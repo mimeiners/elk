@@ -1,0 +1,23 @@
+# Table of contents
+
+format: jb-book
+root: about/unsyllabus
+parts:
+- caption: Seminar
+  chapters:
+    - file: class/01_lec
+      title: Einleitung und Übersicht
+    - file: class/02_lec
+      title: Signale
+    - file: class/03_lec
+      title: Halbleiterphysik
+- caption: Labor
+  chapters:
+    - file: lab/01_Activity
+      title: Aufgabenstellung
+    - file: lab/02_Activity
+      title: Dioden IV-Charakterisierung
+    - file: lab/03_Activity
+      title: Der BJT als Diode"
+    - file: lab/04_Activity
+      title: Der MOSFET als Diode
