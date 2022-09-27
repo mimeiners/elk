@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Dioden IV-Charakterisierung &#8212; M 3.3 Elektronik (ELK)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link media="all" rel="stylesheet" type="text/css" href="https://dokie.li/media/css/dokieli.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="dokieli" src="https://dokie.li/scripts/dokieli.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "mimeiners/elk");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://mimeiners.github.io/elk/lab/02_Activity.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Der BJT als Diode" href="03_Activity.html" />
+    <link rel="prev" title="01_Activity" href="01_Activity.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/hsb-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">M 3.3 Elektronik (ELK)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/unsyllabus.html">
+                    Unsyllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Seminar
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/01_lec.html">
+   Einleitung und Übersicht
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/02_lec.html">
+   Signale
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/03_lec.html">
+   Halbleiterphysik
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Labor
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Activity.html">
+   Aufgabenstellung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Dioden IV-Charakterisierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_Activity.html">
+   Der BJT als Diode"
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_Activity.html">
+   Der MOSFET als Diode
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/mimeiners/elk"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mimeiners/elk/issues/new?title=Issue%20on%20page%20%2Flab/02_Activity.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/mimeiners/elk/edit/master/lab/02_Activity.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lab/02_Activity.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zielsetzung">
+   Zielsetzung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hintergrund">
+   Hintergrund
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schematische-symbole-der-diode">
+   Schematische Symbole der Diode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#materialien">
+   Materialien
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pn-ubergangsdiode-iv-charakteristik">
+   pn-Übergangsdiode IV-Charakteristik
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeitbereichsmessungen">
+   Zeitbereichsmessungen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vorgehensweise-messung-der-i-v-charakteristik">
+   Vorgehensweise - Messung der I/V-Charakteristik
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Dioden IV-Charakterisierung</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zielsetzung">
+   Zielsetzung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hintergrund">
+   Hintergrund
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schematische-symbole-der-diode">
+   Schematische Symbole der Diode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#materialien">
+   Materialien
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pn-ubergangsdiode-iv-charakteristik">
+   pn-Übergangsdiode IV-Charakteristik
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zeitbereichsmessungen">
+   Zeitbereichsmessungen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vorgehensweise-messung-der-i-v-charakteristik">
+   Vorgehensweise - Messung der I/V-Charakteristik
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <!-- !split -->
+<!-- jupyter-book 02_Activity.md -->
+<section class="tex2jax_ignore mathjax_ignore" id="dioden-iv-charakterisierung">
+<h1>Dioden IV-Charakterisierung<a class="headerlink" href="#dioden-iv-charakterisierung" title="Permalink to this headline">#</a></h1>
+<div id="proj:diode"></div>
+<section id="zielsetzung">
+<h2>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Permalink to this headline">#</a></h2>
+<div id="sec:zielsetzung"></div>
+Ziel dieser Übung ist es, Strom- und Spannungseigenschaften zwei verschiedener Silizium-Diode vom Typ 1N4001 und 1N4148 zu
+untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert werden, so
+dass die Messdaten aus dem STEMLab auf dem eigenen Rechner validiert werden können.
+<p><em>Hinweis.</em>
+In diesem Laborversuch wird die Terminologie aus der <a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/index.html">Dokumentation</a>
+verwendet, wenn es um Verbindungen zum
+<a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/top.html">Red Pitaya STEMlab</a> geht.</p>
+<p>Die Erweiterungsstecker-Pins für die Spannungsversorgung -3.3 V und +3.3 V sind in der
+<a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/extent.html">Dokumentation</a>
+dargestellt.</p>
+<p>Die <a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/appsFeatures/applications/oscSigGen/osc.html">Oszilloskop und Signalgenerator App</a>
+wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMLab’s aktiviert
+ist.</p>
+</section>
+<section id="hintergrund">
+<h2>Hintergrund<a class="headerlink" href="#hintergrund" title="Permalink to this headline">#</a></h2>
+<div id="sec:hintergrund"></div>
+<p>Eine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur
+in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.</p>
+<p>Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei <span class="math notranslate nohighlight">\(\approx\)</span> 0.7 V und die
+IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:</p>
+<div id="19_eq_01"></div>
+$$
+\begin{equation}
+I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
+\end{equation}
+$$
+<p>wobei <span class="math notranslate nohighlight">\(I_{S}\)</span> der Sättigungssperrstrom ist und <span class="math notranslate nohighlight">\(N\)</span> ein Skalierungsfaktoren (Emissionskoeffizient), <span class="math notranslate nohighlight">\(V_T = kT / q\)</span> ist
+die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (<span class="math notranslate nohighlight">\(T\)</span>=300 K).</p>
+</section>
+<section id="schematische-symbole-der-diode">
+<h2>Schematische Symbole der Diode<a class="headerlink" href="#schematische-symbole-der-diode" title="Permalink to this headline">#</a></h2>
+<p>Jeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet
+ist, <a class="reference external" href="19_fig_01.html#19_fig_01">Figure</a>. Eine etwa “Z”-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links
+in <a class="reference external" href="19_fig_01.html#19_fig_01">Figure</a> zu sehen ist. Eine “S”-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der
+Diode wegzeigen, kennzeichnen eine LED (engl. Light Emitting Diode), wie im rechten Symbol dargestellt. Pfeile, die auf
+die Diode zeigen, kennzeichnen eine Photodiode.</p>
+<!-- <img src="../fig/Activity_19_Fig_01a.png" width="400"><p><em>Diodensymbole. <div id="19_fig_01"></div></em></p> -->
+<p><img alt="Diodensymbole. " src="fig/Activity_19_Fig_01a.png" /></p>
+</section>
+<section id="materialien">
+<h2>Materialien<a class="headerlink" href="#materialien" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Red Pitaya STEMlab</p></li>
+<li><p>10 <span class="math notranslate nohighlight">\(\Omega\)</span> Widerstand</p></li>
+<li><p>Diode 1N4148</p></li>
+<li><p>Diode 1N4001</p></li>
+<li><p>Platine</p></li>
+</ul>
+</section>
+<section id="pn-ubergangsdiode-iv-charakteristik">
+<h2>pn-Übergangsdiode IV-Charakteristik<a class="headerlink" href="#pn-ubergangsdiode-iv-charakteristik" title="Permalink to this headline">#</a></h2>
+<p>Die Strom-/Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den folgenden in <a class="reference external" href="19_fig_04.html#19_fig_04">Figure</a>
+dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem
+Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im
+Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden
+Diodenstrom und -spannung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+I_D &amp;= (IN_1 - IN_2) / R_1 \\
+V_D &amp;= IN_2
+\end{align}
+\end{split}\]</div>
+<!-- <img src="../fig/Activity_19_Fig_04a.png" width="400"><p><em>Anschlussplan für Dioden IV-Kurven. <div id="19_fig_04"></div></em></p> -->
+<p><img alt="Anschlussplan für Dioden IV-Kurven. " src="fig/Activity_19_Fig_04a.png" /></p>
+<p>Zur Messung der Strom- und Spannungseigenschaften einer pn-Übergangsdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
+mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der
+IV-Kurve ist ein zweidimensionaler (xy) Graph (Plot) erforderlich, wobei die x-Achse die Diodenspannung IN2 und die
+y-Achse den Diodenstrom <span class="math notranslate nohighlight">\(I_D=(IN1-IN2)/R1\)</span> darstellen.</p>
+<p><em>Warning.</em>
+BITTE NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN PARALLEL VERWENDEN.</p>
+<p>Deaktivieren Sie die Oszilloskop-App (OFF-Button), bevor Sie den Zugriff mit Jupyter Notebook oder SCPI erproben.</p>
+</section>
+<section id="zeitbereichsmessungen">
+<h2>Zeitbereichsmessungen<a class="headerlink" href="#zeitbereichsmessungen" title="Permalink to this headline">#</a></h2>
+<!-- <img src="../fig/Activity_19_Fig_05a.png" width="400"><p><em>Verbindungen auf dem Steckbrett. <div id="19_fig_05"></div></em></p> -->
+<p><img alt="Verbindungen auf dem Steckbrett. " src="fig/Activity_19_Fig_05a.png" /></p>
+<ul class="simple">
+<li><p>Die Schaltung aus <a class="reference external" href="19_fig_04.html#19_fig_04">Figure</a> ist für Sie auf einer Platine aufgebaut und angeschlossen.</p></li>
+<li><p>Starten Sie die Oszilloskop- und Signalgenerator-App auf einem Red Pitaya.</p></li>
+<li><p>Stellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein, um ein Dreieckssignal als Eingangsspannung anzulegen. Im Waveform-Menü das Signal “TRIANGLE” auswählen und den Ausgang mit “ON” aktivieren. Der “SHOW”-Button dient zum Anzeigen des Signals in der Oszilloskop-App.</p></li>
+<li><p>Stellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.</p></li>
+<li><p>Setzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.</p></li>
+<li><p>Im Menü “MATH settings” die Differenz IN1-IN2 einstellen und “enable” auswählen. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.</p></li>
+</ul>
+<!-- <img src="../fig/Activity_19_Fig_06.png" width="400"><p><em>Spannung und Strom einer Siliziumdiode (zeitabhängig). <div id="19_fig_06"></div></em></p> -->
+<p><img alt="Spannung und Strom einer Siliziumdiode (zeitabhängig). " src="fig/Activity_19_Fig_06.png" /></p>
+<p>Aus <a class="reference external" href="19_fig_06.html#19_fig_06">Figure</a> kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die
+Schwellenspannung von ca. 0.7 V erreicht.</p>
+<p>Außerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der
+Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung
+<span class="math notranslate nohighlight">\(&gt; 0.7\,\text{V}\)</span> ist, beginnt die Diode zu leiten und der Pfadstrom wird nur durch den Widerstand <span class="math notranslate nohighlight">\(R_1\)</span> begrenzt.</p>
+</section>
+<section id="vorgehensweise-messung-der-i-v-charakteristik">
+<h2>Vorgehensweise - Messung der I/V-Charakteristik<a class="headerlink" href="#vorgehensweise-messung-der-i-v-charakteristik" title="Permalink to this headline">#</a></h2>
+<p>Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am zugewiesenen
+Laborplatz.</p>
+<p>Die IP-Adressen der STEMLabs:</p>
+<ul class="simple">
+<li><p>Laborplatz ELIE1: 192.168.111.181</p></li>
+<li><p>Laborplatz ELIE2: 192.168.111.182</p></li>
+<li><p>Labroplatz ELIE3: 192.168.111.183</p></li>
+<li><p>Laborplatz ELIE4: 192.168.111.184</p></li>
+<li><p>Laborplatz ELIE5: 192.168.111.185</p></li>
+<li><p>Laborplatz ELIE6: 192.168.111.186</p></li>
+</ul>
+<p>Die Web-Adressen der STEMLabs:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://elie1redpi.fk4.hs-bremen.de">Laborplatz ELIE1</a></p></li>
+<li><p><a class="reference external" href="http://elie2redpi.fk4.hs-bremen.de">Laborplatz ELIE2</a></p></li>
+<li><p><a class="reference external" href="http://elie3redpi.fk4.hs-bremen.de">Labroplatz ELIE3</a></p></li>
+<li><p><a class="reference external" href="http://elie4redpi.fk4.hs-bremen.de">Laborplatz ELIE4</a></p></li>
+<li><p><a class="reference external" href="http://elie5redpi.fk4.hs-bremen.de">Laborplatz ELIE5</a></p></li>
+<li><p><a class="reference external" href="http://elie6redpi.fk4.hs-bremen.de">Laborplatz ELIE6</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mimeiners/elk",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lab"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="01_Activity.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">01_Activity</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="03_Activity.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Der BJT als Diode</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By M. Meiners (HSB)<br/>
+  
+    <div class="extra_footer">
+      <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
