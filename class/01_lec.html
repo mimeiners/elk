@@ -91,7 +91,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://mimeiners.github.io/elk/class/01_lec.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Signale und Systeme" href="02_lec.html" />
+    <link rel="next" title="01_Activity" href="../lab/01_Activity.html" />
     <link rel="prev" title="Unsyllabus" href="../about/unsyllabus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -161,16 +161,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Einleitung und Übersicht
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_lec.html">
-   Signale
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_lec.html">
-   Halbleiterphysik
   </a>
  </li>
 </ul>
@@ -400,8 +390,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schaltungssimulation-spice">
-   Schaltungssimulation (SPICE)
+  <a class="reference internal nav-link" href="#analoge-schaltungssimulation-spice">
+   Analoge Schaltungssimulation (SPICE)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -470,8 +460,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#halbleiterherstellung-infineon-dresden">
-   Halbleiterherstellung (Infineon, Dresden)
+  <a class="reference internal nav-link" href="#from-sand-to-silicon-infineon-dresden">
+   From Sand to Silicon (Infineon, Dresden)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -515,13 +505,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#meeting-mit-einem-system-1">
-   Meeting mit einem System (1)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#meeting-mit-einem-system-2">
-   Meeting mit einem System (2)
+  <a class="reference internal nav-link" href="#meeting-mit-einem-system">
+   Meeting mit einem System
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -535,23 +520,38 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sie-werden-unsere-experten">
-   Sie werden unsere Experten
+  <a class="reference internal nav-link" href="#sie-werden-experte">
+   Sie werden Experte
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#silicon-valley-made-in-germany">
-   Silicon Valley - Made in Germany
+  <a class="reference internal nav-link" href="#evolution-von-produkten">
+   Evolution von Produkten
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#was-man-noch-mit-elektronik-machen-kann">
-   Was man noch mit Elektronik machen kann …
+  <a class="reference internal nav-link" href="#eda-kompetenz">
+   EDA Kompetenz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-entwurfsmethodik">
+   Design-/Entwurfsmethodik
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nachhaltige-elektronik">
+   Nachhaltige Elektronik …
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#warum-es-sicht-lohnt">
-   Warum es sicht lohnt
+   Warum es sicht lohnt …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#und-ab-an-den-strand">
+   Und ab an den Strand …
   </a>
  </li>
 </ul>
@@ -579,8 +579,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schaltungssimulation-spice">
-   Schaltungssimulation (SPICE)
+  <a class="reference internal nav-link" href="#analoge-schaltungssimulation-spice">
+   Analoge Schaltungssimulation (SPICE)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -649,8 +649,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#halbleiterherstellung-infineon-dresden">
-   Halbleiterherstellung (Infineon, Dresden)
+  <a class="reference internal nav-link" href="#from-sand-to-silicon-infineon-dresden">
+   From Sand to Silicon (Infineon, Dresden)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -694,13 +694,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#meeting-mit-einem-system-1">
-   Meeting mit einem System (1)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#meeting-mit-einem-system-2">
-   Meeting mit einem System (2)
+  <a class="reference internal nav-link" href="#meeting-mit-einem-system">
+   Meeting mit einem System
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -714,23 +709,38 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sie-werden-unsere-experten">
-   Sie werden unsere Experten
+  <a class="reference internal nav-link" href="#sie-werden-experte">
+   Sie werden Experte
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#silicon-valley-made-in-germany">
-   Silicon Valley - Made in Germany
+  <a class="reference internal nav-link" href="#evolution-von-produkten">
+   Evolution von Produkten
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#was-man-noch-mit-elektronik-machen-kann">
-   Was man noch mit Elektronik machen kann …
+  <a class="reference internal nav-link" href="#eda-kompetenz">
+   EDA Kompetenz
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#design-entwurfsmethodik">
+   Design-/Entwurfsmethodik
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nachhaltige-elektronik">
+   Nachhaltige Elektronik …
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#warum-es-sicht-lohnt">
-   Warum es sicht lohnt
+   Warum es sicht lohnt …
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#und-ab-an-den-strand">
+   Und ab an den Strand …
   </a>
  </li>
 </ul>
@@ -782,15 +792,15 @@ c. Design</p></li>
 </ul>
 <!-- !split -->
 </section>
-<section id="schaltungssimulation-spice">
-<h2>Schaltungssimulation (SPICE)<a class="headerlink" href="#schaltungssimulation-spice" title="Permalink to this headline">#</a></h2>
+<section id="analoge-schaltungssimulation-spice">
+<h2>Analoge Schaltungssimulation (SPICE)<a class="headerlink" href="#analoge-schaltungssimulation-spice" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.linear.com/designtools/software/">LTspice Linear Technology</a></p></li>
-<li><p><a class="reference external" href="http://www.ti.com/tool/tina-ti">TINA-TI SPICE-Based Analog Simulation Program</a></p></li>
-<li><p><a class="reference external" href="http://ngspice.sourceforge.net">ngspice (open-source)</a></p></li>
-<li><p><a class="reference external" href="https://www.mentor.com/products/ic_nanometer_design/analog-mixed-signal-verification/eldo/">ELDO (Mentor Graphics)</a></p></li>
-<li><p><a class="reference external" href="https://www.cadence.com/content/cadence-www/global/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-circuit-simulator.html">Spectre (Cadence)</a></p></li>
-<li><p><a class="reference external" href="https://www.synopsys.com/tools/Verification/AMSVerification/CircuitSimulation/HSPICE/Pages/default.aspx">HSPICE (Synopsys)</a></p></li>
+<li><p><a class="reference external" href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">LTspice (Analog Devices)</a></p></li>
+<li><p><a class="reference external" href="https://www.ti.com/tool/TINA-TI">TINA-TI (Texas Instruments)</a></p></li>
+<li><p><a class="reference external" href="http://ngspice.sourceforge.net">ngspice (Open Source)</a></p></li>
+<li><p><a class="reference external" href="https://eda.sw.siemens.com/en-US/eldo/">ELDO (Siemens EDA)</a></p></li>
+<li><p><a class="reference external" href="https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html">Spectre (cadence)</a></p></li>
+<li><p><a class="reference external" href="https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html">PrimeSim HSPICE (SYNOPSIS)</a></p></li>
 </ul>
 <!-- !split -->
 </section>
@@ -812,11 +822,11 @@ c. Design</p></li>
 <section id="code-editoren">
 <h2>Code Editoren<a class="headerlink" href="#code-editoren" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a></p></li>
+<li><p><a class="reference external" href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</p></li>
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
 <li><p><a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a></p></li>
 <li><p><a class="reference external" href="https://www.vim.org">Vim</a></p></li>
-<li><p><a class="reference external" href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</p></li>
-<li><p><a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a></p></li>
-<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
 </ul>
 <!-- !split -->
 </section>
@@ -863,11 +873,16 @@ c. Design</p></li>
 <h2>Laborarbeit<a class="headerlink" href="#laborarbeit" title="Permalink to this headline">#</a></h2>
 <p><em>Charakterisierung von Bauelementen.</em></p>
 <ul class="simple">
-<li><p>Dioden vom Typ 1N4001 und 1N4148</p></li>
-<li><p>Bipolartransistoren vom Typ 2N2222A, 2N2907A</p></li>
-<li><p>MOSFETs vom Typ BS170, BS250</p></li>
-<li><p>Simulation mit <a class="reference external" href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">SPICE</a></p></li>
-<li><p><a class="reference external" href="https://www.redpitaya.com">Messautomatisierung mit Red Pitaya</a></p></li>
+<li><p>Dioden, Bipolartransistoren und MOSFETs</p></li>
+<li><p>Anwendung unterschiedlicher Beschreibungsebenen</p>
+<ul>
+<li><p>Systemebene (Mathe, z.B. Matlab/Simulink, Python)</p></li>
+<li><p>Schaltungsebene (SPICE)</p></li>
+<li><p>Charakterisierung (Messungen)</p></li>
+</ul>
+</li>
+<li><p>Analog System Lab Kit – <a class="reference external" href="https://aslk-pro.readthedocs.io/de/latest/">ASLK Pro</a></p></li>
+<li><p>Messautomatisierung Red Pitaya <a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/developerGuide/125-14/top.html">STEMlab 125-14/10</a></p></li>
 <li><p>Technischer Bericht</p>
 <ul>
 <li><p>Berichtsvorlage DIN A4 (Word/LaTeX ) <a class="reference external" href="https://www.ieee.org/conferences/publishing/templates.html">IEEE templates</a></p></li>
@@ -911,19 +926,16 @@ c. Design</p></li>
 <section id="datenspeicherung-data-science">
 <h2>Datenspeicherung (Data Science)<a class="headerlink" href="#datenspeicherung-data-science" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Dateisystem mit Arbeitsordner für Unterlagen und Daten</p></li>
-<li><p>Daten in Tabellenformat (ASCII file, CSV format)</p></li>
-<li><p>Daten in Excel (.xlsx ) oder OpenDocument (.ods)</p></li>
-<li><p>Daten in speziellen Formaten, z.B.:</p>
+<li><p>Arbeitsordner auf dem Rechner (sandboxing, virtualenv)</p></li>
+<li><p>Tabellenformat (ASCII, CSV)</p></li>
+<li><p>Exceldatei (.xlsx ) or OpenDocument (.ods)</p></li>
+<li><p>Datenspeicherung in speziellen Formaten, z.B. mat-files (HDF5)</p></li>
+<li><p><a class="reference external" href="https://db-engines.com">Datenbanken</a>,</p>
 <ul>
-<li><p>mat-files HDF5 (Matlab, Gnu Octave, Python Pandas)</p></li>
-<li><p>Pickle (Python Serialization)</p></li>
-</ul>
-</li>
-<li><p>Daten in Datenbanken, z.B.:</p>
-<ul>
-<li><p>SQL (MySQL/MariaDB, PostgreSQL, SQlite)</p></li>
-<li><p>noSQL (MongoDB, LevelDB, RocksDB)</p></li>
+<li><p>SQL (z.B. <a class="reference external" href="https://en.wikipedia.org/wiki/MariaDB">MariaDB</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/SQLite">SQlite</a>),</p></li>
+<li><p>noSQL (z.B. <a class="reference external" href="https://en.wikipedia.org/wiki/MongoDB">MongoDB</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/LevelDB">LevelDB</a>)</p></li>
+<li><p>Time-Series-DB (z.B. <a class="reference external" href="https://www.influxdata.com/time-series-database/">InfluxDB</a>)</p></li>
+<li><p><a class="reference external" href="https://www.opensourceforu.com/2017/05/three-python-databases-pickledb-tinydb-zodb/">PythonDB</a> (z.B. PicklDB, TinyDB, ZODB)</p></li>
 </ul>
 </li>
 </ul>
@@ -955,11 +967,11 @@ c. Design</p></li>
 <h2>Es war einmal …<a class="headerlink" href="#es-war-einmal" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.45 -->
 <!-- <img src="../fig/lec_vacuum_tube.png" width="400"><p><em>1906 die Elektronenröhre</em></p> -->
-<p><img alt="1906 die Elektronenröhre" src="fig/lec_vacuum_tube.png" /></p>
+<p><img alt="1906 die Elektronenröhre" src="../_images/lec_vacuum_tube.png" /></p>
 <!-- !eslidecell -->
 <!-- !bslidecell 01 0.45 -->
 <!-- <img src="../fig/lec_1st_transistor.png" width="400"><p><em>1947 der erste Transistor, Bell Labs Foto</em></p> -->
-<p><img alt="1947 der erste Transistor, Bell Labs Foto" src="fig/lec_1st_transistor.png" /></p>
+<p><img alt="1947 der erste Transistor, Bell Labs Foto" src="../_images/lec_1st_transistor.png" /></p>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
@@ -967,11 +979,11 @@ c. Design</p></li>
 <h2>Damals und heute<a class="headerlink" href="#damals-und-heute" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.45 -->
 <!-- <img src="../fig/lec_1st_ic_kilby.png" width="400"><p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p> -->
-<p><img alt="1958 Jack Kilby's erster IC " src="fig/lec_1st_ic_kilby.png" /></p>
+<p><img alt="1958 Jack Kilby's erster IC " src="../_images/lec_1st_ic_kilby.png" /></p>
 <!-- !eslidecell -->
 <!-- !bslidecell 01 0.45 -->
 <!-- <img src="../fig/lec_modern_ic.png" width="400"><p><em>Moderner IC <div id="fig:modernic"></div></em></p> -->
-<p><img alt="Moderner IC " src="fig/lec_modern_ic.png" /></p>
+<p><img alt="Moderner IC " src="../_images/lec_modern_ic.png" /></p>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
@@ -979,7 +991,7 @@ c. Design</p></li>
 <h2>Packungsdichten<a class="headerlink" href="#packungsdichten" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.85 -->
 <!-- <img src="../fig/lec_wafers.png" width="600"><p><em>Wafergenerationen <div id="fig:wafer"></div></em></p> -->
-<p><img alt="Wafergenerationen " src="fig/lec_wafers.png" /></p>
+<p><img alt="Wafergenerationen " src="../_images/lec_wafers.png" /></p>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
@@ -990,24 +1002,24 @@ c. Design</p></li>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
-<section id="halbleiterherstellung-infineon-dresden">
-<h2>Halbleiterherstellung (Infineon, Dresden)<a class="headerlink" href="#halbleiterherstellung-infineon-dresden" title="Permalink to this headline">#</a></h2>
+<section id="from-sand-to-silicon-infineon-dresden">
+<h2>From Sand to Silicon (Infineon, Dresden)<a class="headerlink" href="#from-sand-to-silicon-infineon-dresden" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.9 -->
-<iframe width="854" height="480" src="https://www.youtube.com/embed/_Kj58yQ67KI" frameborder="0" allowfullscreen></iframe>
+<iframe width="793" height="446" src="https://www.youtube.com/embed/bor0qLifjz4?list=PLO_wT97BGA6xC6hNy9VGtt1bKwVuQXI5B" frameborder="0" allowfullscreen></iframe>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
 <section id="finfet-intel">
 <h2>FinFET (Intel)<a class="headerlink" href="#finfet-intel" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.9 -->
-<iframe width="854" height="480" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
+<iframe width="793" height="446" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
 <section id="tsmc-fab-next-gen-7-5-nm">
 <h2>TSMC Fab (Next Gen 7/5 nm)<a class="headerlink" href="#tsmc-fab-next-gen-7-5-nm" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.9 -->
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
+<iframe width="793" height="446" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
@@ -1046,7 +1058,7 @@ c. Design</p></li>
 <h2>Systemhierarchie<a class="headerlink" href="#systemhierarchie" title="Permalink to this headline">#</a></h2>
 <!-- !bslidecell 00 0.85 -->
 <!-- <img src="../fig/lec_system_hierarchy.png" height="400"><p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p> -->
-<p><img alt="Funktionsblöcke eines elektronischen Systems. " src="fig/lec_system_hierarchy.png" /></p>
+<p><img alt="Funktionsblöcke eines elektronischen Systems. " src="../_images/lec_system_hierarchy.png" /></p>
 <!-- !eslidecell -->
 <!-- !bblock -->
 <!-- * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme -->
@@ -1057,35 +1069,28 @@ c. Design</p></li>
 <section id="system-assembly">
 <h2>System Assembly<a class="headerlink" href="#system-assembly" title="Permalink to this headline">#</a></h2>
 <!-- <img src="../fig/lec_system_assembly.png" height="400"><p><em>Bottom-up Prozess, Integration. <div id="fig:assembly"></div></em></p> -->
-<p><img alt="Bottom-up Prozess, Integration. " src="fig/lec_system_assembly.png" /></p>
+<p><img alt="Bottom-up Prozess, Integration. " src="../_images/lec_system_assembly.png" /></p>
 <p>Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.</p>
 <!-- !split -->
 </section>
 <section id="schnittstellen-zur-aussenwelt">
 <h2>Schnittstellen zur Aussenwelt<a class="headerlink" href="#schnittstellen-zur-aussenwelt" title="Permalink to this headline">#</a></h2>
 <!-- <img src="../fig/lec_real_world_interface.png" width="400"><p><em>Interfacing. <div id="fig:interfaces"></div></em></p> -->
-<p><img alt="Interfacing. " src="fig/lec_real_world_interface.png" /></p>
+<p><img alt="Interfacing. " src="../_images/lec_real_world_interface.png" /></p>
 <p>Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.</p>
 <!-- !split -->
 </section>
-<section id="meeting-mit-einem-system-1">
-<h2>Meeting mit einem System (1)<a class="headerlink" href="#meeting-mit-einem-system-1" title="Permalink to this headline">#</a></h2>
+<section id="meeting-mit-einem-system">
+<h2>Meeting mit einem System<a class="headerlink" href="#meeting-mit-einem-system" title="Permalink to this headline">#</a></h2>
 <!-- <img src="../fig/lec_smartphone.png" width="400"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
-<p><img alt="Drahtloses Kommunikationssystem. " src="fig/lec_smartphone.png" /></p>
-<p>Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.</p>
-<!-- !split -->
-</section>
-<section id="meeting-mit-einem-system-2">
-<h2>Meeting mit einem System (2)<a class="headerlink" href="#meeting-mit-einem-system-2" title="Permalink to this headline">#</a></h2>
-<!-- <img src="../fig/lec_incubator.png" width="400"><p><em>Inkubator. <div id="fig:incubator"></div></em></p> -->
-<p><img alt="Inkubator. " src="fig/lec_incubator.png" /></p>
+<p><img alt="Drahtloses Kommunikationssystem. " src="../_images/lec_smartphone.png" /></p>
 <p>Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.</p>
 <!-- !split -->
 </section>
 <section id="system-in-a-package-sip">
 <h2>System in a Package (SiP)<a class="headerlink" href="#system-in-a-package-sip" title="Permalink to this headline">#</a></h2>
 <!-- <img src="../fig/lec_system_in_package.png" width="400"><p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p> -->
-<p><img alt="Beschleunigungssensor. " src="fig/lec_system_in_package.png" /></p>
+<p><img alt="Beschleunigungssensor. " src="../_images/lec_system_in_package.png" /></p>
 <p>Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.</p>
 <!-- !split -->
 </section>
@@ -1115,8 +1120,8 @@ c. Design</p></li>
 </ul>
 <!-- !split -->
 </section>
-<section id="sie-werden-unsere-experten">
-<h2>Sie werden unsere Experten<a class="headerlink" href="#sie-werden-unsere-experten" title="Permalink to this headline">#</a></h2>
+<section id="sie-werden-experte">
+<h2>Sie werden Experte<a class="headerlink" href="#sie-werden-experte" title="Permalink to this headline">#</a></h2>
 <p><em>Leistungsmerkmale.</em></p>
 <ul class="simple">
 <li><p>Hintergrundwissen</p>
@@ -1144,27 +1149,107 @@ c. Design</p></li>
 </ul>
 <!-- !split -->
 </section>
-<section id="silicon-valley-made-in-germany">
-<h2>Silicon Valley - Made in Germany<a class="headerlink" href="#silicon-valley-made-in-germany" title="Permalink to this headline">#</a></h2>
-<!-- !bslidecell -->
-<iframe width="854" height="480" src="https://www.youtube.com/embed/UvluuAIiA50" frameborder="0" allowfullscreen></iframe>
-<p><em>GLOBALFOUNDRIES From Sand to Silicon</em></p>
-<!-- !eslidecell -->
+<section id="evolution-von-produkten">
+<h2>Evolution von Produkten<a class="headerlink" href="#evolution-von-produkten" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Angetrieben durch Technologieverbesserung</p>
+<ul>
+<li><p>Kosten (größere Chips, geringere Größe der Merkmale, bessere Ausbeute)</p></li>
+<li><p>Leistung (neue Bauteile, höhere Geschwindigkeit, weniger Stromverbrauch)</p></li>
+</ul>
+</li>
+<li><p>Angetrieben durch Verbesserung der Entwurfsmethodik</p>
+<ul>
+<li><p>Architektur (Leistung, Funktionen)</p></li>
+<li><p>CAD (Entwicklungskosten, Time-to-Market)</p></li>
+</ul>
+</li>
+<li><p>Komplexität der Designs verdoppelt sich jedes Jahr (Moore’s Gesetz)</p></li>
+<li><p>Rolle von CAD</p>
+<ul>
+<li><p>Verbesserung der Produktivität von Konstruktionsprozessen</p></li>
+<li><p>Reduzierung der Komplexität für den Konstrukteur</p></li>
+<li><p>Sicherstellung des ordnungsgemäßen Betriebs der Geräte</p></li>
+</ul>
+</li>
+</ul>
 <!-- !split -->
 </section>
-<section id="was-man-noch-mit-elektronik-machen-kann">
-<h2>Was man noch mit Elektronik machen kann …<a class="headerlink" href="#was-man-noch-mit-elektronik-machen-kann" title="Permalink to this headline">#</a></h2>
-<!-- !bslidecell -->
-<iframe width="854" height="480" src="https://www.youtube.com/embed/7S5IuaKiZIY" frameborder="0" allowfullscreen></iframe>
-<p><em>Fettes Brot feat. Geekchester</em></p>
+<section id="eda-kompetenz">
+<h2>EDA Kompetenz<a class="headerlink" href="#eda-kompetenz" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>EDA-Anbieter (Tool-Entwickler)</p>
+<ul>
+<li><p>Identifikation von Entwurfsaufgaben, Bedarf an Werkzeugen</p></li>
+<li><p>Entwicklung von Strategien und Algorithmen</p></li>
+<li><p>Implementierung von Software-Werkzeugen</p></li>
+<li><p>Verifikation der Stabilität und Funktionalität der Software-Tools</p></li>
+</ul>
+</li>
+<li><p>IC-Hersteller</p>
+<ul>
+<li><p>Entscheidungsplanung, welches Tool die Produktivität steigern könnte</p></li>
+<li><p>EDA-Tool-Manager, Installation und Wartung</p></li>
+<li><p>Experten für Softwareeinsatz, Anwendung in Produktdesign und -entwicklung</p></li>
+</ul>
+</li>
+<li><p>Dozenten und Studenten</p>
+<ul>
+<li><p>Jobchancen</p></li>
+<li><p>Notwendigkeit, auf dem Laufenden zu bleiben</p></li>
+</ul>
+</li>
+</ul>
+<!-- !split -->
+</section>
+<section id="design-entwurfsmethodik">
+<h2>Design-/Entwurfsmethodik<a class="headerlink" href="#design-entwurfsmethodik" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Full Custom - vollständig manuell: ASIC</p>
+<ul>
+<li><p>Überwiegend analoge Schaltungen</p></li>
+<li><p>Einfache digitale Gatter</p></li>
+<li><p>Volle Kontrolle, aber lange Entwicklungszeit (bis zu Jahren)</p></li>
+</ul>
+</li>
+<li><p>Semi-custom: ASIC-Fertigung mit Verwendung von vorgefertigten Teilen</p>
+<ul>
+<li><p>Standardzellen, Makrozellen, IP’s</p></li>
+<li><p>Wiederverwendung von vordefinierten Blöcken oder Maskensätzen</p></li>
+<li><p>Eingeschränkte Kontrolle/Flexibilität, aber kürzere Entwicklungszeit (bis zu Wochen)</p></li>
+</ul>
+</li>
+<li><p>Vollständig automatisiert: Keine Fertigung, reprogrammierbare ASICs</p>
+<ul>
+<li><p>FPGA, PLA</p></li>
+<li><p>Ausschließlich digitale Schaltungen</p></li>
+<li><p>Schnelles Prototyping</p></li>
+</ul>
+</li>
+</ul>
+<!-- !split -->
+</section>
+<section id="nachhaltige-elektronik">
+<h2>Nachhaltige Elektronik …<a class="headerlink" href="#nachhaltige-elektronik" title="Permalink to this headline">#</a></h2>
+<!-- !bslidecell 00 0.9 -->
+<iframe width="859" height="483" src="https://www.youtube.com/embed/7S5IuaKiZIY" frameborder="0" allowfullscreen></iframe>
+<p><em>Geekchester.</em></p>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
 <section id="warum-es-sicht-lohnt">
-<h2>Warum es sicht lohnt<a class="headerlink" href="#warum-es-sicht-lohnt" title="Permalink to this headline">#</a></h2>
-<!-- !bslidecell -->
-<iframe width="854" height="480" src="https://www.youtube.com/embed/SwPGxwBZw6I" frameborder="0" allowfullscreen></iframe>
-<p><em>PartyProfs - The Circuit Song.</em></p>
+<h2>Warum es sicht lohnt …<a class="headerlink" href="#warum-es-sicht-lohnt" title="Permalink to this headline">#</a></h2>
+<!-- !bslidecell 00 0.9 -->
+<iframe width="859" height="483" src="https://www.youtube.com/embed/SwPGxwBZw6I" frameborder="0" allowfullscreen></iframe>
+<p><em>Circuit Song.</em></p>
+<!-- !eslidecell -->
+<!-- !split -->
+</section>
+<section id="und-ab-an-den-strand">
+<h2>Und ab an den Strand …<a class="headerlink" href="#und-ab-an-den-strand" title="Permalink to this headline">#</a></h2>
+<!-- !bslidecell 00 0.9 -->
+<iframe width="859" height="483" src="https://www.youtube.com/embed/ekkJlQf-K4I" frameborder="0" allowfullscreen></iframe>
+<p><em>Viva la Electronica.</em></p>
 <!-- !eslidecell -->
 <!-- !split -->
 </section>
@@ -1204,10 +1289,10 @@ c. Design</p></li>
             <p class="prev-next-title">Unsyllabus</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="02_lec.html" title="next page">
+    <a class='right-next' id="next-link" href="../lab/01_Activity.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Signale und Systeme</p>
+        <p class="prev-next-title">01_Activity</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

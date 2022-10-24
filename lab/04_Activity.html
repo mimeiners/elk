@@ -162,16 +162,6 @@ const thebe_selector_output = ".output, .cell_output"
    Einleitung und Übersicht
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/02_lec.html">
-   Signale
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/03_lec.html">
-   Halbleiterphysik
-  </a>
- </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -532,20 +522,20 @@ Das bedeutet, wenn die vom Gate-Kontakt zum Source-Kontakt anliegende Spannung (
 Drain-Kontakt schalttechnisch mit seinem Gate-Kontakt verbunden ist, ist die Drain-Source-Spannung gleich der
 Gate-Source-Spannung.</p>
 <p><em>Hint.</em>
-Diese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlassspannung, die der Schwellenspannung <span class="math notranslate nohighlight">\(V_{Tn}\)</span>
+Diese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlaßspannung, die der Schwellenspannung <span class="math notranslate nohighlight">\(V_{Tn}\)</span>
 entspricht.</p>
 <!-- <img src="../fig/Activity_23_Fig_01a.png" width="400"><p><em>BS170 Spezifikation. <div id="23_fig_01"></div></em></p> -->
-<p><img alt="BS170 Spezifikation. " src="fig/Activity_23_Fig_01a.png" /></p>
+<p><img alt="BS170 Spezifikation. " src="../_images/Activity_23_Fig_01a.png" /></p>
 <p>Auf dem Steckbrett die Schaltung aus <a class="reference external" href="23_fig_02.html#23_fig_02">Figure</a> aufbauen und mit den Messungen fortfahren.</p>
 <!-- <img src="../fig/Activity_23_Fig_02.png" width="400"><p><em>Anschlussdiagramm nMOS-Messung. <div id="23_fig_02"></div></em></p> -->
-<p><img alt="Anschlussdiagramm nMOS-Messung. " src="fig/Activity_23_Fig_02.png" /></p>
+<p><img alt="Anschlussdiagramm nMOS-Messung. " src="../_images/Activity_23_Fig_02.png" /></p>
 </section>
 <section id="verfahren">
 <h2>Verfahren<a class="headerlink" href="#verfahren" title="Permalink to this headline">#</a></h2>
 <p>Für Sie ist die Schaltung aus <a class="reference external" href="23_fig_01.html#23_fig_01">Figure</a> auf einer Platine aufgebaut; <span class="math notranslate nohighlight">\(R_1\)</span> = 2,2 k <span class="math notranslate nohighlight">\(\Omega\)</span>,
 <span class="math notranslate nohighlight">\(R_2\)</span> = 10 k <span class="math notranslate nohighlight">\(\Omega\)</span> und <span class="math notranslate nohighlight">\(R_3\)</span> = 1 k <span class="math notranslate nohighlight">\(\Omega\)</span>, Transistor M1 ist der nMOS Transistor vom Typ BS170.</p>
 <!-- <img src="../fig/Activity_23_Fig_03a.png" width="400"><p><em>nMOS-Schaltung auf der Platine. <div id="23_fig_03"></div></em></p> -->
-<p><img alt="nMOS-Schaltung auf der Platine. " src="fig/Activity_23_Fig_03a.png" /></p>
+<p><img alt="nMOS-Schaltung auf der Platine. " src="../_images/Activity_23_Fig_03a.png" /></p>
 <p><em>Warning.</em>
 Bevor Sie die Schaltung an die STEMlab-Pins -3,3 V und +3,3 V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die
 Spannungsversorgungsstifte -3,3 V und +3,3 V haben keine Schutzschaltung und können im Falle eines Kurzschlusses
@@ -561,23 +551,35 @@ beschädigt werden.</p>
 <li><p>Stellen Sie unter TRIGGER-Einstellungen den Triggerpegel auf 1 V ein</p></li>
 </ul>
 <!-- <img src="../fig/Activity_23_Fig_04.png" width="400"><p><em>nMOS Diodenmessung. <div id="23_fig_04"></div></em></p> -->
-<p><img alt="nMOS Diodenmessung. " src="fig/Activity_23_Fig_04.png" /></p>
+<p><img alt="nMOS Diodenmessung. " src="../_images/Activity_23_Fig_04.png" /></p>
 </section>
 <section id="iv-kurvenmessungen">
 <h2>IV-Kurvenmessungen<a class="headerlink" href="#iv-kurvenmessungen" title="Permalink to this headline">#</a></h2>
 <p>Da sich ein nMOS wie eine Diode mit einer Durchlassspannung entsprechend der <span class="math notranslate nohighlight">\(V_{Tn}\)</span> verhalten kann (Konfiguration in
-<a class="reference external" href="23_fig_02.html#23_fig_02">Figure</a>), können wir ihre IV-Charakteristik wie bei der pn-Diodenschaltung messen. Führen Sie wie im
-entsprechenden Experiment beschrieben die Messungen mit angepassten SCPI-Skripten durch.</p>
+<a class="reference external" href="23_fig_02.html#23_fig_02">Figure</a>), können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die
+Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.</p>
+<p>Wie Sie Jupyter Notebook starten und ein neues Projekt erstellen, ist in <a class="reference external" href="23_fig_05.html#23_fig_05">Figure</a> dargestellt.</p>
+<!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines neuen Jupyter Notbooks. <div id="23_fig_05"></div></em></p> -->
+<p><img alt="Erstellen eines neuen Jupyter Notbooks. " src="../_images/Activity_19_Fig_07.png" /></p>
+<p>Wenn Sie erfolgreich ein neues Jupyter Notebook erstellt haben, kopieren Sie den untenstehenden Code und führen Sie ihn aus.</p>
+<p>Der unten stehende Code erzeugt das gleiche Signal wie in <a class="reference external" href="23_fig_04.html#23_fig_04">Figure</a>, aber er plotet dieses in einem XY-Diagramm.</p>
+<p>Für die Messung der IV-Kurve ist ein XY-Plot erforderlich, wobei die x-Achse die Diodenspannung <span class="math notranslate nohighlight">\(IN_2\)</span> und die y-Achse
+den Diodenstrom (Drainstrom) ) <span class="math notranslate nohighlight">\(I_D = (IN_1 - IN_2)/R_3\)</span> darstellen.</p>
+<p>Kopieren Sie den unten stehenden Code in Zelle 1:</p>
+<p>Erstelle eine neue Zelle (Einfügen -&gt; Zelle darunter) und kopieren Sie den unten stehenden Code.</p>
+<p>Führen Sie Zelle 1 und Zelle 2 aus. Hinweis Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
+die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.</p>
+<p>Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode erhalten, wie in <a class="reference external" href="23_fig_06.html#23_fig_06">Figure</a> dargestellt.</p>
 <!-- <img src="../fig/Activity_23_Fig_06.png" width="400"><p><em>nMOS IV-Kennlinie gemessen mit Jupyter Notebook. <div id="23_fig_06"></div></em></p> -->
-<p><img alt="nMOS IV-Kennlinie gemessen mit Jupyter Notebook. " src="fig/Activity_23_Fig_06.png" /></p>
+<p><img alt="nMOS IV-Kennlinie gemessen mit Jupyter Notebook. " src="../_images/Activity_23_Fig_06.png" /></p>
 </section>
 <section id="pmos-als-diode">
 <h2>pMOS als Diode<a class="headerlink" href="#pmos-als-diode" title="Permalink to this headline">#</a></h2>
 <p>Die selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die
-Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei der nMOS.
+Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS.
 Die Konfiguration der pMOS-Diode ist in <a class="reference external" href="23_fig_07.html#23_fig_07">Figure</a> dargestellt.</p>
 <!-- <img src="../fig/Activity_23_Fig_07.png" width="400"><p><em>pMOS Anschlussdiagramm. <div id="23_fig_07"></div></em></p> -->
-<p><img alt="pMOS Anschlussdiagramm. " src="fig/Activity_23_Fig_07.png" /></p>
+<p><img alt="pMOS Anschlussdiagramm. " src="../_images/Activity_23_Fig_07.png" /></p>
 </section>
 <section id="id1">
 <h2>Verfahren<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
@@ -598,7 +600,7 @@ beschädigt werden.</p>
 <li><p>Stellen Sie unter TRIGER-Einstellungen den Triggerpegel auf 1 V ein.</p></li>
 </ul>
 <!-- <img src="../fig/Activity_23_Fig_08.png" width="400"><p><em>pMOS Diodenmessung.  <div id="23_fig_08"></div></em></p> -->
-<p><img alt="pMOS Diodenmessung.  " src="fig/Activity_23_Fig_08.png" /></p>
+<p><img alt="pMOS Diodenmessung.  " src="../_images/Activity_23_Fig_08.png" /></p>
 <p>Wie in <a class="reference external" href="23_fig_08.html#23_fig_08">Figure</a> zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer
 Durchlassspannung gleich der pMOS Schwellenspannung <span class="math notranslate nohighlight">\(V_{Tp}\)</span>.</p>
 <p>Vergleichen Sie <a class="reference external" href="23_fig_08.html#23_fig_08">Figure</a> mit <a class="reference external" href="23_fig_04.html#23_fig_04">Figure</a> und versuchen Sie, den Unterschied zwischen nMOS- und
