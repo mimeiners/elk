@@ -93,7 +93,7 @@ sie in einam XY-Diagramm auf, wobei die x-Achse die Diodenspannung $IN_2$ und di
 $I_D = I_C = (IN_1 - IN_2) / R_3$ darstellt. 
 
 
-~~~{.Python}
+```python
 # Import libraries
 from redpitaya.overlay.mercury import mercury as overlay
 
@@ -160,12 +160,12 @@ for ch in osc:
 
     # get and explicit handle to update the next show cell
     target = show(p, notebook_handle=True)
-~~~
+```
 
 Erstellen Sie eine neue Zelle (Einfügen -> Zelle darunter) und kopieren Sie den Code von unten hinein.
 
 
-~~~{.Python}
+```python
 # Measuring I, V  and re-plotting
 while True:
     # reset and start
@@ -182,7 +182,7 @@ while True:
     r.data_source.data['y'] = I
 
     push_notebook(handle=target)
-~~~
+```
 
 Führen Sie Zelle 1 und Zelle 2 aus. Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
 die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.

@@ -35,6 +35,7 @@ Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typisc
 IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:
 
 <div id="19_eq_01"></div>
+
 $$
 \begin{equation}
 I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
@@ -42,7 +43,7 @@ I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
 $$
 
 wobei $I_{S}$ der Sättigungssperrstrom ist und $N$ ein Skalierungsfaktoren (Emissionskoeffizient), $V_T = kT / q$ ist
-die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur ($T$=300 K). 
+die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur ($T$ = 300 K). 
 
 ### Schematische Symbole der Diode
 
@@ -150,7 +151,7 @@ zeichnet die Messdaten in einem xy-Diagramm auf. Für die Messung der IV-Kurve d
 Diodenspannung an IN2 und die y-Achse (Ordinate) der Diodenstrom $I_D = (IN1-IN2)/R_1$.   
 
 
-~~~{.Python}
+```python
 # Import libraries
 from redpitaya.overlay.mercury import mercury as overlay
 
@@ -223,12 +224,12 @@ r = p.line(V, I, line_width=1, line_alpha=0.7, color="blue")
 
 # get and explicit handle to update the next show cell
 target = show(p, notebook_handle=True)
-~~~
+```
 
 Erstelle Sie eine neue Zelle (Einfügen -> Zelle darunter) und kopiere Sie den Code hinein.
 
 
-~~~{.Python}
+```python
 # Messung von  I, V und plotten
 while True:
     # Reset und Start
@@ -246,7 +247,7 @@ while True:
     r.data_source.data['y'] = I
 
     push_notebook(handle=target)
-~~~
+```
 
 Führen Sie Zelle 1 und Zelle 2 aus. Obacht, Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
 die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten. 
@@ -265,4 +266,3 @@ führt dies zur Diodenhysterese. Die obere Kurve aus [Figure](19_fig_08.html#19_
 "Einschalten" der Diode einen höheren Strom verursacht als bei der vorherigen "Abschaltung" der Diode. Eine ideale
 Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
 Diodenspannung.
-
