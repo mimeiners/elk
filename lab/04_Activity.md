@@ -42,7 +42,7 @@ Drain-Kontakt schalttechnisch mit seinem Gate-Kontakt verbunden ist, ist die Dra
 Gate-Source-Spannung. 
 
 *Hint.* 
-Diese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlassspannung, die der Schwellenspannung $V_{Tn}$
+Diese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlaßspannung, die der Schwellenspannung $V_{Tn}$
 entspricht.
 
 
@@ -86,11 +86,120 @@ beschädigt werden.
 ### IV-Kurvenmessungen
 
 Da sich ein nMOS wie eine Diode mit einer Durchlassspannung entsprechend der $V_{Tn}$ verhalten kann (Konfiguration in
-[Figure](23_fig_02.html#23_fig_02)), können wir ihre IV-Charakteristik wie bei der pn-Diodenschaltung messen. Führen Sie wie im
-entsprechenden Experiment beschrieben die Messungen mit angepassten SCPI-Skripten durch.
+[Figure](23_fig_02.html#23_fig_02)), können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die
+Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.
+
+Wie Sie Jupyter Notebook starten und ein neues Projekt erstellen, ist in [Figure](23_fig_05.html#23_fig_05) dargestellt. 
+
+<!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines neuen Jupyter Notbooks. <div id="23_fig_05"></div></em></p> -->
+![<p><em>Erstellen eines neuen Jupyter Notbooks. <div id="23_fig_05"></div></em></p>](../fig/Activity_19_Fig_07.png)
+
+Wenn Sie erfolgreich ein neues Jupyter Notebook erstellt haben, kopieren Sie den untenstehenden Code und führen Sie ihn aus.
+
+Der unten stehende Code erzeugt das gleiche Signal wie in [Figure](23_fig_04.html#23_fig_04), aber er plotet dieses in einem XY-Diagramm.
+
+Für die Messung der IV-Kurve ist ein XY-Plot erforderlich, wobei die x-Achse die Diodenspannung $IN_2$ und die y-Achse
+den Diodenstrom (Drainstrom) ) $I_D = (IN_1 - IN_2)/R_3$ darstellen. 
+
+Kopieren Sie den unten stehenden Code in Zelle 1:
 
 
+~~~{.Python}
+# Import libraries
+from redpitaya.overlay.mercury import mercury as overlay
 
+from bokeh.io import push_notebook, show, output_notebook
+from bokeh.models import HoverTool, Range1d, LinearAxis, LabelSet, Label
+from bokeh.plotting import figure, output_file, show
+from bokeh.resources import INLINE
+output_notebook(resources=INLINE)
+
+import numpy as np
+
+# Initialize fpga modules
+fpga = overlay()
+gen0 = fpga.gen(0)
+osc = [fpga.osc(ch, 1.0) for ch in range(fpga._MNO)]
+
+# Configure OUT1 generator channel
+gen0.amplitude = 0.45
+gen0.offset = -0.45
+gen0.waveform = gen0.sawtooth(0.5)
+gen0.frequency = 2000
+gen0.start()
+gen0.enable = True
+gen0.trigger()
+
+# R1 resistor value
+R3 = 1000
+
+# Configure IN1 and IN2 oscilloscope input channels
+for ch in osc:
+    ch.filter_bypass = True
+
+    # data rate decimation
+    ch.decimation = 10
+
+    # trigger timing [sample periods]
+    N = ch.buffer_size
+    ch.trigger_pre = 0
+    ch.trigger_post = N
+
+    # osc0 is controlling both channels
+    ch.sync_src = fpga.sync_src["osc0"]
+    ch.trig_src = fpga.trig_src["osc0"]
+
+    # trigger level [V], edge ['neg', 'pos'] and holdoff time [sample periods]
+    ch.level = 0.01
+    ch.edge = 'pos'
+    ch.holdoff = 0
+
+# Initialize diode current and voltage
+V = np.zeros(N)
+I = np.zeros(N)
+
+# Plotting
+hover = HoverTool(mode='vline', tooltips=[("V", "@x"), ("I", "@y")])
+tools = "wheel_zoom, box_zoom, reset,pan"
+p = figure(plot_height=500,
+           plot_width=900,
+           title="XY plot of NMOS transistor VI characteristic",
+           toolbar_location="right",
+           tools=(tools, hover))
+p.xaxis.axis_label = 'Voltage [V]'
+p.yaxis.axis_label = 'Current [mA]'
+r = p.line(V, I, line_width=1, line_alpha=0.7, color="blue")
+
+# get and explicit handle to update the next show cell
+target = show(p, notebook_handle=True)
+~~~
+
+Erstelle eine neue Zelle (Einfügen -> Zelle darunter) und kopieren Sie den unten stehenden Code.
+
+
+~~~{.Python}
+# Measuring I, V and re-plotting
+while True:
+    # reset and start
+    osc[0].reset()
+    osc[0].start()
+
+    # wait for data
+    while (osc[0].status_run()):
+        pass
+
+    V0 = osc[0].data(N-100)*10  # IN1 signal
+    V1 = osc[1].data(N-100)*10  # IN2 signal
+    I = ((V0-V1)/R3)*1E3        # 1E3 convert to mA
+    r.data_source.data['x'] = V0
+    r.data_source.data['y'] = I
+    push_notebook(handle=target)
+~~~
+
+Führen Sie Zelle 1 und Zelle 2 aus. Hinweis Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
+die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.
+
+Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode erhalten, wie in [Figure](23_fig_06.html#23_fig_06) dargestellt.
 
 <!-- <img src="../fig/Activity_23_Fig_06.png" width="400"><p><em>nMOS IV-Kennlinie gemessen mit Jupyter Notebook. <div id="23_fig_06"></div></em></p> -->
 ![<p><em>nMOS IV-Kennlinie gemessen mit Jupyter Notebook. <div id="23_fig_06"></div></em></p>](../fig/Activity_23_Fig_06.png)
@@ -99,7 +208,7 @@ entsprechenden Experiment beschrieben die Messungen mit angepassten SCPI-Skripte
 ### pMOS als Diode
 
 Die selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die
-Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei der nMOS. 
+Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. 
 Die Konfiguration der pMOS-Diode ist in [Figure](23_fig_07.html#23_fig_07) dargestellt.
 
 <!-- <img src="../fig/Activity_23_Fig_07.png" width="400"><p><em>pMOS Anschlussdiagramm. <div id="23_fig_07"></div></em></p> -->

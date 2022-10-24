@@ -1,1 +1,1 @@
-# Jupyter-Book B.Eng M6.9 Analoge Schaltungstechnik (ANS) SoSe 2022
+# Jupyter-Book B.Eng. M3.3 Elektronik (ELK) WiSe 2022/23

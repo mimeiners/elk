@@ -31,13 +31,13 @@
 * [Command-line tools](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) 
 
 <!-- !split -->
-### Schaltungssimulation (SPICE)
-* [LTspice Linear Technology](http://www.linear.com/designtools/software/)
-* [TINA-TI SPICE-Based Analog Simulation Program](http://www.ti.com/tool/tina-ti) 
-* [ngspice (open-source)](http://ngspice.sourceforge.net)
-* [ELDO (Mentor Graphics)](https://www.mentor.com/products/ic_nanometer_design/analog-mixed-signal-verification/eldo/)
-* [Spectre (Cadence)](https://www.cadence.com/content/cadence-www/global/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-circuit-simulator.html)
-* [HSPICE (Synopsys)](https://www.synopsys.com/tools/Verification/AMSVerification/CircuitSimulation/HSPICE/Pages/default.aspx)
+### Analoge Schaltungssimulation (SPICE)
+* [LTspice (Analog Devices)](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
+* [TINA-TI (Texas Instruments)](https://www.ti.com/tool/TINA-TI)
+* [ngspice (Open Source)](http://ngspice.sourceforge.net)
+* [ELDO (Siemens EDA)](https://eda.sw.siemens.com/en-US/eldo/)
+* [Spectre (cadence)](https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html)
+* [PrimeSim HSPICE (SYNOPSIS)](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html)
 
 <!-- !split -->
 ### Betriebssystem (OS) - Werkzeuge (Tools)
@@ -51,11 +51,11 @@
 
 <!-- !split -->
 ### Code Editoren
-  * [Emacs](https://www.gnu.org/software/emacs/)
-  * [Vim](https://www.vim.org)
-  * [Notepad++](https://notepad-plus-plus.org) (Windows)
   * [Visual Studio Code](https://code.visualstudio.com)
+  * [Notepad++](https://notepad-plus-plus.org) (Windows)
   * [PyCharm](https://www.jetbrains.com/pycharm/)
+  * [Emacs](https://www.gnu.org/software/emacs/)	
+  * [Vim](https://www.vim.org)
 
 <!-- !split -->
 ### Schreibst Du noch oder TeXst Du schon?
@@ -87,11 +87,14 @@
 ### Laborarbeit
 
 *Charakterisierung von Bauelementen.* 
-* Dioden vom Typ 1N4001 und 1N4148
-* Bipolartransistoren vom Typ 2N2222A, 2N2907A
-* MOSFETs vom Typ BS170, BS250
-* Simulation mit [SPICE](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
-* [Messautomatisierung mit Red Pitaya](https://www.redpitaya.com)
+* Dioden, Bipolartransistoren und MOSFETs
+* Anwendung unterschiedlicher Beschreibungsebenen
+  * Systemebene (Mathe, z.B. Matlab/Simulink, Python)
+  * Schaltungsebene (SPICE)
+  * Charakterisierung (Messungen)
+
+* Analog System Lab Kit &ndash; [ASLK Pro](https://aslk-pro.readthedocs.io/de/latest/)
+* Messautomatisierung Red Pitaya [STEMlab 125-14/10](https://redpitaya.readthedocs.io/en/latest/developerGuide/125-14/top.html)
 * Technischer Bericht
   * Berichtsvorlage DIN A4 (Word/LaTeX ) [IEEE templates](https://www.ieee.org/conferences/publishing/templates.html)
   * Gruppen mit 2-3 Studierenden
@@ -122,16 +125,15 @@
 <!-- !split -->
 ### Datenspeicherung (Data Science)
 
-* Dateisystem mit Arbeitsordner für Unterlagen und Daten 
-* Daten in Tabellenformat (ASCII file, CSV format)
-* Daten in Excel (.xlsx ) oder OpenDocument (.ods)
-* Daten in speziellen Formaten, z.B.:
-  * mat-files HDF5 (Matlab, Gnu Octave, Python Pandas)
-  * Pickle (Python Serialization)
-
-* Daten in Datenbanken, z.B.:
-  * SQL (MySQL/MariaDB, PostgreSQL, SQlite)
-  * noSQL (MongoDB, LevelDB, RocksDB)
+* Arbeitsordner auf dem Rechner (sandboxing, virtualenv)
+* Tabellenformat (ASCII, CSV)
+* Exceldatei (.xlsx ) or OpenDocument (.ods)
+* Datenspeicherung in speziellen Formaten, z.B. mat-files (HDF5)
+* [Datenbanken](https://db-engines.com), 
+  * SQL (z.B. [MariaDB](https://en.wikipedia.org/wiki/MariaDB), [SQlite](https://en.wikipedia.org/wiki/SQLite)),
+  * noSQL (z.B. [MongoDB](https://en.wikipedia.org/wiki/MongoDB), [LevelDB](https://en.wikipedia.org/wiki/LevelDB))
+  * Time-Series-DB (z.B. [InfluxDB](https://www.influxdata.com/time-series-database/))
+  * [PythonDB](https://www.opensourceforu.com/2017/05/three-python-databases-pickledb-tinydb-zodb/) (z.B. PicklDB, TinyDB, ZODB)
 
 
 <!-- !split -->
@@ -193,11 +195,10 @@
 <!-- !eslidecell -->
 
 <!-- !split -->
-### Halbleiterherstellung (Infineon, Dresden)
+### From Sand to Silicon (Infineon, Dresden)
 <!-- !bslidecell 00 0.9 -->
 
-
-<iframe width="854" height="480" src="https://www.youtube.com/embed/_Kj58yQ67KI" frameborder="0" allowfullscreen></iframe>
+<iframe width="793" height="446" src="https://www.youtube.com/embed/bor0qLifjz4?list=PLO_wT97BGA6xC6hNy9VGtt1bKwVuQXI5B" frameborder="0" allowfullscreen></iframe>
 
 <!-- !eslidecell -->
 
@@ -205,8 +206,7 @@
 ### FinFET (Intel)
 <!-- !bslidecell 00 0.9 -->
 
-
-<iframe width="854" height="480" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
+<iframe width="793" height="446" src="https://www.youtube.com/embed/_VMYPLXnd7E" frameborder="0" allowfullscreen></iframe>
 
 <!-- !eslidecell -->
 
@@ -214,8 +214,7 @@
 ### TSMC Fab (Next Gen 7/5 nm)
 <!-- !bslidecell 00 0.9 -->
 
-
-<iframe width="854" height="480" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
+<iframe width="793" height="446" src="https://www.youtube.com/embed/Hb1WDxSoSec" frameborder="0" allowfullscreen></iframe>
 
 <!-- !eslidecell -->
 
@@ -280,18 +279,10 @@ Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1
 Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
 
 <!-- !split -->
-### Meeting mit einem System (1)
+### Meeting mit einem System
 
 <!-- <img src="../fig/lec_smartphone.png" width="400"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
 ![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../fig/lec_smartphone.png)
-
-Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
-
-<!-- !split -->
-### Meeting mit einem System (2)
-
-<!-- <img src="../fig/lec_incubator.png" width="400"><p><em>Inkubator. <div id="fig:incubator"></div></em></p> -->
-![<p><em>Inkubator. <div id="fig:incubator"></div></em></p>](../fig/lec_incubator.png)
 
 Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
 
@@ -305,7 +296,6 @@ Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1
 
 <!-- !split -->
 ### Backend Phasen
-
 * Packaging
 * Zuverlässigkeit = Qualität auf Zeit
 * Testing auf Wafer Level, known good die (KGD)
@@ -322,8 +312,7 @@ Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1
 
 
 <!-- !split -->
-### Sie werden unsere Experten
-
+### Sie werden Experte
 *Leistungsmerkmale.* 
 * Hintergrundwissen
   * Systemverständnis, Architektur, Herstellungsverfahren, Implementation
@@ -343,40 +332,87 @@ Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1
 
 
 <!-- !split -->
-### Silicon Valley - Made in Germany
+### Evolution von Produkten
+* Angetrieben durch Technologieverbesserung
+  * Kosten (größere Chips, geringere Größe der Merkmale, bessere Ausbeute)
+  * Leistung (neue Bauteile, höhere Geschwindigkeit, weniger Stromverbrauch)
 
-<!-- !bslidecell -->
+* Angetrieben durch Verbesserung der Entwurfsmethodik
+  * Architektur (Leistung, Funktionen)
+  * CAD (Entwicklungskosten, Time-to-Market)
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/UvluuAIiA50" frameborder="0" allowfullscreen></iframe>
+* Komplexität der Designs verdoppelt sich jedes Jahr (Moore's Gesetz)
+* Rolle von CAD
+  * Verbesserung der Produktivität von Konstruktionsprozessen
+  * Reduzierung der Komplexität für den Konstrukteur
+  * Sicherstellung des ordnungsgemäßen Betriebs der Geräte
 
-<p><em>GLOBALFOUNDRIES From Sand to Silicon</em></p>
 
+<!-- !split -->
+### EDA Kompetenz
+* EDA-Anbieter (Tool-Entwickler)
+  * Identifikation von Entwurfsaufgaben, Bedarf an Werkzeugen
+  * Entwicklung von Strategien und Algorithmen
+  * Implementierung von Software-Werkzeugen
+  * Verifikation der Stabilität und Funktionalität der Software-Tools
+
+* IC-Hersteller
+  * Entscheidungsplanung, welches Tool die Produktivität steigern könnte
+  * EDA-Tool-Manager, Installation und Wartung
+  * Experten für Softwareeinsatz, Anwendung in Produktdesign und -entwicklung
+
+* Dozenten und Studenten
+  * Jobchancen
+  * Notwendigkeit, auf dem Laufenden zu bleiben
+
+
+<!-- !split -->
+### Design-/Entwurfsmethodik
+* Full Custom - vollständig manuell: ASIC
+  * Überwiegend analoge Schaltungen
+  * Einfache digitale Gatter
+  * Volle Kontrolle, aber lange Entwicklungszeit (bis zu Jahren)
+
+* Semi-custom: ASIC-Fertigung mit Verwendung von vorgefertigten Teilen
+  * Standardzellen, Makrozellen, IP's
+  * Wiederverwendung von vordefinierten Blöcken oder Maskensätzen
+  * Eingeschränkte Kontrolle/Flexibilität, aber kürzere Entwicklungszeit (bis zu Wochen)
+
+* Vollständig automatisiert: Keine Fertigung, reprogrammierbare ASICs
+  * FPGA, PLA
+  * Ausschließlich digitale Schaltungen
+  * Schnelles Prototyping
+
+
+<!-- !split -->
+### Nachhaltige Elektronik ...
+<!-- !bslidecell 00 0.9 -->
+
+<iframe width="859" height="483" src="https://www.youtube.com/embed/7S5IuaKiZIY" frameborder="0" allowfullscreen></iframe>
+
+<p><em>Geekchester.</em></p>
 
 
 <!-- !eslidecell -->
 
 <!-- !split -->
-### Was man noch mit Elektronik machen kann ...
+### Warum es sicht lohnt ...
+<!-- !bslidecell 00 0.9 -->
 
-<!-- !bslidecell -->
+<iframe width="859" height="483" src="https://www.youtube.com/embed/SwPGxwBZw6I" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/7S5IuaKiZIY" frameborder="0" allowfullscreen></iframe>
-
-<p><em>Fettes Brot feat. Geekchester</em></p>
-
+<p><em>Circuit Song.</em></p>
 
 
 <!-- !eslidecell -->
 
 <!-- !split -->
-### Warum es sicht lohnt
+### Und ab an den Strand ...
+<!-- !bslidecell 00 0.9 -->
 
-<!-- !bslidecell -->
+<iframe width="859" height="483" src="https://www.youtube.com/embed/ekkJlQf-K4I" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/SwPGxwBZw6I" frameborder="0" allowfullscreen></iframe>
-
-<p><em>PartyProfs - The Circuit Song.</em></p>
-
+<p><em>Viva la Electronica.</em></p>
 
 
 <!-- !eslidecell -->

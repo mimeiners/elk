@@ -8,9 +8,9 @@
 
 ### Zielsetzung
 <div id="sec:zielsetzung"></div>
-Ziel dieser Übung ist es, Strom- und Spannungseigenschaften zwei verschiedener Silizium-Diode vom Typ 1N4001 und 1N4148 zu
+Ziel dieses Laborversuchs ist es, Strom- und Spannungseigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu
 untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert werden, so
-dass die Messdaten aus dem STEMLab auf dem eigenen Rechner validiert werden können.
+dass die Messdaten aus dem STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.
 
 *Hinweis.*
 In diesem Laborversuch wird die Terminologie aus der [Dokumentation](https://redpitaya.readthedocs.io/en/latest/index.html)
@@ -120,7 +120,7 @@ $> 0.7\,\text{V}$ ist, beginnt die Diode zu leiten und der Pfadstrom wird nur du
 Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am zugewiesenen
 Laborplatz.
 
-Die IP-Adressen der STEMLabs:
+Die IP-Adressen der STEMLabs für den Zugriff via SCPI:
 
 * Laborplatz ELIE1: 192.168.111.181
 * Laborplatz ELIE2: 192.168.111.182
@@ -129,7 +129,7 @@ Die IP-Adressen der STEMLabs:
 * Laborplatz ELIE5: 192.168.111.185
 * Laborplatz ELIE6: 192.168.111.186
 
-Die Web-Adressen der STEMLabs:
+Die URLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB:
 
 * [Laborplatz ELIE1](http://elie1redpi.fk4.hs-bremen.de)
 * [Laborplatz ELIE2](http://elie2redpi.fk4.hs-bremen.de)
@@ -137,4 +137,132 @@ Die Web-Adressen der STEMLabs:
 * [Laborplatz ELIE4](http://elie4redpi.fk4.hs-bremen.de)
 * [Laborplatz ELIE5](http://elie5redpi.fk4.hs-bremen.de)
 * [Laborplatz ELIE6](http://elie6redpi.fk4.hs-bremen.de)
+
+Wie Sie Jupyter Notebook auf einem Red Pitaya starten und ein neues Projekt erstellen, ist in [Figure](19_fig_07.html#19_fig_07) dargestellt.
+
+
+<!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines neuen Jupyter Notebooks. <div id="19_fig_07"></div></em></p> -->
+![<p><em>Erstellen eines neuen Jupyter Notebooks. <div id="19_fig_07"></div></em></p>](../fig/Activity_19_Fig_07.png)
+
+Wenn Sie erfolgreich ein neues Jupyter Notebook erstellt haben, kopieren Sie den untenstehenden Code in eine Zelle
+hinein und führen ihn aus. Der untenstehende Code erzeugt das gleiche Signal wie in [Figure](19_fig_06.html#19_fig_06), aber er
+zeichnet die Messdaten in einem xy-Diagramm auf. Für die Messung der IV-Kurve der Diode ist die x-Achse (Abszisse) die
+Diodenspannung an IN2 und die y-Achse (Ordinate) der Diodenstrom $I_D = (IN1-IN2)/R_1$.   
+
+
+~~~{.Python}
+# Import libraries
+from redpitaya.overlay.mercury import mercury as overlay
+
+from bokeh.io import push_notebook, show, output_notebook
+from bokeh.models import HoverTool, Range1d, LinearAxis, LabelSet, Label
+from bokeh.plotting import figure, output_file, show
+from bokeh.resources import INLINE
+output_notebook(resources=INLINE)
+
+import numpy as np
+
+
+# Initialize fpga modules
+fpga = overlay()
+gen0 = fpga.gen(0)
+osc = [fpga.osc(ch, 1.0) for ch in range(fpga._MNO)]
+
+
+# Configure OUT1 generator channel
+gen0.amplitude = 0.5
+gen0.offset = 0.5
+gen0.waveform = gen0.sawtooth(0.5)
+gen0.frequency = 2000
+gen0.start()
+gen0.enable = True
+gen0.trigger()
+
+
+# R1 resistor value
+R1 = 10
+
+
+# Configure IN1 and IN2 oscilloscope input channels
+for ch in osc:
+    ch.filter_bypass = True
+
+    # data rate decimation
+    ch.decimation = 10
+
+    # trigger timing [sample periods]
+    N = ch.buffer_size
+    ch.trigger_pre = 0
+    ch.trigger_post = N
+
+    # osc0 is controlling both channels
+    ch.sync_src = fpga.sync_src["osc0"]
+    ch.trig_src = fpga.trig_src["osc0"]
+
+    # trigger level [V], edge ['neg', 'pos'] and holdoff time [sample periods]
+    ch.level = 0.5
+    ch.edg = 'pos'
+    ch.holdoff = 0
+
+    
+# Initialize diode current and voltage
+V = I = np.zeros(N)
+
+
+# Plotting
+hover = HoverTool(mode='vline', tooltips=[("V", "@x"), ("I", "@y")])
+tools = "wheel_zoom, box_zoom, reset, pan"
+p = figure(plot_height=500, plot_width=900,
+           title="XY plot der Dioden IV-Kurve",
+           toolbar_location="right",
+           tools=(tools, hover))
+p.xaxis.axis_label = 'Spannung in V'
+p.yaxis.axis_label = 'Strom in mA'
+r = p.line(V, I, line_width=1, line_alpha=0.7, color="blue")
+
+
+# get and explicit handle to update the next show cell
+target = show(p, notebook_handle=True)
+~~~
+
+Erstelle Sie eine neue Zelle (Einfügen -> Zelle darunter) und kopiere Sie den Code hinein.
+
+
+~~~{.Python}
+# Messung von  I, V und plotten
+while True:
+    # Reset und Start
+    osc[0].reset()
+    osc[0].start()
+
+    # Auf Daten warten
+    while (osc[0].status_run()):
+        pass
+
+    V0 = osc[0].data(N-100)  # IN1 Signal
+    V1 = osc[1].data(N-100)  # IN2 Signal
+    I = ((V0-V1)/R1)*1E3     # 1E3 Umwandlung zu mA
+    r.data_source.data['x'] = V0
+    r.data_source.data['y'] = I
+
+    push_notebook(handle=target)
+~~~
+
+Führen Sie Zelle 1 und Zelle 2 aus. Obacht, Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
+die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten. 
+
+Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode, wie in [Figure](19_fig_08.html#19_fig_08)
+dargestellt, erhalten.
+
+<!-- <img src="../fig/Activity_19_Fig_08.png" width="400"><p><em>Dioden IV-Charakteristik gemessen mit Jupyter Notebook. <div id="19_fig_08"></div></em></p> -->
+![<p><em>Dioden IV-Charakteristik gemessen mit Jupyter Notebook. <div id="19_fig_08"></div></em></p>](../fig/Activity_19_Fig_08.png)
+
+In der [Figure](19_fig_08.html#19_fig_08) ist die typische IV-Kennlinie einer Si-diode dargestellt. Es ist ersichtlich, dass bei
+steigender Spannung an der Diode (von 0 V - 0.5 V) der Diodenstrom nahe Null bleibt, bis die Spannung Werte nahe der
+Schwellenspannung von etwa 0.7 V erreicht. An dieser Stelle wird die Diode "eingeschaltet" (leitend) und der Diodenstrom
+$I_D$ wird nur durch den Widerstand $R_1$ begrenzt. Falls bei abnehmender Diodenspannung die IV-Kurve nicht gleich ist,
+führt dies zur Diodenhysterese. Die obere Kurve aus [Figure](19_fig_08.html#19_fig_08) zeigt, dass die untere Diodenspannung nach dem
+"Einschalten" der Diode einen höheren Strom verursacht als bei der vorherigen "Abschaltung" der Diode. Eine ideale
+Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
+Diodenspannung.
 
