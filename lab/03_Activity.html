@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Der BJT als Diode &#8212; M 5.3 Elektronik (ELK)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link media="all" rel="stylesheet" type="text/css" href="https://dokie.li/media/css/dokieli.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="dokieli" src="https://dokie.li/scripts/dokieli.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "mimeiners/elk");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lab/03_Activity';</script>
+    <link rel="canonical" href="https://mimeiners.github.io/elk/lab/03_Activity.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Der MOSFET als Diode" href="04_Activity.html" />
+    <link rel="prev" title="Dioden IV-Charakterisierung" href="02_Activity.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../about/unsyllabus.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../about/unsyllabus.html">
+                    Unsyllabus
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../class/01_lec.html">Einleitung und Übersicht</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/02_lec.html">Signale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/03_lec.html">Halbleiterphysik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../class/04_lec.html">Literaturliste</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Labor</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Activity.html">Aufgabenstellung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Activity.html">Dioden IV-Charakterisierung</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Der BJT als Diode"</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_Activity.html">Der MOSFET als Diode</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/elk" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/elk/edit/master/lab/03_Activity.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mimeiners/elk/issues/new?title=Issue%20on%20page%20%2Flab/03_Activity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lab/03_Activity.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Der BJT als Diode</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zielsetzung">Zielsetzung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materialien">Materialien</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verfahren">Verfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-kurvenmessungen">IV-Kurvenmessungen</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <!-- !split -->
+<!-- jupyter-book 03_Activity.md -->
+<section class="tex2jax_ignore mathjax_ignore" id="der-bjt-als-diode">
+<h1>Der BJT als Diode<a class="headerlink" href="#der-bjt-als-diode" title="Permalink to this heading">#</a></h1>
+<div id="proj:bjt"></div>
+<section id="zielsetzung">
+<h2>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Permalink to this heading">#</a></h2>
+<p>Der Zweck dieses Versuchs ist es, die Strom- und Spannungseigenschaften eines als Diode geschalteten Bipolartransistors
+(engl. Bipolar Junction Transistor, BJT) zu untersuchen.</p>
+<p><em>Hinweise.</em></p>
+<p>Die für die Versorgungsspannungen von +5 V, -3,3 V und +3,3 V verwendeten Steckerstifte des STEMLab’s sind
+in der Dokumentation aufgeführt.</p>
+<p>Die STEMlab-Ausgänge können Spannungssignale mit einem maximalen Ausgangsbereich von <span class="math notranslate nohighlight">\(\pm\)</span> 1 V (2 Vpp) erzeugen. Für
+diesen Versuch sind höhere Signalamplituden erforderlich. Aus diesem Grund wird ein Operationsverstärker (Opamp) als
+invertierender Verstärker eingesetzt, um die Signale der Ausgänge OUT1 und OUT2 für einen Spannungshub von +4,7 V bis
+-3,2 V zu verstärken. Der Opamp wird vom STEMlab aus mit +5 V und -3,3 V versorgt. Die Verstärkung des Opamps wird auf
+<span class="math notranslate nohighlight">\(\approx\)</span> 5 gesetzt, wobei <span class="math notranslate nohighlight">\(R_i\)</span> = 2,2 k <span class="math notranslate nohighlight">\(\Omega\)</span> und <span class="math notranslate nohighlight">\(R_f\)</span> = 10 k <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+</section>
+<section id="materialien">
+<h2>Materialien<a class="headerlink" href="#materialien" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Red Pitaya STEMlab</p></li>
+<li><p>OP484</p></li>
+<li><p>1 k <span class="math notranslate nohighlight">\(\Omega\)</span> Widerstand</p></li>
+<li><p>10 k <span class="math notranslate nohighlight">\(\Omega\)</span> Widerstand</p></li>
+<li><p>2,2 k <span class="math notranslate nohighlight">\(\Omega\)</span> Widerstand</p></li>
+<li><p>Kleinsignal npn-Transistor (2N3904)</p></li>
+<li><p>Kleinsignal pnp-Transistor (2N3906)</p></li>
+<li><p>Platine</p></li>
+<li><p>Labornetzteil</p></li>
+</ul>
+<p>Ein npn-Transistor, der wie in <span class="xref myst">Figure</span> gezeigt angeschlossen ist, verhält sich wie eine Diode.
+Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt werden.</p>
+<!-- <img src="../fig/Activity_22_Fig_01.png" width="400"><p><em>npn-Transistor als Diode. <div id="22_fig_01"></div></em></p> -->
+<p><img alt="npn-Transistor als Diode. " src="../_images/Activity_22_Fig_01.png" /></p>
+<p><em>Hint.</em>
+Beachten Sie, dass die in <span class="xref myst">Figure</span> (links) gezeigte Verstärkerschaltung nicht das Hauptthema dieses
+Versuchs ist. Diese Schaltung wird nur hinzugefügt, um das Signal OUT1 zu verstärken.</p>
+<p>Von hier an können Sie den Punkt -5 <span class="math notranslate nohighlight">\(\times V_{OUT1}\)</span> als Bezugspotenzial betrachten.</p>
+</section>
+<section id="verfahren">
+<h2>Verfahren<a class="headerlink" href="#verfahren" title="Permalink to this heading">#</a></h2>
+<p>Im Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in <span class="xref myst">Figure</span> gezeigt, an ein STEMlab
+angeschlossen, wobei <span class="math notranslate nohighlight">\(R_1\)</span> = 2,2 k <span class="math notranslate nohighlight">\(\Omega\)</span>, <span class="math notranslate nohighlight">\(R_2\)</span> = 10 k <span class="math notranslate nohighlight">\(\Omega\)</span> und <span class="math notranslate nohighlight">\(R_3\)</span> = 1 k <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<!-- <img src="../fig/Activity_22_Fig_02a.png" width="400"><p><em>Platine mit Transistorschaltung. <div id="22_fig_02"></div></em></p> -->
+<p><img alt="Platine mit Transistorschaltung. " src="../_images/Activity_22_Fig_02a.png" /></p>
+<p><em>Warning.</em>
+Bevor Sie eigene Schaltungen, entweder auf dem Steckbrett oder einer eigenen Platine, an die STEMlab-Pins -3,3V und
++3,3V anschließen, überprüfen Sie sorgfältig die Polarität Ihrer Schaltung. Die Spannungsversorgungsstifte -3,3V und
++3,3V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.</p>
+<ul class="simple">
+<li><p>Starten Sie die Oszilloskop- und Signalgenerator-App</p></li>
+<li><p>Stellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,8 V, den DC-Offset auf -0,12 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.</p></li>
+<li><p>Stellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind. Sie können V/div einstellen, indem Sie den gewünschten Kanal auswählen und die vertikalen +/- Button rechts unten verwenden.</p></li>
+<li><p>Setzen Sie den t/div Wert auf 200 us/div. Sie können t/div mit den horizontalen +/- Button einstellen.</p></li>
+<li><p>Stellen Sie unter MATH-Kanaleinstellungen folgendes ein: IN1-IN2 und wählen Sie ENABLE.</p></li>
+<li><p>Stellen Sie unter den Menüeinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.</p></li>
+</ul>
+<!-- <img src="../fig/Activity_22_Fig_03.png" widht="400"><p><em>npn-Transistor als Diode, Messungen. <div id="22_fig_03"></div></em></p> -->
+<p><img alt="npn-Transistor als Diode, Messungen. " src="../_images/Activity_22_Fig_03.png" /></p>
+<p>Aus <span class="xref myst">Figure</span> ist ersichtlich, dass der npn-Transistor in der in <span class="xref myst">Figure</span> gezeigten
+Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem
+Diodenversuch.</p>
+</section>
+<section id="iv-kurvenmessungen">
+<h2>IV-Kurvenmessungen<a class="headerlink" href="#iv-kurvenmessungen" title="Permalink to this heading">#</a></h2>
+<p>Da sich ein Bipolartransistor wie eine Diode verhalten kann (vgl. Konfiguration in <span class="xref myst">Figure</span>), können sie
+die IV-Charakteristik mit den gleichen Methoden wie im Diodenexperiment ermitteln, also mit der Oszilloskop-App im
+Web-Browser, mit einem SCPI-Skript und mit eine Jupyter Notebook auf dem STEMlab.</p>
+<!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines Jupyter Notebooks. <div id="22_fig_04"></div></em></p> -->
+<p><img alt="Erstellen eines Jupyter Notebooks. " src="../_images/Activity_19_Fig_07.png" /></p>
+<p>Wenn Sie erfolgreich ein neues Jupyter-Notebook erstellt haben, kopieren Sie den untenstehenden Code in eine Zelle und
+führen diese dann aus. Der untenstehende Code erzeugt das gleiche Signal wie in <span class="xref myst">Figure</span>, aber er zeichnet
+sie in einam XY-Diagramm auf, wobei die x-Achse die Diodenspannung <span class="math notranslate nohighlight">\(IN_2\)</span> und die y-Achse den Diodenstrom
+<span class="math notranslate nohighlight">\(I_D = I_C = (IN_1 - IN_2) / R_3\)</span> darstellt.</p>
+<p>Erstellen Sie eine neue Zelle (Einfügen -&gt; Zelle darunter) und kopieren Sie den Code von unten hinein.</p>
+<p>Führen Sie Zelle 1 und Zelle 2 aus. Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
+die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.</p>
+<p>Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik, wie in <span class="xref myst">Figure</span> gezeigt, erhalten.</p>
+<!-- <img src="../fig/Activity_22_Fig_05.png" width="400"><p><em>BJT IV-Charakteristik gemessen mit Jupyter Notebook. <div id="22_fig_05"></div></em></p> -->
+<p><img alt="BJT IV-Charakteristik gemessen mit Jupyter Notebook. " src="../_images/Activity_22_Fig_05.png" /></p>
+<p>In <span class="xref myst">Figure</span> ist die in einer Diodenkonfiguration gemessene IV-Charakteristik eines BJT dargestellt.
+Vergleichen sie diese Ergebnisse mit der IV-Charakteristik der pn-Diode. Es sollte eine Hysterese sichtbar sein.
+Überlegen sie, warum Bipolartransistoren als Dioden verwendet werden sollen.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mimeiners/elk",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lab"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_Activity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dioden IV-Charakterisierung</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04_Activity.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Der MOSFET als Diode</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zielsetzung">Zielsetzung</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materialien">Materialien</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verfahren">Verfahren</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-kurvenmessungen">IV-Kurvenmessungen</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By M. Meiners (HSB)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
