@@ -7,10 +7,12 @@ parts:
   chapters:
     - file: class/01_lec
       title: Einleitung und Übersicht
-#    - file: class/02_lec
-#      title: Signale
-#    - file: class/03_lec
-#      title: Halbleiterphysik
+    - file: class/02_lec
+      title: Signale
+    - file: class/03_lec
+      title: Halbleiterphysik
+    - file: class/04_lec
+      title: Literaturliste
 - caption: Labor
   chapters:
     - file: lab/01_Activity

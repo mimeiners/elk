@@ -34,8 +34,6 @@ in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.
 Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei $\approx$ 0.7 V und die
 IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:
 
-<div id="19_eq_01"></div>
-
 $$
 \begin{equation}
 I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
@@ -82,10 +80,10 @@ $$
 <!-- <img src="../fig/Activity_19_Fig_04a.png" width="400"><p><em>Anschlussplan für Dioden IV-Kurven. <div id="19_fig_04"></div></em></p> -->
 ![<p><em>Anschlussplan für Dioden IV-Kurven. <div id="19_fig_04"></div></em></p>](../fig/Activity_19_Fig_04a.png)
 
-Zur Messung der Strom- und Spannungseigenschaften einer pn-Übergangsdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
+Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
 mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der
-IV-Kurve ist ein zweidimensionaler (xy) Graph (Plot) erforderlich, wobei die x-Achse die Diodenspannung IN2 und die
-y-Achse den Diodenstrom $I_D=(IN1-IN2)/R1$ darstellen.
+Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (XY-Plot) erforderlich, wobei die x-Achse die
+Diodenspannung IN2 und die y-Achse den Diodenstrom $I_D = (IN1-IN2)/R1$ darstellen.
 
 *Warning.* 
 BITTE NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN PARALLEL VERWENDEN.
@@ -100,11 +98,11 @@ Deaktivieren Sie die Oszilloskop-App (OFF-Button), bevor Sie den Zugriff mit Jup
 ![<p><em>Verbindungen auf dem Steckbrett. <div id="19_fig_05"></div></em></p>](../fig/Activity_19_Fig_05a.png)
 
 * Die Schaltung aus [Figure](19_fig_04.html#19_fig_04) ist für Sie auf einer Platine aufgebaut und angeschlossen.
-* Starten Sie die Oszilloskop- und Signalgenerator-App auf einem Red Pitaya.
-* Stellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein, um ein Dreieckssignal als Eingangsspannung anzulegen. Im Waveform-Menü das Signal "TRIANGLE" auswählen und den Ausgang mit "ON" aktivieren. Der "SHOW"-Button dient zum Anzeigen des Signals in der Oszilloskop-App.
+* Loggen Sie sich mit Google Chrome oder Firefox auf dem STEMlab ein und starten Sie die Oszilloskop- und Signalgenerator-App.
+* Stellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform "TRIANGLE" und aktivieren den Ausgang mit "ON". Der "SHOW"-Button dient zum Anzeigen des Signals in der Oszilloskop-App.
 * Stellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.
 * Setzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.
-* Im Menü "MATH settings" die Differenz IN1-IN2 einstellen und "enable" auswählen. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.
+* Im Menü "MATH settings" die Differenz IN1-IN2 einstellen und "ENABLE" auswählen. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.
 
 <!-- <img src="../fig/Activity_19_Fig_06.png" width="400"><p><em>Spannung und Strom einer Siliziumdiode (zeitabhängig). <div id="19_fig_06"></div></em></p> -->
 ![<p><em>Spannung und Strom einer Siliziumdiode (zeitabhängig). <div id="19_fig_06"></div></em></p>](../fig/Activity_19_Fig_06.png)
@@ -151,7 +149,7 @@ zeichnet die Messdaten in einem xy-Diagramm auf. Für die Messung der IV-Kurve d
 Diodenspannung an IN2 und die y-Achse (Ordinate) der Diodenstrom $I_D = (IN1-IN2)/R_1$.   
 
 
-```python
+~~~{.Python}
 # Import libraries
 from redpitaya.overlay.mercury import mercury as overlay
 
@@ -224,12 +222,12 @@ r = p.line(V, I, line_width=1, line_alpha=0.7, color="blue")
 
 # get and explicit handle to update the next show cell
 target = show(p, notebook_handle=True)
-```
+~~~
 
 Erstelle Sie eine neue Zelle (Einfügen -> Zelle darunter) und kopiere Sie den Code hinein.
 
 
-```python
+~~~{.Python}
 # Messung von  I, V und plotten
 while True:
     # Reset und Start
@@ -247,7 +245,7 @@ while True:
     r.data_source.data['y'] = I
 
     push_notebook(handle=target)
-```
+~~~
 
 Führen Sie Zelle 1 und Zelle 2 aus. Obacht, Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
 die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten. 
@@ -266,3 +264,4 @@ führt dies zur Diodenhysterese. Die obere Kurve aus [Figure](19_fig_08.html#19_
 "Einschalten" der Diode einen höheren Strom verursacht als bei der vorherigen "Abschaltung" der Diode. Eine ideale
 Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
 Diodenspannung.
+

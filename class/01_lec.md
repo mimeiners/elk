@@ -13,9 +13,9 @@
   * Netzwerkanalyse/-synthese
 
 * Anwendung von SPICE in der Schaltungsentwicklung
- a. Spezifikation
- b. Partitionierung
- c. Design
+  * Spezifikation
+  * Partitionierung
+  * Design
 
 * Einsatz von Entwicklungsboards, Embedded Systems (SoC)
   * STEMlab von [redpitaya](https://www.redpitaya.com)
@@ -23,39 +23,59 @@
 
 <!-- !split -->
 ### Wissenschaftliches Rechnen / Datenwissenschaft
-* [Python](https://www.anaconda.com/download/)
-* [R Project](https://www.r-project.org) 
+* [Python (Anaconda)](https://www.anaconda.com/download/)
 * [Matlab](http://de.mathworks.com/?requestedDomain=de.mathworks.com)
 * [Gnu Octave](https://www.gnu.org/software/octave/)
-* [Gnuplot](http://www.gnuplot.info) ([Gnuplotting](http://www.gnuplotting.org))
-* [Command-line tools](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html) 
+* [R Project](https://www.r-project.org) 
+* [Command-line tools](https://jeroenjanssens.com/seven/) 
+* [Gnuplot](http://www.gnuplot.info)
+  * [Gnuplotting](http://www.gnuplotting.org)
+
 
 <!-- !split -->
 ### Analoge Schaltungssimulation (SPICE)
 * [LTspice (Analog Devices)](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
 * [TINA-TI (Texas Instruments)](https://www.ti.com/tool/TINA-TI)
 * [ngspice (Open Source)](http://ngspice.sourceforge.net)
-* [ELDO (Siemens EDA)](https://eda.sw.siemens.com/en-US/eldo/)
-* [Spectre (cadence)](https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html)
+* [ELDO (SiemensEDA)](https://eda.sw.siemens.com/en-US/eldo/)
+* [Spectre (CADENCE)](https://www.cadence.com/en_US/home/tools/custom-ic-analog-rf-design/circuit-simulation/spectre-simulation-platform.html)
 * [PrimeSim HSPICE (SYNOPSIS)](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primesim-hspice.html)
 
 <!-- !split -->
 ### Betriebssystem (OS) - Werkzeuge (Tools)
-  * [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
-    * [oh-my-zsh](https://ohmyz.sh),
-    * [bash-it](https://bash-it.readthedocs.io/en/latest/)
-    * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
+* [Shell](https://en.wikipedia.org/wiki/Shell_%28computing%29)
+  * [oh-my-zsh](https://ohmyz.sh),
+  * [bash-it](https://bash-it.readthedocs.io/en/latest/)
+  * [SSH (Secure Shell)](https://de.wikipedia.org/wiki/Secure_Shell)
 
-  * [GIT (Versionskontrolle)](https://git-scm.com)
-  * [Cygwin](https://cygwin.com)
+* [GIT (Versionskontrolle)](https://git-scm.com)
+* [Cygwin](https://cygwin.com)
+  * Linux-Tools unter Windows
+
 
 <!-- !split -->
 ### Code Editoren
-  * [Visual Studio Code](https://code.visualstudio.com)
-  * [Notepad++](https://notepad-plus-plus.org) (Windows)
-  * [PyCharm](https://www.jetbrains.com/pycharm/)
-  * [Emacs](https://www.gnu.org/software/emacs/)	
-  * [Vim](https://www.vim.org)
+* [Visual Studio Code](https://code.visualstudio.com)
+* [Spyder IDE](https://www.spyder-ide.org)
+* [Thonny (Micro-)Python IDE](https://thonny.org)
+* [Emacs](https://www.gnu.org/software/emacs/)
+* [Vim](https://www.vim.org)
+
+<!-- !split -->
+### Data Science
+* Ordner im Dateisystem (sandboxing, virtualenv)
+* Tabellenformate: Comma-Separated-Values (CSV), Spreadsheet (.xlsx, .ods)
+* Spezielle Formate, z.B. MATLAB mat, HDF5
+* Embedded [Databases](https://db-engines.com)
+  * [SQL](https://en.wikipedia.org/wiki/SQL), z.B. [SQlite](https://en.wikipedia.org/wiki/SQLite)
+  * [Key-Value](https://en.wikipedia.org/wiki/Key–value_database), z.B. [LevelDB](https://en.wikipedia.org/wiki/LevelDB)
+  * [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing), z.B. [DuckDB](https://duckdb.org/why_duckdb)
+  * [PythonDBs](https://www.opensourceforu.com/2017/05/three-python-databases-pickledb-tinydb-zodb/)
+    * [PicklDB](https://github.com/patx/pickledb), key-value
+    * [TinyDB](https://github.com/msiemens/tinydb), document-oriented db
+    * [ZODB](https://github.com/zopefoundation/ZODB), object-oriented db
+
+
 
 <!-- !split -->
 ### Schreibst Du noch oder TeXst Du schon?
@@ -65,23 +85,22 @@
 
 <!-- !split -->
 ### LaTeX Editoren
-  * IDE's
-    * [TeXStudio](http://www.texstudio.org)
-    * [TeXMaker](http://www.xm1math.net/texmaker/)
-    * [TeXWorks](http://www.tug.org/texworks/)
+* IDE's
+  * [TeXStudio](http://www.texstudio.org)
+  * [TeXMaker](http://www.xm1math.net/texmaker/)
 
-  * Kollaborative Frameworks
-    * [ShareLaTeX, Online LaTeX](https://www.sharelatex.com/)
-    * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
+* Collaborative Frameworks
+  * [Overleaf, Online LaTeX](https://www.overleaf.com/)
+  * [CoCalc - Online LaTeX](https://cocalc.com/doc/latex-editor.html)
 
 
 <!-- !split -->
 ### Literaturverwaltung und LaTeX
-  * [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
-  * [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
-  * [Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause](https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/)
-  * [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
-  * [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
+* [Citavi im Detail > Titel exportieren > Export nach BibTeX](https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html)
+* [RefWorks - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3912294)
+* [Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause](https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/)
+* [JabRef - Library Guide Univ. Melbourne](https://unimelb.libguides.com/c.php?g=565734\&p=3897117)
+* [EndNote - Library Guide Univ. Melbourne](https://unimelb.libguides.com/latexbibtex/endnote)
 
 <!-- !split -->
 ### Laborarbeit
@@ -123,20 +142,6 @@
 * Entwicklungsbericht (Technischer Bericht)
 
 <!-- !split -->
-### Datenspeicherung (Data Science)
-
-* Arbeitsordner auf dem Rechner (sandboxing, virtualenv)
-* Tabellenformat (ASCII, CSV)
-* Exceldatei (.xlsx ) or OpenDocument (.ods)
-* Datenspeicherung in speziellen Formaten, z.B. mat-files (HDF5)
-* [Datenbanken](https://db-engines.com), 
-  * SQL (z.B. [MariaDB](https://en.wikipedia.org/wiki/MariaDB), [SQlite](https://en.wikipedia.org/wiki/SQLite)),
-  * noSQL (z.B. [MongoDB](https://en.wikipedia.org/wiki/MongoDB), [LevelDB](https://en.wikipedia.org/wiki/LevelDB))
-  * Time-Series-DB (z.B. [InfluxDB](https://www.influxdata.com/time-series-database/))
-  * [PythonDB](https://www.opensourceforu.com/2017/05/three-python-databases-pickledb-tinydb-zodb/) (z.B. PicklDB, TinyDB, ZODB)
-
-
-<!-- !split -->
 ### Analyse vs. Design
 
 * Entgegen populärwissenschaftlicher Meinungen ist Schaltungsanalyse und Schaltungsentwurf keine "Schwarze Magie"
@@ -156,34 +161,34 @@
 ### Es war einmal ...
 
 <!-- !bslidecell 00 0.45 -->
-<!-- <img src="../fig/lec_vacuum_tube.png" width="400"><p><em>1906 die Elektronenröhre</em></p> -->
-![<p><em>1906 die Elektronenröhre</em></p>](../fig/lec_vacuum_tube.png)
+<!-- <img src="../../lecture/doconce/fig/lec_vacuum_tube.png" width="400"><p><em>1906 die Elektronenröhre</em></p> -->
+![<p><em>1906 die Elektronenröhre</em></p>](../../lecture/doconce/fig/lec_vacuum_tube.png)
 <!-- !eslidecell -->
 
 <!-- !bslidecell 01 0.45 -->
-<!-- <img src="../fig/lec_1st_transistor.png" width="400"><p><em>1947 der erste Transistor, Bell Labs Foto</em></p> -->
-![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../fig/lec_1st_transistor.png)
+<!-- <img src="../../lecture/doconce/fig/lec_1st_transistor.png" width="400"><p><em>1947 der erste Transistor, Bell Labs Foto</em></p> -->
+![<p><em>1947 der erste Transistor, Bell Labs Foto</em></p>](../../lecture/doconce/fig/lec_1st_transistor.png)
 <!-- !eslidecell -->
 
 <!-- !split -->
 ### Damals und heute
 
 <!-- !bslidecell 00 0.45 -->
-<!-- <img src="../fig/lec_1st_ic_kilby.png" width="400"><p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p> -->
-![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../fig/lec_1st_ic_kilby.png)
+<!-- <img src="../../lecture/doconce/fig/lec_1st_ic_kilby.png" width="400"><p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p> -->
+![<p><em>1958 Jack Kilby's erster IC <div id="fig:kilbyic"></div></em></p>](../../lecture/doconce/fig/lec_1st_ic_kilby.png)
 <!-- !eslidecell -->
 
 <!-- !bslidecell 01 0.45 -->
-<!-- <img src="../fig/lec_modern_ic.png" width="400"><p><em>Moderner IC <div id="fig:modernic"></div></em></p> -->
-![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../fig/lec_modern_ic.png)
+<!-- <img src="../../lecture/doconce/fig/lec_modern_ic.png" width="400"><p><em>Moderner IC <div id="fig:modernic"></div></em></p> -->
+![<p><em>Moderner IC <div id="fig:modernic"></div></em></p>](../../lecture/doconce/fig/lec_modern_ic.png)
 <!-- !eslidecell -->
 
 <!-- !split -->
 ### Packungsdichten
 
 <!-- !bslidecell 00 0.85 -->
-<!-- <img src="../fig/lec_wafers.png" width="600"><p><em>Wafergenerationen <div id="fig:wafer"></div></em></p> -->
-![<p><em>Wafergenerationen <div id="fig:wafer"></div></em></p>](../fig/lec_wafers.png)
+<!-- <img src="../../lecture/doconce/fig/lec_wafers.png" width="600"><p><em>Wafergenerationen <div id="fig:wafer"></div></em></p> -->
+![<p><em>Wafergenerationen <div id="fig:wafer"></div></em></p>](../../lecture/doconce/fig/lec_wafers.png)
 <!-- !eslidecell -->
 
 <!-- !split -->
@@ -253,44 +258,39 @@ besser noch, **eines Abenteuers**.
 ### Systemhierarchie
 
 <!-- !bslidecell 00 0.85 -->
-<!-- <img src="../fig/lec_system_hierarchy.png" height="400"><p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p> -->
-![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../fig/lec_system_hierarchy.png)
+<!-- <img src="../../lecture/doconce/fig/lec_system_hierarchy.png" height="400"><p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p> -->
+![<p><em>Funktionsblöcke eines elektronischen Systems. <div id="fig:hierarchy"></div></em></p>](../../lecture/doconce/fig/lec_system_hierarchy.png)
 <!-- !eslidecell -->
-
-<!-- !bblock -->
-<!-- * Nutzen Sie Hierarchien zur Beschreibung komplexer Systeme -->
-<!-- * Teile und herrsche -->
-<!-- !eblock -->
 
 <!-- !split -->
 ### System Assembly
 
-<!-- <img src="../fig/lec_system_assembly.png" height="400"><p><em>Bottom-up Prozess, Integration. <div id="fig:assembly"></div></em></p> -->
-![<p><em>Bottom-up Prozess, Integration. <div id="fig:assembly"></div></em></p>](../fig/lec_system_assembly.png)
+<!-- <img src="../../lecture/doconce/fig/lec_system_assembly.png" height="400"><p><em>Bottom-up Prozess, Integration. <div id="fig:assembly"></div></em></p> -->
+![<p><em>Bottom-up Prozess, Integration. <div id="fig:assembly"></div></em></p>](../../lecture/doconce/fig/lec_system_assembly.png)
 
 Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
 
 <!-- !split -->
 ### Schnittstellen zur Aussenwelt
 
-<!-- <img src="../fig/lec_real_world_interface.png" width="400"><p><em>Interfacing. <div id="fig:interfaces"></div></em></p> -->
-![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../fig/lec_real_world_interface.png)
+<!-- <img src="../../lecture/doconce/fig/lec_real_world_interface.png" width="400"><p><em>Interfacing. <div id="fig:interfaces"></div></em></p> -->
+![<p><em>Interfacing. <div id="fig:interfaces"></div></em></p>](../../lecture/doconce/fig/lec_real_world_interface.png)
 
 Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
 
 <!-- !split -->
 ### Meeting mit einem System
 
-<!-- <img src="../fig/lec_smartphone.png" width="400"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
-![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../fig/lec_smartphone.png)
+<!-- <img src="../../lecture/doconce/fig/lec_smartphone.png" width="400"><p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p> -->
+![<p><em>Drahtloses Kommunikationssystem. <div id="fig:smartphone"></div></em></p>](../../lecture/doconce/fig/lec_smartphone.png)
 
 Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
 
 <!-- !split -->
 ### System in a Package (SiP)
 
-<!-- <img src="../fig/lec_system_in_package.png" width="400"><p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p> -->
-![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../fig/lec_system_in_package.png)
+<!-- <img src="../../lecture/doconce/fig/lec_system_in_package.png" width="400"><p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p> -->
+![<p><em>Beschleunigungssensor. <div id="fig:sip"></div></em></p>](../../lecture/doconce/fig/lec_system_in_package.png)
 
 Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1]</a>.
 
@@ -386,6 +386,7 @@ Entnommen den Vorlesungsfolien von <a href="maloberti2011.html#maloberti2011">[1
 
 <!-- !split -->
 ### Nachhaltige Elektronik ...
+
 <!-- !bslidecell 00 0.9 -->
 
 <iframe width="859" height="483" src="https://www.youtube.com/embed/7S5IuaKiZIY" frameborder="0" allowfullscreen></iframe>

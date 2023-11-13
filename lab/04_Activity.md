@@ -11,9 +11,9 @@ n-Kanal und p-Kanal MOS Feldeffekttransistoren (kurz nMOS und pMOS), die jeweils
 
 *Notice.* 
 Die STEMlab-Ausgänge können Spannungssignale mit einem maximalen Ausgangsbereich von $\pm$ 1 V (2 Vpp) erzeugen. Für
-diesen Versuch werden höhere Signalamplituden benötigt. Aus diesem Grund wird wieder ein OP484 als invertierenden
+diesen Versuch werden höhere Signalamplituden benötigt. Aus diesem Grund wird wieder ein OP27 als invertierenden
 Verstärker benötigt, um die Signalverstärkung von OUT1 und OUT2 für einen Spannungshub von +4,7V bis -3,2V zu
-erreichen. Ein OP484 wird vom STEMlab über die +5 V und -3.3 V Spannungsschienen versorgt. Der Verstärkungfaktor des
+erreichen. Ein OP27 wird vom STEMlab über die +5 V und -3.3 V Spannungsschienen versorgt. Der Verstärkungfaktor des
 invertierenden Verstärkers wird auf $\approx$ 5 gesetzt, wobei $R_1$ = 2,2 k $\Omega$ und $R_2$ = 10 k $\Omega$ eingesetzt
 werden.
 
@@ -22,10 +22,10 @@ werden.
 ### Materialien
 
 * Red Pitaya STEMlab
-* OP484 Quad-Rail-to-Rail-Operationsverstärker
-* 1 k $\Omega$ Widerstand
-* Kleinsignal-nMOS-Transistor (BS170)
-* Kleinsignal-pMOS-Transistor (BS250)
+* OP27 Operationsverstärker
+* 1 $k\Omega$ Widerstand
+* BS170 Kleinsignal-nMOS-Transistor
+* BS250 Kleinsignal-pMOS-Transistor
 * Platine
 
 ### nMOS als Diode
@@ -33,7 +33,7 @@ werden.
 Die Schaltung des nMOS in Diodenkonfiguration ist in [Figure](23_fig_02.html#23_fig_02) gezeigt. In Diodenkonfiguration arbeitet
 ein nMOS vergleichbar zu einem npn-Transistor. 
 
-Die Schwellspannung (Threshold Voltage, $V_{Tn,p}, V_{th}, V_{TH}$) liegt nicht zwingend bei $\approx$ 0,7 V wie bei
+Die Schwellspannung (Threshold Voltage, $V_{Tn,p}$, $V_{th}$, $V_{TH}$) liegt nicht zwingend bei $\approx$ 0,7 V wie bei
 einem Bipolartransistor. Bei einem unipolaren Transistor hängt sie von der Technologie und der Kanalgröße des
 Transistors ab. Für den ausgewählten nMOS-Transistor liegt die Schwellenspannung $V_{Tn}$ bei etwa 2,0 V nominal.
 Das bedeutet, wenn die vom Gate-Kontakt zum Source-Kontakt anliegende Spannung ($V_{GS}$) die Schwellspannung $V_{Tn}$
@@ -85,12 +85,13 @@ beschädigt werden.
 
 ### IV-Kurvenmessungen
 
-Da sich ein nMOS wie eine Diode mit einer Durchlassspannung entsprechend der $V_{Tn}$ verhalten kann (Konfiguration in
+Da sich ein nMOS wie eine Diode mit einer Durchlaßspannung entsprechend der $V_{Tn}$ verhalten kann (Konfiguration in
 [Figure](23_fig_02.html#23_fig_02)), können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die
 Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.
 
 Wie Sie Jupyter Notebook starten und ein neues Projekt erstellen, ist in [Figure](23_fig_05.html#23_fig_05) dargestellt. 
 
+k
 <!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines neuen Jupyter Notbooks. <div id="23_fig_05"></div></em></p> -->
 ![<p><em>Erstellen eines neuen Jupyter Notbooks. <div id="23_fig_05"></div></em></p>](../fig/Activity_19_Fig_07.png)
 
@@ -107,13 +108,11 @@ Kopieren Sie den unten stehenden Code in Zelle 1:
 ~~~{.Python}
 # Import libraries
 from redpitaya.overlay.mercury import mercury as overlay
-
 from bokeh.io import push_notebook, show, output_notebook
 from bokeh.models import HoverTool, Range1d, LinearAxis, LabelSet, Label
 from bokeh.plotting import figure, output_file, show
 from bokeh.resources import INLINE
 output_notebook(resources=INLINE)
-
 import numpy as np
 
 # Initialize fpga modules
@@ -125,12 +124,12 @@ osc = [fpga.osc(ch, 1.0) for ch in range(fpga._MNO)]
 gen0.amplitude = 0.45
 gen0.offset = -0.45
 gen0.waveform = gen0.sawtooth(0.5)
-gen0.frequency = 2000
+gen0.frequency = 1000
 gen0.start()
 gen0.enable = True
 gen0.trigger()
 
-# R1 resistor value
+# Resistor value
 R3 = 1000
 
 # Configure IN1 and IN2 oscilloscope input channels
@@ -154,6 +153,7 @@ for ch in osc:
     ch.edge = 'pos'
     ch.holdoff = 0
 
+    
 # Initialize diode current and voltage
 V = np.zeros(N)
 I = np.zeros(N)
@@ -163,11 +163,11 @@ hover = HoverTool(mode='vline', tooltips=[("V", "@x"), ("I", "@y")])
 tools = "wheel_zoom, box_zoom, reset,pan"
 p = figure(plot_height=500,
            plot_width=900,
-           title="XY plot of NMOS transistor VI characteristic",
+           title="XY Plot der NMOS Transistor IV Charakteristik",
            toolbar_location="right",
            tools=(tools, hover))
-p.xaxis.axis_label = 'Voltage [V]'
-p.yaxis.axis_label = 'Current [mA]'
+p.xaxis.axis_label = 'Spannung in V'
+p.yaxis.axis_label = 'Strom in mA'
 r = p.line(V, I, line_width=1, line_alpha=0.7, color="blue")
 
 # get and explicit handle to update the next show cell
@@ -199,7 +199,7 @@ while True:
 Führen Sie Zelle 1 und Zelle 2 aus. Hinweis Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
 die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.
 
-Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode erhalten, wie in [Figure](23_fig_06.html#23_fig_06) dargestellt.
+Nach dem Ausführen der Jupyter Notebook Zelle sollten Sie die IV-Charakteristik der Diode erhalten, wie in [Figure](23_fig_06.html#23_fig_06) dargestellt.
 
 <!-- <img src="../fig/Activity_23_Fig_06.png" width="400"><p><em>nMOS IV-Kennlinie gemessen mit Jupyter Notebook. <div id="23_fig_06"></div></em></p> -->
 ![<p><em>nMOS IV-Kennlinie gemessen mit Jupyter Notebook. <div id="23_fig_06"></div></em></p>](../fig/Activity_23_Fig_06.png)
@@ -229,18 +229,18 @@ beschädigt werden.
 
 * Starten Sie die Anwendung Oszilloskop und Signalgenerator-App
 * Stellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE. 
-* Stellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (V/div kann im gewünschten Kanal mit den vertikalen +/- Butten einstellt werden).
+* Stellen Sie sicher, dass IN1 und IN2 auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (V/div kann im gewünschten Kanal mit den vertikalen +/- Butten einstellt werden) und MATH auf 0.5 V/div.
 * Setzen Sie t/div Wert auf 200 us/div (t/div wird mit den horizontalen +/- Button eingestellt).
 * Stellen Sie unter MATH-Kanaleinstellungen die Differenz IN1-IN2 ein und wählen Sie ENABLE.
 * Stellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.
 * Stellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.
-* Stellen Sie unter TRIGER-Einstellungen den Triggerpegel auf 1 V ein.
+* Stellen Sie unter TRIGGER-Einstellungen den Triggerlevel auf 4 V ein.
 
 <!-- <img src="../fig/Activity_23_Fig_08.png" width="400"><p><em>pMOS Diodenmessung.  <div id="23_fig_08"></div></em></p> -->
 ![<p><em>pMOS Diodenmessung.  <div id="23_fig_08"></div></em></p>](../fig/Activity_23_Fig_08.png)
 
 Wie in [Figure](23_fig_08.html#23_fig_08) zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer
-Durchlassspannung gleich der pMOS Schwellenspannung $V_{Tp}$.
+Durchlaßspannung gleich der pMOS Schwellenspannung $V_{Tp}$.
 
 Vergleichen Sie [Figure](23_fig_08.html#23_fig_08) mit [Figure](23_fig_04.html#23_fig_04) und versuchen Sie, den Unterschied zwischen nMOS- und
 pMOS-Diodenkonfigurationen zu erklären.
