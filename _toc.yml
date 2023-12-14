@@ -23,3 +23,5 @@ parts:
       title: Der BJT als Diode"
     - file: lab/04_Activity
       title: Der MOSFET als Diode
+    - file: lab/05_dega_Activity
+      title: Probe
