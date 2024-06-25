@@ -1,0 +1,22 @@
+Circuit: * C:\Users\ymele\Documents\flexil-elk\elk\files\spice\Draft_Diode_1N4148.asc
+
+Warning: Multiple definitions of model "1n750" Type: Diode
+.OP point found by inspection.
+
+Date: Fri May 31 07:56:54 2024
+Total elapsed time: 0.132 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2124
+traniter = 2124
+tranpoints = 1063
+accept = 1058
+rejected = 5
+matrix size = 4
+fillins = 0
+solver = Alternate
+Matrix Compiler1: 122 bytes object code size  0.1/0.0/[0.0]
+Matrix Compiler2: 280 bytes object code size  0.1/0.1/[0.0]
+
