@@ -1,16 +1,9 @@
-<!-- !split -->
-<!-- jupyter-book 02_Activity.md -->
-
-
 # Dioden IV-Charakterisierung
 
-<div id="proj:diode"></div>
-
-### Zielsetzung
-<div id="sec:zielsetzung"></div>
-Ziel dieses Laborversuchs ist es, Strom- und Spannungseigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu
-untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert werden, so
-dass die Messdaten aus dem STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.
+## Zielsetzung
+Ziel dieses Laborversuchs ist es, Strom- und Spannungseigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und
+1N4148 zu untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert
+werden, so dass die Messdaten aus dem STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.
 
 *Hinweis.*
 In diesem Laborversuch wird die Terminologie aus der [Dokumentation](https://redpitaya.readthedocs.io/en/latest/index.html)
@@ -25,8 +18,7 @@ Die [Oszilloskop und Signalgenerator App](https://redpitaya.readthedocs.io/en/la
 wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMLab's aktiviert
 ist.
 
-### Hintergrund
-<div id="sec:hintergrund"></div>
+## Hintergrund
 
 Eine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur
 in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.
@@ -43,7 +35,7 @@ $$
 wobei $I_{S}$ der Sättigungssperrstrom ist und $N$ ein Skalierungsfaktoren (Emissionskoeffizient), $V_T = kT / q$ ist
 die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur ($T$ = 300 K). 
 
-### Schematische Symbole der Diode
+## Schematische Symbole der Diode
 
 Jeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet
 ist, [Figure](19_fig_01.html#19_fig_01). Eine etwa "Z"-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links
@@ -51,10 +43,10 @@ in [Figure](19_fig_01.html#19_fig_01) zu sehen ist. Eine "S"-förmige Kathode be
 Diode wegzeigen, kennzeichnen eine LED (engl. Light Emitting Diode), wie im rechten Symbol dargestellt. Pfeile, die auf
 die Diode zeigen, kennzeichnen eine Photodiode. 
 
-<!-- <img src="../fig/Activity_19_Fig_01a.png" width="400"><p><em>Diodensymbole. <div id="19_fig_01"></div></em></p> -->
 ![<p><em>Diodensymbole. <div id="19_fig_01"></div></em></p>](../fig/Activity_19_Fig_01a.png)
 
-### Materialien
+
+## Materialien
 
 * Red Pitaya STEMlab
 * 10 $\Omega$ Widerstand
@@ -62,7 +54,8 @@ die Diode zeigen, kennzeichnen eine Photodiode.
 * Diode 1N4001
 * Platine
 
-### pn-Übergangsdiode IV-Charakteristik
+
+## pn-Diode IV-Charakteristik
 
 Die Strom-/Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den folgenden in [Figure](19_fig_04.html#19_fig_04)
 dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem
@@ -77,7 +70,6 @@ V_D &= IN_2
 \end{align}
 $$
 
-<!-- <img src="../fig/Activity_19_Fig_04a.png" width="400"><p><em>Anschlussplan für Dioden IV-Kurven. <div id="19_fig_04"></div></em></p> -->
 ![<p><em>Anschlussplan für Dioden IV-Kurven. <div id="19_fig_04"></div></em></p>](../fig/Activity_19_Fig_04a.png)
 
 Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
@@ -85,26 +77,30 @@ mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konf
 Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (XY-Plot) erforderlich, wobei die x-Achse die
 Diodenspannung IN2 und die y-Achse den Diodenstrom $I_D = (IN1-IN2)/R1$ darstellen.
 
-*Warning.* 
+```{warning} 
 BITTE NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN PARALLEL VERWENDEN.
+```
 
 Deaktivieren Sie die Oszilloskop-App (OFF-Button), bevor Sie den Zugriff mit Jupyter Notebook oder SCPI erproben.
 
 
 
-### Zeitbereichsmessungen
+## Zeitbereichsmessungen
 
-<!-- <img src="../fig/Activity_19_Fig_05a.png" width="400"><p><em>Verbindungen auf dem Steckbrett. <div id="19_fig_05"></div></em></p> -->
 ![<p><em>Verbindungen auf dem Steckbrett. <div id="19_fig_05"></div></em></p>](../fig/Activity_19_Fig_05a.png)
 
 * Die Schaltung aus [Figure](19_fig_04.html#19_fig_04) ist für Sie auf einer Platine aufgebaut und angeschlossen.
+
 * Loggen Sie sich mit Google Chrome oder Firefox auf dem STEMlab ein und starten Sie die Oszilloskop- und Signalgenerator-App.
+
 * Stellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform "TRIANGLE" und aktivieren den Ausgang mit "ON". Der "SHOW"-Button dient zum Anzeigen des Signals in der Oszilloskop-App.
+
 * Stellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.
+
 * Setzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.
+
 * Im Menü "MATH settings" die Differenz IN1-IN2 einstellen und "ENABLE" auswählen. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.
 
-<!-- <img src="../fig/Activity_19_Fig_06.png" width="400"><p><em>Spannung und Strom einer Siliziumdiode (zeitabhängig). <div id="19_fig_06"></div></em></p> -->
 ![<p><em>Spannung und Strom einer Siliziumdiode (zeitabhängig). <div id="19_fig_06"></div></em></p>](../fig/Activity_19_Fig_06.png)
 
 Aus [Figure](19_fig_06.html#19_fig_06) kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die
@@ -114,10 +110,10 @@ Außerdem sollte der mit "MATH-Trace" dargestellte Diodenstrom beobachtet werden
 Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung
 $> 0.7\,\text{V}$ ist, beginnt die Diode zu leiten und der Pfadstrom wird nur durch den Widerstand $R_1$ begrenzt.
 
-### Vorgehensweise - Messung der I/V-Charakteristik
+## Vorgehensweise - Messung der I/V-Charakteristik
 
-Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am zugewiesenen
-Laborplatz.
+Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am
+zugewiesenen Laborplatz.
 
 Die IP-Adressen der STEMLabs für den Zugriff via SCPI:
 
@@ -140,7 +136,6 @@ Die URLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB:
 Wie Sie Jupyter Notebook auf einem Red Pitaya starten und ein neues Projekt erstellen, ist in [Figure](19_fig_07.html#19_fig_07) dargestellt.
 
 
-<!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines neuen Jupyter Notebooks. <div id="19_fig_07"></div></em></p> -->
 ![<p><em>Erstellen eines neuen Jupyter Notebooks. <div id="19_fig_07"></div></em></p>](../fig/Activity_19_Fig_07.png)
 
 Wenn Sie erfolgreich ein neues Jupyter Notebook erstellt haben, kopieren Sie den untenstehenden Code in eine Zelle
@@ -149,7 +144,7 @@ zeichnet die Messdaten in einem xy-Diagramm auf. Für die Messung der IV-Kurve d
 Diodenspannung an IN2 und die y-Achse (Ordinate) der Diodenstrom $I_D = (IN1-IN2)/R_1$.   
 
 
-~~~{.Python}
+```python
 # Import libraries
 from redpitaya.overlay.mercury import mercury as overlay
 
@@ -222,12 +217,13 @@ r = p.line(V, I, line_width=1, line_alpha=0.7, color="blue")
 
 # get and explicit handle to update the next show cell
 target = show(p, notebook_handle=True)
-~~~
+```
+
 
 Erstelle Sie eine neue Zelle (Einfügen -> Zelle darunter) und kopiere Sie den Code hinein.
 
 
-~~~{.Python}
+```python
 # Messung von  I, V und plotten
 while True:
     # Reset und Start
@@ -245,7 +241,7 @@ while True:
     r.data_source.data['y'] = I
 
     push_notebook(handle=target)
-~~~
+```
 
 Führen Sie Zelle 1 und Zelle 2 aus. Obacht, Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
 die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten. 
@@ -253,15 +249,13 @@ die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen ern
 Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode, wie in [Figure](19_fig_08.html#19_fig_08)
 dargestellt, erhalten.
 
-<!-- <img src="../fig/Activity_19_Fig_08.png" width="400"><p><em>Dioden IV-Charakteristik gemessen mit Jupyter Notebook. <div id="19_fig_08"></div></em></p> -->
 ![<p><em>Dioden IV-Charakteristik gemessen mit Jupyter Notebook. <div id="19_fig_08"></div></em></p>](../fig/Activity_19_Fig_08.png)
 
-In der [Figure](19_fig_08.html#19_fig_08) ist die typische IV-Kennlinie einer Si-diode dargestellt. Es ist ersichtlich, dass bei
-steigender Spannung an der Diode (von 0 V - 0.5 V) der Diodenstrom nahe Null bleibt, bis die Spannung Werte nahe der
-Schwellenspannung von etwa 0.7 V erreicht. An dieser Stelle wird die Diode "eingeschaltet" (leitend) und der Diodenstrom
-$I_D$ wird nur durch den Widerstand $R_1$ begrenzt. Falls bei abnehmender Diodenspannung die IV-Kurve nicht gleich ist,
-führt dies zur Diodenhysterese. Die obere Kurve aus [Figure](19_fig_08.html#19_fig_08) zeigt, dass die untere Diodenspannung nach dem
-"Einschalten" der Diode einen höheren Strom verursacht als bei der vorherigen "Abschaltung" der Diode. Eine ideale
-Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
+In der [Figure](19_fig_08.html#19_fig_08) ist die typische IV-Kennlinie einer Si-diode dargestellt. Es ist ersichtlich,
+dass bei steigender Spannung an der Diode (von 0 V - 0.5 V) der Diodenstrom nahe Null bleibt, bis die Spannung Werte
+nahe der Schwellenspannung von etwa 0.7 V erreicht. An dieser Stelle wird die Diode "eingeschaltet" (leitend) und der
+Diodenstrom $I_D$ wird nur durch den Widerstand $R_1$ begrenzt. Falls bei abnehmender Diodenspannung die IV-Kurve nicht
+gleich ist, führt dies zur Diodenhysterese. Die obere Kurve aus [Figure](19_fig_08.html#19_fig_08) zeigt, dass die
+untere Diodenspannung nach dem "Einschalten" der Diode einen höheren Strom verursacht als bei der vorherigen
+"Abschaltung" der Diode. Eine ideale Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
 Diodenspannung.
-

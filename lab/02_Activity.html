@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Dioden IV-Charakterisierung &#8212; M 5.3 Elektronik (ELK)</title>
   
@@ -15,45 +14,44 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link media="all" rel="stylesheet" type="text/css" href="https://dokie.li/media/css/dokieli.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=e637711f"></script>
+    <script src="../_static/copybutton.js?v=56c01ce6"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script async="async" kind="dokieli" src="https://dokie.li/scripts/dokieli.js"></script>
     <script kind="utterances">
 
@@ -90,13 +88,11 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lab/02_Activity';</script>
@@ -104,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Der BJT als Diode" href="03_Activity.html" />
-    <link rel="prev" title="01_Activity" href="01_Activity.html" />
+    <link rel="prev" title="Laborversuche" href="01_Activity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -114,19 +110,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -148,12 +148,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -168,9 +176,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../about/unsyllabus.html">
+  
   
   
   
@@ -180,12 +192,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 5.3 Elektronik (ELK) - Home"/>
+    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 5.3 Elektronik (ELK) - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -198,15 +221,12 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../class/01_lec.html">Einleitung und Übersicht</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../class/02_lec.html">Signale</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../class/03_lec.html">Halbleiterphysik</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../class/04_lec.html">Literaturliste</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Labor</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01_Activity.html">Aufgabenstellung</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Dioden IV-Charakterisierung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_Activity.html">Der BJT als Diode"</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_Activity.html">Der BJT als Diode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04_Activity.html">Der MOSFET als Diode</a></li>
 </ul>
 
@@ -223,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -232,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -378,20 +398,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -422,7 +444,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hintergrund">Hintergrund</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schematische-symbole-der-diode">Schematische Symbole der Diode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materialien">Materialien</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pn-ubergangsdiode-iv-charakteristik">pn-Übergangsdiode IV-Charakteristik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pn-diode-iv-charakteristik">pn-Diode IV-Charakteristik</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeitbereichsmessungen">Zeitbereichsmessungen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorgehensweise-messung-der-i-v-charakteristik">Vorgehensweise - Messung der I/V-Charakteristik</a></li>
 </ul>
@@ -434,19 +456,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <!-- !split -->
-<!-- jupyter-book 02_Activity.md -->
-<section class="tex2jax_ignore mathjax_ignore" id="dioden-iv-charakterisierung">
-<h1>Dioden IV-Charakterisierung<a class="headerlink" href="#dioden-iv-charakterisierung" title="Permalink to this heading">#</a></h1>
-<div id="proj:diode"></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="dioden-iv-charakterisierung">
+<h1>Dioden IV-Charakterisierung<a class="headerlink" href="#dioden-iv-charakterisierung" title="Link to this heading">#</a></h1>
 <section id="zielsetzung">
-<h2>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Permalink to this heading">#</a></h2>
-<div id="sec:zielsetzung"></div>
-Ziel dieses Laborversuchs ist es, Strom- und Spannungseigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu
-untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert werden, so
-dass die Messdaten aus dem STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.
+<h2>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Link to this heading">#</a></h2>
+<p>Ziel dieses Laborversuchs ist es, Strom- und Spannungseigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und
+1N4148 zu untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert
+werden, so dass die Messdaten aus dem STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.</p>
 <p><em>Hinweis.</em>
 In diesem Laborversuch wird die Terminologie aus der <a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/index.html">Dokumentation</a>
 verwendet, wenn es um Verbindungen zum
@@ -459,8 +477,7 @@ wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn d
 ist.</p>
 </section>
 <section id="hintergrund">
-<h2>Hintergrund<a class="headerlink" href="#hintergrund" title="Permalink to this heading">#</a></h2>
-<div id="sec:hintergrund"></div>
+<h2>Hintergrund<a class="headerlink" href="#hintergrund" title="Link to this heading">#</a></h2>
 <p>Eine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur
 in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.</p>
 <p>Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei <span class="math notranslate nohighlight">\(\approx\)</span> 0.7 V und die
@@ -475,17 +492,16 @@ I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
 die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (<span class="math notranslate nohighlight">\(T\)</span> = 300 K).</p>
 </section>
 <section id="schematische-symbole-der-diode">
-<h2>Schematische Symbole der Diode<a class="headerlink" href="#schematische-symbole-der-diode" title="Permalink to this heading">#</a></h2>
+<h2>Schematische Symbole der Diode<a class="headerlink" href="#schematische-symbole-der-diode" title="Link to this heading">#</a></h2>
 <p>Jeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet
-ist, <span class="xref myst">Figure</span>. Eine etwa “Z”-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links
-in <span class="xref myst">Figure</span> zu sehen ist. Eine “S”-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der
+ist, <a class="reference internal" href="#19_fig_01.html#19_fig_01"><span class="xref myst">Figure</span></a>. Eine etwa “Z”-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links
+in <a class="reference internal" href="#19_fig_01.html#19_fig_01"><span class="xref myst">Figure</span></a> zu sehen ist. Eine “S”-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der
 Diode wegzeigen, kennzeichnen eine LED (engl. Light Emitting Diode), wie im rechten Symbol dargestellt. Pfeile, die auf
 die Diode zeigen, kennzeichnen eine Photodiode.</p>
-<!-- <img src="../fig/Activity_19_Fig_01a.png" width="400"><p><em>Diodensymbole. <div id="19_fig_01"></div></em></p> -->
 <p><img alt="Diodensymbole. " src="../_images/Activity_19_Fig_01a.png" /></p>
 </section>
 <section id="materialien">
-<h2>Materialien<a class="headerlink" href="#materialien" title="Permalink to this heading">#</a></h2>
+<h2>Materialien<a class="headerlink" href="#materialien" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Red Pitaya STEMlab</p></li>
 <li><p>10 <span class="math notranslate nohighlight">\(\Omega\)</span> Widerstand</p></li>
@@ -494,9 +510,9 @@ die Diode zeigen, kennzeichnen eine Photodiode.</p>
 <li><p>Platine</p></li>
 </ul>
 </section>
-<section id="pn-ubergangsdiode-iv-charakteristik">
-<h2>pn-Übergangsdiode IV-Charakteristik<a class="headerlink" href="#pn-ubergangsdiode-iv-charakteristik" title="Permalink to this heading">#</a></h2>
-<p>Die Strom-/Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den folgenden in <span class="xref myst">Figure</span>
+<section id="pn-diode-iv-charakteristik">
+<h2>pn-Diode IV-Charakteristik<a class="headerlink" href="#pn-diode-iv-charakteristik" title="Link to this heading">#</a></h2>
+<p>Die Strom-/Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den folgenden in <a class="reference internal" href="#19_fig_04.html#19_fig_04"><span class="xref myst">Figure</span></a>
 dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem
 Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im
 Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden
@@ -508,40 +524,39 @@ I_D &amp;= (IN_1 - IN_2) / R_1 \\
 V_D &amp;= IN_2
 \end{align}
 \end{split}\]</div>
-<!-- <img src="../fig/Activity_19_Fig_04a.png" width="400"><p><em>Anschlussplan für Dioden IV-Kurven. <div id="19_fig_04"></div></em></p> -->
 <p><img alt="Anschlussplan für Dioden IV-Kurven. " src="../_images/Activity_19_Fig_04a.png" /></p>
 <p>Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
 mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der
 Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (XY-Plot) erforderlich, wobei die x-Achse die
 Diodenspannung IN2 und die y-Achse den Diodenstrom <span class="math notranslate nohighlight">\(I_D = (IN1-IN2)/R1\)</span> darstellen.</p>
-<p><em>Warning.</em>
-BITTE NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN PARALLEL VERWENDEN.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>BITTE NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN PARALLEL VERWENDEN.</p>
+</div>
 <p>Deaktivieren Sie die Oszilloskop-App (OFF-Button), bevor Sie den Zugriff mit Jupyter Notebook oder SCPI erproben.</p>
 </section>
 <section id="zeitbereichsmessungen">
-<h2>Zeitbereichsmessungen<a class="headerlink" href="#zeitbereichsmessungen" title="Permalink to this heading">#</a></h2>
-<!-- <img src="../fig/Activity_19_Fig_05a.png" width="400"><p><em>Verbindungen auf dem Steckbrett. <div id="19_fig_05"></div></em></p> -->
+<h2>Zeitbereichsmessungen<a class="headerlink" href="#zeitbereichsmessungen" title="Link to this heading">#</a></h2>
 <p><img alt="Verbindungen auf dem Steckbrett. " src="../_images/Activity_19_Fig_05a.png" /></p>
 <ul class="simple">
-<li><p>Die Schaltung aus <span class="xref myst">Figure</span> ist für Sie auf einer Platine aufgebaut und angeschlossen.</p></li>
+<li><p>Die Schaltung aus <a class="reference internal" href="#19_fig_04.html#19_fig_04"><span class="xref myst">Figure</span></a> ist für Sie auf einer Platine aufgebaut und angeschlossen.</p></li>
 <li><p>Loggen Sie sich mit Google Chrome oder Firefox auf dem STEMlab ein und starten Sie die Oszilloskop- und Signalgenerator-App.</p></li>
 <li><p>Stellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform “TRIANGLE” und aktivieren den Ausgang mit “ON”. Der “SHOW”-Button dient zum Anzeigen des Signals in der Oszilloskop-App.</p></li>
 <li><p>Stellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.</p></li>
 <li><p>Setzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.</p></li>
 <li><p>Im Menü “MATH settings” die Differenz IN1-IN2 einstellen und “ENABLE” auswählen. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.</p></li>
 </ul>
-<!-- <img src="../fig/Activity_19_Fig_06.png" width="400"><p><em>Spannung und Strom einer Siliziumdiode (zeitabhängig). <div id="19_fig_06"></div></em></p> -->
 <p><img alt="Spannung und Strom einer Siliziumdiode (zeitabhängig). " src="../_images/Activity_19_Fig_06.png" /></p>
-<p>Aus <span class="xref myst">Figure</span> kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die
+<p>Aus <a class="reference internal" href="#19_fig_06.html#19_fig_06"><span class="xref myst">Figure</span></a> kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die
 Schwellenspannung von ca. 0.7 V erreicht.</p>
 <p>Außerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der
 Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung
 <span class="math notranslate nohighlight">\(&gt; 0.7\,\text{V}\)</span> ist, beginnt die Diode zu leiten und der Pfadstrom wird nur durch den Widerstand <span class="math notranslate nohighlight">\(R_1\)</span> begrenzt.</p>
 </section>
 <section id="vorgehensweise-messung-der-i-v-charakteristik">
-<h2>Vorgehensweise - Messung der I/V-Charakteristik<a class="headerlink" href="#vorgehensweise-messung-der-i-v-charakteristik" title="Permalink to this heading">#</a></h2>
-<p>Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am zugewiesenen
-Laborplatz.</p>
+<h2>Vorgehensweise - Messung der I/V-Charakteristik<a class="headerlink" href="#vorgehensweise-messung-der-i-v-charakteristik" title="Link to this heading">#</a></h2>
+<p>Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am
+zugewiesenen Laborplatz.</p>
 <p>Die IP-Adressen der STEMLabs für den Zugriff via SCPI:</p>
 <ul class="simple">
 <li><p>Laborplatz ELIE1: 192.168.111.181</p></li>
@@ -560,27 +575,118 @@ Laborplatz.</p>
 <li><p><a class="reference external" href="http://elie5redpi.fk4.hs-bremen.de">Laborplatz ELIE5</a></p></li>
 <li><p><a class="reference external" href="http://elie6redpi.fk4.hs-bremen.de">Laborplatz ELIE6</a></p></li>
 </ul>
-<p>Wie Sie Jupyter Notebook auf einem Red Pitaya starten und ein neues Projekt erstellen, ist in <span class="xref myst">Figure</span> dargestellt.</p>
-<!-- <img src="../fig/Activity_19_Fig_07.png" width="400"><p><em>Erstellen eines neuen Jupyter Notebooks. <div id="19_fig_07"></div></em></p> -->
+<p>Wie Sie Jupyter Notebook auf einem Red Pitaya starten und ein neues Projekt erstellen, ist in <a class="reference internal" href="#19_fig_07.html#19_fig_07"><span class="xref myst">Figure</span></a> dargestellt.</p>
 <p><img alt="Erstellen eines neuen Jupyter Notebooks. " src="../_images/Activity_19_Fig_07.png" /></p>
 <p>Wenn Sie erfolgreich ein neues Jupyter Notebook erstellt haben, kopieren Sie den untenstehenden Code in eine Zelle
-hinein und führen ihn aus. Der untenstehende Code erzeugt das gleiche Signal wie in <span class="xref myst">Figure</span>, aber er
+hinein und führen ihn aus. Der untenstehende Code erzeugt das gleiche Signal wie in <a class="reference internal" href="#19_fig_06.html#19_fig_06"><span class="xref myst">Figure</span></a>, aber er
 zeichnet die Messdaten in einem xy-Diagramm auf. Für die Messung der IV-Kurve der Diode ist die x-Achse (Abszisse) die
 Diodenspannung an IN2 und die y-Achse (Ordinate) der Diodenstrom <span class="math notranslate nohighlight">\(I_D = (IN1-IN2)/R_1\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries</span>
+<span class="kn">from</span> <span class="nn">redpitaya.overlay.mercury</span> <span class="kn">import</span> <span class="n">mercury</span> <span class="k">as</span> <span class="n">overlay</span>
+
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">push_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">HoverTool</span><span class="p">,</span> <span class="n">Range1d</span><span class="p">,</span> <span class="n">LinearAxis</span><span class="p">,</span> <span class="n">LabelSet</span><span class="p">,</span> <span class="n">Label</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">bokeh.resources</span> <span class="kn">import</span> <span class="n">INLINE</span>
+<span class="n">output_notebook</span><span class="p">(</span><span class="n">resources</span><span class="o">=</span><span class="n">INLINE</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
+<span class="c1"># Initialize fpga modules</span>
+<span class="n">fpga</span> <span class="o">=</span> <span class="n">overlay</span><span class="p">()</span>
+<span class="n">gen0</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">.</span><span class="n">gen</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">osc</span> <span class="o">=</span> <span class="p">[</span><span class="n">fpga</span><span class="o">.</span><span class="n">osc</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">fpga</span><span class="o">.</span><span class="n">_MNO</span><span class="p">)]</span>
+
+
+<span class="c1"># Configure OUT1 generator channel</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">amplitude</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">waveform</span> <span class="o">=</span> <span class="n">gen0</span><span class="o">.</span><span class="n">sawtooth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">enable</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">gen0</span><span class="o">.</span><span class="n">trigger</span><span class="p">()</span>
+
+
+<span class="c1"># R1 resistor value</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="c1"># Configure IN1 and IN2 oscilloscope input channels</span>
+<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">osc</span><span class="p">:</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">filter_bypass</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># data rate decimation</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">decimation</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="c1"># trigger timing [sample periods]</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">buffer_size</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">trigger_pre</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">trigger_post</span> <span class="o">=</span> <span class="n">N</span>
+
+    <span class="c1"># osc0 is controlling both channels</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">sync_src</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">.</span><span class="n">sync_src</span><span class="p">[</span><span class="s2">&quot;osc0&quot;</span><span class="p">]</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">trig_src</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">.</span><span class="n">trig_src</span><span class="p">[</span><span class="s2">&quot;osc0&quot;</span><span class="p">]</span>
+
+    <span class="c1"># trigger level [V], edge [&#39;neg&#39;, &#39;pos&#39;] and holdoff time [sample periods]</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">edg</span> <span class="o">=</span> <span class="s1">&#39;pos&#39;</span>
+    <span class="n">ch</span><span class="o">.</span><span class="n">holdoff</span> <span class="o">=</span> <span class="mi">0</span>
+
+    
+<span class="c1"># Initialize diode current and voltage</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+
+<span class="c1"># Plotting</span>
+<span class="n">hover</span> <span class="o">=</span> <span class="n">HoverTool</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;vline&#39;</span><span class="p">,</span> <span class="n">tooltips</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="s2">&quot;@x&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;@y&quot;</span><span class="p">)])</span>
+<span class="n">tools</span> <span class="o">=</span> <span class="s2">&quot;wheel_zoom, box_zoom, reset, pan&quot;</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
+           <span class="n">title</span><span class="o">=</span><span class="s2">&quot;XY plot der Dioden IV-Kurve&quot;</span><span class="p">,</span>
+           <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span>
+           <span class="n">tools</span><span class="o">=</span><span class="p">(</span><span class="n">tools</span><span class="p">,</span> <span class="n">hover</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Spannung in V&#39;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Strom in mA&#39;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">line_alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># get and explicit handle to update the next show cell</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">notebook_handle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Erstelle Sie eine neue Zelle (Einfügen -&gt; Zelle darunter) und kopiere Sie den Code hinein.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Messung von  I, V und plotten</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="c1"># Reset und Start</span>
+    <span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+    <span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="c1"># Auf Daten warten</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">status_run</span><span class="p">()):</span>
+        <span class="k">pass</span>
+
+    <span class="n">V0</span> <span class="o">=</span> <span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># IN1 Signal</span>
+    <span class="n">V1</span> <span class="o">=</span> <span class="n">osc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># IN2 Signal</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="p">((</span><span class="n">V0</span><span class="o">-</span><span class="n">V1</span><span class="p">)</span><span class="o">/</span><span class="n">R1</span><span class="p">)</span><span class="o">*</span><span class="mf">1E3</span>     <span class="c1"># 1E3 Umwandlung zu mA</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">data_source</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">V0</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">data_source</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">I</span>
+
+    <span class="n">push_notebook</span><span class="p">(</span><span class="n">handle</span><span class="o">=</span><span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Führen Sie Zelle 1 und Zelle 2 aus. Obacht, Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
 die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.</p>
-<p>Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode, wie in <span class="xref myst">Figure</span>
+<p>Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode, wie in <a class="reference internal" href="#19_fig_08.html#19_fig_08"><span class="xref myst">Figure</span></a>
 dargestellt, erhalten.</p>
-<!-- <img src="../fig/Activity_19_Fig_08.png" width="400"><p><em>Dioden IV-Charakteristik gemessen mit Jupyter Notebook. <div id="19_fig_08"></div></em></p> -->
 <p><img alt="Dioden IV-Charakteristik gemessen mit Jupyter Notebook. " src="../_images/Activity_19_Fig_08.png" /></p>
-<p>In der <span class="xref myst">Figure</span> ist die typische IV-Kennlinie einer Si-diode dargestellt. Es ist ersichtlich, dass bei
-steigender Spannung an der Diode (von 0 V - 0.5 V) der Diodenstrom nahe Null bleibt, bis die Spannung Werte nahe der
-Schwellenspannung von etwa 0.7 V erreicht. An dieser Stelle wird die Diode “eingeschaltet” (leitend) und der Diodenstrom
-<span class="math notranslate nohighlight">\(I_D\)</span> wird nur durch den Widerstand <span class="math notranslate nohighlight">\(R_1\)</span> begrenzt. Falls bei abnehmender Diodenspannung die IV-Kurve nicht gleich ist,
-führt dies zur Diodenhysterese. Die obere Kurve aus <span class="xref myst">Figure</span> zeigt, dass die untere Diodenspannung nach dem
-“Einschalten” der Diode einen höheren Strom verursacht als bei der vorherigen “Abschaltung” der Diode. Eine ideale
-Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
+<p>In der <a class="reference internal" href="#19_fig_08.html#19_fig_08"><span class="xref myst">Figure</span></a> ist die typische IV-Kennlinie einer Si-diode dargestellt. Es ist ersichtlich,
+dass bei steigender Spannung an der Diode (von 0 V - 0.5 V) der Diodenstrom nahe Null bleibt, bis die Spannung Werte
+nahe der Schwellenspannung von etwa 0.7 V erreicht. An dieser Stelle wird die Diode “eingeschaltet” (leitend) und der
+Diodenstrom <span class="math notranslate nohighlight">\(I_D\)</span> wird nur durch den Widerstand <span class="math notranslate nohighlight">\(R_1\)</span> begrenzt. Falls bei abnehmender Diodenspannung die IV-Kurve nicht
+gleich ist, führt dies zur Diodenhysterese. Die obere Kurve aus <a class="reference internal" href="#19_fig_08.html#19_fig_08"><span class="xref myst">Figure</span></a> zeigt, dass die
+untere Diodenspannung nach dem “Einschalten” der Diode einen höheren Strom verursacht als bei der vorherigen
+“Abschaltung” der Diode. Eine ideale Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
 Diodenspannung.</p>
 </section>
 </section>
@@ -610,11 +716,10 @@ Diodenspannung.</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="01_Activity.html"
@@ -622,7 +727,7 @@ Diodenspannung.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">01_Activity</p>
+        <p class="prev-next-title">Laborversuche</p>
       </div>
     </a>
     <a class="right-next"
@@ -634,10 +739,7 @@ Diodenspannung.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -645,6 +747,7 @@ Diodenspannung.</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -656,7 +759,7 @@ Diodenspannung.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hintergrund">Hintergrund</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schematische-symbole-der-diode">Schematische Symbole der Diode</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materialien">Materialien</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pn-ubergangsdiode-iv-charakteristik">pn-Übergangsdiode IV-Charakteristik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pn-diode-iv-charakteristik">pn-Diode IV-Charakteristik</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeitbereichsmessungen">Zeitbereichsmessungen</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorgehensweise-messung-der-i-v-charakteristik">Vorgehensweise - Messung der I/V-Charakteristik</a></li>
 </ul>
@@ -680,6 +783,7 @@ By M. Meiners (HSB)
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -706,8 +810,8 @@ By M. Meiners (HSB)
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
