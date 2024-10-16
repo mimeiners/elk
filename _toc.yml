@@ -7,12 +7,12 @@ parts:
   chapters:
     - file: class/01_lec
       title: Einleitung und Übersicht
-    - file: class/02_lec
-      title: Signale
-    - file: class/03_lec
-      title: Halbleiterphysik
-    - file: class/04_lec
-      title: Literaturliste
+        #    - file: class/02_lec
+        #      title: Signale
+        #    - file: class/03_lec
+        #      title: Halbleiterphysik
+        #    - file: class/04_lec
+        #      title: Literaturliste
 - caption: Labor
   chapters:
     - file: lab/01_Activity
@@ -23,5 +23,5 @@ parts:
       title: Der BJT als Diode
     - file: lab/04_Activity
       title: Der MOSFET als Diode
-    - file: lab/05_dega_Activity
-      title: Probe
+        #    - file: lab/05_dega_Activity
+        #      title: Messautomatisierung

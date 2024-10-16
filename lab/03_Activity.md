@@ -5,7 +5,7 @@
 Der Zweck dieses Versuchs ist es, die Strom- und Spannungseigenschaften eines als Diode geschalteten Bipolartransistors
 (engl. Bipolar Junction Transistor, BJT) zu untersuchen.
 
-```{admonition}
+```{tip}
 Die für die Versorgungsspannungen von +5 V, -3,3 V und +3,3 V verwendeten Steckerstifte des STEMLab's sind
 in der Dokumentation aufgeführt.
 
@@ -34,7 +34,7 @@ Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt 
 ![<p><em>npn-Transistor als Diode. <div id="22_fig_01"></div></em></p>](../fig/Activity_22_Fig_01.png)
 
 
-```{admonition} 
+```{tip} 
 Beachten Sie, dass die in [Figure](22_fig_01.html#22_fig_01) (links) gezeigte Verstärkerschaltung nicht das Hauptthema
 dieses Versuchs ist. Diese Schaltung wird nur hinzugefügt, um das Signal OUT1 zu verstärken; von hier an können Sie den
 Punkt -5 $\times V_{OUT1}$ als Bezugspotenzial betrachten.

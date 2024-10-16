@@ -6,7 +6,7 @@
 Ziel dieses Versuches ist die Untersuchung der Strom- und Spannungscharakteristik von
 n-Kanal und p-Kanal MOS Feldeffekttransistoren (kurz nMOS und pMOS), die jeweils als Diode geschaltet sind. 
 
-```{admonition} 
+```{tip} 
 Die STEMlab-Ausgänge können Spannungssignale mit einem maximalen Ausgangsbereich von $\pm$ 1 V (2 Vpp) erzeugen. Für
 diesen Versuch werden höhere Signalamplituden benötigt. Aus diesem Grund wird wieder ein OP27 als invertierenden
 Verstärker benötigt, um die Signalverstärkung von OUT1 und OUT2 für einen Spannungshub von +4,7V bis -3,2V zu
