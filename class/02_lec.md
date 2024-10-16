@@ -1,10 +1,8 @@
-<!-- !split -->
-<!-- jupyter-book 02_lec.md -->
 # Signale und Systeme
 
-<div id="sec:signal"></div>
-<!-- !split -->
-### Einfache Signale
+
+
+## Einfache Signale
 
 Signale repräsentieren Informationen, z.B.
 
@@ -16,12 +14,10 @@ Mögliche Signale sind:
 * Geschmack/Qualität des Kuchens.
 
 
-
-<!-- <img src="../../lecture/doconce/fig/lec2_backofen.png" width="400"><p><em>Signale beim Kuchenbacken. <div id="fig:backofen"></div></em></p> -->
 ![<p><em>Signale beim Kuchenbacken. <div id="fig:backofen"></div></em></p>](../../lecture/doconce/fig/lec2_backofen.png)
 
-<!-- !split -->
-### Signaltypen
+
+## Signaltypen
 
 * Zeitabhängiges Signal, $f(t)$
 * Raumabhängiges Signal, $f(x_1, x_2, x_3)$
@@ -33,27 +29,25 @@ Mögliche Signale sind:
 
 * Logisches oder binäres Signal
 
-<!-- !split -->
-### Konstantes Signal
+
+## Konstantes Signal
 
 * Ein konstantes Signal für ein elektronisches System korrespondiert nicht mit der mathematischen Definition einer Konstanten.
 * Versorgungsspannungen und Referenzsignale elektronischer Schaltungen sind immer fehlerbehaftet (statisch und/oder statistisch).
 * Toleranzen/Fehlergrenzen 
 
-<!-- <img src="../../lecture/doconce/fig/lec2_ekg.png" width="400"><p><em>EKG. <div id="fig:constsignal"></div></em></p> -->
 ![<p><em>EKG. <div id="fig:constsignal"></div></em></p>](../../lecture/doconce/fig/lec2_ekg.png)
 
-<!-- !split -->
-### Nominal und Worst Case
+
+## Nominal und Worst Case
 
 * Wir definieren **nominal** als das Ausgangssignal, welches wir bei einem spezifizierten Eingangssignal erwarten; E/A-Verhalten.
 * **Worst case high** und **worst case low** definieren Signale, die über und unter dem nominalen Signal liegen.
 
-<!-- <img src="../../lecture/doconce/fig/lec2_nominal.png" width="400"><p><em>Signalklassen. <div id="fig:worstcase"></div></em></p> -->
 ![<p><em>Signalklassen. <div id="fig:worstcase"></div></em></p>](../../lecture/doconce/fig/lec2_nominal.png)
 
-<!-- !split -->
-### Zeitkontinuierliche Signale
+
+## Zeitkontinuierliche Signale
 
 * Wdh. aus Modul GEL2
 * allgem. Exponentialfunktion
@@ -66,8 +60,8 @@ s &= \sigma + j \omega
 \end{align}
 $$
 
-<!-- !split -->
-### Sprungsignale (1)
+
+## Sprungsignale (1)
 
 * Plötzliche Amplitudenänderung, unstetig
 * Sprungfunktion
@@ -94,8 +88,8 @@ rect(t) =
 \end{equation}
 $$
 
-<!-- !split -->
-### Sprungsignale (2)
+
+## Sprungsignale (2)
 
 * Signumfunktion
 
@@ -121,8 +115,8 @@ tri(t) =
 \end{equation}
 $$
 
-<!-- !split -->
-### Zeitdiskrete Signale
+
+## Zeitdiskrete Signale
 
 * Exponentialfolge
 
@@ -144,15 +138,15 @@ $$
 * Abgetastetes Signal (sampled)
 * Dirac-Impuls
 
-<!-- !split -->
-### Stochastische Signale
+
+## Stochastische Signale
 
 * Wahrscheinlichkeitsdichtefunktion, vgl. Halbleiterphysik Aufenthaltswahrscheinlichkeit
 * Erwartungswert (Mittelwert, Varianz) 
 * Autokorrelationsfunktion
 
-<!-- !split -->
-### Rauschen
+
+## Rauschen
 
 * Rauschen ist ein spezieller Signaltyp, es ist ein statistischer Prozess und beinhaltet keine Informationen. 
 * Rauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.
@@ -165,9 +159,7 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 $$
 
 
-
-<!-- !split -->
-### Linear zeitinvariantes (LTI) System (1)
+## LTI System (1)
 
 *Parseval'sches Theorem.* 
 $$
@@ -175,6 +167,7 @@ $$
 \int_{-\infty}^{\infty} \lvert f(t) \lvert^2 dt = \frac{1}{2\pi} \int_{-\infty}^{\infty} \lvert F(j \omega) \lvert^2 d \omega
 \end{equation}
 $$
+
 
 $$
 \begin{align}
@@ -185,8 +178,7 @@ $$
 
 
 
-<!-- !split -->
-### LTI System (2)
+## LTI System (2)
 
 *Wiener-Khintchine Theorem (Autokorrelation).* 
 $$
@@ -198,7 +190,7 @@ $$
 
 
 <!-- !split -->
-### LTI System (3)
+## LTI System (3)
 
 *Mittlerer Erwartungswert.* 
 $$
@@ -220,9 +212,7 @@ S_{yy}(j \omega) &= S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2
 $$
 
 
-
-<!-- !split -->
-### PSD zu SNR
+## PSD zu SNR
 
 *Leistungsdichtespektrum.* 
 PSD - Power Spectral Density (engl.)
@@ -245,10 +235,8 @@ $$
 
 
 
-<!-- !split -->
-### Rauschen eines passiven Tiefpassfilters
+## Rauschen eines passiven Tiefpassfilters
 
-<!-- <img src="./fig/lec2s10.png" width="300"> -->
 ![](./fig/lec2s10.png)
 
 $$
@@ -259,8 +247,8 @@ $$
 \end{equation}
 $$
 
-<!-- !split -->
-### Formelsammlung
+
+## Formelsammlung
 
 *Notice.* 
 $$
@@ -270,9 +258,7 @@ $$
 $$
 
 
-
-<!-- !split -->
-### Total Integrated Noise
+## Total Integrated Noise
 
 $$
 \begin{align}
@@ -284,10 +270,9 @@ RC} \right\lvert^2 df
 \end{align}
 $$
 
-<!-- !split -->
-### LC Tiefpassfilter
 
-<!-- <img src="./fig/lec2s11.png" width="300"> -->
+## LC Tiefpassfilter
+
 ![](./fig/lec2s11.png)
 
 $$
@@ -306,5 +291,3 @@ Q_p = \frac{1}{R}\sqrt{\frac{L}{C}} \quad
 \omega_p Q_p \quad \frac{1}{RC}
 \end{equation}
 $$
-
-<!-- !split -->

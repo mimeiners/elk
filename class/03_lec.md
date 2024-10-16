@@ -1,19 +1,13 @@
-<!-- !split -->
-<!-- jupyter-book 03_lec.md -->
 # Halbleiterphysik
 
-<div id="sec:phy"></div>
-<!-- !split -->
-### Elektrische Ladung
+
+## Elektrische Ladung
 
 *Quantitatives und Einheiten.* 
 * Ladung $Q$, Einheit $[Q]$ = 1 Coulomb = 1C = 1 As
 * Ladung $q$ von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.
 
-
-
-<!-- !split -->
-### Elektrische Feldstärke
+## Elektrische Feldstärke
 
 *Coulomb'sches Gesetz.* 
 Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.
@@ -36,9 +30,7 @@ $$
 $$
 
 
-
-<!-- !split -->
-### Grundlagen der Elektrotechnik
+## Grundlagen der Elektrotechnik
 
 Als weitere Vorbereitung für ein besseres Verständnis der Halbleiterphysik, sollten die Grundbegriffe aus den
 Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden.\n
@@ -51,8 +43,8 @@ Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:
 * Elektrische Energie
 * Elektrische Leistung.
 
-<!-- !split -->
-### Einführung in die Halbleiterphysik
+
+## Einführung in die Halbleiterphysik
 
 *Notice.* 
 Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap. 8, Atom- und Kernphysik und Kap. 9, Festkörperphysik, 
@@ -74,24 +66,21 @@ Bauelemente* von Reisch entnommen. <a href="hering2012.html#hering2012">[2]</a> 
   * Donatoren und Akzeptoren
 
 
-<!-- !split -->
-### Elektronen im Festkörper
+## Elektronen im Festkörper
 
-<!-- <img src="fig/lec3_bandstruktur.png" width="400"> -->
 ![](fig/lec3_bandstruktur.png)
 
 * **Leiter** mit $\rho < 10^{-5} \Omega m$
 * **Halbleiter** mit $10^{-5} \Omega m < \rho < 10^{7} \Omega m$
 * **Isolator** mit  $\rho > 10^{7} \Omega m$
 
-<!-- !split -->
-### Energiebänder-Modell (1)
+## Energiebänder-Modell (1)
 
 * **Modell gebundener Elektronen:** Das Bohr'sche Atommodell beschreibt, "dass sich Elektronen, die an isolierte Atome gebunden sind, nur auf diskreten Energieniveaus aufhalten können."
 * "Die Aufenthaltswahrscheinlichkeit der Elektronnen um die Kerne wird durch das *Quadrat der Wellenfunktion* $\lvert \Psi \lvert^2$ beschrieben."
 
-<!-- !split -->
-### Wellenfunktion
+
+## Wellenfunktion
 
 Die Lösung für die Wellenfunktion $\Psi$ liefert räumlich stehende
 Wellen. "Nach *de Brogli* kann dem Teilchen eine Welle $\Psi$ mit dem 
@@ -108,14 +97,15 @@ $$
 
 mit $E=\hbar \omega$,  $p_x=\hbar k_x$ und $i=\sqrt{-1}$.
 
-<!-- !split -->
-### Newton Mechanik vs. Quantentheorie
+
+## Newton Mechanik vs. Quantentheorie
 
 * "In der klassischen Physik (Newton Mechanik) wird das Teilchen durch seine *Bahnkurve* $\mathbf{r}(t)$ beschrieben, in der Quantentheorie dagegen nur durch seine *Aufenthaltswahrscheinlichkeit* $\lvert \Psi \lvert^2 dV$."
-* ``Die Fundamentalgleichung der Quantentheorie, die die Bestimmung von $\Psi$ ermöglicht, ist die Schrödinger-Gleichung (E. Schrödinger, 1887 bis 1961). Sie ist vergleichbar mit der Newton'schen Bewegungsgleichung, aus der die Bahnkurve $\mathbf{r}(t)$ bestimmt wird.'' 
 
-<!-- !split -->
-### Schrödinger-Gleichung  (zeitabhängig)
+* "Die Fundamentalgleichung der Quantentheorie, die die Bestimmung von $\Psi$ ermöglicht, ist die Schrödinger-Gleichung (E. Schrödinger, 1887 bis 1961). Sie ist vergleichbar mit der Newton'schen Bewegungsgleichung, aus der die Bahnkurve $\mathbf{r}(t)$ bestimmt wird."
+
+
+## Schrödinger-Gleichung  (zeitabhängig)
 
 $$
 \begin{equation}
@@ -137,8 +127,8 @@ $$
 \end{equation}
 $$
 
-<!-- !split -->
-### Energiebänder-Modell (2)
+
+## Energiebänder-Modell (2)
 
 * **Modell freier Elektronen**: "Nach der Quantentheorie wird die Aufenthaltswahrscheinlichkeit der Elektronen im Kristall durch das *Quadrat der Wellenfunktion* $\lvert \Psi \lvert^2$ beschrieben." 
 * **De-Broglie-Beziehung** (Teilchenbild / Wellenbild)
@@ -157,15 +147,13 @@ E_{kin} = \frac{p^2}{2 m} = \frac{\hbar^2 k^2}{2 m}
 \end{equation}
 $$
 
-<!-- !split -->
-### Energiebandstruktur (1)
-<div id="sl:energieband"></div>
 
-<!-- <img src="fig/lec3_energiebandstruktur.png" width="400"> -->
+## Energiebandstruktur (1)
+
 ![](fig/lec3_energiebandstruktur.png)
 
-<!-- !split -->
-### Energiebandstruktur (2)
+
+## Energiebandstruktur (2)
 
 * Die kinetische Energie $E_{kin}$ als Funktion der Wellenzahl $k$ ergibt eine Parabel.
 * Für Elektronen in Kristallen ergeben sich *verbotene* Energiebereiche.
@@ -179,34 +167,38 @@ k_n &= \frac{2 \pi}{\lambda_n} = \frac{\pi}{a} n
 \end{align}
 $$
 
-<!-- !split -->
-### Aufenthaltswahrscheinlichkeit
 
-<!-- <img src="fig/lec3_aufenthaltswahrscheinlichkeit.png" width="400"> -->
+## Aufenthaltswahrscheinlichkeit
+
 ![](fig/lec3_aufenthaltswahrscheinlichkeit.png)
 
-<!-- !split -->
-### Reduziertes Zonenschema
+
+## Reduziertes Zonenschema
 
 * "Durch Überlagerung der laufenden mit den reflektierten Wellen entstehen stehende Elektronenwellen mit ortsfesten Knoten und Bäuchen."
-* "Die $E(k)$-Parabel bekommt daher an der Stelle $k_1 = \pm \pi/a$ Unstetigkeitsstellen." Dieses sind die sog. *verbotenen Zonen* oder *Energielücken*.
+
+* "Die $E(k)$-Parabel bekommt daher an der Stelle $k_1 = \pm \pi/a$ Unstetigkeitsstellen." Dieses sind die sog. 
+*verbotenen Zonen* oder *Energielücken*.
+
 * Aufgrund er Periodizität des $k$-Raumes kann die Parabel durch ein *reduziertes Zonenschema* dargestellt werden, vgl. The section [Energiebandstruktur (1)](#sl:energieband).
 
-<!-- !split -->
-### Besetzungswahrscheinlichkeit (1)
+
+## Besetzungswahrscheinlichkeit (1)
 
 * Die Berechnung der Ladungsträgerdichten von Elektronen (n) und Löchern (p) erfolgt mithilfe der Fermi-Dirac-Statistik.
 * **Modell des freien Elektronengases**: "Dieses wurde von A. Sommerfeld (1868 bis 1951) vorgeschlagen und von E. Fermi (1901 bis 1954) erweitert. Es beschreibt die Leitungselektronen der Metalle so wie die frei beweglichen Moleküle eines Gases, vernachlässigt also die Wechselwirkung der Elektronen mit den ortsfesten Atomkernen und damit auch das Auftreten von Energielücken."
 
-<!-- !split -->
-### Besetzungswahrscheinlichkeit (2)
+
+## Besetzungswahrscheinlichkeit (2)
 
 * "Befinden sich die Elektronen in einem Würfel der Kantenlänge $L$, dann ist ihre Aufenthaltswahrscheinlichkeit durch das Quadrat der Wellenfunktion $\Psi$ gegeben, die als Lösung aus der Schrödinger-Gleichung folgt."
+
 * Streng genommen gilt das Modell des freien Elektronengases nur für $T=0$. "Nur am absoluten Nullpunkt besetzen die Elektronen alle Energieniveaus von Null bis $E_F$."
+
 * Bei endlicher Temperatur nimmt die kinetische Energie des Elektronengases zu, sodass einige Energieniveaus oberhalb der Fermi-Kante besetzt werden und eine gleiche Anzahl unterhalb leer bleibt.
 
-<!-- !split -->
-### Fermi-Dirac-Verteilungsfunktion
+
+## Fermi-Dirac-Verteilungsfunktion
 
 * "Die Wahrscheinlichkeit, mit der ein bestimmter Energiezustand $E$ mit Elektronen besetzt ist, wird beschrieben durch die *Fermi-Dirac-Verteilungsfunktion*"
 
@@ -216,41 +208,37 @@ f_{FD}(E) = \frac{1}{1 + \exp\left( \frac{E - E_F}{k_B T}\right)}
 \end{equation}
 $$
 
-<!-- !split -->
-### Fermi-Dirac-Statistik (1)
 
-<!-- <img src="fig/lec3_fermidirac.png" width="400"> -->
+## Fermi-Dirac-Statistik (1)
+
 ![](fig/lec3_fermidirac.png)
 
-<!-- !split -->
-### Fermi-Dirac-Statistik (2)
+
+## Fermi-Dirac-Statistik (2)
 
 * "Die Fermi-Dirac-Statistik ist anwendbar auf Teilchen mit halbzahligem Spin, zu denen die Elektronen gehören."
+
 * "Bei $T=0$ sind alle Zustände unterhalb der Fermi-Energie $E_F$ besetzt, oberhalb $E_F$ leer: $f_{FD}(E)=1$ für $0 \leq E < E_F$, $f_{FD}(E)=0$ für $E > E_F$."
+
 * "Bei endlicher Temperatur sind entsprechend den schraffierten Flächen Zustände unterhalb der Fermi-Energie leer und oberhalb besetzt. Die Besetzungswahrscheinlichkeit nimmt von 90% auf 10% ab innerhalb eines Energiebereiches von $\Delta E \approx 4.4 k T$. Die bei tiefen Temperaturen scharfe Fermi-Kante weicht also mit zunehmender Temperatur immer mehr auf."
 
-<!-- !split -->
-### Halbleiter im thermischen Gleichgewicht
+
+## Halbleiter im thermischen Gleichgewicht
 
 * Ladungsträgerkonzentration Elektronen $n_0 \approx N_C \exp\left( \frac{E_F - E_C}{kT} \right)$
 * Ladungsträgerkonznetration Löcher $p_0 \approx N_V \exp\left( \frac{E_V - E_F}{kT} \right)$
 * *Massenwirkungsgesetz* $ n_i^2(T) = n_0 \cdot p_0 = N_C N_V \exp\left( -\frac{(E_C - E_V)}{kT} \right) $
 * *Neutralitätsbedingung* der Raumladung $N_A^{-} + n = N_D^{+} + p$
 
-<!-- !split -->
-### Intrinsischer Halbleiter
+## Intrinsischer Halbleiter
 
-<!-- <img src="fig/lec3_intrinsischer_hl.png" width="600"> -->
 ![](fig/lec3_intrinsischer_hl.png)
 
-<!-- !split -->
-### Dotierter Halbleiter
+## Dotierter Halbleiter
 
-<!-- <img src="fig/lec3_pn_hl.png" width="600"> -->
 ![](fig/lec3_pn_hl.png)
 
-<!-- !split -->
-### Stromgleichung
+## Stromgleichung
 
 * **Ohmsches Gesetz für Halbleiterphysiker**
 * Allgem. Ansatz (vektoriell)
@@ -268,8 +256,8 @@ D_p &= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
 \end{align}
 $$
 
-<!-- !split -->
-### Stromgleichung 1D
+
+## Stromgleichung 1D
 
 **Vereinf. eindimensionaler Fall**
 
@@ -286,8 +274,8 @@ D_p &= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
 \end{align}
 $$
 
-<!-- !split -->
-### Kontinuitätsgleichung
+
+## Kontinuitätsgleichung
 
 **Allgem. Ansatz**
 
@@ -303,8 +291,8 @@ $$
 \end{align}
 $$
 
-<!-- !split -->
-### Kontinuitätsgleichung 1D
+
+## Kontinuitätsgleichung 1D
 
 **Vereinf. eindimensionaler Fall**
 
@@ -320,8 +308,8 @@ $$
 \end{align}
 $$
 
-<!-- !split -->
-### Poisson-Gleichung
+
+## Poisson-Gleichung
 
 * "Für eine vollständige Beschreibung der Vorgänge im Halbleiter unter Nichtgleichgewichtsbedingungen sind die Strom- und Kontinuitätsgleichungen durch eine Beziehung zu ergänzen, die es erlaubt, die elektrische Feldstärke bzw. das elektrostatische Potential aus der Verteilung der Ladungen zu berechnen."
 
@@ -340,5 +328,3 @@ $$
 \label{eq:rho}
 \end{equation}
 $$
-
-<!-- !split -->
