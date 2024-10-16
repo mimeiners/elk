@@ -2,7 +2,12 @@
 
 ## Important Details
 
-```{include} unsyllabus_bits/important_details.md
-```
+| Name              | Description                      |
+|-------------------|----------------------------------|
+| Course            | {{ COURSE_CODE }}                |
+| Term              | {{ TERM }}                       |
+| Instructor        | {{ INSTRUCTOR }}                 |
+| Lectures          | {{ MEETING_TIMES }}: {{ ROOM }}  |
+
 
 
