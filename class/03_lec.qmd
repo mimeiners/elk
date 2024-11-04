@@ -3,13 +3,17 @@
 
 ## Elektrische Ladung
 
-*Quantitatives und Einheiten.* 
+**Quantitatives und Einheiten**
+
 * Ladung $Q$, Einheit $[Q]$ = 1 Coulomb = 1C = 1 As
+
 * Ladung $q$ von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.
+
 
 ## Elektrische Feldstärke
 
-*Coulomb'sches Gesetz.* 
+**Coulomb'sches Gesetz**
+
 Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.
 
 $$
@@ -20,7 +24,8 @@ $$
 $$
 
 
-*Elektrische Feldstärke.* 
+**Elektrische Feldstärke**
+
 $$
 \begin{align}
 \mathbf{E} &= \frac{\mathbf{F}}{Q} \\
@@ -51,8 +56,8 @@ Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:
 
 ::: {.callout-note} 
 Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap. 8, Atom- und Kernphysik und Kap. 9, Festkörperphysik, 
-des Buches *Physik für Ingenieure* von Hering, Martin und Stohrer, sowie Kap. 12, Halbleiter, des Buches *Elektronische
-Bauelemente* von Reisch entnommen. 
+des Buches *Physik für Ingenieure* von @hering2012, sowie Kap. 12, Halbleiter, des Buches *Elektronische
+Bauelemente* von @reisch2007 entnommen. 
 :::
 
 * Quantentheorie
@@ -73,8 +78,11 @@ Bauelemente* von Reisch entnommen.
 ![](../images/lec3_bandstruktur.png)
 
 * **Leiter** mit $\rho < 10^{-5} \Omega m$
+
 * **Halbleiter** mit $10^{-5} \Omega m < \rho < 10^{7} \Omega m$
+
 * **Isolator** mit  $\rho > 10^{7} \Omega m$
+
 
 ## Energiebänder-Modell
 
@@ -249,9 +257,9 @@ $$
 
 * Ladungsträgerkonznetration Löcher $p_0 \approx N_V \exp\left( \frac{E_V - E_F}{kT} \right)$
 
-* *Massenwirkungsgesetz* $n_i^2(T) = n_0 \cdot p_0 = N_C N_V \exp\left( -\frac{(E_C - E_V)}{kT} \right)$
+* **Massenwirkungsgesetz** $n_i^2(T) = n_0 \cdot p_0 = N_C N_V \exp\left( -\frac{(E_C - E_V)}{kT} \right)$
 
-* *Neutralitätsbedingung* der Raumladung $N_A^{-} + n = N_D^{+} + p$
+* **Neutralitätsbedingung** der Raumladung $N_A^{-} + n = N_D^{+} + p$
 
 
 ## Intrinsischer Halbleiter
