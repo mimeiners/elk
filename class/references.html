@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Der MOSFET als Diode – M 5.3 Elektronik (ELK)</title>
+<title>Literaturverzeichnis – M 5.3 Elektronik (ELK)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lab/03_Activity.html" rel="prev">
+<link href="../lab/01_Activity.html" rel="next">
+<link href="../class/03_lec.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,35 +88,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -109,7 +100,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/04_Activity.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/01_lec.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/references.html">Literaturverzeichnis</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,7 +168,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../class/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../class/references.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Literaturverzeichnis</span></a>
   </div>
 </li>
@@ -212,7 +203,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
   </div>
 </li>
@@ -223,27 +214,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">7.1</span> Zielsetzung</a></li>
-  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">7.2</span> Materialien</a></li>
-  <li><a href="#nmos-als-diode" id="toc-nmos-als-diode" class="nav-link" data-scroll-target="#nmos-als-diode"><span class="header-section-number">7.3</span> nMOS als Diode</a></li>
-  <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren"><span class="header-section-number">7.4</span> Verfahren</a></li>
-  <li><a href="#iv-kurvenmessungen" id="toc-iv-kurvenmessungen" class="nav-link" data-scroll-target="#iv-kurvenmessungen"><span class="header-section-number">7.5</span> IV-Kurvenmessungen</a></li>
-  <li><a href="#pmos-als-diode" id="toc-pmos-als-diode" class="nav-link" data-scroll-target="#pmos-als-diode"><span class="header-section-number">7.6</span> pMOS als Diode</a></li>
-  <li><a href="#verfahren-1" id="toc-verfahren-1" class="nav-link" data-scroll-target="#verfahren-1"><span class="header-section-number">7.7</span> Verfahren</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/04_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/04_Activity.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/01_lec.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/references.html">Literaturverzeichnis</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></h1>
+<h1 class="title">Literaturverzeichnis</h1>
 </div>
 
 
@@ -260,170 +239,14 @@ window.Quarto = {
 </header>
 
 
-<section id="zielsetzung" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">7.1</span> Zielsetzung</h2>
-<p>Ziel dieses Versuches ist die Untersuchung der Strom- und Spannungscharakteristik von n-Kanal und p-Kanal MOS Feldeffekttransistoren (kurz nMOS und pMOS), die jeweils als Diode geschaltet sind.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-maloberti2011" class="csl-entry" role="listitem">
+Maloberti, Franco. 2011. <em>Understanding Microelectronics: A Top-down
+Approach</em>. Wiley-Blackwell.
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Die STEMlab-Ausgänge können Spannungssignale mit einem maximalen Ausgangsbereich von <span class="math inline">\(\pm\)</span> 1 V (2 Vpp) erzeugen. Für diesen Versuch werden höhere Signalamplituden benötigt. Aus diesem Grund wird wieder ein OP27 als invertierenden Verstärker benötigt, um die Signalverstärkung von OUT1 und OUT2 für einen Spannungshub von +4,7V bis -3,2V zu erreichen. Ein OP27 wird vom STEMlab über die +5 V und -3.3 V Spannungsschienen versorgt. Der Verstärkungfaktor des invertierenden Verstärkers wird auf <span class="math inline">\(\approx\)</span> 5 gesetzt, wobei <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> eingesetzt werden.</p>
-</div>
-</div>
-</section>
-<section id="materialien" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="materialien"><span class="header-section-number">7.2</span> Materialien</h2>
-<ul>
-<li>Red Pitaya STEMlab</li>
-<li>OP27 Operationsverstärker</li>
-<li>1 <span class="math inline">\(k\Omega\)</span> Widerstand</li>
-<li>BS170 Kleinsignal-nMOS-Transistor</li>
-<li>BS250 Kleinsignal-pMOS-Transistor</li>
-<li>Platine</li>
-</ul>
-</section>
-<section id="nmos-als-diode" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="nmos-als-diode"><span class="header-section-number">7.3</span> nMOS als Diode</h2>
-<p>Die Schaltung des nMOS in Diodenkonfiguration ist in <a href="#fig-23-02" class="quarto-xref">Figure&nbsp;<span>7.1</span></a> gezeigt. In Diodenkonfiguration arbeitet ein nMOS vergleichbar zu einem npn-Transistor.</p>
-<p>Die Schwellspannung (Threshold Voltage, <span class="math inline">\(V_{Tn,p}\)</span>, <span class="math inline">\(V_{th}\)</span>, <span class="math inline">\(V_{TH}\)</span>) liegt nicht zwingend bei <span class="math inline">\(\approx\)</span> 0,7 V wie bei einem Bipolartransistor. Bei einem unipolaren Transistor hängt sie von der Technologie und der Kanalgröße des Transistors ab. Für den ausgewählten nMOS-Transistor liegt die Schwellenspannung <span class="math inline">\(V_{Tn}\)</span> bei etwa 2,0 V nominal. Das bedeutet, wenn die vom Gate-Kontakt zum Source-Kontakt anliegende Spannung (<span class="math inline">\(V_{GS}\)</span>) die Schwellspannung <span class="math inline">\(V_{Tn}\)</span> überschreiten, schaltet der nMOS Transistor ein und beginnt zu leiten. Da bei der Diodenkonfiguration des nMOS sein Drain-Kontakt schalttechnisch mit seinem Gate-Kontakt verbunden ist, ist die Drain-Source-Spannung gleich der Gate-Source-Spannung.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Diese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlaßspannung, die der Schwellenspannung <span class="math inline">\(V_{Tn}\)</span> entspricht.</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/Activity_23_Fig_01a.png" class="img-fluid figure-img"></p>
-<figcaption>BS170 Spezifikation.</figcaption>
-</figure>
-</div>
-<div id="fig-23-02" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-23-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_23_Fig_02.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.1: Anschlussdiagramm nMOS-Messung
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="verfahren" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="verfahren"><span class="header-section-number">7.4</span> Verfahren</h2>
-<p>Für Sie ist die Schaltung aus <span class="citation" data-cites="fig23-01">(<a href="../class/references.html#ref-fig23-01" role="doc-biblioref"><strong>fig23-01?</strong></a>)</span> auf einer Platine aufgebaut; <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>, Transistor M1 ist der nMOS Transistor vom Typ BS170.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/Activity_23_Fig_03a.png" class="img-fluid figure-img"></p>
-<figcaption>nMOS-Schaltung auf der Platine</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Bevor Sie die Schaltung an die STEMlab-Pins -3,3 V und +3,3 V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die Spannungsversorgungsstifte -3,3 V und +3,3 V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.</p>
-</div>
-</div>
-<ul>
-<li><p>Starten Sie die Oszilloskop und Signalgenerator-App</p></li>
-<li><p>Stellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.</p></li>
-<li><p>Stellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (Sie können V/div einstellen, indem Sie den gewünschten Kanal auswählen und mit dem vertikalen +/- Regler einstellen).</p></li>
-<li><p>Setzen Sie t/div Wert auf 200 us/div (Sie können t/div mit dem horizontalen +/- Reglern einstellen).</p></li>
-<li><p>Stellen Sie unter MATH-Kanaleinstellungen IN1-IN2 ein und wählen Sie ENABLE.</p></li>
-<li><p>Stellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.</p></li>
-<li><p>Stellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.</p></li>
-<li><p>Stellen Sie unter TRIGGER-Einstellungen den Triggerpegel auf 1 V ein</p></li>
-</ul>
-<div id="fig-23-04" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-23-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_23_Fig_04.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.2: nMOS Diodenmessung
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="iv-kurvenmessungen" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="iv-kurvenmessungen"><span class="header-section-number">7.5</span> IV-Kurvenmessungen</h2>
-<p>Da sich ein nMOS wie eine Diode mit einer Durchlaßspannung entsprechend der <span class="math inline">\(V_{Tn}\)</span> verhalten kann (Konfiguration in <a href="#fig-23-02" class="quarto-xref">Figure&nbsp;<span>7.1</span></a>, können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.</p>
-</section>
-<section id="pmos-als-diode" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="pmos-als-diode"><span class="header-section-number">7.6</span> pMOS als Diode</h2>
-<p>Die selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. Die Konfiguration der pMOS-Diode ist in <a href="#fig-23-07" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> dargestellt.</p>
-<div id="fig-23-07" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-23-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_23_Fig_07.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.3: pMOS Anschlussdiagramm.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="verfahren-1" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="verfahren-1"><span class="header-section-number">7.7</span> Verfahren</h2>
-<p>Für Sie ist die Schaltung aus <a href="#fig-23-07" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> auf einer Platine aufgebaut; <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und für <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>, der Transistor M1 ist ein pMOS Transistor vom Typ BS250.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Bevor Sie die Schaltung an die STEMlab-Pins -3,3V und +3,3V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die Spannungsversorgungsstifte -3,3V und +3,3V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.</p>
-</div>
-</div>
-<ul>
-<li><p>Starten Sie die Anwendung Oszilloskop und Signalgenerator-App</p></li>
-<li><p>Stellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.</p></li>
-<li><p>Stellen Sie sicher, dass IN1 und IN2 auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (V/div kann im gewünschten Kanal mit den vertikalen +/- Butten einstellt werden) und MATH auf 0.5 V/div.</p></li>
-<li><p>Setzen Sie t/div Wert auf 200 us/div (t/div wird mit den horizontalen +/- Button eingestellt).</p></li>
-<li><p>Stellen Sie unter MATH-Kanaleinstellungen die Differenz IN1-IN2 ein und wählen Sie ENABLE.</p></li>
-<li><p>Stellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.</p></li>
-<li><p>Stellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.</p></li>
-<li><p>Stellen Sie unter TRIGGER-Einstellungen den Triggerlevel auf 4 V ein.</p></li>
-</ul>
-<div id="fig-23-08" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-23-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_23_Fig_08.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7.4: pMOS Diodenmessung.
-</figcaption>
-</figure>
-</div>
-<p>Wie in <a href="#fig-23-08" class="quarto-xref">Figure&nbsp;<span>7.4</span></a> zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer Durchlaßspannung gleich der pMOS Schwellenspannung <span class="math inline">\(V_{Tp}\)</span>.</p>
-<p>Vergleichen Sie <a href="#fig-23-08" class="quarto-xref">Figure&nbsp;<span>7.4</span></a> mit <a href="#fig-23-04" class="quarto-xref">Figure&nbsp;<span>7.2</span></a> und versuchen Sie, den Unterschied zwischen nMOS- und pMOS-Diodenkonfigurationen zu erklären.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -848,11 +671,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lab/03_Activity.html" class="pagination-link" aria-label="Der BJT als Diode">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span>
+      <a href="../class/03_lec.html" class="pagination-link" aria-label="Halbleiterphysik">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../lab/01_Activity.html" class="pagination-link" aria-label="Laborversuche">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -863,7 +689,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/04_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This thesis was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

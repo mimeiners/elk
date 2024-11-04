@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Halbleiterphysik – M 5.3 Elektronik (ELK)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../class/references.html" rel="next">
+<link href="../class/02_lec.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ed6da6eef3892af8a4b5ed59bfb951f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/01_lec.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/03_lec.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">M 5.3 Elektronik (ELK)</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/mimeiners/elk/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/01_lec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/02_lec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale und Systeme</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/03_lec.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labor</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/01_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/03_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#elektrische-ladung" id="toc-elektrische-ladung" class="nav-link active" data-scroll-target="#elektrische-ladung"><span class="header-section-number">3.1</span> Elektrische Ladung</a></li>
+  <li><a href="#elektrische-feldstärke" id="toc-elektrische-feldstärke" class="nav-link" data-scroll-target="#elektrische-feldstärke"><span class="header-section-number">3.2</span> Elektrische Feldstärke</a></li>
+  <li><a href="#grundlagen-der-elektrotechnik" id="toc-grundlagen-der-elektrotechnik" class="nav-link" data-scroll-target="#grundlagen-der-elektrotechnik"><span class="header-section-number">3.3</span> Grundlagen der Elektrotechnik</a></li>
+  <li><a href="#einführung-in-die-halbleiterphysik" id="toc-einführung-in-die-halbleiterphysik" class="nav-link" data-scroll-target="#einführung-in-die-halbleiterphysik"><span class="header-section-number">3.4</span> Einführung in die Halbleiterphysik</a></li>
+  <li><a href="#elektronen-im-festkörper" id="toc-elektronen-im-festkörper" class="nav-link" data-scroll-target="#elektronen-im-festkörper"><span class="header-section-number">3.5</span> Elektronen im Festkörper</a></li>
+  <li><a href="#energiebänder-modell" id="toc-energiebänder-modell" class="nav-link" data-scroll-target="#energiebänder-modell"><span class="header-section-number">3.6</span> Energiebänder-Modell</a></li>
+  <li><a href="#wellenfunktion" id="toc-wellenfunktion" class="nav-link" data-scroll-target="#wellenfunktion"><span class="header-section-number">3.7</span> Wellenfunktion</a></li>
+  <li><a href="#newton-mechanik-vs.-quantentheorie" id="toc-newton-mechanik-vs.-quantentheorie" class="nav-link" data-scroll-target="#newton-mechanik-vs.-quantentheorie"><span class="header-section-number">3.8</span> Newton Mechanik vs.&nbsp;Quantentheorie</a></li>
+  <li><a href="#schrödinger-gleichung-zeitabhängig" id="toc-schrödinger-gleichung-zeitabhängig" class="nav-link" data-scroll-target="#schrödinger-gleichung-zeitabhängig"><span class="header-section-number">3.9</span> Schrödinger-Gleichung (zeitabhängig)</a></li>
+  <li><a href="#energiebänder-modell-2" id="toc-energiebänder-modell-2" class="nav-link" data-scroll-target="#energiebänder-modell-2"><span class="header-section-number">3.10</span> Energiebänder-Modell (2)</a></li>
+  <li><a href="#energiebandstruktur" id="toc-energiebandstruktur" class="nav-link" data-scroll-target="#energiebandstruktur"><span class="header-section-number">3.11</span> Energiebandstruktur</a></li>
+  <li><a href="#aufenthaltswahrscheinlichkeit" id="toc-aufenthaltswahrscheinlichkeit" class="nav-link" data-scroll-target="#aufenthaltswahrscheinlichkeit"><span class="header-section-number">3.12</span> Aufenthaltswahrscheinlichkeit</a></li>
+  <li><a href="#reduziertes-zonenschema" id="toc-reduziertes-zonenschema" class="nav-link" data-scroll-target="#reduziertes-zonenschema"><span class="header-section-number">3.13</span> Reduziertes Zonenschema</a></li>
+  <li><a href="#besetzungswahrscheinlichkeit" id="toc-besetzungswahrscheinlichkeit" class="nav-link" data-scroll-target="#besetzungswahrscheinlichkeit"><span class="header-section-number">3.14</span> Besetzungswahrscheinlichkeit</a></li>
+  <li><a href="#fermi-dirac-verteilungsfunktion" id="toc-fermi-dirac-verteilungsfunktion" class="nav-link" data-scroll-target="#fermi-dirac-verteilungsfunktion"><span class="header-section-number">3.15</span> Fermi-Dirac-Verteilungsfunktion</a></li>
+  <li><a href="#fermi-dirac-statistik-1" id="toc-fermi-dirac-statistik-1" class="nav-link" data-scroll-target="#fermi-dirac-statistik-1"><span class="header-section-number">3.16</span> Fermi-Dirac-Statistik (1)</a></li>
+  <li><a href="#halbleiter-im-thermischen-gleichgewicht" id="toc-halbleiter-im-thermischen-gleichgewicht" class="nav-link" data-scroll-target="#halbleiter-im-thermischen-gleichgewicht"><span class="header-section-number">3.17</span> Halbleiter im thermischen Gleichgewicht</a></li>
+  <li><a href="#intrinsischer-halbleiter" id="toc-intrinsischer-halbleiter" class="nav-link" data-scroll-target="#intrinsischer-halbleiter"><span class="header-section-number">3.18</span> Intrinsischer Halbleiter</a></li>
+  <li><a href="#dotierter-halbleiter" id="toc-dotierter-halbleiter" class="nav-link" data-scroll-target="#dotierter-halbleiter"><span class="header-section-number">3.19</span> Dotierter Halbleiter</a></li>
+  <li><a href="#stromgleichung" id="toc-stromgleichung" class="nav-link" data-scroll-target="#stromgleichung"><span class="header-section-number">3.20</span> Stromgleichung</a></li>
+  <li><a href="#stromgleichung-1d" id="toc-stromgleichung-1d" class="nav-link" data-scroll-target="#stromgleichung-1d"><span class="header-section-number">3.21</span> Stromgleichung 1D</a></li>
+  <li><a href="#kontinuitätsgleichung" id="toc-kontinuitätsgleichung" class="nav-link" data-scroll-target="#kontinuitätsgleichung"><span class="header-section-number">3.22</span> Kontinuitätsgleichung</a></li>
+  <li><a href="#kontinuitätsgleichung-1d" id="toc-kontinuitätsgleichung-1d" class="nav-link" data-scroll-target="#kontinuitätsgleichung-1d"><span class="header-section-number">3.23</span> Kontinuitätsgleichung 1D</a></li>
+  <li><a href="#poisson-gleichung" id="toc-poisson-gleichung" class="nav-link" data-scroll-target="#poisson-gleichung"><span class="header-section-number">3.24</span> Poisson-Gleichung</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/03_lec.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/01_lec.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/03_lec.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="elektrische-ladung" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="elektrische-ladung"><span class="header-section-number">3.1</span> Elektrische Ladung</h2>
+<p><em>Quantitatives und Einheiten.</em> * Ladung <span class="math inline">\(Q\)</span>, Einheit <span class="math inline">\([Q]\)</span> = 1 Coulomb = 1C = 1 As * Ladung <span class="math inline">\(q\)</span> von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.</p>
+</section>
+<section id="elektrische-feldstärke" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="elektrische-feldstärke"><span class="header-section-number">3.2</span> Elektrische Feldstärke</h2>
+<p><em>Coulomb’sches Gesetz.</em> Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.</p>
+<p><span class="math display">\[
+\begin{align}
+\mathbf{F} &amp;=  \frac{1}{4 \pi \varepsilon} \frac{Q_1 Q_2}{r^2} \frac{\vec{r}}{r} \\
+[F] &amp;= 1N = 1 \frac{kg \, m}{s^2} = 1 \frac{Ws}{m}
+\end{align}
+\]</span></p>
+<p><em>Elektrische Feldstärke.</em> <span class="math display">\[
+\begin{align}
+\mathbf{E} &amp;= \frac{\mathbf{F}}{Q} \\
+[E] &amp; = \frac{[F]}{[Q]} = 1 \frac{N}{As} = 1 \frac{kg\,m}{A s^3} = 1 \frac{V}{m}
+\end{align}
+\]</span></p>
+</section>
+<section id="grundlagen-der-elektrotechnik" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="grundlagen-der-elektrotechnik"><span class="header-section-number">3.3</span> Grundlagen der Elektrotechnik</h2>
+<p>Als weitere Vorbereitung für ein besseres Verständnis der Halbleiterphysik, sollten die Grundbegriffe aus den Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden.</p>
+<p>Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:</p>
+<ul>
+<li><p>Elektrische Stromstärke</p></li>
+<li><p>Elektrische Spannung</p></li>
+<li><p>Kirchhoff’schen Gesetze</p></li>
+<li><p>Elektrische Energie</p></li>
+<li><p>Elektrische Leistung.</p></li>
+</ul>
+</section>
+<section id="einführung-in-die-halbleiterphysik" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="einführung-in-die-halbleiterphysik"><span class="header-section-number">3.4</span> Einführung in die Halbleiterphysik</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap. 8, Atom- und Kernphysik und Kap. 9, Festkörperphysik, des Buches <em>Physik für Ingenieure</em> von Hering, Martin und Stohrer, sowie Kap. 12, Halbleiter, des Buches <em>Elektronische Bauelemente</em> von Reisch entnommen.</p>
+</div>
+</div>
+<ul>
+<li>Quantentheorie
+<ul>
+<li>Welle-Teilchen Dualismus</li>
+<li>Schrödinger-Gleichung</li>
+</ul></li>
+<li>Elektronengas
+<ul>
+<li>Zustände und Aufenthaltswahrscheinlichkeiten</li>
+<li>Zustandsdichten: <span class="math inline">\(\int D(E)\)</span> bzw. <span class="math inline">\(\int N(E)\)</span></li>
+<li>Fermi-Dirac-Verteilung</li>
+</ul></li>
+<li>Dotierung
+<ul>
+<li>Donatoren und Akzeptoren</li>
+</ul></li>
+</ul>
+</section>
+<section id="elektronen-im-festkörper" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="elektronen-im-festkörper"><span class="header-section-number">3.5</span> Elektronen im Festkörper</h2>
+<p><img src="../images/lec3_bandstruktur.png" class="img-fluid"></p>
+<ul>
+<li><strong>Leiter</strong> mit <span class="math inline">\(\rho &lt; 10^{-5} \Omega m\)</span></li>
+<li><strong>Halbleiter</strong> mit <span class="math inline">\(10^{-5} \Omega m &lt; \rho &lt; 10^{7} \Omega m\)</span></li>
+<li><strong>Isolator</strong> mit <span class="math inline">\(\rho &gt; 10^{7} \Omega m\)</span></li>
+</ul>
+</section>
+<section id="energiebänder-modell" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="energiebänder-modell"><span class="header-section-number">3.6</span> Energiebänder-Modell</h2>
+<ul>
+<li><p><strong>Modell gebundener Elektronen:</strong> Das Bohr’sche Atommodell beschreibt, “dass sich Elektronen, die an isolierte Atome gebunden sind, nur auf diskreten Energieniveaus aufhalten können.”</p></li>
+<li><p>“Die Aufenthaltswahrscheinlichkeit der Elektronen um die Kerne wird durch das <em>Quadrat der Wellenfunktion</em> <span class="math inline">\(\lvert \Psi \lvert^2\)</span> beschrieben.”</p></li>
+</ul>
+</section>
+<section id="wellenfunktion" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="wellenfunktion"><span class="header-section-number">3.7</span> Wellenfunktion</h2>
+<p>Die Lösung für die Wellenfunktion <span class="math inline">\(\Psi\)</span> liefert räumlich stehende Wellen. “Nach <em>de Brogli</em> kann dem Teilchen eine Welle <span class="math inline">\(\Psi\)</span> mit dem Wellenvektor <span class="math inline">\(\mathbf{k}=\mathbf{p}/\hbar\)</span> und der Kreisfrequenz <span class="math inline">\(\omega\)</span> zugeordnet werden:”</p>
+<p><strong>Wellenfunktion (eindimensional)</strong></p>
+<p><span class="math display">\[
+\begin{equation}
+\Psi (x,t) = a \exp\left(i k_x x - i \omega t \right) = a \exp\left(\frac{i}{\hbar}\left( p_x x - E t \right) \right)
+\end{equation}
+\]</span></p>
+<p>mit <span class="math inline">\(E=\hbar \omega\)</span>, <span class="math inline">\(p_x=\hbar k_x\)</span> und <span class="math inline">\(i=\sqrt{-1}\)</span>.</p>
+</section>
+<section id="newton-mechanik-vs.-quantentheorie" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="newton-mechanik-vs.-quantentheorie"><span class="header-section-number">3.8</span> Newton Mechanik vs.&nbsp;Quantentheorie</h2>
+<ul>
+<li><p>“In der klassischen Physik (Newton Mechanik) wird das Teilchen durch seine <em>Bahnkurve</em> <span class="math inline">\(\mathbf{r}(t)\)</span> beschrieben, in der Quantentheorie dagegen nur durch seine <em>Aufenthaltswahrscheinlichkeit</em> <span class="math inline">\(\lvert \Psi \lvert^2 dV\)</span>.”</p></li>
+<li><p>“Die Fundamentalgleichung der Quantentheorie, die die Bestimmung von <span class="math inline">\(\Psi\)</span> ermöglicht, ist die Schrödinger-Gleichung (E. Schrödinger, 1887 bis 1961). Sie ist vergleichbar mit der Newton’schen Bewegungsgleichung, aus der die Bahnkurve <span class="math inline">\(\mathbf{r}(t)\)</span> bestimmt wird.”</p></li>
+</ul>
+</section>
+<section id="schrödinger-gleichung-zeitabhängig" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="schrödinger-gleichung-zeitabhängig"><span class="header-section-number">3.9</span> Schrödinger-Gleichung (zeitabhängig)</h2>
+<p><span class="math display">\[
+\begin{equation}
+\left( -\frac{\hbar^2}{2 m} \Delta + V(\mathbf{r}) \right) \Psi (\mathbf{r},t) =
+i \hbar \frac{\partial}{\partial t} \Psi (\mathbf{r},t)
+\end{equation}
+\]</span></p>
+<p>wobei</p>
+<ul>
+<li><p><span class="math inline">\(m\)</span>, Masse des Teilchens,</p></li>
+<li><p><span class="math inline">\(V(\mathbf{r})\)</span>, potentielle Energie; <span class="math inline">\(\mathbf{r} = (x, y, z)\)</span></p></li>
+<li><p><span class="math inline">\(\Delta\)</span>, Laplace-Operator:</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{equation}
+\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
+= \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)^2
+= \nabla^2
+\end{equation}
+\]</span></p>
+</section>
+<section id="energiebänder-modell-2" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="energiebänder-modell-2"><span class="header-section-number">3.10</span> Energiebänder-Modell (2)</h2>
+<ul>
+<li><p><strong>Modell freier Elektronen</strong>: “Nach der Quantentheorie wird die Aufenthaltswahrscheinlichkeit der Elektronen im Kristall durch das <em>Quadrat der Wellenfunktion</em> <span class="math inline">\(\lvert \Psi \lvert^2\)</span> beschrieben.”</p></li>
+<li><p><strong>De-Broglie-Beziehung</strong> (Teilchenbild / Wellenbild)</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{equation}
+p = \frac{h}{\lambda} = \frac{h}{2 \pi} \frac{2 \pi}{\lambda} = \hbar k
+\end{equation}
+\]</span></p>
+<ul>
+<li><strong>Kinetische Energie der Elektronen</strong> : Der Physiker schreibt hier <span class="math inline">\(E\)</span> anstelle von <span class="math inline">\(W\)</span>. In der Elektrotechnik ist der Buchstabe <span class="math inline">\(E\)</span> allerdings mit dem elektrischen Feld verknüpft.</li>
+</ul>
+<p><span class="math display">\[
+\begin{equation}
+E_{kin} = \frac{p^2}{2 m} = \frac{\hbar^2 k^2}{2 m}
+\end{equation}
+\]</span></p>
+</section>
+<section id="energiebandstruktur" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="energiebandstruktur"><span class="header-section-number">3.11</span> Energiebandstruktur</h2>
+<p><img src="../images/lec3_energiebandstruktur.png" class="img-fluid"></p>
+<ul>
+<li><p>Die kinetische Energie <span class="math inline">\(E_{kin}\)</span> als Funktion der Wellenzahl <span class="math inline">\(k\)</span> ergibt eine Parabel.</p></li>
+<li><p>Für Elektronen in Kristallen ergeben sich <em>verbotene</em> Energiebereiche.</p></li>
+<li><p>Stehende Wellen durch Reflexionen am Kristallgitter mit der Gitterkonstanten <span class="math inline">\(a\)</span>.</p></li>
+<li><p>Elektronen- bzw. Materiewellen mit der Wellenlänge <span class="math inline">\(\lambda\)</span> erfüllen die <strong>Bragg’sche Reflexionsbedingung</strong></p></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\lambda_n &amp;= \frac{2 a}{\pi}, \quad n=1,2,3,... \\
+k_n &amp;= \frac{2 \pi}{\lambda_n} = \frac{\pi}{a} n
+\end{align}
+\]</span></p>
+</section>
+<section id="aufenthaltswahrscheinlichkeit" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="aufenthaltswahrscheinlichkeit"><span class="header-section-number">3.12</span> Aufenthaltswahrscheinlichkeit</h2>
+<p><img src="../images/lec3_aufenthaltswahrscheinlichkeit.png" class="img-fluid"></p>
+</section>
+<section id="reduziertes-zonenschema" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="reduziertes-zonenschema"><span class="header-section-number">3.13</span> Reduziertes Zonenschema</h2>
+<ul>
+<li><p>“Durch Überlagerung der laufenden mit den reflektierten Wellen entstehen stehende Elektronenwellen mit ortsfesten Knoten und Bäuchen.”</p></li>
+<li><p>“Die <span class="math inline">\(E(k)\)</span>-Parabel bekommt daher an der Stelle <span class="math inline">\(k_1 = \pm \pi/a\)</span> Unstetigkeitsstellen.” Dieses sind die sog. <em>verbotenen Zonen</em> oder <em>Energielücken</em>.</p></li>
+<li><p>Aufgrund der Periodizität des <span class="math inline">\(k\)</span>-Raumes kann die Parabel durch ein <em>reduziertes Zonenschema</em> dargestellt werden, vgl. <em>Energiebandstruktur</em>.</p></li>
+</ul>
+</section>
+<section id="besetzungswahrscheinlichkeit" class="level2" data-number="3.14">
+<h2 data-number="3.14" class="anchored" data-anchor-id="besetzungswahrscheinlichkeit"><span class="header-section-number">3.14</span> Besetzungswahrscheinlichkeit</h2>
+<ul>
+<li><p>Die Berechnung der Ladungsträgerdichten von Elektronen (n) und Löchern (p) erfolgt mithilfe der Fermi-Dirac-Statistik.</p></li>
+<li><p><strong>Modell des freien Elektronengases</strong>: “Dieses wurde von A. Sommerfeld (1868 bis 1951) vorgeschlagen und von E. Fermi (1901 bis 1954) erweitert. Es beschreibt die Leitungselektronen der Metalle so wie die frei beweglichen Moleküle eines Gases, vernachlässigt also die Wechselwirkung der Elektronen mit den ortsfesten Atomkernen und damit auch das Auftreten von Energielücken.”</p></li>
+<li><p>“Befinden sich die Elektronen in einem Würfel der Kantenlänge <span class="math inline">\(L\)</span>, dann ist ihre Aufenthaltswahrscheinlichkeit durch das Quadrat der Wellenfunktion <span class="math inline">\(\Psi\)</span> gegeben, die als Lösung aus der Schrödinger-Gleichung folgt.”</p></li>
+<li><p>Streng genommen gilt das Modell des freien Elektronengases nur für <span class="math inline">\(T=0\)</span>. “Nur am absoluten Nullpunkt besetzen die Elektronen alle Energieniveaus von Null bis <span class="math inline">\(E_F\)</span>.”</p></li>
+<li><p>Bei endlicher Temperatur nimmt die kinetische Energie des Elektronengases zu, sodass einige Energieniveaus oberhalb der Fermi-Kante besetzt werden und eine gleiche Anzahl unterhalb leer bleibt.</p></li>
+</ul>
+</section>
+<section id="fermi-dirac-verteilungsfunktion" class="level2" data-number="3.15">
+<h2 data-number="3.15" class="anchored" data-anchor-id="fermi-dirac-verteilungsfunktion"><span class="header-section-number">3.15</span> Fermi-Dirac-Verteilungsfunktion</h2>
+<ul>
+<li>“Die Wahrscheinlichkeit, mit der ein bestimmter Energiezustand <span class="math inline">\(E\)</span> mit Elektronen besetzt ist, wird beschrieben durch die <em>Fermi-Dirac-Verteilungsfunktion</em>”</li>
+</ul>
+<p><span class="math display">\[
+\begin{equation}
+f_{FD}(E) = \frac{1}{1 + \exp\left( \frac{E - E_F}{k_B T}\right)}
+\end{equation}
+\]</span></p>
+</section>
+<section id="fermi-dirac-statistik-1" class="level2" data-number="3.16">
+<h2 data-number="3.16" class="anchored" data-anchor-id="fermi-dirac-statistik-1"><span class="header-section-number">3.16</span> Fermi-Dirac-Statistik (1)</h2>
+<p><img src="../images/lec3_fermidirac.png" class="img-fluid"></p>
+<ul>
+<li><p>“Die Fermi-Dirac-Statistik ist anwendbar auf Teilchen mit halbzahligem Spin, zu denen die Elektronen gehören.”</p></li>
+<li><p>“Bei <span class="math inline">\(T=0\)</span> sind alle Zustände unterhalb der Fermi-Energie <span class="math inline">\(E_F\)</span> besetzt, oberhalb <span class="math inline">\(E_F\)</span> leer: <span class="math inline">\(f_{FD}(E)=1\)</span> für <span class="math inline">\(0
+\leq E &lt; E_F\)</span>, <span class="math inline">\(f_{FD}(E)=0\)</span> für <span class="math inline">\(E &gt; E_F\)</span>.”</p></li>
+<li><p>“Bei endlicher Temperatur sind entsprechend den schraffierten Flächen Zustände unterhalb der Fermi-Energie leer und oberhalb besetzt. Die Besetzungswahrscheinlichkeit nimmt von 90% auf 10% ab innerhalb eines Energiebereiches von <span class="math inline">\(\Delta E \approx 4.4 k T\)</span>. Die bei tiefen Temperaturen scharfe Fermi-Kante weicht also mit zunehmender Temperatur immer mehr auf.”</p></li>
+</ul>
+</section>
+<section id="halbleiter-im-thermischen-gleichgewicht" class="level2" data-number="3.17">
+<h2 data-number="3.17" class="anchored" data-anchor-id="halbleiter-im-thermischen-gleichgewicht"><span class="header-section-number">3.17</span> Halbleiter im thermischen Gleichgewicht</h2>
+<ul>
+<li><p>Ladungsträgerkonzentration Elektronen <span class="math inline">\(n_0 \approx N_C \exp\left( \frac{E_F - E_C}{kT} \right)\)</span></p></li>
+<li><p>Ladungsträgerkonznetration Löcher <span class="math inline">\(p_0 \approx N_V \exp\left( \frac{E_V - E_F}{kT} \right)\)</span></p></li>
+<li><p><em>Massenwirkungsgesetz</em> <span class="math inline">\(n_i^2(T) = n_0 \cdot p_0 = N_C N_V \exp\left( -\frac{(E_C - E_V)}{kT} \right)\)</span></p></li>
+<li><p><em>Neutralitätsbedingung</em> der Raumladung <span class="math inline">\(N_A^{-} + n = N_D^{+} + p\)</span></p></li>
+</ul>
+</section>
+<section id="intrinsischer-halbleiter" class="level2" data-number="3.18">
+<h2 data-number="3.18" class="anchored" data-anchor-id="intrinsischer-halbleiter"><span class="header-section-number">3.18</span> Intrinsischer Halbleiter</h2>
+<p><img src="../images/lec3_intrinsischer_hl.png" class="img-fluid"></p>
+</section>
+<section id="dotierter-halbleiter" class="level2" data-number="3.19">
+<h2 data-number="3.19" class="anchored" data-anchor-id="dotierter-halbleiter"><span class="header-section-number">3.19</span> Dotierter Halbleiter</h2>
+<p><img src="../images/lec3_pn_hl.png" class="img-fluid"></p>
+</section>
+<section id="stromgleichung" class="level2" data-number="3.20">
+<h2 data-number="3.20" class="anchored" data-anchor-id="stromgleichung"><span class="header-section-number">3.20</span> Stromgleichung</h2>
+<ul>
+<li><p><strong>Ohmsches Gesetz für Halbleiterphysiker</strong></p></li>
+<li><p>Allgem. Ansatz (vektoriell)</p></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\mathbf{J}_n &amp;= \overbrace{e \mu_n n \mathbf{E}}^{\text{Feldanteil}}
++ \overbrace{e D_n \nabla n}^{\text{Diffusionsanteil}}
+&amp;
+D_n &amp;= \mu_n \frac{kT}{q} \quad \text{Einstein-Relation} \\
+\mathbf{J}_p &amp;= \underbrace{e \mu_p n \mathbf{E}}_{\text{Feldanteil}}
+- \underbrace{e D_p \nabla p}_{\text{Diffusionsanteil}}
+&amp;
+D_p &amp;= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
+\end{align}
+\]</span></p>
+</section>
+<section id="stromgleichung-1d" class="level2" data-number="3.21">
+<h2 data-number="3.21" class="anchored" data-anchor-id="stromgleichung-1d"><span class="header-section-number">3.21</span> Stromgleichung 1D</h2>
+<p><strong>Vereinf. eindimensionaler Fall</strong></p>
+<p><span class="math display">\[
+\begin{align}
+J_n &amp;= \overbrace{e \mu_n n E}^{\text{Feldanteil}}
++ \overbrace{e D_n \frac{\partial n}{\partial x}}^{\text{Diffusionsanteil}}
+&amp;
+D_n &amp;= \mu_n \frac{kT}{q} \quad \text{Einstein-Relation}\\
+J_p &amp;= \underbrace{e \mu_p n E}_{Feldanteil}
+- \underbrace{e D_p \frac{\partial p}{\partial x}}_{Diffusionsanteil}
+&amp;
+D_p &amp;= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
+\end{align}
+\]</span></p>
+</section>
+<section id="kontinuitätsgleichung" class="level2" data-number="3.22">
+<h2 data-number="3.22" class="anchored" data-anchor-id="kontinuitätsgleichung"><span class="header-section-number">3.22</span> Kontinuitätsgleichung</h2>
+<p><strong>Allgem. Ansatz</strong></p>
+<p><span class="math display">\[
+\begin{align}
+\frac{\partial n}{\partial t}
+&amp;= \frac{1}{e} \nabla \cdot \mathbf{J}_n
+- (\mathcal{R} - \mathcal{G})
+&amp;
+\frac{\partial p}{\partial t}
+&amp;= \frac{1}{e} \nabla \cdot \mathbf{J}_p
+- (\mathcal{R} - \mathcal{G})
+\end{align}
+\]</span></p>
+</section>
+<section id="kontinuitätsgleichung-1d" class="level2" data-number="3.23">
+<h2 data-number="3.23" class="anchored" data-anchor-id="kontinuitätsgleichung-1d"><span class="header-section-number">3.23</span> Kontinuitätsgleichung 1D</h2>
+<p><strong>Vereinf. eindimensionaler Fall</strong></p>
+<p><span class="math display">\[
+\begin{align}
+\frac{\partial n}{\partial t}
+&amp;= \frac{1}{e} \frac{\partial J_n}{\partial x}
+- (\mathcal{R} - \mathcal{G})
+&amp;
+\frac{\partial p}{\partial t}
+&amp;= \frac{1}{e} \frac{\partial J_p}{\partial x}
+- (\mathcal{R} - \mathcal{G})
+\end{align}
+\]</span></p>
+</section>
+<section id="poisson-gleichung" class="level2" data-number="3.24">
+<h2 data-number="3.24" class="anchored" data-anchor-id="poisson-gleichung"><span class="header-section-number">3.24</span> Poisson-Gleichung</h2>
+<ul>
+<li>“Für eine vollständige Beschreibung der Vorgänge im Halbleiter unter Nichtgleichgewichtsbedingungen sind die Strom- und Kontinuitätsgleichungen durch eine Beziehung zu ergänzen, die es erlaubt, die elektrische Feldstärke bzw. das elektrostatische Potential aus der Verteilung der Ladungen zu berechnen.”</li>
+</ul>
+<p><span class="math display">\[
+\begin{equation}
+\nabla \cdot \mathbf{E} = -\nabla^2 \varphi = \frac{\varrho}{\varepsilon_0 \varepsilon_r}
+\end{equation}
+\]</span></p>
+<ul>
+<li>Hierbei bezeichnet <span class="math inline">\(\varrho\)</span> die Raumladung</li>
+</ul>
+<p><span class="math display">\[
+\begin{equation}
+\varrho = e \left( p - n + N_D^{+} - N_A^{-} \right)
+\end{equation}
+\]</span></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/elk\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../class/02_lec.html" class="pagination-link" aria-label="Signale und Systeme">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale und Systeme</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../class/references.html" class="pagination-link" aria-label="Literaturverzeichnis">
+        <span class="nav-page-text">Literaturverzeichnis</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>M 5.3 Elektronik (ELK) T. Ziemann, M. Meiners.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/03_lec.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This thesis was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

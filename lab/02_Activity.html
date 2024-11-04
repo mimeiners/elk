@@ -1,819 +1,880 @@
-
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<html lang="en" data-content_root="../" >
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Dioden IV-Charakterisierung &#8212; M 5.3 Elektronik (ELK)</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=f78ba3b0" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link media="all" rel="stylesheet" type="text/css" href="https://dokie.li/media/css/dokieli.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=e637711f"></script>
-    <script src="../_static/copybutton.js?v=56c01ce6"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script async="async" kind="dokieli" src="https://dokie.li/scripts/dokieli.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
+<title>5&nbsp; IV-Charakterisierung von Siliziumdioden – M 5.3 Elektronik (ELK)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
+</style>
 
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
 
-    script.setAttribute("repo", "mimeiners/elk");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lab/03_Activity.html" rel="next">
+<link href="../lab/01_Activity.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-ed6da6eef3892af8a4b5ed59bfb951f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
     }
+  }
 }
-commentsRunWhenDOMLoaded(addUtterances);
+window.Quarto = {
+  typesetMath
+};
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lab/02_Activity';</script>
-    <link rel="canonical" href="https://mimeiners.github.io/elk/lab/02_Activity.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Der BJT als Diode" href="03_Activity.html" />
-    <link rel="prev" title="Laborversuche" href="01_Activity.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  
-  
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+</head>
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/02_Activity.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">M 5.3 Elektronik (ELK)</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/mimeiners/elk/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</a>
 </div>
-
-  
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-
-  
-    
-  
-
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
-  
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="M 5.3 Elektronik (ELK) - Home"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="M 5.3 Elektronik (ELK) - Home"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
-                    Unsyllabus
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Seminar</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../class/01_lec.html">Einleitung und Übersicht</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Labor</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_Activity.html">Aufgabenstellung</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dioden IV-Charakterisierung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_Activity.html">Der BJT als Diode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_Activity.html">Der MOSFET als Diode</a></li>
-</ul>
-
     </div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
       </div>
-      
-      <main id="main-content" class="bd-main" role="main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/mimeiners/elk" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/mimeiners/elk/edit/master/lab/02_Activity.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/mimeiners/elk/issues/new?title=Issue%20on%20page%20%2Flab/02_Activity.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/lab/02_Activity.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-              
-              
-
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Dioden IV-Charakterisierung</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zielsetzung">Zielsetzung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hintergrund">Hintergrund</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schematische-symbole-der-diode">Schematische Symbole der Diode</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materialien">Materialien</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pn-diode-iv-charakteristik">pn-Diode IV-Charakteristik</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeitbereichsmessungen">Zeitbereichsmessungen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorgehensweise-messung-der-i-v-charakteristik">Vorgehensweise - Messung der I/V-Charakteristik</a></li>
-</ul>
-            </nav>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/01_lec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/02_lec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale und Systeme</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/03_lec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labor</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/01_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/03_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
     </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">5.1</span> Zielsetzung</a></li>
+  <li><a href="#hintergrund" id="toc-hintergrund" class="nav-link" data-scroll-target="#hintergrund"><span class="header-section-number">5.2</span> Hintergrund</a></li>
+  <li><a href="#schematische-symbole-der-diode" id="toc-schematische-symbole-der-diode" class="nav-link" data-scroll-target="#schematische-symbole-der-diode"><span class="header-section-number">5.3</span> Schematische Symbole der Diode</a></li>
+  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">5.4</span> Materialien</a></li>
+  <li><a href="#iv-charakteristik" id="toc-iv-charakteristik" class="nav-link" data-scroll-target="#iv-charakteristik"><span class="header-section-number">5.5</span> IV-Charakteristik</a></li>
+  <li><a href="#zeitbereichsmessungen" id="toc-zeitbereichsmessungen" class="nav-link" data-scroll-target="#zeitbereichsmessungen"><span class="header-section-number">5.6</span> Zeitbereichsmessungen</a>
+  <ul class="collapse">
+  <li><a href="#messungen-mit-der-stemlab-oszilloskop-app" id="toc-messungen-mit-der-stemlab-oszilloskop-app" class="nav-link" data-scroll-target="#messungen-mit-der-stemlab-oszilloskop-app"><span class="header-section-number">5.6.1</span> Messungen mit der STEMlab Oszilloskop-App</a></li>
+  <li><a href="#messungen-mit-scpi-server-und-python" id="toc-messungen-mit-scpi-server-und-python" class="nav-link" data-scroll-target="#messungen-mit-scpi-server-und-python"><span class="header-section-number">5.6.2</span> Messungen mit SCPI-Server und Python</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/02_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/02_Activity.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></h1>
 </div>
 
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
-  <section class="tex2jax_ignore mathjax_ignore" id="dioden-iv-charakterisierung">
-<h1>Dioden IV-Charakterisierung<a class="headerlink" href="#dioden-iv-charakterisierung" title="Link to this heading">#</a></h1>
-<section id="zielsetzung">
-<h2>Zielsetzung<a class="headerlink" href="#zielsetzung" title="Link to this heading">#</a></h2>
-<p>Ziel dieses Laborversuchs ist es, Strom- und Spannungseigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und
-1N4148 zu untersuchen. Parallel zu Messungen am Red Pitaya STEMlab muss die Schaltung vollständig in LTSpice simuliert
-werden, so dass die Messdaten aus dem STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.</p>
-<p><em>Hinweis.</em>
-In diesem Laborversuch wird die Terminologie aus der <a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/index.html">Dokumentation</a>
-verwendet, wenn es um Verbindungen zum
-<a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/top.html">Red Pitaya STEMlab</a> geht.</p>
-<p>Die Erweiterungsstecker-Pins für die Spannungsversorgung -3.3 V und +3.3 V sind in der
-<a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/extent.html">Dokumentation</a>
-dargestellt.</p>
-<p>Die <a class="reference external" href="https://redpitaya.readthedocs.io/en/latest/appsFeatures/applications/oscSigGen/osc.html">Oszilloskop und Signalgenerator App</a>
-wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMLab’s aktiviert
-ist.</p>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="zielsetzung" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">5.1</span> Zielsetzung</h2>
+<p>Ziel dieses Laborversuchs ist es, Strom- (I) und Spannungs- (V, eigentlich U) eigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu untersuchen. Parallel zu Messungen mit dem Red Pitaya STEMlab soll die Schaltung vollständig mit SPICE (LTspice, ngspice) simuliert werden, so dass Messdaten vom STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.</p>
+<p><em>Hinweis.</em> In diesem Laborversuch wird die Terminologie aus der <a href="https://redpitaya.readthedocs.io/en/latest/index.html">Dokumentation</a> verwendet, wenn es um Verbindungen zum <a href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/top.html">Red Pitaya STEMlab</a> geht.</p>
+<p>Die Erweiterungsstecker-Pins für die Spannungsversorgung -3.3 V und +3.3 V sind in der <a href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/extent.html">Dokumentation</a> dargestellt.</p>
+<p>Die <a href="https://redpitaya.readthedocs.io/en/latest/appsFeatures/applications/oscSigGen/osc.html">Oszilloskop und Signalgenerator App</a> wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMlab’s aktiviert ist.</p>
 </section>
-<section id="hintergrund">
-<h2>Hintergrund<a class="headerlink" href="#hintergrund" title="Link to this heading">#</a></h2>
-<p>Eine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur
-in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.</p>
-<p>Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei <span class="math notranslate nohighlight">\(\approx\)</span> 0.7 V und die
-IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:</p>
-<div class="math notranslate nohighlight">
-\[
+<section id="hintergrund" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="hintergrund"><span class="header-section-number">5.2</span> Hintergrund</h2>
+<p>Eine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.</p>
+<p>Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei <span class="math inline">\(\approx\)</span> 0.7 V und die IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:</p>
+<p><span class="math display">\[
 \begin{equation}
 I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
 \end{equation}
-\]</div>
-<p>wobei <span class="math notranslate nohighlight">\(I_{S}\)</span> der Sättigungssperrstrom ist und <span class="math notranslate nohighlight">\(N\)</span> ein Skalierungsfaktoren (Emissionskoeffizient), <span class="math notranslate nohighlight">\(V_T = kT / q\)</span> ist
-die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (<span class="math notranslate nohighlight">\(T\)</span> = 300 K).</p>
+\]</span></p>
+<p>wobei <span class="math inline">\(I_{S}\)</span> der Sättigungssperrstrom ist und <span class="math inline">\(N\)</span> ein Skalierungsfaktoren (Emissionskoeffizient), <span class="math inline">\(V_T = kT / q\)</span> ist die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (<span class="math inline">\(T\)</span> = 300 K).</p>
 </section>
-<section id="schematische-symbole-der-diode">
-<h2>Schematische Symbole der Diode<a class="headerlink" href="#schematische-symbole-der-diode" title="Link to this heading">#</a></h2>
-<p>Jeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet
-ist, <a class="reference internal" href="#19_fig_01.html#19_fig_01"><span class="xref myst">Figure</span></a>. Eine etwa “Z”-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links
-in <a class="reference internal" href="#19_fig_01.html#19_fig_01"><span class="xref myst">Figure</span></a> zu sehen ist. Eine “S”-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der
-Diode wegzeigen, kennzeichnen eine LED (engl. Light Emitting Diode), wie im rechten Symbol dargestellt. Pfeile, die auf
-die Diode zeigen, kennzeichnen eine Photodiode.</p>
-<p><img alt="Diodensymbole. " src="../_images/Activity_19_Fig_01a.png" /></p>
+<section id="schematische-symbole-der-diode" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="schematische-symbole-der-diode"><span class="header-section-number">5.3</span> Schematische Symbole der Diode</h2>
+<p>Jeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet ist, vgl. <a href="#fig-19-01" class="quarto-xref">Figure&nbsp;<span>5.1</span></a> . Eine <em>Z</em>-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links in <a href="#fig-19-01" class="quarto-xref">Figure&nbsp;<span>5.1</span></a> zu sehen ist. Eine <em>S</em>-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der Diode wegzeigen, kennzeichnen eine LED (Light Emitting Diode, engl.), wie im rechten Symbol dargestellt. Pfeile, die auf die Diode zeigen, kennzeichnen eine Photodiode.</p>
+<div id="fig-19-01" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-19-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Activity_19_Fig_01a.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Diodensymbole
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="materialien">
-<h2>Materialien<a class="headerlink" href="#materialien" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Red Pitaya STEMlab</p></li>
-<li><p>10 <span class="math notranslate nohighlight">\(\Omega\)</span> Widerstand</p></li>
-<li><p>Diode 1N4148</p></li>
-<li><p>Diode 1N4001</p></li>
-<li><p>Platine</p></li>
+<section id="materialien" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="materialien"><span class="header-section-number">5.4</span> Materialien</h2>
+<ul>
+<li>Red Pitaya’s STEMlab</li>
+<li>10 <span class="math inline">\(\Omega\)</span> Widerstand</li>
+<li>Diode 1N4148</li>
+<li>Diode 1N4001</li>
+<li>Platine</li>
 </ul>
 </section>
-<section id="pn-diode-iv-charakteristik">
-<h2>pn-Diode IV-Charakteristik<a class="headerlink" href="#pn-diode-iv-charakteristik" title="Link to this heading">#</a></h2>
-<p>Die Strom-/Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den folgenden in <a class="reference internal" href="#19_fig_04.html#19_fig_04"><span class="xref myst">Figure</span></a>
-dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem
-Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im
-Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden
-Diodenstrom und -spannung:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<section id="iv-charakteristik" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="iv-charakteristik"><span class="header-section-number">5.5</span> IV-Charakteristik</h2>
+<p>Die Strom- und Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den in <a href="#fig-19-04" class="quarto-xref">Figure&nbsp;<span>5.2</span></a> dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden Diodenstrom und -spannung:</p>
+<p><span class="math display">\[
 \begin{align}
 I_D &amp;= (IN_1 - IN_2) / R_1 \\
 V_D &amp;= IN_2
 \end{align}
-\end{split}\]</div>
-<p><img alt="Anschlussplan für Dioden IV-Kurven. " src="../_images/Activity_19_Fig_04a.png" /></p>
-<p>Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
-mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der
-Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (XY-Plot) erforderlich, wobei die x-Achse die
-Diodenspannung IN2 und die y-Achse den Diodenstrom <span class="math notranslate nohighlight">\(I_D = (IN1-IN2)/R1\)</span> darstellen.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>BITTE NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN PARALLEL VERWENDEN.</p>
+\]</span></p>
+<div id="fig-19-04" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-19-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Activity_19_Fig_04a.png" class="img-fluid figure-img">
 </div>
-<p>Deaktivieren Sie die Oszilloskop-App (OFF-Button), bevor Sie den Zugriff mit Jupyter Notebook oder SCPI erproben.</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.2: Anschlussplan für Dioden IV-Kurven
+</figcaption>
+</figure>
+</div>
+<p>Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (xy-Graph/Plot) erforderlich, wobei die x-Achse die Diodenspannung an IN2 und die y-Achse den Diodenstrom <span class="math inline">\(I_D = (IN1-IN2)/R1\)</span> darstellen.</p>
 </section>
-<section id="zeitbereichsmessungen">
-<h2>Zeitbereichsmessungen<a class="headerlink" href="#zeitbereichsmessungen" title="Link to this heading">#</a></h2>
-<p><img alt="Verbindungen auf dem Steckbrett. " src="../_images/Activity_19_Fig_05a.png" /></p>
-<ul class="simple">
-<li><p>Die Schaltung aus <a class="reference internal" href="#19_fig_04.html#19_fig_04"><span class="xref myst">Figure</span></a> ist für Sie auf einer Platine aufgebaut und angeschlossen.</p></li>
-<li><p>Loggen Sie sich mit Google Chrome oder Firefox auf dem STEMlab ein und starten Sie die Oszilloskop- und Signalgenerator-App.</p></li>
+<section id="zeitbereichsmessungen" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="zeitbereichsmessungen"><span class="header-section-number">5.6</span> Zeitbereichsmessungen</h2>
+<div id="wrn-conn" class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning&nbsp;5.1: Unterschiedliche Zugriffsarten / Messverfahren mit dem STEMlab
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN / MESSVERFAHREN PARALLEL VERWENDEN.</p>
+<p>NICHT MIT ZWEI ODER MEHREREN RECHNERN ZUM MESSEN AUF DAS STEMLAB ZUGREIFEN.</p>
+<p>Greifen Sie nur von einem Rechner aus auf das STEMlab zu und deaktivieren Sie die aktuell nicht genutzte Methode, bspw. Oszilloskop-App (OFF-Button), bevor Sie den Zugriff via JupyterLab oder SCPI erproben.</p>
+</div>
+</div>
+<section id="messungen-mit-der-stemlab-oszilloskop-app" class="level3" data-number="5.6.1">
+<h3 data-number="5.6.1" class="anchored" data-anchor-id="messungen-mit-der-stemlab-oszilloskop-app"><span class="header-section-number">5.6.1</span> Messungen mit der STEMlab Oszilloskop-App</h3>
+<div id="tip-urls" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;5.1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>URLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB</em></p>
+<ul>
+<li><a href="http://elie1redpi.fk4.hs-bremen.de">Laborplatz ELIE1</a></li>
+<li><a href="http://elie2redpi.fk4.hs-bremen.de">Laborplatz ELIE2</a></li>
+<li><a href="http://elie3redpi.fk4.hs-bremen.de">Labroplatz ELIE3</a></li>
+<li><a href="http://elie4redpi.fk4.hs-bremen.de">Laborplatz ELIE4</a></li>
+<li><a href="http://elie5redpi.fk4.hs-bremen.de">Laborplatz ELIE5</a></li>
+<li><a href="http://elie6redpi.fk4.hs-bremen.de">Laborplatz ELIE6</a></li>
+</ul>
+</div>
+</div>
+<div id="fig-19-05" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-19-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Activity_19_Fig_05a.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.3: Verbindungen auf dem Steckbrett
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Die Schaltung aus <a href="#fig-19-04" class="quarto-xref">Figure&nbsp;<span>5.2</span></a> ist für Sie auf einer Platine aufgebaut und wird via SMA-Verbindern an das STEMlab angeschlossen.</p></li>
+<li><p>Loggen Sie sich mit vorzugsweise mit Google Chrome oder Mozilla Firefox auf dem STEMlab an ihrem Laborplatz ein und starten Sie die Oszilloskop- und Signalgenerator-App.</p></li>
 <li><p>Stellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform “TRIANGLE” und aktivieren den Ausgang mit “ON”. Der “SHOW”-Button dient zum Anzeigen des Signals in der Oszilloskop-App.</p></li>
 <li><p>Stellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.</p></li>
 <li><p>Setzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.</p></li>
-<li><p>Im Menü “MATH settings” die Differenz IN1-IN2 einstellen und “ENABLE” auswählen. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.</p></li>
+<li><p>Im Menü “MATH settings” stellen Sie die Differenz IN1-IN2 ein und aktieren diese wurch setzen des “ENABLE” Buttons. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.</p></li>
 </ul>
-<p><img alt="Spannung und Strom einer Siliziumdiode (zeitabhängig). " src="../_images/Activity_19_Fig_06.png" /></p>
-<p>Aus <a class="reference internal" href="#19_fig_06.html#19_fig_06"><span class="xref myst">Figure</span></a> kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die
-Schwellenspannung von ca. 0.7 V erreicht.</p>
-<p>Außerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der
-Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung
-<span class="math notranslate nohighlight">\(&gt; 0.7\,\text{V}\)</span> ist, beginnt die Diode zu leiten und der Pfadstrom wird nur durch den Widerstand <span class="math notranslate nohighlight">\(R_1\)</span> begrenzt.</p>
-</section>
-<section id="vorgehensweise-messung-der-i-v-charakteristik">
-<h2>Vorgehensweise - Messung der I/V-Charakteristik<a class="headerlink" href="#vorgehensweise-messung-der-i-v-charakteristik" title="Link to this heading">#</a></h2>
-<p>Für diese Aufgabe verwenden Sie die Steuerung des STEMLabs mittels SCPI-Server und Python aus dem VPN der Hochschule am
-zugewiesenen Laborplatz.</p>
-<p>Die IP-Adressen der STEMLabs für den Zugriff via SCPI:</p>
-<ul class="simple">
-<li><p>Laborplatz ELIE1: 192.168.111.181</p></li>
-<li><p>Laborplatz ELIE2: 192.168.111.182</p></li>
-<li><p>Labroplatz ELIE3: 192.168.111.183</p></li>
-<li><p>Laborplatz ELIE4: 192.168.111.184</p></li>
-<li><p>Laborplatz ELIE5: 192.168.111.185</p></li>
-<li><p>Laborplatz ELIE6: 192.168.111.186</p></li>
-</ul>
-<p>Die URLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://elie1redpi.fk4.hs-bremen.de">Laborplatz ELIE1</a></p></li>
-<li><p><a class="reference external" href="http://elie2redpi.fk4.hs-bremen.de">Laborplatz ELIE2</a></p></li>
-<li><p><a class="reference external" href="http://elie3redpi.fk4.hs-bremen.de">Labroplatz ELIE3</a></p></li>
-<li><p><a class="reference external" href="http://elie4redpi.fk4.hs-bremen.de">Laborplatz ELIE4</a></p></li>
-<li><p><a class="reference external" href="http://elie5redpi.fk4.hs-bremen.de">Laborplatz ELIE5</a></p></li>
-<li><p><a class="reference external" href="http://elie6redpi.fk4.hs-bremen.de">Laborplatz ELIE6</a></p></li>
-</ul>
-<p>Wie Sie Jupyter Notebook auf einem Red Pitaya starten und ein neues Projekt erstellen, ist in <a class="reference internal" href="#19_fig_07.html#19_fig_07"><span class="xref myst">Figure</span></a> dargestellt.</p>
-<p><img alt="Erstellen eines neuen Jupyter Notebooks. " src="../_images/Activity_19_Fig_07.png" /></p>
-<p>Wenn Sie erfolgreich ein neues Jupyter Notebook erstellt haben, kopieren Sie den untenstehenden Code in eine Zelle
-hinein und führen ihn aus. Der untenstehende Code erzeugt das gleiche Signal wie in <a class="reference internal" href="#19_fig_06.html#19_fig_06"><span class="xref myst">Figure</span></a>, aber er
-zeichnet die Messdaten in einem xy-Diagramm auf. Für die Messung der IV-Kurve der Diode ist die x-Achse (Abszisse) die
-Diodenspannung an IN2 und die y-Achse (Ordinate) der Diodenstrom <span class="math notranslate nohighlight">\(I_D = (IN1-IN2)/R_1\)</span>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import libraries</span>
-<span class="kn">from</span> <span class="nn">redpitaya.overlay.mercury</span> <span class="kn">import</span> <span class="n">mercury</span> <span class="k">as</span> <span class="n">overlay</span>
-
-<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">push_notebook</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_notebook</span>
-<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">HoverTool</span><span class="p">,</span> <span class="n">Range1d</span><span class="p">,</span> <span class="n">LinearAxis</span><span class="p">,</span> <span class="n">LabelSet</span><span class="p">,</span> <span class="n">Label</span>
-<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">show</span>
-<span class="kn">from</span> <span class="nn">bokeh.resources</span> <span class="kn">import</span> <span class="n">INLINE</span>
-<span class="n">output_notebook</span><span class="p">(</span><span class="n">resources</span><span class="o">=</span><span class="n">INLINE</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-
-<span class="c1"># Initialize fpga modules</span>
-<span class="n">fpga</span> <span class="o">=</span> <span class="n">overlay</span><span class="p">()</span>
-<span class="n">gen0</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">.</span><span class="n">gen</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">osc</span> <span class="o">=</span> <span class="p">[</span><span class="n">fpga</span><span class="o">.</span><span class="n">osc</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">fpga</span><span class="o">.</span><span class="n">_MNO</span><span class="p">)]</span>
-
-
-<span class="c1"># Configure OUT1 generator channel</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">amplitude</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">waveform</span> <span class="o">=</span> <span class="n">gen0</span><span class="o">.</span><span class="n">sawtooth</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="mi">2000</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">enable</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">gen0</span><span class="o">.</span><span class="n">trigger</span><span class="p">()</span>
-
-
-<span class="c1"># R1 resistor value</span>
-<span class="n">R1</span> <span class="o">=</span> <span class="mi">10</span>
-
-
-<span class="c1"># Configure IN1 and IN2 oscilloscope input channels</span>
-<span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">osc</span><span class="p">:</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">filter_bypass</span> <span class="o">=</span> <span class="kc">True</span>
-
-    <span class="c1"># data rate decimation</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">decimation</span> <span class="o">=</span> <span class="mi">10</span>
-
-    <span class="c1"># trigger timing [sample periods]</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">ch</span><span class="o">.</span><span class="n">buffer_size</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">trigger_pre</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">trigger_post</span> <span class="o">=</span> <span class="n">N</span>
-
-    <span class="c1"># osc0 is controlling both channels</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">sync_src</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">.</span><span class="n">sync_src</span><span class="p">[</span><span class="s2">&quot;osc0&quot;</span><span class="p">]</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">trig_src</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">.</span><span class="n">trig_src</span><span class="p">[</span><span class="s2">&quot;osc0&quot;</span><span class="p">]</span>
-
-    <span class="c1"># trigger level [V], edge [&#39;neg&#39;, &#39;pos&#39;] and holdoff time [sample periods]</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mf">0.5</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">edg</span> <span class="o">=</span> <span class="s1">&#39;pos&#39;</span>
-    <span class="n">ch</span><span class="o">.</span><span class="n">holdoff</span> <span class="o">=</span> <span class="mi">0</span>
-
-    
-<span class="c1"># Initialize diode current and voltage</span>
-<span class="n">V</span> <span class="o">=</span> <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-
-
-<span class="c1"># Plotting</span>
-<span class="n">hover</span> <span class="o">=</span> <span class="n">HoverTool</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;vline&#39;</span><span class="p">,</span> <span class="n">tooltips</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="s2">&quot;@x&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;@y&quot;</span><span class="p">)])</span>
-<span class="n">tools</span> <span class="o">=</span> <span class="s2">&quot;wheel_zoom, box_zoom, reset, pan&quot;</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">plot_width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span>
-           <span class="n">title</span><span class="o">=</span><span class="s2">&quot;XY plot der Dioden IV-Kurve&quot;</span><span class="p">,</span>
-           <span class="n">toolbar_location</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span>
-           <span class="n">tools</span><span class="o">=</span><span class="p">(</span><span class="n">tools</span><span class="p">,</span> <span class="n">hover</span><span class="p">))</span>
-<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Spannung in V&#39;</span>
-<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Strom in mA&#39;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">line_alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-
-
-<span class="c1"># get and explicit handle to update the next show cell</span>
-<span class="n">target</span> <span class="o">=</span> <span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">notebook_handle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
+<div id="fig-19-06" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-19-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Activity_19_Fig_06.png" class="img-fluid figure-img">
 </div>
-<p>Erstelle Sie eine neue Zelle (Einfügen -&gt; Zelle darunter) und kopiere Sie den Code hinein.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Messung von  I, V und plotten</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="c1"># Reset und Start</span>
-    <span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
-    <span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-
-    <span class="c1"># Auf Daten warten</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">status_run</span><span class="p">()):</span>
-        <span class="k">pass</span>
-
-    <span class="n">V0</span> <span class="o">=</span> <span class="n">osc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># IN1 Signal</span>
-    <span class="n">V1</span> <span class="o">=</span> <span class="n">osc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># IN2 Signal</span>
-    <span class="n">I</span> <span class="o">=</span> <span class="p">((</span><span class="n">V0</span><span class="o">-</span><span class="n">V1</span><span class="p">)</span><span class="o">/</span><span class="n">R1</span><span class="p">)</span><span class="o">*</span><span class="mf">1E3</span>     <span class="c1"># 1E3 Umwandlung zu mA</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">data_source</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">V0</span>
-    <span class="n">r</span><span class="o">.</span><span class="n">data_source</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">I</span>
-
-    <span class="n">push_notebook</span><span class="p">(</span><span class="n">handle</span><span class="o">=</span><span class="n">target</span><span class="p">)</span>
-</pre></div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.4: Spannung und Strom einer Siliziumdiode (zeitabhängig)
+</figcaption>
+</figure>
 </div>
-<p>Führen Sie Zelle 1 und Zelle 2 aus. Obacht, Zelle 2 ist eine Hauptschleife für die Erfassung und Neuaufnahme. Wenn Sie
-die Erfassung stoppen, führen Sie einfach nur Zelle 2 aus, um die Messungen erneut zu starten.</p>
-<p>Nach dem Ausführen des obigen Codes sollten Sie die IV-Charakteristik der Diode, wie in <a class="reference internal" href="#19_fig_08.html#19_fig_08"><span class="xref myst">Figure</span></a>
-dargestellt, erhalten.</p>
-<p><img alt="Dioden IV-Charakteristik gemessen mit Jupyter Notebook. " src="../_images/Activity_19_Fig_08.png" /></p>
-<p>In der <a class="reference internal" href="#19_fig_08.html#19_fig_08"><span class="xref myst">Figure</span></a> ist die typische IV-Kennlinie einer Si-diode dargestellt. Es ist ersichtlich,
-dass bei steigender Spannung an der Diode (von 0 V - 0.5 V) der Diodenstrom nahe Null bleibt, bis die Spannung Werte
-nahe der Schwellenspannung von etwa 0.7 V erreicht. An dieser Stelle wird die Diode “eingeschaltet” (leitend) und der
-Diodenstrom <span class="math notranslate nohighlight">\(I_D\)</span> wird nur durch den Widerstand <span class="math notranslate nohighlight">\(R_1\)</span> begrenzt. Falls bei abnehmender Diodenspannung die IV-Kurve nicht
-gleich ist, führt dies zur Diodenhysterese. Die obere Kurve aus <a class="reference internal" href="#19_fig_08.html#19_fig_08"><span class="xref myst">Figure</span></a> zeigt, dass die
-untere Diodenspannung nach dem “Einschalten” der Diode einen höheren Strom verursacht als bei der vorherigen
-“Abschaltung” der Diode. Eine ideale Diode hat keine Hysterese, d.h. der Diodenstrom ist unabhängig von früheren Diodenzuständen, nur abhängig von der
-Diodenspannung.</p>
+<p>In <a href="#fig-19-06" class="quarto-xref">Figure&nbsp;<span>5.4</span></a> kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die Schwellenspannung von ca. 0.7 V erreicht.</p>
+<p>Außerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung größer 0.7 V ist, beginnt die Diode zu leiten und der Strom wird nur durch den Widerstand <span class="math inline">\(R_1\)</span> begrenzt.</p>
+</section>
+<section id="messungen-mit-scpi-server-und-python" class="level3" data-number="5.6.2">
+<h3 data-number="5.6.2" class="anchored" data-anchor-id="messungen-mit-scpi-server-und-python"><span class="header-section-number">5.6.2</span> Messungen mit SCPI-Server und Python</h3>
+<div id="tip-ip-scpi" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;5.2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>IP-Adressen der STEMLabs für den Zugriff via SCPI</em></p>
+<ul>
+<li>Laborplatz ELIE1: 192.168.111.181</li>
+<li>Laborplatz ELIE2: 192.168.111.182</li>
+<li>Labroplatz ELIE3: 192.168.111.183</li>
+<li>Laborplatz ELIE4: 192.168.111.184</li>
+<li>Laborplatz ELIE5: 192.168.111.185</li>
+<li>Laborplatz ELIE6: 192.168.111.186</li>
+</ul>
+</div>
+</div>
+
+
 </section>
 </section>
 
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "mimeiners/elk",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            name: "python3",
-            path: "./lab"
-        },
-        predefinedOutput: true
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-                </article>
-              
-
-              
-              
-              
-              
-                <footer class="prev-next-footer d-print-none">
-                  
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="01_Activity.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Laborversuche</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="03_Activity.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Der BJT als Diode</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/elk\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../lab/01_Activity.html" class="pagination-link" aria-label="Laborversuche">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lab/03_Activity.html" class="pagination-link" aria-label="Der BJT als Diode">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>M 5.3 Elektronik (ELK) T. Ziemann, M. Meiners.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/02_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This thesis was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zielsetzung">Zielsetzung</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hintergrund">Hintergrund</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#schematische-symbole-der-diode">Schematische Symbole der Diode</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materialien">Materialien</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pn-diode-iv-charakteristik">pn-Diode IV-Charakteristik</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeitbereichsmessungen">Zeitbereichsmessungen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vorgehensweise-messung-der-i-v-charakteristik">Vorgehensweise - Messung der I/V-Charakteristik</a></li>
-</ul>
-  </nav></div>
+</footer>
 
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By M. Meiners (HSB)
-</p>
 
-  </div>
-  
-  <div class="footer-item">
-    
 
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-<div class="extra_footer">
-  <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-</div>
 
-</div>
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
-    </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
-
-  <footer class="bd-footer">
-  </footer>
-  </body>
-</html>
+</body></html>
