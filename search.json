@@ -509,7 +509,7 @@
     "href": "class/02_lec.html#rauschen",
     "title": "2  Signale und Systeme",
     "section": "2.9 Rauschen",
-    "text": "2.9 Rauschen\n\nRauschen ist ein spezieller Signaltyp, es ist ein statistischer Prozess und beinhaltet keine Informationen.\nRauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.\n\nSignal-zu-Rausch-Verhältnis (SNR). \\[\n\\begin{equation}\nSNR = \\frac{P_{signal}}{P_{noise}} = \\frac{\\overline{f^2_{sig}(t)}}{\\overline{v^2_{noise}(t)}}\n\\end{equation}\n\\]",
+    "text": "2.9 Rauschen\n\nRauschen ist ein spezieller Signaltyp, es ist ein statistischer Prozess und beinhaltet keine Informationen.\nRauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.\n\nSignal-zu-Rausch-Verhältnis (Signal-to-Noise Ratio, SNR, engl.)\n\\[\n\\begin{equation}\nSNR = \\frac{P_{signal}}{P_{noise}} = \\frac{\\overline{f^2_{sig}(t)}}{\\overline{v^2_{noise}(t)}}\n\\end{equation}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
@@ -520,7 +520,7 @@
     "href": "class/02_lec.html#lti-system",
     "title": "2  Signale und Systeme",
     "section": "2.10 LTI System",
-    "text": "2.10 LTI System\nParseval’sches Theorem. \\[\n\\begin{equation}\n\\int_{-\\infty}^{\\infty} \\lvert f(t) \\lvert^2 dt = \\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} \\lvert F(j \\omega) \\lvert^2 d \\omega\n\\end{equation}\n\\]\n\\[\n\\begin{align}\n\\mbox{Energie:} \\quad E_f &= \\int_{-\\infty}^{\\infty} \\lvert f(t) \\lvert^2 dt \\\\\n\\mbox{Leistung:} \\quad P_f &= \\lim\\limits_{T \\to \\infty} \\frac{1}{T} \\int_{-T/2}^{T/2} \\lvert f(t) \\lvert^2 dt\n\\end{align}\n\\]\nWiener-Khintchine Theorem (Autokorrelation). \\[\n\\begin{equation}\nr_{ff}^E (t) = \\int_{-\\infty}^{\\infty} f(t) f(t+\\tau) dt = \\int_{-\\infty}^{\\infty} \\lvert F(j\\omega) \\lvert^2 e^{j \\omega t} df\n\\end{equation}\n\\]\nMittlerer Erwartungswert. \\[\n\\begin{align}\n\\overline{y(t)} &= E \\{ y(t) \\} = E \\left\\{\\int_{-\\infty}^{\\infty} u(t)h(t-\\tau) dt \\right\\} \\\\\nr_{uy}(t) &= r_{uu}(t) \\ast h(t) \\\\\nS_{uy}(j\\omega) &= S_{uu}(j \\omega) \\cdot H(j \\omega)\n\\end{align}\n\\]\nWiener-Lee Beziehung. \\[\n\\begin{align}\nr_{yy}(t) &= r_{uu}(t) \\ast r_{hh}^E (t) \\\\\nS_{yy}(j \\omega) &= S_{uu}(j \\omega) \\cdot \\lvert H(j \\omega) \\lvert^2\n\\end{align}\n\\]",
+    "text": "2.10 LTI System\nParseval’sches Theorem\n\\[\n\\begin{equation}\n\\int_{-\\infty}^{\\infty} \\lvert f(t) \\lvert^2 dt =\n\\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} \\lvert F(j \\omega) \\lvert^2 d \\omega\n\\end{equation}\n\\]\n\\[\n\\begin{align}\n\\mbox{Energie:} \\quad E_f &= \\int_{-\\infty}^{\\infty} \\lvert f(t) \\lvert^2 dt \\\\\n\\mbox{Leistung:} \\quad P_f &= \\lim\\limits_{T \\to \\infty} \\frac{1}{T} \\int_{-T/2}^{T/2} \\lvert f(t) \\lvert^2 dt\n\\end{align}\n\\]\nWiener-Khintchine Theorem (Autokorrelation)\n\\[\n\\begin{equation}\nr_{ff}^E (t) = \\int_{-\\infty}^{\\infty} f(t) f(t+\\tau) dt =\n\\int_{-\\infty}^{\\infty} \\lvert F(j\\omega) \\lvert^2 e^{j \\omega t} df\n\\end{equation}\n\\]\nMittlerer Erwartungswert\n\\[\n\\begin{align}\n\\overline{y(t)} &= E \\{ y(t) \\} = E \\left\\{\\int_{-\\infty}^{\\infty} u(t)h(t-\\tau) dt \\right\\} \\\\\nr_{uy}(t) &= r_{uu}(t) \\ast h(t) \\\\\nS_{uy}(j\\omega) &= S_{uu}(j \\omega) \\cdot H(j \\omega)\n\\end{align}\n\\]\nWiener-Lee Beziehung\n\\[\n\\begin{align}\nr_{yy}(t) &= r_{uu}(t) \\ast r_{hh}^E (t) \\\\\nS_{yy}(j \\omega) &= S_{uu}(j \\omega) \\cdot \\lvert H(j \\omega) \\lvert^2\n\\end{align}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
@@ -531,7 +531,7 @@
     "href": "class/02_lec.html#psd-zu-snr",
     "title": "2  Signale und Systeme",
     "section": "2.11 PSD zu SNR",
-    "text": "2.11 PSD zu SNR\nLeistungsdichtespektrum. PSD - Power Spectral Density (engl.) \\[\n\\begin{align}\n\\overline{v_{noise}^2(t)} &= r_{yy}(0) = \\int_{-\\infty}^{\\infty} S_{yy}(j \\omega) df \\\\\n\\overline{v_{noise}^2(t)} &=  \\int_{-\\infty}^{\\infty} S_{uu}(j \\omega) \\cdot \\lvert H(j \\omega) \\lvert^2\n\\end{align}\n\\]\nSignal-zu-Rausch Verhältnis. SNR - Signal-to-Noise Ratio (engl.) \\[\n\\begin{equation}\nSNR = \\frac{P_{signal}}{P_{noise}} = \\frac{\\overline{f^2_{sig}(t)}}{\\overline{v^2_{noise}(t)}}\n\\end{equation}\n\\]",
+    "text": "2.11 PSD zu SNR\nLeistungsdichtespektrum (Power Spectral Density, PSD, engl.)\n\\[\n\\begin{align}\n\\overline{v_{noise}^2(t)} &= r_{yy}(0) = \\int_{-\\infty}^{\\infty} S_{yy}(j \\omega) df \\\\\n\\overline{v_{noise}^2(t)} &=  \\int_{-\\infty}^{\\infty} S_{uu}(j \\omega) \\cdot \\lvert H(j \\omega) \\lvert^2\n\\end{align}\n\\]\nSignal-zu-Rausch Verhältnis (Signal-to-Noise Ratio, SNR, engl.)\n\\[\n\\begin{equation}\nSNR = \\frac{P_{signal}}{P_{noise}} = \\frac{\\overline{f^2_{sig}(t)}}{\\overline{v^2_{noise}(t)}}\n\\end{equation}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
@@ -542,18 +542,7 @@
     "href": "class/02_lec.html#rauschen-eines-passiven-tiefpassfilters",
     "title": "2  Signale und Systeme",
     "section": "2.12 Rauschen eines passiven Tiefpassfilters",
-    "text": "2.12 Rauschen eines passiven Tiefpassfilters\n\n\\[\n\\begin{equation}\n\\overline{v_{out}^2} =\n\\int_{f_1}^{f_2} 4 kTR \\, \\left\\lvert \\frac{1}{1 + j 2 \\pi f \\cdot RC} \\right\\lvert^2 df =\n4kTR \\int_{f_1}^{f_2} \\frac{1}{1+(2\\pi f RC)^2} df\n\\end{equation}\n\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#formelsammlung",
-    "href": "class/02_lec.html#formelsammlung",
-    "title": "2  Signale und Systeme",
-    "section": "2.13 Formelsammlung",
-    "text": "2.13 Formelsammlung\nNotice. \\[\n\\begin{equation}\n\\int \\frac{1}{1+x^2} dx = \\arctan(x)\n\\end{equation}\n\\]",
+    "text": "2.12 Rauschen eines passiven Tiefpassfilters\n\n\\[\n\\begin{equation}\n\\overline{v_{out}^2} =\n\\int_{f_1}^{f_2} 4 kTR \\, \\left\\lvert \\frac{1}{1 + j 2 \\pi f \\cdot RC} \\right\\lvert^2 df =\n4kTR \\int_{f_1}^{f_2} \\frac{1}{1+(2\\pi f RC)^2} df\n\\end{equation}\n\\]\n\n\n\n\n\n\nTip\n\n\n\n\\[\n\\begin{equation}\n\\int \\frac{1}{1+x^2} dx = \\arctan(x)\n\\end{equation}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
@@ -563,8 +552,8 @@
     "objectID": "class/02_lec.html#total-integrated-noise",
     "href": "class/02_lec.html#total-integrated-noise",
     "title": "2  Signale und Systeme",
-    "section": "2.14 Total Integrated Noise",
-    "text": "2.14 Total Integrated Noise\n\\[\n\\begin{align}\n\\overline{v_{out,tot}^2} &= \\int_{0}^{\\infty} 4 kTR \\,\n\\left\\lvert \\frac{1}{1 + j 2 \\pi f \\cdot RC} \\right\\lvert^2 df \\\\\n&= 4kTR \\int_{f_1}^{f_2} \\frac{1}{1 + (2 \\pi f RC)^2} df \\\\\n&= 4kTR \\frac{1}{4 RC} = \\frac{kT}{C}\n\\end{align}\n\\]",
+    "section": "2.13 Total Integrated Noise",
+    "text": "2.13 Total Integrated Noise\n\\[\n\\begin{align}\n\\overline{v_{out,tot}^2} &= \\int_{0}^{\\infty} 4 kTR \\,\n\\left\\lvert \\frac{1}{1 + j 2 \\pi f \\cdot RC} \\right\\lvert^2 df \\\\\n&= 4kTR \\int_{f_1}^{f_2} \\frac{1}{1 + (2 \\pi f RC)^2} df \\\\\n&= 4kTR \\frac{1}{4 RC} = \\frac{kT}{C}\n\\end{align}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
@@ -574,8 +563,8 @@
     "objectID": "class/02_lec.html#lc-tiefpassfilter",
     "href": "class/02_lec.html#lc-tiefpassfilter",
     "title": "2  Signale und Systeme",
-    "section": "2.15 LC Tiefpassfilter",
-    "text": "2.15 LC Tiefpassfilter\n\n\\[\n\\begin{align}\n\\overline{v_{out,tot}^2} &= \\int_{0}^{\\infty} 4 kTR \\,\n\\left\\lvert \\frac{1}{1+\\frac{s}{\\omega_p Q_p} +\n\\frac{s^2}{\\omega_p^2}} \\right\\lvert^2 df \\\\\n&= 4 kTR \\frac{\\omega_p Q_p}{4} = \\frac{kT}{C}\n\\end{align}\n\\]\n\\[\n\\begin{equation}\n\\omega_p = \\frac{1}{\\sqrt{LC}} \\quad\nQ_p = \\frac{1}{R}\\sqrt{\\frac{L}{C}} \\quad\n\\omega_p Q_p \\quad \\frac{1}{RC}\n\\end{equation}\n\\]",
+    "section": "2.14 LC Tiefpassfilter",
+    "text": "2.14 LC Tiefpassfilter\n\n\\[\n\\begin{align}\n\\overline{v_{out,tot}^2} &= \\int_{0}^{\\infty} 4 kTR \\,\n\\left\\lvert \\frac{1}{1+\\frac{s}{\\omega_p Q_p} +\n\\frac{s^2}{\\omega_p^2}} \\right\\lvert^2 df \\\\\n&= 4 kTR \\frac{\\omega_p Q_p}{4} = \\frac{kT}{C}\n\\end{align}\n\\]\n\\[\n\\begin{equation}\n\\omega_p = \\frac{1}{\\sqrt{LC}} \\quad\nQ_p = \\frac{1}{R}\\sqrt{\\frac{L}{C}} \\quad\n\\omega_p Q_p \\quad \\frac{1}{RC}\n\\end{equation}\n\\]",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"

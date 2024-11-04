@@ -241,9 +241,8 @@ window.Quarto = {
   <li><a href="#lti-system" id="toc-lti-system" class="nav-link" data-scroll-target="#lti-system"><span class="header-section-number">2.10</span> LTI System</a></li>
   <li><a href="#psd-zu-snr" id="toc-psd-zu-snr" class="nav-link" data-scroll-target="#psd-zu-snr"><span class="header-section-number">2.11</span> PSD zu SNR</a></li>
   <li><a href="#rauschen-eines-passiven-tiefpassfilters" id="toc-rauschen-eines-passiven-tiefpassfilters" class="nav-link" data-scroll-target="#rauschen-eines-passiven-tiefpassfilters"><span class="header-section-number">2.12</span> Rauschen eines passiven Tiefpassfilters</a></li>
-  <li><a href="#formelsammlung" id="toc-formelsammlung" class="nav-link" data-scroll-target="#formelsammlung"><span class="header-section-number">2.13</span> Formelsammlung</a></li>
-  <li><a href="#total-integrated-noise" id="toc-total-integrated-noise" class="nav-link" data-scroll-target="#total-integrated-noise"><span class="header-section-number">2.14</span> Total Integrated Noise</a></li>
-  <li><a href="#lc-tiefpassfilter" id="toc-lc-tiefpassfilter" class="nav-link" data-scroll-target="#lc-tiefpassfilter"><span class="header-section-number">2.15</span> LC Tiefpassfilter</a></li>
+  <li><a href="#total-integrated-noise" id="toc-total-integrated-noise" class="nav-link" data-scroll-target="#total-integrated-noise"><span class="header-section-number">2.13</span> Total Integrated Noise</a></li>
+  <li><a href="#lc-tiefpassfilter" id="toc-lc-tiefpassfilter" class="nav-link" data-scroll-target="#lc-tiefpassfilter"><span class="header-section-number">2.14</span> LC Tiefpassfilter</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/02_lec.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -432,7 +431,8 @@ x'(n) = A' \, \cos(\omega n T) = A' \, \cos(\Omega T)
 <li><p>Rauschen ist ein spezieller Signaltyp, es ist ein statistischer Prozess und beinhaltet keine Informationen.</p></li>
 <li><p>Rauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.</p></li>
 </ul>
-<p><em>Signal-zu-Rausch-Verhältnis (SNR).</em> <span class="math display">\[
+<p><strong>Signal-zu-Rausch-Verhältnis</strong> (Signal-to-Noise Ratio, SNR, engl.)</p>
+<p><span class="math display">\[
 \begin{equation}
 SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^2_{noise}(t)}}
 \end{equation}
@@ -440,9 +440,11 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 </section>
 <section id="lti-system" class="level2" data-number="2.10">
 <h2 data-number="2.10" class="anchored" data-anchor-id="lti-system"><span class="header-section-number">2.10</span> LTI System</h2>
-<p><em>Parseval’sches Theorem.</em> <span class="math display">\[
+<p><strong>Parseval’sches Theorem</strong></p>
+<p><span class="math display">\[
 \begin{equation}
-\int_{-\infty}^{\infty} \lvert f(t) \lvert^2 dt = \frac{1}{2\pi} \int_{-\infty}^{\infty} \lvert F(j \omega) \lvert^2 d \omega
+\int_{-\infty}^{\infty} \lvert f(t) \lvert^2 dt =
+\frac{1}{2\pi} \int_{-\infty}^{\infty} \lvert F(j \omega) \lvert^2 d \omega
 \end{equation}
 \]</span></p>
 <p><span class="math display">\[
@@ -451,19 +453,23 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 \mbox{Leistung:} \quad P_f &amp;= \lim\limits_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} \lvert f(t) \lvert^2 dt
 \end{align}
 \]</span></p>
-<p><em>Wiener-Khintchine Theorem (Autokorrelation).</em> <span class="math display">\[
+<p><strong>Wiener-Khintchine Theorem (Autokorrelation)</strong></p>
+<p><span class="math display">\[
 \begin{equation}
-r_{ff}^E (t) = \int_{-\infty}^{\infty} f(t) f(t+\tau) dt = \int_{-\infty}^{\infty} \lvert F(j\omega) \lvert^2 e^{j \omega t} df
+r_{ff}^E (t) = \int_{-\infty}^{\infty} f(t) f(t+\tau) dt =
+\int_{-\infty}^{\infty} \lvert F(j\omega) \lvert^2 e^{j \omega t} df
 \end{equation}
 \]</span></p>
-<p><em>Mittlerer Erwartungswert.</em> <span class="math display">\[
+<p><strong>Mittlerer Erwartungswert</strong></p>
+<p><span class="math display">\[
 \begin{align}
 \overline{y(t)} &amp;= E \{ y(t) \} = E \left\{\int_{-\infty}^{\infty} u(t)h(t-\tau) dt \right\} \\
 r_{uy}(t) &amp;= r_{uu}(t) \ast h(t) \\
 S_{uy}(j\omega) &amp;= S_{uu}(j \omega) \cdot H(j \omega)
 \end{align}
 \]</span></p>
-<p><em>Wiener-Lee Beziehung.</em> <span class="math display">\[
+<p><strong>Wiener-Lee Beziehung</strong></p>
+<p><span class="math display">\[
 \begin{align}
 r_{yy}(t) &amp;= r_{uu}(t) \ast r_{hh}^E (t) \\
 S_{yy}(j \omega) &amp;= S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2
@@ -472,13 +478,15 @@ S_{yy}(j \omega) &amp;= S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2
 </section>
 <section id="psd-zu-snr" class="level2" data-number="2.11">
 <h2 data-number="2.11" class="anchored" data-anchor-id="psd-zu-snr"><span class="header-section-number">2.11</span> PSD zu SNR</h2>
-<p><em>Leistungsdichtespektrum.</em> PSD - Power Spectral Density (engl.) <span class="math display">\[
+<p><strong>Leistungsdichtespektrum</strong> (Power Spectral Density, PSD, engl.)</p>
+<p><span class="math display">\[
 \begin{align}
 \overline{v_{noise}^2(t)} &amp;= r_{yy}(0) = \int_{-\infty}^{\infty} S_{yy}(j \omega) df \\
 \overline{v_{noise}^2(t)} &amp;=  \int_{-\infty}^{\infty} S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2
 \end{align}
 \]</span></p>
-<p><em>Signal-zu-Rausch Verhältnis.</em> SNR - Signal-to-Noise Ratio (engl.) <span class="math display">\[
+<p><strong>Signal-zu-Rausch Verhältnis</strong> (Signal-to-Noise Ratio, SNR, engl.)</p>
+<p><span class="math display">\[
 \begin{equation}
 SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^2_{noise}(t)}}
 \end{equation}
@@ -494,17 +502,26 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 4kTR \int_{f_1}^{f_2} \frac{1}{1+(2\pi f RC)^2} df
 \end{equation}
 \]</span></p>
-</section>
-<section id="formelsammlung" class="level2" data-number="2.13">
-<h2 data-number="2.13" class="anchored" data-anchor-id="formelsammlung"><span class="header-section-number">2.13</span> Formelsammlung</h2>
-<p><em>Notice.</em> <span class="math display">\[
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
 \begin{equation}
 \int \frac{1}{1+x^2} dx = \arctan(x)
 \end{equation}
 \]</span></p>
+</div>
+</div>
 </section>
-<section id="total-integrated-noise" class="level2" data-number="2.14">
-<h2 data-number="2.14" class="anchored" data-anchor-id="total-integrated-noise"><span class="header-section-number">2.14</span> Total Integrated Noise</h2>
+<section id="total-integrated-noise" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="total-integrated-noise"><span class="header-section-number">2.13</span> Total Integrated Noise</h2>
 <p><span class="math display">\[
 \begin{align}
 \overline{v_{out,tot}^2} &amp;= \int_{0}^{\infty} 4 kTR \,
@@ -514,8 +531,8 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 \end{align}
 \]</span></p>
 </section>
-<section id="lc-tiefpassfilter" class="level2" data-number="2.15">
-<h2 data-number="2.15" class="anchored" data-anchor-id="lc-tiefpassfilter"><span class="header-section-number">2.15</span> LC Tiefpassfilter</h2>
+<section id="lc-tiefpassfilter" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="lc-tiefpassfilter"><span class="header-section-number">2.14</span> LC Tiefpassfilter</h2>
 <p><img src="../images/lec2s11.png" class="img-fluid"></p>
 <p><span class="math display">\[
 \begin{align}
