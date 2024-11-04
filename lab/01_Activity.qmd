@@ -1,0 +1,20 @@
+# Laborversuche
+In den Laborversuchen des Moduls M 5.3 Elektronik (ELK) sollen Halbleiterbauelemente, wie Dioden,
+Bipolartransistoren (Bipolar Junction Transistor, BJT, engl.) und Feldeffektransistoren (Metal Oxide Semiconductor Field 
+Effect Transistor, MOSFET, engl.) charakterisiert werden. Die Versuche sind der Versuchsreihe
+[Active Learning](https://activelearning-fork.readthedocs.io/en/latest/) von Red Pitaya entnommen.
+
+Sie experimentieren in Gruppen mit bis zu vier Studierenden an elektronischen Bauelementen und Baugruppen, bspw.
+
+* Dioden vom Typ 1N4001 und 1N4148,
+* BJTs vom Typ 2N3904 (npn) und 2N3906 (pnp),
+* MOSFETs vom Typ BS170 und BS250.
+
+Die Charakterisierung geschieht über das VPN der Hochschule, in dem Sie an dem Ihnen zugewiesenen Laborplatz ELIE1 bis
+ELIE6 die Messungen über ein Red Pitaya STEMLab steuern. Die Steuerung der STEMLabs kann sowohl über das Web-Frontend
+mit der Oszilloskop-App geschehen, als auch über den jeweiligen [SCPI
+Server](https://redpitaya.readthedocs.io/en/latest/appsFeatures/remoteControl/remoteAndProg.html) des STEMlabs.
+
+Als Ergebnis der Untersuchungen soll ein Technischer Bericht/Entwicklungsbericht mit [quarto](https://quarto.org/) angefertigt werden.
+
+Im Entwicklungsbericht beschreiben und vergleichen Sie die Messungen mit SPICE-Simulationen gestützt durch Literaturrecherche in Fachjournalen, Fachforen (z.B. auf den Webseiten der Halbleiterhersteller) und der Bibliothek (SuUB).
