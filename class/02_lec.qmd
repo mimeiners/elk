@@ -164,7 +164,8 @@ $$
 
 * Rauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.
 
-*Signal-zu-Rausch-Verhältnis (SNR).* 
+**Signal-zu-Rausch-Verhältnis** (Signal-to-Noise Ratio, SNR, engl.)
+
 $$
 \begin{equation}
 SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^2_{noise}(t)}}
@@ -174,10 +175,12 @@ $$
 
 ## LTI System
 
-*Parseval'sches Theorem.* 
+**Parseval'sches Theorem** 
+
 $$
 \begin{equation}
-\int_{-\infty}^{\infty} \lvert f(t) \lvert^2 dt = \frac{1}{2\pi} \int_{-\infty}^{\infty} \lvert F(j \omega) \lvert^2 d \omega
+\int_{-\infty}^{\infty} \lvert f(t) \lvert^2 dt = 
+\frac{1}{2\pi} \int_{-\infty}^{\infty} \lvert F(j \omega) \lvert^2 d \omega
 \end{equation}
 $$
 
@@ -188,15 +191,18 @@ $$
 \end{align}
 $$
 
-*Wiener-Khintchine Theorem (Autokorrelation).* 
+**Wiener-Khintchine Theorem (Autokorrelation)** 
+
 $$
 \begin{equation}
-r_{ff}^E (t) = \int_{-\infty}^{\infty} f(t) f(t+\tau) dt = \int_{-\infty}^{\infty} \lvert F(j\omega) \lvert^2 e^{j \omega t} df
+r_{ff}^E (t) = \int_{-\infty}^{\infty} f(t) f(t+\tau) dt = 
+\int_{-\infty}^{\infty} \lvert F(j\omega) \lvert^2 e^{j \omega t} df
 \end{equation}
 $$
 
 
-*Mittlerer Erwartungswert.* 
+**Mittlerer Erwartungswert** 
+
 $$
 \begin{align}
 \overline{y(t)} &= E \{ y(t) \} = E \left\{\int_{-\infty}^{\infty} u(t)h(t-\tau) dt \right\} \\
@@ -206,7 +212,8 @@ S_{uy}(j\omega) &= S_{uu}(j \omega) \cdot H(j \omega)
 $$
 
 
-*Wiener-Lee Beziehung.* 
+**Wiener-Lee Beziehung** 
+
 $$
 \begin{align}
 r_{yy}(t) &= r_{uu}(t) \ast r_{hh}^E (t) \\
@@ -217,8 +224,8 @@ $$
 
 ## PSD zu SNR
 
-*Leistungsdichtespektrum.* 
-PSD - Power Spectral Density (engl.)
+**Leistungsdichtespektrum** (Power Spectral Density, PSD, engl.)
+
 $$
 \begin{align}
 \overline{v_{noise}^2(t)} &= r_{yy}(0) = \int_{-\infty}^{\infty} S_{yy}(j \omega) df \\
@@ -228,8 +235,8 @@ $$
 
 
 
-*Signal-zu-Rausch Verhältnis.* 
-SNR - Signal-to-Noise Ratio (engl.)
+**Signal-zu-Rausch Verhältnis** (Signal-to-Noise Ratio, SNR, engl.)
+
 $$
 \begin{equation}
 SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^2_{noise}(t)}}
@@ -250,16 +257,13 @@ $$
 \end{equation}
 $$
 
-
-## Formelsammlung
-
-*Notice.* 
+::: {.callout-tip} 
 $$
 \begin{equation}
 \int \frac{1}{1+x^2} dx = \arctan(x)
 \end{equation}
 $$
-
+:::
 
 ## Total Integrated Noise
 
