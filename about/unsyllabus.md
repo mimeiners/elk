@@ -8,6 +8,3 @@
 | Term              | {{ TERM }}                       |
 | Instructor        | {{ INSTRUCTOR }}                 |
 | Lectures          | {{ MEETING_TIMES }}: {{ ROOM }}  |
-
-
-

@@ -1,30 +1,34 @@
 # Signale und Systeme
 
-
-
 ## Einfache Signale
+Signale repräsentieren Informationen, z.B. *Temperatur eines Backofens.* 
 
-Signale repräsentieren Informationen, z.B.
-
-*Temperatur eines Backofens.* 
 Mögliche Signale sind:
 
 * Temperatur des Backofens
+
 * Temperatur und Feuchtigkeit des Kuchenteigs
-* Geschmack/Qualität des Kuchens.
+
+* Geschmack / Qualität des Kuchens.
 
 
-![<p><em>Signale beim Kuchenbacken. <div id="fig:backofen"></div></em></p>](../../lecture/doconce/fig/lec2_backofen.png)
+![Signale beim Kuchenbacken.](../images/lec2_backofen.png)
 
 
 ## Signaltypen
 
 * Zeitabhängiges Signal, $f(t)$
+
 * Raumabhängiges Signal, $f(x_1, x_2, x_3)$
+
 * Lokal oder verteiltes Signal
+
 * Kontinuierliches oder diskretes Signal
+
   * zeitdiskret
+  
   * amplitudendiskret (quantisiert)
+  
   * ge-sampled, samples
 
 * Logisches oder binäres Signal
@@ -33,23 +37,26 @@ Mögliche Signale sind:
 ## Konstantes Signal
 
 * Ein konstantes Signal für ein elektronisches System korrespondiert nicht mit der mathematischen Definition einer Konstanten.
+
 * Versorgungsspannungen und Referenzsignale elektronischer Schaltungen sind immer fehlerbehaftet (statisch und/oder statistisch).
+
 * Toleranzen/Fehlergrenzen 
 
-![<p><em>EKG. <div id="fig:constsignal"></div></em></p>](../../lecture/doconce/fig/lec2_ekg.png)
+![Elektrokardiogramm, kurz  EKG](../images/lec2_ekg.png)
 
 
-## Nominal und Worst Case
+## Nominal (nom) und Worst Case (wc)
 
 * Wir definieren **nominal** als das Ausgangssignal, welches wir bei einem spezifizierten Eingangssignal erwarten; E/A-Verhalten.
 * **Worst case high** und **worst case low** definieren Signale, die über und unter dem nominalen Signal liegen.
 
-![<p><em>Signalklassen. <div id="fig:worstcase"></div></em></p>](../../lecture/doconce/fig/lec2_nominal.png)
+![Signalklassen](../images/lec2_nominal.png)
 
 
 ## Zeitkontinuierliche Signale
 
 * Wdh. aus Modul GEL2
+
 * allgem. Exponentialfunktion
 
 $$
@@ -61,9 +68,12 @@ s &= \sigma + j \omega
 $$
 
 
-## Sprungsignale (1)
+## Sprungsignale
+
+* Wdh. aus Modul SYS
 
 * Plötzliche Amplitudenänderung, unstetig
+
 * Sprungfunktion
 
 $$
@@ -89,13 +99,11 @@ rect(t) =
 $$
 
 
-## Sprungsignale (2)
-
 * Signumfunktion
 
 $$
 \begin{equation}
-sgn(t) =
+sgn(t) = 
 \begin{cases}
 -1 & \mbox{für } t < 0 \\
 1 & \mbox{für } t > 0
@@ -135,20 +143,25 @@ x'(n) = A' \, \cos(\omega n T) = A' \, \cos(\Omega T)
 $$
 
 * Sprungfolge und verwandte Folgen
+
 * Abgetastetes Signal (sampled)
+
 * Dirac-Impuls
 
 
 ## Stochastische Signale
 
 * Wahrscheinlichkeitsdichtefunktion, vgl. Halbleiterphysik Aufenthaltswahrscheinlichkeit
+
 * Erwartungswert (Mittelwert, Varianz) 
+
 * Autokorrelationsfunktion
 
 
 ## Rauschen
 
 * Rauschen ist ein spezieller Signaltyp, es ist ein statistischer Prozess und beinhaltet keine Informationen. 
+
 * Rauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.
 
 *Signal-zu-Rausch-Verhältnis (SNR).* 
@@ -159,7 +172,7 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 $$
 
 
-## LTI System (1)
+## LTI System
 
 *Parseval'sches Theorem.* 
 $$
@@ -168,17 +181,12 @@ $$
 \end{equation}
 $$
 
-
 $$
 \begin{align}
 \mbox{Energie:} \quad E_f &= \int_{-\infty}^{\infty} \lvert f(t) \lvert^2 dt \\
 \mbox{Leistung:} \quad P_f &= \lim\limits_{T \to \infty} \frac{1}{T} \int_{-T/2}^{T/2} \lvert f(t) \lvert^2 dt
 \end{align}
 $$
-
-
-
-## LTI System (2)
 
 *Wiener-Khintchine Theorem (Autokorrelation).* 
 $$
@@ -188,10 +196,6 @@ r_{ff}^E (t) = \int_{-\infty}^{\infty} f(t) f(t+\tau) dt = \int_{-\infty}^{\inft
 $$
 
 
-
-<!-- !split -->
-## LTI System (3)
-
 *Mittlerer Erwartungswert.* 
 $$
 \begin{align}
@@ -200,7 +204,6 @@ r_{uy}(t) &= r_{uu}(t) \ast h(t) \\
 S_{uy}(j\omega) &= S_{uu}(j \omega) \cdot H(j \omega)
 \end{align}
 $$
-
 
 
 *Wiener-Lee Beziehung.* 
@@ -237,7 +240,7 @@ $$
 
 ## Rauschen eines passiven Tiefpassfilters
 
-![](./fig/lec2s10.png)
+![](../images/lec2s10.png)
 
 $$
 \begin{equation}
@@ -262,9 +265,8 @@ $$
 
 $$
 \begin{align}
-\overline{v_{out,tot}^2} &=
-\int_{0}^{\infty} 4 kTR \, \left\lvert \frac{1}{1 + j 2 \pi f \cdot
-RC} \right\lvert^2 df
+\overline{v_{out,tot}^2} &= \int_{0}^{\infty} 4 kTR \, 
+\left\lvert \frac{1}{1 + j 2 \pi f \cdot RC} \right\lvert^2 df \\
 &= 4kTR \int_{f_1}^{f_2} \frac{1}{1 + (2 \pi f RC)^2} df \\
 &= 4kTR \frac{1}{4 RC} = \frac{kT}{C}
 \end{align}
@@ -273,12 +275,12 @@ $$
 
 ## LC Tiefpassfilter
 
-![](./fig/lec2s11.png)
+![](../images/lec2s11.png)
 
 $$
 \begin{align}
-\overline{v_{out,tot}^2} &=
-\int_{0}^{\infty} 4 kTR \, \left\lvert \frac{1}{1+\frac{s}{\omega_p Q_p} +
+\overline{v_{out,tot}^2} &= \int_{0}^{\infty} 4 kTR \, 
+\left\lvert \frac{1}{1+\frac{s}{\omega_p Q_p} + 
 \frac{s^2}{\omega_p^2}} \right\lvert^2 df \\
 &= 4 kTR \frac{\omega_p Q_p}{4} = \frac{kT}{C}
 \end{align}
@@ -286,7 +288,7 @@ $$
 
 $$
 \begin{equation}
-\omega_p = \frac{1}{\sqrt{LC}} \quad
+\omega_p = \frac{1}{\sqrt{LC}} \quad 
 Q_p = \frac{1}{R}\sqrt{\frac{L}{C}} \quad
 \omega_p Q_p \quad \frac{1}{RC}
 \end{equation}
