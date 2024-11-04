@@ -1,0 +1,54 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "M 5.3 Elektronik (ELK)"
+  author: "T. Ziemann, M. Meiners"
+  date: "17.10.2024"
+
+  reader-mode: true
+
+  page-footer:
+    left: |
+      M 5.3 Elektronik (ELK)
+      T. Ziemann, M. Meiners.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+#  cover-image: images/hsb-logo.png
+#  favicon: images/hsb-logo.png
+  site-url: https://mimeiners.github.io/elk/
+  repo-url: https://github.com/mimeiners/elk/
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  chapters:
+    - index.qmd
+
+    - part: Seminar
+      chapters:
+        - class/01_lec.qmd
+        - class/02_lec.qmd
+        - class/03_lec.qmd
+        - class/references.qmd
+    
+    - part: Labor
+      chapters:
+        - lab/01_Activity.qmd
+        - lab/02_Activity.qmd
+        - lab/03_Activity.qmd
+        - lab/04_Activity.qmd
+#        - lab/05_dega_Activity.ipynb
+          
+bibliography: _bibliography/references.bib
+
+format:
+  html:
+    theme: cosmo
+#  pdf:
+#    documentclass: scrreprt
+
+execute:
+  freeze: auto
+
+editor: visual
