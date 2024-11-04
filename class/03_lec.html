@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -280,18 +300,24 @@ window.Quarto = {
 
 <section id="elektrische-ladung" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="elektrische-ladung"><span class="header-section-number">3.1</span> Elektrische Ladung</h2>
-<p><em>Quantitatives und Einheiten.</em> * Ladung <span class="math inline">\(Q\)</span>, Einheit <span class="math inline">\([Q]\)</span> = 1 Coulomb = 1C = 1 As * Ladung <span class="math inline">\(q\)</span> von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.</p>
+<p><strong>Quantitatives und Einheiten</strong></p>
+<ul>
+<li><p>Ladung <span class="math inline">\(Q\)</span>, Einheit <span class="math inline">\([Q]\)</span> = 1 Coulomb = 1C = 1 As</p></li>
+<li><p>Ladung <span class="math inline">\(q\)</span> von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.</p></li>
+</ul>
 </section>
 <section id="elektrische-feldstärke" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="elektrische-feldstärke"><span class="header-section-number">3.2</span> Elektrische Feldstärke</h2>
-<p><em>Coulomb’sches Gesetz.</em> Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.</p>
+<p><strong>Coulomb’sches Gesetz</strong></p>
+<p>Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.</p>
 <p><span class="math display">\[
 \begin{align}
 \mathbf{F} &amp;=  \frac{1}{4 \pi \varepsilon} \frac{Q_1 Q_2}{r^2} \frac{\vec{r}}{r} \\
 [F] &amp;= 1N = 1 \frac{kg \, m}{s^2} = 1 \frac{Ws}{m}
 \end{align}
 \]</span></p>
-<p><em>Elektrische Feldstärke.</em> <span class="math display">\[
+<p><strong>Elektrische Feldstärke</strong></p>
+<p><span class="math display">\[
 \begin{align}
 \mathbf{E} &amp;= \frac{\mathbf{F}}{Q} \\
 [E] &amp; = \frac{[F]}{[Q]} = 1 \frac{N}{As} = 1 \frac{kg\,m}{A s^3} = 1 \frac{V}{m}
@@ -322,7 +348,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap. 8, Atom- und Kernphysik und Kap. 9, Festkörperphysik, des Buches <em>Physik für Ingenieure</em> von Hering, Martin und Stohrer, sowie Kap. 12, Halbleiter, des Buches <em>Elektronische Bauelemente</em> von Reisch entnommen.</p>
+<p>Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap. 8, Atom- und Kernphysik und Kap. 9, Festkörperphysik, des Buches <em>Physik für Ingenieure</em> von <span class="citation" data-cites="hering2012">Hering, Martin, and Stohrer (<a href="references.html#ref-hering2012" role="doc-biblioref">2012</a>)</span>, sowie Kap. 12, Halbleiter, des Buches <em>Elektronische Bauelemente</em> von <span class="citation" data-cites="reisch2007">Reisch (<a href="references.html#ref-reisch2007" role="doc-biblioref">2007</a>)</span> entnommen.</p>
 </div>
 </div>
 <ul>
@@ -347,9 +373,9 @@ Note
 <h2 data-number="3.5" class="anchored" data-anchor-id="elektronen-im-festkörper"><span class="header-section-number">3.5</span> Elektronen im Festkörper</h2>
 <p><img src="../images/lec3_bandstruktur.png" class="img-fluid"></p>
 <ul>
-<li><strong>Leiter</strong> mit <span class="math inline">\(\rho &lt; 10^{-5} \Omega m\)</span></li>
-<li><strong>Halbleiter</strong> mit <span class="math inline">\(10^{-5} \Omega m &lt; \rho &lt; 10^{7} \Omega m\)</span></li>
-<li><strong>Isolator</strong> mit <span class="math inline">\(\rho &gt; 10^{7} \Omega m\)</span></li>
+<li><p><strong>Leiter</strong> mit <span class="math inline">\(\rho &lt; 10^{-5} \Omega m\)</span></p></li>
+<li><p><strong>Halbleiter</strong> mit <span class="math inline">\(10^{-5} \Omega m &lt; \rho &lt; 10^{7} \Omega m\)</span></p></li>
+<li><p><strong>Isolator</strong> mit <span class="math inline">\(\rho &gt; 10^{7} \Omega m\)</span></p></li>
 </ul>
 </section>
 <section id="energiebänder-modell" class="level2" data-number="3.6">
@@ -483,8 +509,8 @@ f_{FD}(E) = \frac{1}{1 + \exp\left( \frac{E - E_F}{k_B T}\right)}
 <ul>
 <li><p>Ladungsträgerkonzentration Elektronen <span class="math inline">\(n_0 \approx N_C \exp\left( \frac{E_F - E_C}{kT} \right)\)</span></p></li>
 <li><p>Ladungsträgerkonznetration Löcher <span class="math inline">\(p_0 \approx N_V \exp\left( \frac{E_V - E_F}{kT} \right)\)</span></p></li>
-<li><p><em>Massenwirkungsgesetz</em> <span class="math inline">\(n_i^2(T) = n_0 \cdot p_0 = N_C N_V \exp\left( -\frac{(E_C - E_V)}{kT} \right)\)</span></p></li>
-<li><p><em>Neutralitätsbedingung</em> der Raumladung <span class="math inline">\(N_A^{-} + n = N_D^{+} + p\)</span></p></li>
+<li><p><strong>Massenwirkungsgesetz</strong> <span class="math inline">\(n_i^2(T) = n_0 \cdot p_0 = N_C N_V \exp\left( -\frac{(E_C - E_V)}{kT} \right)\)</span></p></li>
+<li><p><strong>Neutralitätsbedingung</strong> der Raumladung <span class="math inline">\(N_A^{-} + n = N_D^{+} + p\)</span></p></li>
 </ul>
 </section>
 <section id="intrinsischer-halbleiter" class="level2" data-number="3.18">
@@ -580,6 +606,14 @@ D_p &amp;= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
 \]</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-hering2012" class="csl-entry" role="listitem">
+Hering, Ekbert, Rolf Martin, and Martin Stohrer. 2012. <em>Physik f<span>ü</span>r Ingenieure</em>. Springer-Lehrbuch. Springer. <a href="https://doi.org/10.1007/978-3-642-22569-7">https://doi.org/10.1007/978-3-642-22569-7</a>.
+</div>
+<div id="ref-reisch2007" class="csl-entry" role="listitem">
+Reisch, Michael. 2007. <em>Elektronische Bauelemente</em>. 2nd ed. Springer. <a href="https://doi.org/10.1007/978-3-540-34015-7">https://doi.org/10.1007/978-3-540-34015-7</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
