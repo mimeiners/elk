@@ -1,11 +1,13 @@
 project:
   type: book
   output-dir: _book
+  
+lang: de
 
 book:
   title: "M 5.3 Elektronik (ELK)"
   author: "T. Ziemann, M. Meiners"
-  date: "17.10.2024"
+  date: "10.17.2024"
 
   reader-mode: true
 
@@ -44,9 +46,27 @@ bibliography: _bibliography/references.bib
 
 format:
   html:
-    theme: cosmo
-#  pdf:
-#    documentclass: scrreprt
+    theme: flatly
+  pdf:
+    documentclass: scrbook # scrreptrt
+#    lof: true
+#    lot: true
+    toc: true    
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    hyperrefoptions:
+      - linktoc=all
+    colorlinks: true
+    linkcolor: "blue"
+    biblio-style: ieee
+    #    keep-tex: true
+    output-file: elk
+  epub:
+    theme: flatly
+    output-file: elk
+  
 
 execute:
   freeze: auto

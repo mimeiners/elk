@@ -1,43 +1,9 @@
 # Halbleiterphysik
 
-
-## Elektrische Ladung
-
-**Quantitatives und Einheiten**
-
-* Ladung $Q$, Einheit $[Q]$ = 1 Coulomb = 1C = 1 As
-
-* Ladung $q$ von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.
-
-
-## Elektrische Feldstärke
-
-**Coulomb'sches Gesetz**
-
-Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.
-
-$$
-\begin{align}
-\mathbf{F} &=  \frac{1}{4 \pi \varepsilon} \frac{Q_1 Q_2}{r^2} \frac{\vec{r}}{r} \\
-[F] &= 1N = 1 \frac{kg \, m}{s^2} = 1 \frac{Ws}{m}
-\end{align}
-$$
-
-
-**Elektrische Feldstärke**
-
-$$
-\begin{align}
-\mathbf{E} &= \frac{\mathbf{F}}{Q} \\
-[E] & = \frac{[F]}{[Q]} = 1 \frac{N}{As} = 1 \frac{kg\,m}{A s^3} = 1 \frac{V}{m}
-\end{align}
-$$
-
-
 ## Grundlagen der Elektrotechnik
 
-Als weitere Vorbereitung für ein besseres Verständnis der Halbleiterphysik, sollten die Grundbegriffe aus den
-Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden.\n
+Als Vorbereitung für ein besseres Verständnis der Halbleiterphysik, sollten die Grundbegriffe aus den
+Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden.
 
 Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung: 
 
@@ -50,6 +16,36 @@ Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:
 * Elektrische Energie
 
 * Elektrische Leistung.
+
+
+:::{.callout-tip}
+## Elektrische Ladung
+
+* Ladung $Q$, Einheit $[Q]$ = 1 Coulomb = 1C = 1 As
+
+* Ladung $q$ von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.
+:::
+
+
+:::{.callout-tip}
+## Coulomb'sches Gesetz
+
+Ladungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.
+
+\begin{align}
+\mathbf{F} &=  \frac{1}{4 \pi \varepsilon} \frac{Q_1 Q_2}{r^2} \frac{\vec{r}}{r} \\
+[F] &= 1N = 1 \frac{kg \, m}{s^2} = 1 \frac{Ws}{m}
+\end{align}
+:::
+
+:::{.callout-tip}
+## Elektrische Feldstärke
+
+\begin{align}
+\mathbf{E} &= \frac{\mathbf{F}}{Q} \\
+[E] & = \frac{[F]}{[Q]} = 1 \frac{N}{As} = 1 \frac{kg\,m}{A s^3} = 1 \frac{V}{m}
+\end{align}
+:::
 
 
 ## Einführung in die Halbleiterphysik
@@ -100,11 +96,11 @@ Welle $\Psi$ mit dem Wellenvektor $\mathbf{k}=\mathbf{p}/\hbar$ und der Kreisfre
 
 **Wellenfunktion (eindimensional)** 
 
-$$
+
 \begin{equation}
 \Psi (x,t) = a \exp\left(i k_x x - i \omega t \right) = a \exp\left(\frac{i}{\hbar}\left( p_x x - E t \right) \right)
 \end{equation}
-$$
+
 
 mit $E=\hbar \omega$,  $p_x=\hbar k_x$ und $i=\sqrt{-1}$.
 
@@ -121,12 +117,12 @@ mit $E=\hbar \omega$,  $p_x=\hbar k_x$ und $i=\sqrt{-1}$.
 
 ## Schrödinger-Gleichung  (zeitabhängig)
 
-$$
+
 \begin{equation}
 \left( -\frac{\hbar^2}{2 m} \Delta + V(\mathbf{r}) \right) \Psi (\mathbf{r},t) = 
 i \hbar \frac{\partial}{\partial t} \Psi (\mathbf{r},t)
 \end{equation}
-$$
+
 
 wobei
 
@@ -136,13 +132,13 @@ wobei
 
 * $\Delta$, Laplace-Operator:
 
-$$
+
 \begin{equation}
 \Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
 = \left( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right)^2
 = \nabla^2
 \end{equation}
-$$
+
 
 
 ## Energiebänder-Modell (2)
@@ -152,20 +148,20 @@ $$
   
 * **De-Broglie-Beziehung** (Teilchenbild / Wellenbild)
 
-$$
+
 \begin{equation}
 p = \frac{h}{\lambda} = \frac{h}{2 \pi} \frac{2 \pi}{\lambda} = \hbar k
 \end{equation}
-$$
+
 
 * **Kinetische Energie der Elektronen** : Der Physiker schreibt hier $E$ anstelle von $W$. In der Elektrotechnik ist der
   Buchstabe $E$ allerdings mit dem elektrischen Feld verknüpft.
 
-$$
+
 \begin{equation}
 E_{kin} = \frac{p^2}{2 m} = \frac{\hbar^2 k^2}{2 m}
 \end{equation}
-$$
+
 
 
 ## Energiebandstruktur
@@ -180,12 +176,12 @@ $$
 
 * Elektronen- bzw. Materiewellen mit der Wellenlänge $\lambda$ erfüllen die **Bragg'sche Reflexionsbedingung**
 
-$$
+
 \begin{align}
 \lambda_n &= \frac{2 a}{\pi}, \quad n=1,2,3,... \\
 k_n &= \frac{2 \pi}{\lambda_n} = \frac{\pi}{a} n
 \end{align}
-$$
+
 
 
 ## Aufenthaltswahrscheinlichkeit
@@ -229,11 +225,11 @@ $$
 * "Die Wahrscheinlichkeit, mit der ein bestimmter Energiezustand $E$ mit Elektronen besetzt ist, wird beschrieben durch
   die *Fermi-Dirac-Verteilungsfunktion*"
 
-$$
+
 \begin{equation}
 f_{FD}(E) = \frac{1}{1 + \exp\left( \frac{E - E_F}{k_B T}\right)}
 \end{equation}
-$$
+
 
 
 ## Fermi-Dirac-Statistik (1)
@@ -278,7 +274,7 @@ $$
 
 * Allgem. Ansatz (vektoriell)
 
-$$
+
 \begin{align}
 \mathbf{J}_n &= \overbrace{e \mu_n n \mathbf{E}}^{\text{Feldanteil}}
 + \overbrace{e D_n \nabla n}^{\text{Diffusionsanteil}}
@@ -289,14 +285,14 @@ D_n &= \mu_n \frac{kT}{q} \quad \text{Einstein-Relation} \\
 &
 D_p &= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
 \end{align}
-$$
+
 
 
 ## Stromgleichung 1D
 
 **Vereinf. eindimensionaler Fall**
 
-$$
+
 \begin{align}
 J_n &= \overbrace{e \mu_n n E}^{\text{Feldanteil}}
 + \overbrace{e D_n \frac{\partial n}{\partial x}}^{\text{Diffusionsanteil}}
@@ -307,14 +303,14 @@ J_p &= \underbrace{e \mu_p n E}_{Feldanteil}
 &
 D_p &= \mu_p \frac{kT}{q} \quad \text{Einstein-Relation}
 \end{align}
-$$
+
 
 
 ## Kontinuitätsgleichung
 
 **Allgem. Ansatz**
 
-$$
+
 \begin{align}
 \frac{\partial n}{\partial t}
 &= \frac{1}{e} \nabla \cdot \mathbf{J}_n
@@ -324,14 +320,14 @@ $$
 &= \frac{1}{e} \nabla \cdot \mathbf{J}_p
 - (\mathcal{R} - \mathcal{G})
 \end{align}
-$$
+
 
 
 ## Kontinuitätsgleichung 1D
 
 **Vereinf. eindimensionaler Fall**
 
-$$
+
 \begin{align}
 \frac{\partial n}{\partial t}
 &= \frac{1}{e} \frac{\partial J_n}{\partial x}
@@ -341,7 +337,7 @@ $$
 &= \frac{1}{e} \frac{\partial J_p}{\partial x}
 - (\mathcal{R} - \mathcal{G})
 \end{align}
-$$
+
 
 
 ## Poisson-Gleichung
@@ -350,16 +346,16 @@ $$
   und Kontinuitätsgleichungen durch eine Beziehung zu ergänzen, die es erlaubt, die elektrische Feldstärke bzw. das
   elektrostatische Potential aus der Verteilung der Ladungen zu berechnen."
 
-$$
+
 \begin{equation}
 \nabla \cdot \mathbf{E} = -\nabla^2 \varphi = \frac{\varrho}{\varepsilon_0 \varepsilon_r}
 \end{equation}
-$$
+
 
 * Hierbei bezeichnet $\varrho$ die Raumladung
 
-$$
+
 \begin{equation}
 \varrho = e \left( p - n + N_D^{+} - N_A^{-} \right)
 \end{equation}
-$$
+

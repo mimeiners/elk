@@ -27,11 +27,11 @@ in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.
 Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei $\approx$ 0.7 V und die
 IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:
 
-$$
+
 \begin{equation}
 I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
 \end{equation}
-$$
+
 
 wobei $I_{S}$ der Sättigungssperrstrom ist und $N$ ein Skalierungsfaktoren (Emissionskoeffizient), $V_T = kT / q$ ist
 die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur ($T$ = 300 K). 
@@ -64,12 +64,12 @@ Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende d
 Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden
 Diodenstrom und -spannung:
 
-$$
+
 \begin{align}
 I_D &= (IN_1 - IN_2) / R_1 \\
 V_D &= IN_2
 \end{align}
-$$
+
 
 ![Anschlussplan für Dioden IV-Kurven](../images/Activity_19_Fig_04a.png){#fig-19-04}
 
