@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.32">
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ed6da6eef3892af8a4b5ed59bfb951f5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8555de54821c8356f4a1cfa7fa0c8ce2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -55,17 +55,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
   }
 }</script>
 
@@ -107,13 +107,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/03_Activity.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -127,8 +127,8 @@ window.Quarto = {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">M 5.3 Elektronik (ELK)</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/mimeiners/elk/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+    <a href="https://github.com/mimeiners/elk/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -138,7 +138,7 @@ window.Quarto = {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Suchen"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -153,7 +153,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Seminar</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -188,7 +188,7 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Labor</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -226,7 +226,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
   <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">6.1</span> Zielsetzung</a></li>
@@ -234,7 +234,7 @@ window.Quarto = {
   <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren"><span class="header-section-number">6.3</span> Verfahren</a></li>
   <li><a href="#iv-kurvenmessungen" id="toc-iv-kurvenmessungen" class="nav-link" data-scroll-target="#iv-kurvenmessungen"><span class="header-section-number">6.4</span> IV-Kurvenmessungen</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/03_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/03_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -267,7 +267,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Tipp
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -296,7 +296,7 @@ Tip
 <img src="../images/Activity_22_Fig_01.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-20-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.1: npn-Transistor als Diode.
+Abbildung&nbsp;6.1: npn-Transistor als Diode.
 </figcaption>
 </figure>
 </div>
@@ -306,7 +306,7 @@ Figure&nbsp;6.1: npn-Transistor als Diode.
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Tipp
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -317,14 +317,14 @@ V_{OUT1}\)</span> als Bezugspotenzial betrachten.</p>
 </section>
 <section id="verfahren" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="verfahren"><span class="header-section-number">6.3</span> Verfahren</h2>
-<p>Im Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in <a href="#fig-22-02" class="quarto-xref">Figure&nbsp;<span>6.2</span></a> gezeigt, an ein STEMlab angeschlossen, wobei <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>.</p>
+<p>Im Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in <a href="#fig-22-02" class="quarto-xref">Abbildung&nbsp;<span>6.2</span></a> gezeigt, an ein STEMlab angeschlossen, wobei <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>.</p>
 <div id="fig-22-02" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-22-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/Activity_22_Fig_02a.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-22-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.2: Platine mit Transistorschaltung.
+Abbildung&nbsp;6.2: Platine mit Transistorschaltung.
 </figcaption>
 </figure>
 </div>
@@ -334,7 +334,7 @@ Figure&nbsp;6.2: Platine mit Transistorschaltung.
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Warnung
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -355,11 +355,11 @@ Warning
 <img src="../images/Activity_22_Fig_03.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-22-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.3: npn-Transistor als Diode, Messungen.
+Abbildung&nbsp;6.3: npn-Transistor als Diode, Messungen.
 </figcaption>
 </figure>
 </div>
-<p>Aus <a href="#fig-22-03" class="quarto-xref">Figure&nbsp;<span>6.3</span></a> ist ersichtlich, dass der npn-Transistor in der in <span class="quarto-unresolved-ref">?fig-22-01</span> gezeigten Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem Diodenversuch.</p>
+<p>Aus <a href="#fig-22-03" class="quarto-xref">Abbildung&nbsp;<span>6.3</span></a> ist ersichtlich, dass der npn-Transistor in der in <span class="quarto-unresolved-ref">?fig-22-01</span> gezeigten Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem Diodenversuch.</p>
 </section>
 <section id="iv-kurvenmessungen" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="iv-kurvenmessungen"><span class="header-section-number">6.4</span> IV-Kurvenmessungen</h2>
@@ -412,12 +412,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Kopiert");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Kopiert");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -809,7 +809,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/03_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/03_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
