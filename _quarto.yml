@@ -6,15 +6,21 @@ lang: de
 
 book:
   title: "M 5.3 Elektronik (ELK)"
-  author: "T. Ziemann, M. Meiners"
-  date: "10.17.2024"
+  date: 2024-11-11
+  author:
+    - name: Mirco Meiners
+      email: Mirco.Meiners@hs-bremen.de
+      affiliation:
+        - name: Hochschule Bremen - City University of Applied Sciences
+          city: Bremen
+          country: Germany
+          url: www.hs-bremen.de
 
   reader-mode: true
 
   page-footer:
     left: |
-      M 5.3 Elektronik (ELK)
-      T. Ziemann, M. Meiners.
+      M 5.3 Elektronik (ELK), M. Meiners.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 #  cover-image: images/hsb-logo.png

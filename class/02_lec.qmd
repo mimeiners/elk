@@ -149,6 +149,9 @@ x'(n) = A' \, \cos(\omega n T) = A' \, \cos(\Omega T)
 
 * Dirac-Impuls
 
+## ADC
+
+* Intro durch Blalock und CEMS (Murmann)
 
 ## Stochastische Signale
 
@@ -192,7 +195,7 @@ SNR = \frac{P_{signal}}{P_{noise}} = \frac{\overline{f^2_{sig}(t)}}{\overline{v^
 \end{align}
 
 
-**Wiener-Khintchine Theorem (Autokorrelation)** 
+**Wiener-Chintchin Theorem (Autokorrelation)** 
 
 
 \begin{equation}
