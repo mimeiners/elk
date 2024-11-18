@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; Der MOSFET als Diode – M 5.3 Elektronik (ELK)</title>
+<title>5&nbsp; Der MOSFET als Diode – M 5.3 Elektronik (ELK)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/04_Activity.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/04_Activity.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -165,18 +165,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../class/02_lec.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale und Systeme</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../class/03_lec.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Halbleiterphysik</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../class/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Literaturverzeichnis</span></a>
   </div>
@@ -195,25 +183,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/01_Activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/03_Activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
   </div>
 </li>
       </ul>
@@ -228,22 +216,22 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">7.1</span> Zielsetzung</a></li>
-  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">7.2</span> Materialien</a></li>
-  <li><a href="#nmos-als-diode" id="toc-nmos-als-diode" class="nav-link" data-scroll-target="#nmos-als-diode"><span class="header-section-number">7.3</span> nMOS als Diode</a></li>
-  <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren"><span class="header-section-number">7.4</span> Verfahren</a></li>
-  <li><a href="#iv-kurvenmessungen" id="toc-iv-kurvenmessungen" class="nav-link" data-scroll-target="#iv-kurvenmessungen"><span class="header-section-number">7.5</span> IV-Kurvenmessungen</a></li>
-  <li><a href="#pmos-als-diode" id="toc-pmos-als-diode" class="nav-link" data-scroll-target="#pmos-als-diode"><span class="header-section-number">7.6</span> pMOS als Diode</a></li>
-  <li><a href="#verfahren-1" id="toc-verfahren-1" class="nav-link" data-scroll-target="#verfahren-1"><span class="header-section-number">7.7</span> Verfahren</a></li>
+  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">5.1</span> Zielsetzung</a></li>
+  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">5.2</span> Materialien</a></li>
+  <li><a href="#nmos-als-diode" id="toc-nmos-als-diode" class="nav-link" data-scroll-target="#nmos-als-diode"><span class="header-section-number">5.3</span> nMOS als Diode</a></li>
+  <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren"><span class="header-section-number">5.4</span> Verfahren</a></li>
+  <li><a href="#iv-kurvenmessungen" id="toc-iv-kurvenmessungen" class="nav-link" data-scroll-target="#iv-kurvenmessungen"><span class="header-section-number">5.5</span> IV-Kurvenmessungen</a></li>
+  <li><a href="#pmos-als-diode" id="toc-pmos-als-diode" class="nav-link" data-scroll-target="#pmos-als-diode"><span class="header-section-number">5.6</span> pMOS als Diode</a></li>
+  <li><a href="#verfahren-1" id="toc-verfahren-1" class="nav-link" data-scroll-target="#verfahren-1"><span class="header-section-number">5.7</span> Verfahren</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/04_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/04_Activity.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/04_Activity.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></h1>
 </div>
 
 
@@ -260,8 +248,8 @@ window.Quarto = {
 </header>
 
 
-<section id="zielsetzung" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">7.1</span> Zielsetzung</h2>
+<section id="zielsetzung" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">5.1</span> Zielsetzung</h2>
 <p>Ziel dieses Versuches ist die Untersuchung der Strom- und Spannungscharakteristik von n-Kanal und p-Kanal MOS Feldeffekttransistoren (kurz nMOS und pMOS), die jeweils als Diode geschaltet sind.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -277,8 +265,8 @@ Tipp
 </div>
 </div>
 </section>
-<section id="materialien" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="materialien"><span class="header-section-number">7.2</span> Materialien</h2>
+<section id="materialien" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="materialien"><span class="header-section-number">5.2</span> Materialien</h2>
 <ul>
 <li>Red Pitaya STEMlab</li>
 <li>OP27 Operationsverstärker</li>
@@ -288,9 +276,9 @@ Tipp
 <li>Platine</li>
 </ul>
 </section>
-<section id="nmos-als-diode" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="nmos-als-diode"><span class="header-section-number">7.3</span> nMOS als Diode</h2>
-<p>Die Schaltung des nMOS in Diodenkonfiguration ist in <a href="#fig-23-02" class="quarto-xref">Abbildung&nbsp;<span>7.1</span></a> gezeigt. In Diodenkonfiguration arbeitet ein nMOS vergleichbar zu einem npn-Transistor.</p>
+<section id="nmos-als-diode" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="nmos-als-diode"><span class="header-section-number">5.3</span> nMOS als Diode</h2>
+<p>Die Schaltung des nMOS in Diodenkonfiguration ist in <a href="#fig-23-02" class="quarto-xref">Abbildung&nbsp;<span>5.1</span></a> gezeigt. In Diodenkonfiguration arbeitet ein nMOS vergleichbar zu einem npn-Transistor.</p>
 <p>Die Schwellspannung (Threshold Voltage, <span class="math inline">\(V_{Tn,p}\)</span>, <span class="math inline">\(V_{th}\)</span>, <span class="math inline">\(V_{TH}\)</span>) liegt nicht zwingend bei <span class="math inline">\(\approx\)</span> 0,7 V wie bei einem Bipolartransistor. Bei einem unipolaren Transistor hängt sie von der Technologie und der Kanalgröße des Transistors ab. Für den ausgewählten nMOS-Transistor liegt die Schwellenspannung <span class="math inline">\(V_{Tn}\)</span> bei etwa 2,0 V nominal. Das bedeutet, wenn die vom Gate-Kontakt zum Source-Kontakt anliegende Spannung (<span class="math inline">\(V_{GS}\)</span>) die Schwellspannung <span class="math inline">\(V_{Tn}\)</span> überschreiten, schaltet der nMOS Transistor ein und beginnt zu leiten. Da bei der Diodenkonfiguration des nMOS sein Drain-Kontakt schalttechnisch mit seinem Gate-Kontakt verbunden ist, ist die Drain-Source-Spannung gleich der Gate-Source-Spannung.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -317,13 +305,13 @@ Tipp
 <img src="../images/Activity_23_Fig_02.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7.1: Anschlussdiagramm nMOS-Messung
+Abbildung&nbsp;5.1: Anschlussdiagramm nMOS-Messung
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="verfahren" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="verfahren"><span class="header-section-number">7.4</span> Verfahren</h2>
+<section id="verfahren" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="verfahren"><span class="header-section-number">5.4</span> Verfahren</h2>
 <p>Für Sie ist die Schaltung aus <span class="citation" data-cites="fig23-01">(<a href="../class/references.html#ref-fig23-01" role="doc-biblioref"><strong>fig23-01?</strong></a>)</span> auf einer Platine aufgebaut; <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>, Transistor M1 ist der nMOS Transistor vom Typ BS170.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -360,32 +348,32 @@ Warnung
 <img src="../images/Activity_23_Fig_04.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7.2: nMOS Diodenmessung
+Abbildung&nbsp;5.2: nMOS Diodenmessung
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="iv-kurvenmessungen" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="iv-kurvenmessungen"><span class="header-section-number">7.5</span> IV-Kurvenmessungen</h2>
-<p>Da sich ein nMOS wie eine Diode mit einer Durchlaßspannung entsprechend der <span class="math inline">\(V_{Tn}\)</span> verhalten kann (Konfiguration in <a href="#fig-23-02" class="quarto-xref">Abbildung&nbsp;<span>7.1</span></a>, können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.</p>
+<section id="iv-kurvenmessungen" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="iv-kurvenmessungen"><span class="header-section-number">5.5</span> IV-Kurvenmessungen</h2>
+<p>Da sich ein nMOS wie eine Diode mit einer Durchlaßspannung entsprechend der <span class="math inline">\(V_{Tn}\)</span> verhalten kann (Konfiguration in <a href="#fig-23-02" class="quarto-xref">Abbildung&nbsp;<span>5.1</span></a>, können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.</p>
 </section>
-<section id="pmos-als-diode" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="pmos-als-diode"><span class="header-section-number">7.6</span> pMOS als Diode</h2>
-<p>Die selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. Die Konfiguration der pMOS-Diode ist in <a href="#fig-23-07" class="quarto-xref">Abbildung&nbsp;<span>7.3</span></a> dargestellt.</p>
+<section id="pmos-als-diode" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="pmos-als-diode"><span class="header-section-number">5.6</span> pMOS als Diode</h2>
+<p>Die selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. Die Konfiguration der pMOS-Diode ist in <a href="#fig-23-07" class="quarto-xref">Abbildung&nbsp;<span>5.3</span></a> dargestellt.</p>
 <div id="fig-23-07" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-23-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/Activity_23_Fig_07.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7.3: pMOS Anschlussdiagramm.
+Abbildung&nbsp;5.3: pMOS Anschlussdiagramm.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="verfahren-1" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="verfahren-1"><span class="header-section-number">7.7</span> Verfahren</h2>
-<p>Für Sie ist die Schaltung aus <a href="#fig-23-07" class="quarto-xref">Abbildung&nbsp;<span>7.3</span></a> auf einer Platine aufgebaut; <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und für <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>, der Transistor M1 ist ein pMOS Transistor vom Typ BS250.</p>
+<section id="verfahren-1" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="verfahren-1"><span class="header-section-number">5.7</span> Verfahren</h2>
+<p>Für Sie ist die Schaltung aus <a href="#fig-23-07" class="quarto-xref">Abbildung&nbsp;<span>5.3</span></a> auf einer Platine aufgebaut; <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und für <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>, der Transistor M1 ist ein pMOS Transistor vom Typ BS250.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -415,12 +403,12 @@ Warnung
 <img src="../images/Activity_23_Fig_08.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-23-08-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7.4: pMOS Diodenmessung.
+Abbildung&nbsp;5.4: pMOS Diodenmessung.
 </figcaption>
 </figure>
 </div>
-<p>Wie in <a href="#fig-23-08" class="quarto-xref">Abbildung&nbsp;<span>7.4</span></a> zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer Durchlaßspannung gleich der pMOS Schwellenspannung <span class="math inline">\(V_{Tp}\)</span>.</p>
-<p>Vergleichen Sie <a href="#fig-23-08" class="quarto-xref">Abbildung&nbsp;<span>7.4</span></a> mit <a href="#fig-23-04" class="quarto-xref">Abbildung&nbsp;<span>7.2</span></a> und versuchen Sie, den Unterschied zwischen nMOS- und pMOS-Diodenkonfigurationen zu erklären.</p>
+<p>Wie in <a href="#fig-23-08" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a> zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer Durchlaßspannung gleich der pMOS Schwellenspannung <span class="math inline">\(V_{Tp}\)</span>.</p>
+<p>Vergleichen Sie <a href="#fig-23-08" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a> mit <a href="#fig-23-04" class="quarto-xref">Abbildung&nbsp;<span>5.2</span></a> und versuchen Sie, den Unterschied zwischen nMOS- und pMOS-Diodenkonfigurationen zu erklären.</p>
 
 
 </section>
@@ -849,7 +837,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../lab/03_Activity.html" class="pagination-link" aria-label="Der BJT als Diode">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

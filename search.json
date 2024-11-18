@@ -406,429 +406,11 @@
     ]
   },
   {
-    "objectID": "class/02_lec.html",
-    "href": "class/02_lec.html",
-    "title": "2  Signale und Systeme",
-    "section": "",
-    "text": "2.1 Einfache Signale\nSignale repräsentieren Informationen, z.B. Temperatur eines Backofens.\nMögliche Signale sind:",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#einfache-signale",
-    "href": "class/02_lec.html#einfache-signale",
-    "title": "2  Signale und Systeme",
-    "section": "",
-    "text": "Temperatur des Backofens\nTemperatur und Feuchtigkeit des Kuchenteigs\nGeschmack / Qualität des Kuchens.\n\n\n\n\nSignale beim Kuchenbacken.",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#signaltypen",
-    "href": "class/02_lec.html#signaltypen",
-    "title": "2  Signale und Systeme",
-    "section": "2.2 Signaltypen",
-    "text": "2.2 Signaltypen\n\nZeitabhängiges Signal, \\(f(t)\\)\nRaumabhängiges Signal, \\(f(x_1, x_2, x_3)\\)\nLokal oder verteiltes Signal\nKontinuierliches oder diskretes Signal\n\nzeitdiskret\namplitudendiskret (quantisiert)\nge-sampled, samples\n\nLogisches oder binäres Signal",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#konstantes-signal",
-    "href": "class/02_lec.html#konstantes-signal",
-    "title": "2  Signale und Systeme",
-    "section": "2.3 Konstantes Signal",
-    "text": "2.3 Konstantes Signal\n\nEin konstantes Signal für ein elektronisches System korrespondiert nicht mit der mathematischen Definition einer Konstanten.\nVersorgungsspannungen und Referenzsignale elektronischer Schaltungen sind immer fehlerbehaftet (statisch und/oder statistisch).\nToleranzen/Fehlergrenzen\n\n\n\n\nElektrokardiogramm, kurz EKG",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#nominal-nom-und-worst-case-wc",
-    "href": "class/02_lec.html#nominal-nom-und-worst-case-wc",
-    "title": "2  Signale und Systeme",
-    "section": "2.4 Nominal (nom) und Worst Case (wc)",
-    "text": "2.4 Nominal (nom) und Worst Case (wc)\n\nWir definieren nominal als das Ausgangssignal, welches wir bei einem spezifizierten Eingangssignal erwarten; E/A-Verhalten.\nWorst case high und worst case low definieren Signale, die über und unter dem nominalen Signal liegen.\n\n\n\n\nSignalklassen",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#zeitkontinuierliche-signale",
-    "href": "class/02_lec.html#zeitkontinuierliche-signale",
-    "title": "2  Signale und Systeme",
-    "section": "2.5 Zeitkontinuierliche Signale",
-    "text": "2.5 Zeitkontinuierliche Signale\n\nWdh. aus Modul GEL2\nallgem. Exponentialfunktion\n\n\\[\\begin{align}\nx(t) &= \\underline{A} \\exp(st) \\\\\n\\underline{A} &= \\Re{\\underline{A}} + j \\Im{\\underline{A}} = A' + j A''\\\\\ns &= \\sigma + j \\omega\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#sprungsignale",
-    "href": "class/02_lec.html#sprungsignale",
-    "title": "2  Signale und Systeme",
-    "section": "2.6 Sprungsignale",
-    "text": "2.6 Sprungsignale\n\nWdh. aus Modul SYS\nPlötzliche Amplitudenänderung, unstetig\nSprungfunktion\n\n\\[\\begin{equation}\n\\epsilon(t) =\n\\begin{cases}\n0 & \\mbox{für } t &lt; 0 \\\\\n1 & \\mbox{für } t &gt; 0\n\\end{cases}\n\\end{equation}\\]\n\nRechteckfunktion\n\n\\[\\begin{equation}\nrect(t) =\n\\begin{cases}\n0 & \\mbox{für } |t| &gt; \\frac{1}{2} \\\\\n1 & \\mbox{für } |t| &lt; \\frac{1}{2}\n\\end{cases}\n\\end{equation}\\]\n\nSignumfunktion\n\n\\[\\begin{equation}\nsgn(t) =\n\\begin{cases}\n-1 & \\mbox{für } t &lt; 0 \\\\\n1 & \\mbox{für } t &gt; 0\n\\end{cases}\n\\end{equation}\\]\n\nDreieckfunktion\n\n\\[\\begin{equation}\ntri(t) =\n\\begin{cases}\n1 - |t| & \\mbox{für } |t| \\leq 1 \\\\\n0 & \\mbox{für } |t| \\geq 1\n\\end{cases}\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#zeitdiskrete-signale",
-    "href": "class/02_lec.html#zeitdiskrete-signale",
-    "title": "2  Signale und Systeme",
-    "section": "2.7 Zeitdiskrete Signale",
-    "text": "2.7 Zeitdiskrete Signale\n\nExponentialfolge\n\n\\[\\begin{equation}\nx(n) = A \\, \\exp(snT) = A \\, \\exp(\\sigma n T)  \\, \\exp(j \\omega n T)\n\\end{equation}\\]\n\nSinus- und Kosinusfolge\n\n\\[\\begin{equation}\nx'(n) = A' \\, \\cos(\\omega n T) = A' \\, \\cos(\\Omega T)\n\\end{equation}\\]\n\nSprungfolge und verwandte Folgen\nAbgetastetes Signal (sampled)\nDirac-Impuls",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#stochastische-signale",
-    "href": "class/02_lec.html#stochastische-signale",
-    "title": "2  Signale und Systeme",
-    "section": "2.8 Stochastische Signale",
-    "text": "2.8 Stochastische Signale\n\nWahrscheinlichkeitsdichtefunktion, vgl. Halbleiterphysik Aufenthaltswahrscheinlichkeit\nErwartungswert (Mittelwert, Varianz)\nAutokorrelationsfunktion",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#rauschen",
-    "href": "class/02_lec.html#rauschen",
-    "title": "2  Signale und Systeme",
-    "section": "2.9 Rauschen",
-    "text": "2.9 Rauschen\n\nRauschen ist ein spezieller Signaltyp, es ist ein statistischer Prozess und beinhaltet keine Informationen.\nRauschen stört bzw. überlagert die eigentliche Information, die mit einem Signal transportiert wird.\n\nSignal-zu-Rausch-Verhältnis (Signal-to-Noise Ratio, SNR, engl.)\n\\[\\begin{equation}\nSNR = \\frac{P_{signal}}{P_{noise}} = \\frac{\\overline{f^2_{sig}(t)}}{\\overline{v^2_{noise}(t)}}\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#lti-system",
-    "href": "class/02_lec.html#lti-system",
-    "title": "2  Signale und Systeme",
-    "section": "2.10 LTI System",
-    "text": "2.10 LTI System\nParseval’sches Theorem\n\\[\\begin{equation}\n\\int_{-\\infty}^{\\infty} \\lvert f(t) \\lvert^2 dt =\n\\frac{1}{2\\pi} \\int_{-\\infty}^{\\infty} \\lvert F(j \\omega) \\lvert^2 d \\omega\n\\end{equation}\\]\n\\[\\begin{align}\n\\mbox{Energie:} \\quad E_f &= \\int_{-\\infty}^{\\infty} \\lvert f(t) \\lvert^2 dt \\\\\n\\mbox{Leistung:} \\quad P_f &= \\lim\\limits_{T \\to \\infty} \\frac{1}{T} \\int_{-T/2}^{T/2} \\lvert f(t) \\lvert^2 dt\n\\end{align}\\]\nWiener-Khintchine Theorem (Autokorrelation)\n\\[\\begin{equation}\nr_{ff}^E (t) = \\int_{-\\infty}^{\\infty} f(t) f(t+\\tau) dt =\n\\int_{-\\infty}^{\\infty} \\lvert F(j\\omega) \\lvert^2 e^{j \\omega t} df\n\\end{equation}\\]\nMittlerer Erwartungswert\n\\[\\begin{align}\n\\overline{y(t)} &= E \\{ y(t) \\} = E \\left\\{\\int_{-\\infty}^{\\infty} u(t)h(t-\\tau) dt \\right\\} \\\\\nr_{uy}(t) &= r_{uu}(t) \\ast h(t) \\\\\nS_{uy}(j\\omega) &= S_{uu}(j \\omega) \\cdot H(j \\omega)\n\\end{align}\\]\nWiener-Lee Beziehung\n\\[\\begin{align}\nr_{yy}(t) &= r_{uu}(t) \\ast r_{hh}^E (t) \\\\\nS_{yy}(j \\omega) &= S_{uu}(j \\omega) \\cdot \\lvert H(j \\omega) \\lvert^2\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#psd-zu-snr",
-    "href": "class/02_lec.html#psd-zu-snr",
-    "title": "2  Signale und Systeme",
-    "section": "2.11 PSD zu SNR",
-    "text": "2.11 PSD zu SNR\nLeistungsdichtespektrum (Power Spectral Density, PSD, engl.)\n\\[\\begin{align}\n\\overline{v_{noise}^2(t)} &= r_{yy}(0) = \\int_{-\\infty}^{\\infty} S_{yy}(j \\omega) df \\\\\n\\overline{v_{noise}^2(t)} &=  \\int_{-\\infty}^{\\infty} S_{uu}(j \\omega) \\cdot \\lvert H(j \\omega) \\lvert^2\n\\end{align}\\]\nSignal-zu-Rausch Verhältnis (Signal-to-Noise Ratio, SNR, engl.)\n\\[\\begin{equation}\nSNR = \\frac{P_{signal}}{P_{noise}} = \\frac{\\overline{f^2_{sig}(t)}}{\\overline{v^2_{noise}(t)}}\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#rauschen-eines-passiven-tiefpassfilters",
-    "href": "class/02_lec.html#rauschen-eines-passiven-tiefpassfilters",
-    "title": "2  Signale und Systeme",
-    "section": "2.12 Rauschen eines passiven Tiefpassfilters",
-    "text": "2.12 Rauschen eines passiven Tiefpassfilters\n\n\\[\\begin{equation}\n\\overline{v_{out}^2} =\n\\int_{f_1}^{f_2} 4 kTR \\, \\left\\lvert \\frac{1}{1 + j 2 \\pi f \\cdot RC} \\right\\lvert^2 df =\n4kTR \\int_{f_1}^{f_2} \\frac{1}{1+(2\\pi f RC)^2} df\n\\end{equation}\\]\n\n\n\n\n\n\nTipp\n\n\n\n\\[\\begin{equation}\n\\int \\frac{1}{1+x^2} dx = \\arctan(x)\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#total-integrated-noise",
-    "href": "class/02_lec.html#total-integrated-noise",
-    "title": "2  Signale und Systeme",
-    "section": "2.13 Total Integrated Noise",
-    "text": "2.13 Total Integrated Noise\n\\[\\begin{align}\n\\overline{v_{out,tot}^2} &= \\int_{0}^{\\infty} 4 kTR \\,\n\\left\\lvert \\frac{1}{1 + j 2 \\pi f \\cdot RC} \\right\\lvert^2 df \\\\\n&= 4kTR \\int_{f_1}^{f_2} \\frac{1}{1 + (2 \\pi f RC)^2} df \\\\\n&= 4kTR \\frac{1}{4 RC} = \\frac{kT}{C}\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/02_lec.html#lc-tiefpassfilter",
-    "href": "class/02_lec.html#lc-tiefpassfilter",
-    "title": "2  Signale und Systeme",
-    "section": "2.14 LC Tiefpassfilter",
-    "text": "2.14 LC Tiefpassfilter\n\n\\[\\begin{align}\n\\overline{v_{out,tot}^2} &= \\int_{0}^{\\infty} 4 kTR \\,\n\\left\\lvert \\frac{1}{1+\\frac{s}{\\omega_p Q_p} +\n\\frac{s^2}{\\omega_p^2}} \\right\\lvert^2 df \\\\\n&= 4 kTR \\frac{\\omega_p Q_p}{4} = \\frac{kT}{C}\n\\end{align}\\]\n\\[\\begin{equation}\n\\omega_p = \\frac{1}{\\sqrt{LC}} \\quad\nQ_p = \\frac{1}{R}\\sqrt{\\frac{L}{C}} \\quad\n\\omega_p Q_p \\quad \\frac{1}{RC}\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Signale und Systeme</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html",
-    "href": "class/03_lec.html",
-    "title": "3  Halbleiterphysik",
-    "section": "",
-    "text": "3.1 Grundlagen der Elektrotechnik\nAls Vorbereitung für ein besseres Verständnis der Halbleiterphysik, sollten die Grundbegriffe aus den Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden.\nRufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#grundlagen-der-elektrotechnik",
-    "href": "class/03_lec.html#grundlagen-der-elektrotechnik",
-    "title": "3  Halbleiterphysik",
-    "section": "",
-    "text": "Elektrische Stromstärke\nElektrische Spannung\nKirchhoff’schen Gesetze\nElektrische Energie\nElektrische Leistung.\n\n\n\n\n\n\n\nElektrische Ladung\n\n\n\n\nLadung \\(Q\\), Einheit \\([Q]\\) = 1 Coulomb = 1C = 1 As\nLadung \\(q\\) von Ladungsträgern, elektrische Ladung ist eine Eigenschaft von Elementarteilchen.\n\n\n\n\n\n\n\n\n\nCoulomb’sches Gesetz\n\n\n\nLadungen erzeugen Kraftfelder und üben Kräfte aufeinander aus.\n\\[\\begin{align}\n\\mathbf{F} &=  \\frac{1}{4 \\pi \\varepsilon} \\frac{Q_1 Q_2}{r^2} \\frac{\\vec{r}}{r} \\\\\n[F] &= 1N = 1 \\frac{kg \\, m}{s^2} = 1 \\frac{Ws}{m}\n\\end{align}\\]\n\n\n\n\n\n\n\n\nElektrische Feldstärke\n\n\n\n\\[\\begin{align}\n\\mathbf{E} &= \\frac{\\mathbf{F}}{Q} \\\\\n[E] & = \\frac{[F]}{[Q]} = 1 \\frac{N}{As} = 1 \\frac{kg\\,m}{A s^3} = 1 \\frac{V}{m}\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#einführung-in-die-halbleiterphysik",
-    "href": "class/03_lec.html#einführung-in-die-halbleiterphysik",
-    "title": "3  Halbleiterphysik",
-    "section": "3.2 Einführung in die Halbleiterphysik",
-    "text": "3.2 Einführung in die Halbleiterphysik\n\n\n\n\n\n\nHinweis\n\n\n\nDie hier präsentierten Inhalte zur Halbleiterphysik sind den Kap. 8, Atom- und Kernphysik und Kap. 9, Festkörperphysik, des Buches Physik für Ingenieure von Hering, Martin, und Stohrer (2012), sowie Kap. 12, Halbleiter, des Buches Elektronische Bauelemente von Reisch (2007) entnommen.\n\n\n\nQuantentheorie\n\nWelle-Teilchen Dualismus\nSchrödinger-Gleichung\n\nElektronengas\n\nZustände und Aufenthaltswahrscheinlichkeiten\nZustandsdichten: \\(\\int D(E)\\) bzw. \\(\\int N(E)\\)\nFermi-Dirac-Verteilung\n\nDotierung\n\nDonatoren und Akzeptoren",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#elektronen-im-festkörper",
-    "href": "class/03_lec.html#elektronen-im-festkörper",
-    "title": "3  Halbleiterphysik",
-    "section": "3.3 Elektronen im Festkörper",
-    "text": "3.3 Elektronen im Festkörper\n\n\nLeiter mit \\(\\rho &lt; 10^{-5} \\Omega m\\)\nHalbleiter mit \\(10^{-5} \\Omega m &lt; \\rho &lt; 10^{7} \\Omega m\\)\nIsolator mit \\(\\rho &gt; 10^{7} \\Omega m\\)",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#energiebänder-modell",
-    "href": "class/03_lec.html#energiebänder-modell",
-    "title": "3  Halbleiterphysik",
-    "section": "3.4 Energiebänder-Modell",
-    "text": "3.4 Energiebänder-Modell\n\nModell gebundener Elektronen: Das Bohr’sche Atommodell beschreibt, “dass sich Elektronen, die an isolierte Atome gebunden sind, nur auf diskreten Energieniveaus aufhalten können.”\n“Die Aufenthaltswahrscheinlichkeit der Elektronen um die Kerne wird durch das Quadrat der Wellenfunktion \\(\\lvert \\Psi \\lvert^2\\) beschrieben.”",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#wellenfunktion",
-    "href": "class/03_lec.html#wellenfunktion",
-    "title": "3  Halbleiterphysik",
-    "section": "3.5 Wellenfunktion",
-    "text": "3.5 Wellenfunktion\nDie Lösung für die Wellenfunktion \\(\\Psi\\) liefert räumlich stehende Wellen. “Nach de Brogli kann dem Teilchen eine Welle \\(\\Psi\\) mit dem Wellenvektor \\(\\mathbf{k}=\\mathbf{p}/\\hbar\\) und der Kreisfrequenz \\(\\omega\\) zugeordnet werden:”\nWellenfunktion (eindimensional)\n\\[\\begin{equation}\n\\Psi (x,t) = a \\exp\\left(i k_x x - i \\omega t \\right) = a \\exp\\left(\\frac{i}{\\hbar}\\left( p_x x - E t \\right) \\right)\n\\end{equation}\\]\nmit \\(E=\\hbar \\omega\\), \\(p_x=\\hbar k_x\\) und \\(i=\\sqrt{-1}\\).",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#newton-mechanik-vs.-quantentheorie",
-    "href": "class/03_lec.html#newton-mechanik-vs.-quantentheorie",
-    "title": "3  Halbleiterphysik",
-    "section": "3.6 Newton Mechanik vs. Quantentheorie",
-    "text": "3.6 Newton Mechanik vs. Quantentheorie\n\n“In der klassischen Physik (Newton Mechanik) wird das Teilchen durch seine Bahnkurve \\(\\mathbf{r}(t)\\) beschrieben, in der Quantentheorie dagegen nur durch seine Aufenthaltswahrscheinlichkeit \\(\\lvert \\Psi \\lvert^2 dV\\).”\n“Die Fundamentalgleichung der Quantentheorie, die die Bestimmung von \\(\\Psi\\) ermöglicht, ist die Schrödinger-Gleichung (E. Schrödinger, 1887 bis 1961). Sie ist vergleichbar mit der Newton’schen Bewegungsgleichung, aus der die Bahnkurve \\(\\mathbf{r}(t)\\) bestimmt wird.”",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#schrödinger-gleichung-zeitabhängig",
-    "href": "class/03_lec.html#schrödinger-gleichung-zeitabhängig",
-    "title": "3  Halbleiterphysik",
-    "section": "3.7 Schrödinger-Gleichung (zeitabhängig)",
-    "text": "3.7 Schrödinger-Gleichung (zeitabhängig)\n\\[\\begin{equation}\n\\left( -\\frac{\\hbar^2}{2 m} \\Delta + V(\\mathbf{r}) \\right) \\Psi (\\mathbf{r},t) =\ni \\hbar \\frac{\\partial}{\\partial t} \\Psi (\\mathbf{r},t)\n\\end{equation}\\]\nwobei\n\n\\(m\\), Masse des Teilchens,\n\\(V(\\mathbf{r})\\), potentielle Energie; \\(\\mathbf{r} = (x, y, z)\\)\n\\(\\Delta\\), Laplace-Operator:\n\n\\[\\begin{equation}\n\\Delta = \\frac{\\partial^2}{\\partial x^2} + \\frac{\\partial^2}{\\partial y^2} + \\frac{\\partial^2}{\\partial z^2}\n= \\left( \\frac{\\partial}{\\partial x}, \\frac{\\partial}{\\partial y}, \\frac{\\partial}{\\partial z} \\right)^2\n= \\nabla^2\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#energiebänder-modell-2",
-    "href": "class/03_lec.html#energiebänder-modell-2",
-    "title": "3  Halbleiterphysik",
-    "section": "3.8 Energiebänder-Modell (2)",
-    "text": "3.8 Energiebänder-Modell (2)\n\nModell freier Elektronen: “Nach der Quantentheorie wird die Aufenthaltswahrscheinlichkeit der Elektronen im Kristall durch das Quadrat der Wellenfunktion \\(\\lvert \\Psi \\lvert^2\\) beschrieben.”\nDe-Broglie-Beziehung (Teilchenbild / Wellenbild)\n\n\\[\\begin{equation}\np = \\frac{h}{\\lambda} = \\frac{h}{2 \\pi} \\frac{2 \\pi}{\\lambda} = \\hbar k\n\\end{equation}\\]\n\nKinetische Energie der Elektronen : Der Physiker schreibt hier \\(E\\) anstelle von \\(W\\). In der Elektrotechnik ist der Buchstabe \\(E\\) allerdings mit dem elektrischen Feld verknüpft.\n\n\\[\\begin{equation}\nE_{kin} = \\frac{p^2}{2 m} = \\frac{\\hbar^2 k^2}{2 m}\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#energiebandstruktur",
-    "href": "class/03_lec.html#energiebandstruktur",
-    "title": "3  Halbleiterphysik",
-    "section": "3.9 Energiebandstruktur",
-    "text": "3.9 Energiebandstruktur\n\n\nDie kinetische Energie \\(E_{kin}\\) als Funktion der Wellenzahl \\(k\\) ergibt eine Parabel.\nFür Elektronen in Kristallen ergeben sich verbotene Energiebereiche.\nStehende Wellen durch Reflexionen am Kristallgitter mit der Gitterkonstanten \\(a\\).\nElektronen- bzw. Materiewellen mit der Wellenlänge \\(\\lambda\\) erfüllen die Bragg’sche Reflexionsbedingung\n\n\\[\\begin{align}\n\\lambda_n &= \\frac{2 a}{\\pi}, \\quad n=1,2,3,... \\\\\nk_n &= \\frac{2 \\pi}{\\lambda_n} = \\frac{\\pi}{a} n\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#aufenthaltswahrscheinlichkeit",
-    "href": "class/03_lec.html#aufenthaltswahrscheinlichkeit",
-    "title": "3  Halbleiterphysik",
-    "section": "3.10 Aufenthaltswahrscheinlichkeit",
-    "text": "3.10 Aufenthaltswahrscheinlichkeit",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#reduziertes-zonenschema",
-    "href": "class/03_lec.html#reduziertes-zonenschema",
-    "title": "3  Halbleiterphysik",
-    "section": "3.11 Reduziertes Zonenschema",
-    "text": "3.11 Reduziertes Zonenschema\n\n“Durch Überlagerung der laufenden mit den reflektierten Wellen entstehen stehende Elektronenwellen mit ortsfesten Knoten und Bäuchen.”\n“Die \\(E(k)\\)-Parabel bekommt daher an der Stelle \\(k_1 = \\pm \\pi/a\\) Unstetigkeitsstellen.” Dieses sind die sog. verbotenen Zonen oder Energielücken.\nAufgrund der Periodizität des \\(k\\)-Raumes kann die Parabel durch ein reduziertes Zonenschema dargestellt werden, vgl. Energiebandstruktur.",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#besetzungswahrscheinlichkeit",
-    "href": "class/03_lec.html#besetzungswahrscheinlichkeit",
-    "title": "3  Halbleiterphysik",
-    "section": "3.12 Besetzungswahrscheinlichkeit",
-    "text": "3.12 Besetzungswahrscheinlichkeit\n\nDie Berechnung der Ladungsträgerdichten von Elektronen (n) und Löchern (p) erfolgt mithilfe der Fermi-Dirac-Statistik.\nModell des freien Elektronengases: “Dieses wurde von A. Sommerfeld (1868 bis 1951) vorgeschlagen und von E. Fermi (1901 bis 1954) erweitert. Es beschreibt die Leitungselektronen der Metalle so wie die frei beweglichen Moleküle eines Gases, vernachlässigt also die Wechselwirkung der Elektronen mit den ortsfesten Atomkernen und damit auch das Auftreten von Energielücken.”\n“Befinden sich die Elektronen in einem Würfel der Kantenlänge \\(L\\), dann ist ihre Aufenthaltswahrscheinlichkeit durch das Quadrat der Wellenfunktion \\(\\Psi\\) gegeben, die als Lösung aus der Schrödinger-Gleichung folgt.”\nStreng genommen gilt das Modell des freien Elektronengases nur für \\(T=0\\). “Nur am absoluten Nullpunkt besetzen die Elektronen alle Energieniveaus von Null bis \\(E_F\\).”\nBei endlicher Temperatur nimmt die kinetische Energie des Elektronengases zu, sodass einige Energieniveaus oberhalb der Fermi-Kante besetzt werden und eine gleiche Anzahl unterhalb leer bleibt.",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#fermi-dirac-verteilungsfunktion",
-    "href": "class/03_lec.html#fermi-dirac-verteilungsfunktion",
-    "title": "3  Halbleiterphysik",
-    "section": "3.13 Fermi-Dirac-Verteilungsfunktion",
-    "text": "3.13 Fermi-Dirac-Verteilungsfunktion\n\n“Die Wahrscheinlichkeit, mit der ein bestimmter Energiezustand \\(E\\) mit Elektronen besetzt ist, wird beschrieben durch die Fermi-Dirac-Verteilungsfunktion”\n\n\\[\\begin{equation}\nf_{FD}(E) = \\frac{1}{1 + \\exp\\left( \\frac{E - E_F}{k_B T}\\right)}\n\\end{equation}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#fermi-dirac-statistik-1",
-    "href": "class/03_lec.html#fermi-dirac-statistik-1",
-    "title": "3  Halbleiterphysik",
-    "section": "3.14 Fermi-Dirac-Statistik (1)",
-    "text": "3.14 Fermi-Dirac-Statistik (1)\n\n\n“Die Fermi-Dirac-Statistik ist anwendbar auf Teilchen mit halbzahligem Spin, zu denen die Elektronen gehören.”\n“Bei \\(T=0\\) sind alle Zustände unterhalb der Fermi-Energie \\(E_F\\) besetzt, oberhalb \\(E_F\\) leer: \\(f_{FD}(E)=1\\) für \\(0\n\\leq E &lt; E_F\\), \\(f_{FD}(E)=0\\) für \\(E &gt; E_F\\).”\n“Bei endlicher Temperatur sind entsprechend den schraffierten Flächen Zustände unterhalb der Fermi-Energie leer und oberhalb besetzt. Die Besetzungswahrscheinlichkeit nimmt von 90% auf 10% ab innerhalb eines Energiebereiches von \\(\\Delta E \\approx 4.4 k T\\). Die bei tiefen Temperaturen scharfe Fermi-Kante weicht also mit zunehmender Temperatur immer mehr auf.”",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#halbleiter-im-thermischen-gleichgewicht",
-    "href": "class/03_lec.html#halbleiter-im-thermischen-gleichgewicht",
-    "title": "3  Halbleiterphysik",
-    "section": "3.15 Halbleiter im thermischen Gleichgewicht",
-    "text": "3.15 Halbleiter im thermischen Gleichgewicht\n\nLadungsträgerkonzentration Elektronen \\(n_0 \\approx N_C \\exp\\left( \\frac{E_F - E_C}{kT} \\right)\\)\nLadungsträgerkonznetration Löcher \\(p_0 \\approx N_V \\exp\\left( \\frac{E_V - E_F}{kT} \\right)\\)\nMassenwirkungsgesetz \\(n_i^2(T) = n_0 \\cdot p_0 = N_C N_V \\exp\\left( -\\frac{(E_C - E_V)}{kT} \\right)\\)\nNeutralitätsbedingung der Raumladung \\(N_A^{-} + n = N_D^{+} + p\\)",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#intrinsischer-halbleiter",
-    "href": "class/03_lec.html#intrinsischer-halbleiter",
-    "title": "3  Halbleiterphysik",
-    "section": "3.16 Intrinsischer Halbleiter",
-    "text": "3.16 Intrinsischer Halbleiter",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#dotierter-halbleiter",
-    "href": "class/03_lec.html#dotierter-halbleiter",
-    "title": "3  Halbleiterphysik",
-    "section": "3.17 Dotierter Halbleiter",
-    "text": "3.17 Dotierter Halbleiter",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#stromgleichung",
-    "href": "class/03_lec.html#stromgleichung",
-    "title": "3  Halbleiterphysik",
-    "section": "3.18 Stromgleichung",
-    "text": "3.18 Stromgleichung\n\nOhmsches Gesetz für Halbleiterphysiker\nAllgem. Ansatz (vektoriell)\n\n\\[\\begin{align}\n\\mathbf{J}_n &= \\overbrace{e \\mu_n n \\mathbf{E}}^{\\text{Feldanteil}}\n+ \\overbrace{e D_n \\nabla n}^{\\text{Diffusionsanteil}}\n&\nD_n &= \\mu_n \\frac{kT}{q} \\quad \\text{Einstein-Relation} \\\\\n\\mathbf{J}_p &= \\underbrace{e \\mu_p n \\mathbf{E}}_{\\text{Feldanteil}}\n- \\underbrace{e D_p \\nabla p}_{\\text{Diffusionsanteil}}\n&\nD_p &= \\mu_p \\frac{kT}{q} \\quad \\text{Einstein-Relation}\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#stromgleichung-1d",
-    "href": "class/03_lec.html#stromgleichung-1d",
-    "title": "3  Halbleiterphysik",
-    "section": "3.19 Stromgleichung 1D",
-    "text": "3.19 Stromgleichung 1D\nVereinf. eindimensionaler Fall\n\\[\\begin{align}\nJ_n &= \\overbrace{e \\mu_n n E}^{\\text{Feldanteil}}\n+ \\overbrace{e D_n \\frac{\\partial n}{\\partial x}}^{\\text{Diffusionsanteil}}\n&\nD_n &= \\mu_n \\frac{kT}{q} \\quad \\text{Einstein-Relation}\\\\\nJ_p &= \\underbrace{e \\mu_p n E}_{Feldanteil}\n- \\underbrace{e D_p \\frac{\\partial p}{\\partial x}}_{Diffusionsanteil}\n&\nD_p &= \\mu_p \\frac{kT}{q} \\quad \\text{Einstein-Relation}\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#kontinuitätsgleichung",
-    "href": "class/03_lec.html#kontinuitätsgleichung",
-    "title": "3  Halbleiterphysik",
-    "section": "3.20 Kontinuitätsgleichung",
-    "text": "3.20 Kontinuitätsgleichung\nAllgem. Ansatz\n\\[\\begin{align}\n\\frac{\\partial n}{\\partial t}\n&= \\frac{1}{e} \\nabla \\cdot \\mathbf{J}_n\n- (\\mathcal{R} - \\mathcal{G})\n&\n\\frac{\\partial p}{\\partial t}\n&= \\frac{1}{e} \\nabla \\cdot \\mathbf{J}_p\n- (\\mathcal{R} - \\mathcal{G})\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#kontinuitätsgleichung-1d",
-    "href": "class/03_lec.html#kontinuitätsgleichung-1d",
-    "title": "3  Halbleiterphysik",
-    "section": "3.21 Kontinuitätsgleichung 1D",
-    "text": "3.21 Kontinuitätsgleichung 1D\nVereinf. eindimensionaler Fall\n\\[\\begin{align}\n\\frac{\\partial n}{\\partial t}\n&= \\frac{1}{e} \\frac{\\partial J_n}{\\partial x}\n- (\\mathcal{R} - \\mathcal{G})\n&\n\\frac{\\partial p}{\\partial t}\n&= \\frac{1}{e} \\frac{\\partial J_p}{\\partial x}\n- (\\mathcal{R} - \\mathcal{G})\n\\end{align}\\]",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
-    "objectID": "class/03_lec.html#poisson-gleichung",
-    "href": "class/03_lec.html#poisson-gleichung",
-    "title": "3  Halbleiterphysik",
-    "section": "3.22 Poisson-Gleichung",
-    "text": "3.22 Poisson-Gleichung\n\n“Für eine vollständige Beschreibung der Vorgänge im Halbleiter unter Nichtgleichgewichtsbedingungen sind die Strom- und Kontinuitätsgleichungen durch eine Beziehung zu ergänzen, die es erlaubt, die elektrische Feldstärke bzw. das elektrostatische Potential aus der Verteilung der Ladungen zu berechnen.”\n\n\\[\\begin{equation}\n\\nabla \\cdot \\mathbf{E} = -\\nabla^2 \\varphi = \\frac{\\varrho}{\\varepsilon_0 \\varepsilon_r}\n\\end{equation}\\]\n\nHierbei bezeichnet \\(\\varrho\\) die Raumladung\n\n\\[\\begin{equation}\n\\varrho = e \\left( p - n + N_D^{+} - N_A^{-} \\right)\n\\end{equation}\\]\n\n\n\n\nHering, Ekbert, Rolf Martin, und Martin Stohrer. 2012. Physik für Ingenieure. Springer-Lehrbuch. Springer. https://doi.org/10.1007/978-3-642-22569-7.\n\n\nReisch, Michael. 2007. Elektronische Bauelemente. 2nd Aufl. Springer. https://doi.org/10.1007/978-3-540-34015-7.",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Halbleiterphysik</span>"
-    ]
-  },
-  {
     "objectID": "class/references.html",
     "href": "class/references.html",
     "title": "Literaturverzeichnis",
     "section": "",
-    "text": "Hering, Ekbert, Rolf Martin, and Martin Stohrer. 2012. Physik\nfür Ingenieure. Springer-Lehrbuch. Springer. https://doi.org/10.1007/978-3-642-22569-7.\n\n\nMaloberti, Franco. 2011. Understanding Microelectronics: A Top-down\nApproach. Wiley-Blackwell.\n\n\nReisch, Michael. 2007. Elektronische Bauelemente. 2nd ed.\nSpringer. https://doi.org/10.1007/978-3-540-34015-7.",
+    "text": "Maloberti, Franco. 2011. Understanding Microelectronics: A Top-down\nApproach. Wiley-Blackwell.",
     "crumbs": [
       "Seminar",
       "Literaturverzeichnis"
@@ -837,221 +419,221 @@
   {
     "objectID": "lab/01_Activity.html",
     "href": "lab/01_Activity.html",
-    "title": "4  Laborversuche",
+    "title": "2  Laborversuche",
     "section": "",
     "text": "In den Laborversuchen des Moduls M 5.3 Elektronik (ELK) sollen Halbleiterbauelemente, wie Dioden, Bipolartransistoren (Bipolar Junction Transistor, BJT, engl.) und Feldeffektransistoren (Metal Oxide Semiconductor Field Effect Transistor, MOSFET, engl.) charakterisiert werden. Die Versuche sind der Versuchsreihe Active Learning von Red Pitaya entnommen.\nSie experimentieren in Gruppen mit bis zu vier Studierenden an elektronischen Bauelementen und Baugruppen, bspw.\n\nDioden vom Typ 1N4001 und 1N4148,\nBJTs vom Typ 2N3904 (npn) und 2N3906 (pnp),\nMOSFETs vom Typ BS170 und BS250.\n\nDie Charakterisierung geschieht über das VPN der Hochschule, in dem Sie an dem Ihnen zugewiesenen Laborplatz ELIE1 bis ELIE6 die Messungen über ein Red Pitaya STEMLab steuern. Die Steuerung der STEMLabs kann sowohl über das Web-Frontend mit der Oszilloskop-App geschehen, als auch über den jeweiligen SCPI Server des STEMlabs.\nAls Ergebnis der Untersuchungen soll ein Technischer Bericht/Entwicklungsbericht mit quarto angefertigt werden.\nIm Entwicklungsbericht beschreiben und vergleichen Sie die Messungen mit SPICE-Simulationen gestützt durch Literaturrecherche in Fachjournalen, Fachforen (z.B. auf den Webseiten der Halbleiterhersteller) und der Bibliothek (SuUB).",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Laborversuche</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Laborversuche</span>"
     ]
   },
   {
     "objectID": "lab/02_Activity.html",
     "href": "lab/02_Activity.html",
-    "title": "5  IV-Charakterisierung von Siliziumdioden",
+    "title": "3  IV-Charakterisierung von Siliziumdioden",
     "section": "",
-    "text": "5.1 Zielsetzung\nZiel dieses Laborversuchs ist es, Strom- (I) und Spannungs- (V, eigentlich U) eigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu untersuchen. Parallel zu Messungen mit dem Red Pitaya STEMlab soll die Schaltung vollständig mit SPICE (LTspice, ngspice) simuliert werden, so dass Messdaten vom STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.\nHinweis. In diesem Laborversuch wird die Terminologie aus der Dokumentation verwendet, wenn es um Verbindungen zum Red Pitaya STEMlab geht.\nDie Erweiterungsstecker-Pins für die Spannungsversorgung -3.3 V und +3.3 V sind in der Dokumentation dargestellt.\nDie Oszilloskop und Signalgenerator App wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMlab’s aktiviert ist.",
+    "text": "3.1 Zielsetzung\nZiel dieses Laborversuchs ist es, Strom- (I) und Spannungs- (V, eigentlich U) eigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu untersuchen. Parallel zu Messungen mit dem Red Pitaya STEMlab soll die Schaltung vollständig mit SPICE (LTspice, ngspice) simuliert werden, so dass Messdaten vom STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.\nHinweis. In diesem Laborversuch wird die Terminologie aus der Dokumentation verwendet, wenn es um Verbindungen zum Red Pitaya STEMlab geht.\nDie Erweiterungsstecker-Pins für die Spannungsversorgung -3.3 V und +3.3 V sind in der Dokumentation dargestellt.\nDie Oszilloskop und Signalgenerator App wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMlab’s aktiviert ist.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
     ]
   },
   {
     "objectID": "lab/02_Activity.html#hintergrund",
     "href": "lab/02_Activity.html#hintergrund",
-    "title": "5  IV-Charakterisierung von Siliziumdioden",
-    "section": "5.2 Hintergrund",
-    "text": "5.2 Hintergrund\nEine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.\nWenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei \\(\\approx\\) 0.7 V und die IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:\n\\[\\begin{equation}\nI_D = I_S \\left( e^{\\frac{V_D }{N V_T}} - 1 \\right)\n\\end{equation}\\]\nwobei \\(I_{S}\\) der Sättigungssperrstrom ist und \\(N\\) ein Skalierungsfaktoren (Emissionskoeffizient), \\(V_T = kT / q\\) ist die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (\\(T\\) = 300 K).",
+    "title": "3  IV-Charakterisierung von Siliziumdioden",
+    "section": "3.2 Hintergrund",
+    "text": "3.2 Hintergrund\nEine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.\nWenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei \\(\\approx\\) 0.7 V und die IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:\n\\[\\begin{equation}\nI_D = I_S \\left( e^{\\frac{V_D }{N V_T}} - 1 \\right)\n\\end{equation}\\]\nwobei \\(I_{S}\\) der Sättigungssperrstrom ist und \\(N\\) ein Skalierungsfaktoren (Emissionskoeffizient), \\(V_T = kT / q\\) ist die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (\\(T\\) = 300 K).",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
     ]
   },
   {
     "objectID": "lab/02_Activity.html#schematische-symbole-der-diode",
     "href": "lab/02_Activity.html#schematische-symbole-der-diode",
-    "title": "5  IV-Charakterisierung von Siliziumdioden",
-    "section": "5.3 Schematische Symbole der Diode",
-    "text": "5.3 Schematische Symbole der Diode\nJeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet ist, vgl. Abbildung 5.1 . Eine Z-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links in Abbildung 5.1 zu sehen ist. Eine S-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der Diode wegzeigen, kennzeichnen eine LED (Light Emitting Diode, engl.), wie im rechten Symbol dargestellt. Pfeile, die auf die Diode zeigen, kennzeichnen eine Photodiode.\n\n\n\n\n\n\nAbbildung 5.1: Diodensymbole",
+    "title": "3  IV-Charakterisierung von Siliziumdioden",
+    "section": "3.3 Schematische Symbole der Diode",
+    "text": "3.3 Schematische Symbole der Diode\nJeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet ist, vgl. Abbildung 3.1 . Eine Z-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links in Abbildung 3.1 zu sehen ist. Eine S-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der Diode wegzeigen, kennzeichnen eine LED (Light Emitting Diode, engl.), wie im rechten Symbol dargestellt. Pfeile, die auf die Diode zeigen, kennzeichnen eine Photodiode.\n\n\n\n\n\n\nAbbildung 3.1: Diodensymbole",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
     ]
   },
   {
     "objectID": "lab/02_Activity.html#materialien",
     "href": "lab/02_Activity.html#materialien",
-    "title": "5  IV-Charakterisierung von Siliziumdioden",
-    "section": "5.4 Materialien",
-    "text": "5.4 Materialien\n\nRed Pitaya’s STEMlab\n10 \\(\\Omega\\) Widerstand\nDiode 1N4148\nDiode 1N4001\nPlatine",
+    "title": "3  IV-Charakterisierung von Siliziumdioden",
+    "section": "3.4 Materialien",
+    "text": "3.4 Materialien\n\nRed Pitaya’s STEMlab\n10 \\(\\Omega\\) Widerstand\nDiode 1N4148\nDiode 1N4001\nPlatine",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
     ]
   },
   {
     "objectID": "lab/02_Activity.html#iv-charakteristik",
     "href": "lab/02_Activity.html#iv-charakteristik",
-    "title": "5  IV-Charakterisierung von Siliziumdioden",
-    "section": "5.5 IV-Charakteristik",
-    "text": "5.5 IV-Charakteristik\nDie Strom- und Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den in Abbildung 5.2 dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden Diodenstrom und -spannung:\n\\[\\begin{align}\nI_D &= (IN_1 - IN_2) / R_1 \\\\\nV_D &= IN_2\n\\end{align}\\]\n\n\n\n\n\n\nAbbildung 5.2: Anschlussplan für Dioden IV-Kurven\n\n\n\nZur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (xy-Graph/Plot) erforderlich, wobei die x-Achse die Diodenspannung an IN2 und die y-Achse den Diodenstrom \\(I_D = (IN1-IN2)/R1\\) darstellen.",
+    "title": "3  IV-Charakterisierung von Siliziumdioden",
+    "section": "3.5 IV-Charakteristik",
+    "text": "3.5 IV-Charakteristik\nDie Strom- und Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den in Abbildung 3.2 dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden Diodenstrom und -spannung:\n\\[\\begin{align}\nI_D &= (IN_1 - IN_2) / R_1 \\\\\nV_D &= IN_2\n\\end{align}\\]\n\n\n\n\n\n\nAbbildung 3.2: Anschlussplan für Dioden IV-Kurven\n\n\n\nZur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (xy-Graph/Plot) erforderlich, wobei die x-Achse die Diodenspannung an IN2 und die y-Achse den Diodenstrom \\(I_D = (IN1-IN2)/R1\\) darstellen.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
     ]
   },
   {
     "objectID": "lab/02_Activity.html#zeitbereichsmessungen",
     "href": "lab/02_Activity.html#zeitbereichsmessungen",
-    "title": "5  IV-Charakterisierung von Siliziumdioden",
-    "section": "5.6 Zeitbereichsmessungen",
-    "text": "5.6 Zeitbereichsmessungen\n\n\n\n\n\n\nWarnung 5.1: Unterschiedliche Zugriffsarten / Messverfahren mit dem STEMlab\n\n\n\nNIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN / MESSVERFAHREN PARALLEL VERWENDEN.\nNICHT MIT ZWEI ODER MEHREREN RECHNERN ZUM MESSEN AUF DAS STEMLAB ZUGREIFEN.\nGreifen Sie nur von einem Rechner aus auf das STEMlab zu und deaktivieren Sie die aktuell nicht genutzte Methode, bspw. Oszilloskop-App (OFF-Button), bevor Sie den Zugriff via JupyterLab oder SCPI erproben.\n\n\n\n5.6.1 Messungen mit der STEMlab Oszilloskop-App\n\n\n\n\n\n\nTipp 5.1\n\n\n\nURLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB\n\nLaborplatz ELIE1\nLaborplatz ELIE2\nLabroplatz ELIE3\nLaborplatz ELIE4\nLaborplatz ELIE5\nLaborplatz ELIE6\n\n\n\n\n\n\n\n\n\nAbbildung 5.3: Verbindungen auf dem Steckbrett\n\n\n\n\nDie Schaltung aus Abbildung 5.2 ist für Sie auf einer Platine aufgebaut und wird via SMA-Verbindern an das STEMlab angeschlossen.\nLoggen Sie sich mit vorzugsweise mit Google Chrome oder Mozilla Firefox auf dem STEMlab an ihrem Laborplatz ein und starten Sie die Oszilloskop- und Signalgenerator-App.\nStellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform “TRIANGLE” und aktivieren den Ausgang mit “ON”. Der “SHOW”-Button dient zum Anzeigen des Signals in der Oszilloskop-App.\nStellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.\nSetzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.\nIm Menü “MATH settings” stellen Sie die Differenz IN1-IN2 ein und aktieren diese wurch setzen des “ENABLE” Buttons. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.\n\n\n\n\n\n\n\nAbbildung 5.4: Spannung und Strom einer Siliziumdiode (zeitabhängig)\n\n\n\nIn Abbildung 5.4 kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die Schwellenspannung von ca. 0.7 V erreicht.\nAußerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung größer 0.7 V ist, beginnt die Diode zu leiten und der Strom wird nur durch den Widerstand \\(R_1\\) begrenzt.\n\n\n5.6.2 Messungen mit SCPI-Server und Python\n\n\n\n\n\n\nTipp 5.2\n\n\n\nIP-Adressen der STEMLabs für den Zugriff via SCPI\n\nLaborplatz ELIE1: 192.168.111.181\nLaborplatz ELIE2: 192.168.111.182\nLabroplatz ELIE3: 192.168.111.183\nLaborplatz ELIE4: 192.168.111.184\nLaborplatz ELIE5: 192.168.111.185\nLaborplatz ELIE6: 192.168.111.186",
+    "title": "3  IV-Charakterisierung von Siliziumdioden",
+    "section": "3.6 Zeitbereichsmessungen",
+    "text": "3.6 Zeitbereichsmessungen\n\n\n\n\n\n\nWarnung 3.1: Unterschiedliche Zugriffsarten / Messverfahren mit dem STEMlab\n\n\n\nNIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN / MESSVERFAHREN PARALLEL VERWENDEN.\nNICHT MIT ZWEI ODER MEHREREN RECHNERN ZUM MESSEN AUF DAS STEMLAB ZUGREIFEN.\nGreifen Sie nur von einem Rechner aus auf das STEMlab zu und deaktivieren Sie die aktuell nicht genutzte Methode, bspw. Oszilloskop-App (OFF-Button), bevor Sie den Zugriff via JupyterLab oder SCPI erproben.\n\n\n\n3.6.1 Messungen mit der STEMlab Oszilloskop-App\n\n\n\n\n\n\nTipp 3.1\n\n\n\nURLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB\n\nLaborplatz ELIE1\nLaborplatz ELIE2\nLabroplatz ELIE3\nLaborplatz ELIE4\nLaborplatz ELIE5\nLaborplatz ELIE6\n\n\n\n\n\n\n\n\n\nAbbildung 3.3: Verbindungen auf dem Steckbrett\n\n\n\n\nDie Schaltung aus Abbildung 3.2 ist für Sie auf einer Platine aufgebaut und wird via SMA-Verbindern an das STEMlab angeschlossen.\nLoggen Sie sich mit vorzugsweise mit Google Chrome oder Mozilla Firefox auf dem STEMlab an ihrem Laborplatz ein und starten Sie die Oszilloskop- und Signalgenerator-App.\nStellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform “TRIANGLE” und aktivieren den Ausgang mit “ON”. Der “SHOW”-Button dient zum Anzeigen des Signals in der Oszilloskop-App.\nStellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.\nSetzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.\nIm Menü “MATH settings” stellen Sie die Differenz IN1-IN2 ein und aktieren diese wurch setzen des “ENABLE” Buttons. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.\n\n\n\n\n\n\n\nAbbildung 3.4: Spannung und Strom einer Siliziumdiode (zeitabhängig)\n\n\n\nIn Abbildung 3.4 kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die Schwellenspannung von ca. 0.7 V erreicht.\nAußerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung größer 0.7 V ist, beginnt die Diode zu leiten und der Strom wird nur durch den Widerstand \\(R_1\\) begrenzt.\n\n\n3.6.2 Messungen mit SCPI-Server und Python\n\n\n\n\n\n\nTipp 3.2\n\n\n\nIP-Adressen der STEMLabs für den Zugriff via SCPI\n\nLaborplatz ELIE1: 192.168.111.181\nLaborplatz ELIE2: 192.168.111.182\nLabroplatz ELIE3: 192.168.111.183\nLaborplatz ELIE4: 192.168.111.184\nLaborplatz ELIE5: 192.168.111.185\nLaborplatz ELIE6: 192.168.111.186",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"
     ]
   },
   {
     "objectID": "lab/03_Activity.html",
     "href": "lab/03_Activity.html",
-    "title": "6  Der BJT als Diode",
+    "title": "4  Der BJT als Diode",
     "section": "",
-    "text": "6.1 Zielsetzung\nDer Zweck dieses Versuchs ist es, die Strom- und Spannungseigenschaften eines als Diode geschalteten Bipolartransistors (Bipolar Junction Transistor, kurz BJT, engl.) zu untersuchen.",
+    "text": "4.1 Zielsetzung\nDer Zweck dieses Versuchs ist es, die Strom- und Spannungseigenschaften eines als Diode geschalteten Bipolartransistors (Bipolar Junction Transistor, kurz BJT, engl.) zu untersuchen.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Der BJT als Diode</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Der BJT als Diode</span>"
     ]
   },
   {
     "objectID": "lab/03_Activity.html#zielsetzung",
     "href": "lab/03_Activity.html#zielsetzung",
-    "title": "6  Der BJT als Diode",
+    "title": "4  Der BJT als Diode",
     "section": "",
     "text": "Tipp\n\n\n\nDie für die Versorgungsspannungen von +5 V, -3,3 V und +3,3 V verwendeten Steckerstifte des STEMlab’s sind in der Dokumentation aufgeführt.\nDie STEMlab-Ausgänge können Spannungssignale mit einem maximalen Ausgangsbereich von \\(\\pm\\) 1 V (2 Vpp) erzeugen. Für diesen Versuch sind höhere Signalamplituden erforderlich. Aus diesem Grund wird ein Operationsverstärker (Opamp) als invertierender Verstärker eingesetzt, um die Signale der Ausgänge OUT1 und OUT2 für einen Spannungshub von -3,2 V bis +4,7 V zu verstärken. Der Opamp wird vom STEMlab aus mit +5 V und -3,3 V versorgt. Die Verstärkung des Opamps wird auf \\(\\approx\\) 5 gesetzt, wobei \\(R_i\\) = 2,2 k \\(\\Omega\\) und \\(R_f\\) = 10 k \\(\\Omega\\).",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Der BJT als Diode</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Der BJT als Diode</span>"
     ]
   },
   {
     "objectID": "lab/03_Activity.html#materialien",
     "href": "lab/03_Activity.html#materialien",
-    "title": "6  Der BJT als Diode",
-    "section": "6.2 Materialien",
-    "text": "6.2 Materialien\n\nRed Pitaya STEMlab\nOP484\n1 k \\(\\Omega\\) Widerstand\n10 k \\(\\Omega\\) Widerstand\n2,2 k \\(\\Omega\\) Widerstand\nKleinsignal npn-Transistor (2N3904)\nKleinsignal pnp-Transistor (2N3906)\nPlatine\nLabornetzteil\n\nEin npn-Transistor, der wie in ?fig-22-01 gezeigt angeschlossen ist, verhält sich wie eine Diode. Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt werden.\n\n\n\n\n\n\nAbbildung 6.1: npn-Transistor als Diode.\n\n\n\n\n\n\n\n\n\nTipp\n\n\n\nBeachten Sie, dass die in ?fig-22-01 (links) gezeigte Verstärkerschaltung nicht das Hauptthema dieses Versuchs ist. Diese Schaltung wird nur hinzugefügt, um das Signal OUT1 zu verstärken; von hier an können Sie den Punkt -5 \\(\\times\nV_{OUT1}\\) als Bezugspotenzial betrachten.",
+    "title": "4  Der BJT als Diode",
+    "section": "4.2 Materialien",
+    "text": "4.2 Materialien\n\nRed Pitaya STEMlab\nOP484\n1 k \\(\\Omega\\) Widerstand\n10 k \\(\\Omega\\) Widerstand\n2,2 k \\(\\Omega\\) Widerstand\nKleinsignal npn-Transistor (2N3904)\nKleinsignal pnp-Transistor (2N3906)\nPlatine\nLabornetzteil\n\nEin npn-Transistor, der wie in ?fig-22-01 gezeigt angeschlossen ist, verhält sich wie eine Diode. Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt werden.\n\n\n\n\n\n\nAbbildung 4.1: npn-Transistor als Diode.\n\n\n\n\n\n\n\n\n\nTipp\n\n\n\nBeachten Sie, dass die in ?fig-22-01 (links) gezeigte Verstärkerschaltung nicht das Hauptthema dieses Versuchs ist. Diese Schaltung wird nur hinzugefügt, um das Signal OUT1 zu verstärken; von hier an können Sie den Punkt -5 \\(\\times\nV_{OUT1}\\) als Bezugspotenzial betrachten.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Der BJT als Diode</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Der BJT als Diode</span>"
     ]
   },
   {
     "objectID": "lab/03_Activity.html#verfahren",
     "href": "lab/03_Activity.html#verfahren",
-    "title": "6  Der BJT als Diode",
-    "section": "6.3 Verfahren",
-    "text": "6.3 Verfahren\nIm Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in Abbildung 6.2 gezeigt, an ein STEMlab angeschlossen, wobei \\(R_1\\) = 2,2 k \\(\\Omega\\), \\(R_2\\) = 10 k \\(\\Omega\\) und \\(R_3\\) = 1 k \\(\\Omega\\).\n\n\n\n\n\n\nAbbildung 6.2: Platine mit Transistorschaltung.\n\n\n\n\n\n\n\n\n\nWarnung\n\n\n\nBevor Sie eigene Schaltungen, entweder auf dem Steckbrett oder einer eigenen Platine, an die STEMlab-Pins -3,3V und +3,3V anschließen, überprüfen Sie sorgfältig die Polarität Ihrer Schaltung. Die Spannungsversorgungsstifte -3,3V und +3,3V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.\n\n\n\nStarten Sie die Oszilloskop- und Signalgenerator-App\nStellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,8 V, den DC-Offset auf -0,12 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.\nStellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind. Sie können V/div einstellen, indem Sie den gewünschten Kanal auswählen und die vertikalen +/- Button rechts unten verwenden.\nSetzen Sie den t/div Wert auf 200 us/div. Sie können t/div mit den horizontalen +/- Button einstellen.\nStellen Sie unter MATH-Kanaleinstellungen folgendes ein: IN1-IN2 und wählen Sie ENABLE.\nStellen Sie unter den Menüeinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.\n\n\n\n\n\n\n\nAbbildung 6.3: npn-Transistor als Diode, Messungen.\n\n\n\nAus Abbildung 6.3 ist ersichtlich, dass der npn-Transistor in der in ?fig-22-01 gezeigten Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem Diodenversuch.",
+    "title": "4  Der BJT als Diode",
+    "section": "4.3 Verfahren",
+    "text": "4.3 Verfahren\nIm Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in Abbildung 4.2 gezeigt, an ein STEMlab angeschlossen, wobei \\(R_1\\) = 2,2 k \\(\\Omega\\), \\(R_2\\) = 10 k \\(\\Omega\\) und \\(R_3\\) = 1 k \\(\\Omega\\).\n\n\n\n\n\n\nAbbildung 4.2: Platine mit Transistorschaltung.\n\n\n\n\n\n\n\n\n\nWarnung\n\n\n\nBevor Sie eigene Schaltungen, entweder auf dem Steckbrett oder einer eigenen Platine, an die STEMlab-Pins -3,3V und +3,3V anschließen, überprüfen Sie sorgfältig die Polarität Ihrer Schaltung. Die Spannungsversorgungsstifte -3,3V und +3,3V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.\n\n\n\nStarten Sie die Oszilloskop- und Signalgenerator-App\nStellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,8 V, den DC-Offset auf -0,12 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.\nStellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind. Sie können V/div einstellen, indem Sie den gewünschten Kanal auswählen und die vertikalen +/- Button rechts unten verwenden.\nSetzen Sie den t/div Wert auf 200 us/div. Sie können t/div mit den horizontalen +/- Button einstellen.\nStellen Sie unter MATH-Kanaleinstellungen folgendes ein: IN1-IN2 und wählen Sie ENABLE.\nStellen Sie unter den Menüeinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.\n\n\n\n\n\n\n\nAbbildung 4.3: npn-Transistor als Diode, Messungen.\n\n\n\nAus Abbildung 4.3 ist ersichtlich, dass der npn-Transistor in der in ?fig-22-01 gezeigten Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem Diodenversuch.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Der BJT als Diode</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Der BJT als Diode</span>"
     ]
   },
   {
     "objectID": "lab/03_Activity.html#iv-kurvenmessungen",
     "href": "lab/03_Activity.html#iv-kurvenmessungen",
-    "title": "6  Der BJT als Diode",
-    "section": "6.4 IV-Kurvenmessungen",
-    "text": "6.4 IV-Kurvenmessungen\nDa sich ein Bipolartransistor wie eine Diode verhalten kann (vgl. Konfiguration in ?fig-22-01, können sie die IV-Charakteristik mit den gleichen Messmethoden wie im Diodenexperiment ermitteln, also mit der Oszilloskop-App im Web-Browser, mit einem SCPI-Skript und mit dem JupyterLab auf dem STEMlab.",
+    "title": "4  Der BJT als Diode",
+    "section": "4.4 IV-Kurvenmessungen",
+    "text": "4.4 IV-Kurvenmessungen\nDa sich ein Bipolartransistor wie eine Diode verhalten kann (vgl. Konfiguration in ?fig-22-01, können sie die IV-Charakteristik mit den gleichen Messmethoden wie im Diodenexperiment ermitteln, also mit der Oszilloskop-App im Web-Browser, mit einem SCPI-Skript und mit dem JupyterLab auf dem STEMlab.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Der BJT als Diode</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Der BJT als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html",
     "href": "lab/04_Activity.html",
-    "title": "7  Der MOSFET als Diode",
+    "title": "5  Der MOSFET als Diode",
     "section": "",
-    "text": "7.1 Zielsetzung\nZiel dieses Versuches ist die Untersuchung der Strom- und Spannungscharakteristik von n-Kanal und p-Kanal MOS Feldeffekttransistoren (kurz nMOS und pMOS), die jeweils als Diode geschaltet sind.",
+    "text": "5.1 Zielsetzung\nZiel dieses Versuches ist die Untersuchung der Strom- und Spannungscharakteristik von n-Kanal und p-Kanal MOS Feldeffekttransistoren (kurz nMOS und pMOS), die jeweils als Diode geschaltet sind.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#zielsetzung",
     "href": "lab/04_Activity.html#zielsetzung",
-    "title": "7  Der MOSFET als Diode",
+    "title": "5  Der MOSFET als Diode",
     "section": "",
     "text": "Tipp\n\n\n\nDie STEMlab-Ausgänge können Spannungssignale mit einem maximalen Ausgangsbereich von \\(\\pm\\) 1 V (2 Vpp) erzeugen. Für diesen Versuch werden höhere Signalamplituden benötigt. Aus diesem Grund wird wieder ein OP27 als invertierenden Verstärker benötigt, um die Signalverstärkung von OUT1 und OUT2 für einen Spannungshub von +4,7V bis -3,2V zu erreichen. Ein OP27 wird vom STEMlab über die +5 V und -3.3 V Spannungsschienen versorgt. Der Verstärkungfaktor des invertierenden Verstärkers wird auf \\(\\approx\\) 5 gesetzt, wobei \\(R_1\\) = 2,2 k \\(\\Omega\\) und \\(R_2\\) = 10 k \\(\\Omega\\) eingesetzt werden.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#materialien",
     "href": "lab/04_Activity.html#materialien",
-    "title": "7  Der MOSFET als Diode",
-    "section": "7.2 Materialien",
-    "text": "7.2 Materialien\n\nRed Pitaya STEMlab\nOP27 Operationsverstärker\n1 \\(k\\Omega\\) Widerstand\nBS170 Kleinsignal-nMOS-Transistor\nBS250 Kleinsignal-pMOS-Transistor\nPlatine",
+    "title": "5  Der MOSFET als Diode",
+    "section": "5.2 Materialien",
+    "text": "5.2 Materialien\n\nRed Pitaya STEMlab\nOP27 Operationsverstärker\n1 \\(k\\Omega\\) Widerstand\nBS170 Kleinsignal-nMOS-Transistor\nBS250 Kleinsignal-pMOS-Transistor\nPlatine",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#nmos-als-diode",
     "href": "lab/04_Activity.html#nmos-als-diode",
-    "title": "7  Der MOSFET als Diode",
-    "section": "7.3 nMOS als Diode",
-    "text": "7.3 nMOS als Diode\nDie Schaltung des nMOS in Diodenkonfiguration ist in Abbildung 7.1 gezeigt. In Diodenkonfiguration arbeitet ein nMOS vergleichbar zu einem npn-Transistor.\nDie Schwellspannung (Threshold Voltage, \\(V_{Tn,p}\\), \\(V_{th}\\), \\(V_{TH}\\)) liegt nicht zwingend bei \\(\\approx\\) 0,7 V wie bei einem Bipolartransistor. Bei einem unipolaren Transistor hängt sie von der Technologie und der Kanalgröße des Transistors ab. Für den ausgewählten nMOS-Transistor liegt die Schwellenspannung \\(V_{Tn}\\) bei etwa 2,0 V nominal. Das bedeutet, wenn die vom Gate-Kontakt zum Source-Kontakt anliegende Spannung (\\(V_{GS}\\)) die Schwellspannung \\(V_{Tn}\\) überschreiten, schaltet der nMOS Transistor ein und beginnt zu leiten. Da bei der Diodenkonfiguration des nMOS sein Drain-Kontakt schalttechnisch mit seinem Gate-Kontakt verbunden ist, ist die Drain-Source-Spannung gleich der Gate-Source-Spannung.\n\n\n\n\n\n\nTipp\n\n\n\nDiese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlaßspannung, die der Schwellenspannung \\(V_{Tn}\\) entspricht.\n\n\n\n\n\nBS170 Spezifikation.\n\n\n\n\n\n\n\n\nAbbildung 7.1: Anschlussdiagramm nMOS-Messung",
+    "title": "5  Der MOSFET als Diode",
+    "section": "5.3 nMOS als Diode",
+    "text": "5.3 nMOS als Diode\nDie Schaltung des nMOS in Diodenkonfiguration ist in Abbildung 5.1 gezeigt. In Diodenkonfiguration arbeitet ein nMOS vergleichbar zu einem npn-Transistor.\nDie Schwellspannung (Threshold Voltage, \\(V_{Tn,p}\\), \\(V_{th}\\), \\(V_{TH}\\)) liegt nicht zwingend bei \\(\\approx\\) 0,7 V wie bei einem Bipolartransistor. Bei einem unipolaren Transistor hängt sie von der Technologie und der Kanalgröße des Transistors ab. Für den ausgewählten nMOS-Transistor liegt die Schwellenspannung \\(V_{Tn}\\) bei etwa 2,0 V nominal. Das bedeutet, wenn die vom Gate-Kontakt zum Source-Kontakt anliegende Spannung (\\(V_{GS}\\)) die Schwellspannung \\(V_{Tn}\\) überschreiten, schaltet der nMOS Transistor ein und beginnt zu leiten. Da bei der Diodenkonfiguration des nMOS sein Drain-Kontakt schalttechnisch mit seinem Gate-Kontakt verbunden ist, ist die Drain-Source-Spannung gleich der Gate-Source-Spannung.\n\n\n\n\n\n\nTipp\n\n\n\nDiese Konfiguration des nMOS erzeugt effektiv eine Diode mit einer Durchlaßspannung, die der Schwellenspannung \\(V_{Tn}\\) entspricht.\n\n\n\n\n\nBS170 Spezifikation.\n\n\n\n\n\n\n\n\nAbbildung 5.1: Anschlussdiagramm nMOS-Messung",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#verfahren",
     "href": "lab/04_Activity.html#verfahren",
-    "title": "7  Der MOSFET als Diode",
-    "section": "7.4 Verfahren",
-    "text": "7.4 Verfahren\nFür Sie ist die Schaltung aus (fig23-01?) auf einer Platine aufgebaut; \\(R_1\\) = 2,2 k \\(\\Omega\\), \\(R_2\\) = 10 k \\(\\Omega\\) und \\(R_3\\) = 1 k \\(\\Omega\\), Transistor M1 ist der nMOS Transistor vom Typ BS170.\n\n\n\nnMOS-Schaltung auf der Platine\n\n\n\n\n\n\n\n\nWarnung\n\n\n\nBevor Sie die Schaltung an die STEMlab-Pins -3,3 V und +3,3 V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die Spannungsversorgungsstifte -3,3 V und +3,3 V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.\n\n\n\nStarten Sie die Oszilloskop und Signalgenerator-App\nStellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.\nStellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (Sie können V/div einstellen, indem Sie den gewünschten Kanal auswählen und mit dem vertikalen +/- Regler einstellen).\nSetzen Sie t/div Wert auf 200 us/div (Sie können t/div mit dem horizontalen +/- Reglern einstellen).\nStellen Sie unter MATH-Kanaleinstellungen IN1-IN2 ein und wählen Sie ENABLE.\nStellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.\nStellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.\nStellen Sie unter TRIGGER-Einstellungen den Triggerpegel auf 1 V ein\n\n\n\n\n\n\n\nAbbildung 7.2: nMOS Diodenmessung",
+    "title": "5  Der MOSFET als Diode",
+    "section": "5.4 Verfahren",
+    "text": "5.4 Verfahren\nFür Sie ist die Schaltung aus (fig23-01?) auf einer Platine aufgebaut; \\(R_1\\) = 2,2 k \\(\\Omega\\), \\(R_2\\) = 10 k \\(\\Omega\\) und \\(R_3\\) = 1 k \\(\\Omega\\), Transistor M1 ist der nMOS Transistor vom Typ BS170.\n\n\n\nnMOS-Schaltung auf der Platine\n\n\n\n\n\n\n\n\nWarnung\n\n\n\nBevor Sie die Schaltung an die STEMlab-Pins -3,3 V und +3,3 V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die Spannungsversorgungsstifte -3,3 V und +3,3 V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.\n\n\n\nStarten Sie die Oszilloskop und Signalgenerator-App\nStellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.\nStellen Sie sicher, dass IN1, IN2 und MATH V/div auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (Sie können V/div einstellen, indem Sie den gewünschten Kanal auswählen und mit dem vertikalen +/- Regler einstellen).\nSetzen Sie t/div Wert auf 200 us/div (Sie können t/div mit dem horizontalen +/- Reglern einstellen).\nStellen Sie unter MATH-Kanaleinstellungen IN1-IN2 ein und wählen Sie ENABLE.\nStellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.\nStellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.\nStellen Sie unter TRIGGER-Einstellungen den Triggerpegel auf 1 V ein\n\n\n\n\n\n\n\nAbbildung 5.2: nMOS Diodenmessung",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#iv-kurvenmessungen",
     "href": "lab/04_Activity.html#iv-kurvenmessungen",
-    "title": "7  Der MOSFET als Diode",
-    "section": "7.5 IV-Kurvenmessungen",
-    "text": "7.5 IV-Kurvenmessungen\nDa sich ein nMOS wie eine Diode mit einer Durchlaßspannung entsprechend der \\(V_{Tn}\\) verhalten kann (Konfiguration in Abbildung 7.1, können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.",
+    "title": "5  Der MOSFET als Diode",
+    "section": "5.5 IV-Kurvenmessungen",
+    "text": "5.5 IV-Kurvenmessungen\nDa sich ein nMOS wie eine Diode mit einer Durchlaßspannung entsprechend der \\(V_{Tn}\\) verhalten kann (Konfiguration in Abbildung 5.1, können sie die IV-Charakteristik wie bei der Diodenschaltung messen. Sie können die Oszilloskop-App, ein Jupyter Notebook oder ein SCPI-Skript verwenden.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#pmos-als-diode",
     "href": "lab/04_Activity.html#pmos-als-diode",
-    "title": "7  Der MOSFET als Diode",
-    "section": "7.6 pMOS als Diode",
-    "text": "7.6 pMOS als Diode\nDie selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. Die Konfiguration der pMOS-Diode ist in Abbildung 7.3 dargestellt.\n\n\n\n\n\n\nAbbildung 7.3: pMOS Anschlussdiagramm.",
+    "title": "5  Der MOSFET als Diode",
+    "section": "5.6 pMOS als Diode",
+    "text": "5.6 pMOS als Diode\nDie selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden. Beim pMOS-Transistor wird allerdings die Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. Die Konfiguration der pMOS-Diode ist in Abbildung 5.3 dargestellt.\n\n\n\n\n\n\nAbbildung 5.3: pMOS Anschlussdiagramm.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   },
   {
     "objectID": "lab/04_Activity.html#verfahren-1",
     "href": "lab/04_Activity.html#verfahren-1",
-    "title": "7  Der MOSFET als Diode",
-    "section": "7.7 Verfahren",
-    "text": "7.7 Verfahren\nFür Sie ist die Schaltung aus Abbildung 7.3 auf einer Platine aufgebaut; \\(R_1\\) = 2,2 k \\(\\Omega\\), \\(R_2\\) = 10 k \\(\\Omega\\) und für \\(R_3\\) = 1 k \\(\\Omega\\), der Transistor M1 ist ein pMOS Transistor vom Typ BS250.\n\n\n\n\n\n\nWarnung\n\n\n\nBevor Sie die Schaltung an die STEMlab-Pins -3,3V und +3,3V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die Spannungsversorgungsstifte -3,3V und +3,3V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.\n\n\n\nStarten Sie die Anwendung Oszilloskop und Signalgenerator-App\nStellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.\nStellen Sie sicher, dass IN1 und IN2 auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (V/div kann im gewünschten Kanal mit den vertikalen +/- Butten einstellt werden) und MATH auf 0.5 V/div.\nSetzen Sie t/div Wert auf 200 us/div (t/div wird mit den horizontalen +/- Button eingestellt).\nStellen Sie unter MATH-Kanaleinstellungen die Differenz IN1-IN2 ein und wählen Sie ENABLE.\nStellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.\nStellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.\nStellen Sie unter TRIGGER-Einstellungen den Triggerlevel auf 4 V ein.\n\n\n\n\n\n\n\nAbbildung 7.4: pMOS Diodenmessung.\n\n\n\nWie in Abbildung 7.4 zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer Durchlaßspannung gleich der pMOS Schwellenspannung \\(V_{Tp}\\).\nVergleichen Sie Abbildung 7.4 mit Abbildung 7.2 und versuchen Sie, den Unterschied zwischen nMOS- und pMOS-Diodenkonfigurationen zu erklären.",
+    "title": "5  Der MOSFET als Diode",
+    "section": "5.7 Verfahren",
+    "text": "5.7 Verfahren\nFür Sie ist die Schaltung aus Abbildung 5.3 auf einer Platine aufgebaut; \\(R_1\\) = 2,2 k \\(\\Omega\\), \\(R_2\\) = 10 k \\(\\Omega\\) und für \\(R_3\\) = 1 k \\(\\Omega\\), der Transistor M1 ist ein pMOS Transistor vom Typ BS250.\n\n\n\n\n\n\nWarnung\n\n\n\nBevor Sie die Schaltung an die STEMlab-Pins -3,3V und +3,3V anschließen, überprüfen Sie Ihre Schaltung nochmal. Die Spannungsversorgungsstifte -3,3V und +3,3V haben keine Schutzschaltung und können im Falle eines Kurzschlusses beschädigt werden.\n\n\n\nStarten Sie die Anwendung Oszilloskop und Signalgenerator-App\nStellen Sie im Menü OUT1-Einstellungen den Amplitudenwert auf 0,45 V, den DC-Offset auf -0,45 V und die Frequenz auf 1 kHz ein, um die Eingangsspannung anzulegen. Wählen Sie im Wellenform-Menü TRIANGLE, deaktivieren Sie SHOW und wählen Sie ENABLE.\nStellen Sie sicher, dass IN1 und IN2 auf der linken unteren Seite des Bildschirms auf 1 V/div eingestellt sind (V/div kann im gewünschten Kanal mit den vertikalen +/- Butten einstellt werden) und MATH auf 0.5 V/div.\nSetzen Sie t/div Wert auf 200 us/div (t/div wird mit den horizontalen +/- Button eingestellt).\nStellen Sie unter MATH-Kanaleinstellungen die Differenz IN1-IN2 ein und wählen Sie ENABLE.\nStellen Sie unter den Menueinstellungen IN1 und IN2 den Messtaster auf x10 und den vertikalen Offset auf 0.\nStellen Sie unter Einstellungen des MATH-Menüs den vertikalen Offset auf 0 ein.\nStellen Sie unter TRIGGER-Einstellungen den Triggerlevel auf 4 V ein.\n\n\n\n\n\n\n\nAbbildung 5.4: pMOS Diodenmessung.\n\n\n\nWie in Abbildung 5.4 zu sehen, verhält sich der pMOS in der Diodenkonfiguration wie eine Diode mit einer Durchlaßspannung gleich der pMOS Schwellenspannung \\(V_{Tp}\\).\nVergleichen Sie Abbildung 5.4 mit Abbildung 5.2 und versuchen Sie, den Unterschied zwischen nMOS- und pMOS-Diodenkonfigurationen zu erklären.",
     "crumbs": [
       "Labor",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Der MOSFET als Diode</span>"
     ]
   }
 ]
