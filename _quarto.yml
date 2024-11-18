@@ -36,8 +36,8 @@ book:
     - part: Seminar
       chapters:
         - class/01_lec.qmd
-        - class/02_lec.qmd
-        - class/03_lec.qmd
+#        - class/02_lec.qmd
+#        - class/03_lec.qmd
         - class/references.qmd
     
     - part: Labor
