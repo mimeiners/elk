@@ -1,0 +1,444 @@
+# Signale
+
+## Einfache Signale
+
+* Signale repräsentieren Informationen
+* Ein Beispiel: Temperatur eines Backofens
+* Mögliche Signale:
+  * Temperatur des Backofens
+  * Temperatur und Feuchtigkeit des Kuchenteigs
+  * Geschmack/Qualität des Kuchens
+
+
+![](../images/lec-02-signals_0.png)
+
+## Signaltypen
+
+## Konstantes Signal
+
+Ein konstantes Signal für ein elektronisches System korrespondiert nicht mit der mathematischen Definition einer Konstanten\.
+
+Versorgungsspannungen und Referenzsignale elektronischer Schaltungen sind immer fehlerbehaftet \(statisch und/oder statistisch\)\.
+
+Toleranzen/Fehlergrenzen
+
+## Nominal und Worst Case
+
+Wir definieren  _nominal_  als das Ausgangssignal\, welches wir bei einem spezifizierten Eingangssignal erwarten; E/A\-Verhalten\.
+
+Worst case high und worst case low definieren Signale\, die über und unter dem nominalen Signal liegen\.
+
+## Zeitkontinuierliches Signal
+
+## Sprungsignale
+
+Sprung und Impuls sind plötzliche Amplitudenänderungen\.
+
+## Sprungfunktionen
+
+Sprungfunktion
+
+Rechteckfunktion
+
+Signumfunktion
+
+Dreieckfunktion
+
+## Zeitdiskrete Signale
+
+## Analog and Digital Signals
+
+After digitization\, the continuous analog signal becomes a set of discrete valueAnalog electrical signals are
+continuous in time \- most often voltage or current\.  \(Charge can also be utilized as a signal conveyor\.\)
+
+s\, typically separated by fixed time intervals\.
+
+![](../images/lec-02-signals_9.jpg)
+
+
+## The Data Conversion Problem
+
+* Real world signals
+  * Continuous time\, continuous amplitude
+* Digital abstraction
+  * Discrete time\, discrete amplitude
+* Two problems
+  * How to discretize in time and amplitude
+    * A/D conversion \(ADC\)
+  * How to “un\-discretize” in time and amplitude
+    * D/A conversion \(DAC\)
+
+
+## Overview
+
+
+
+* We'll first look at these building blocks from a functional\, “black box” perspective\.
+  * Refine later and look at implementations
+
+
+## Analog-to-Digital (A/D) Conversion
+
+Analog input voltage vx is converted to an n\-bit number\.
+
+For a four\-bit converter\, vx ranging between 0 and VFS yields a digital output code between 0000 and 1111\.
+
+The output is an approximation of the input due to the limited resolution of the n\-bit output\.  Error is expressed as:
+
+![](../images/lec-02-signals_10.jpg)
+
+
+## Digital-to-Analog (D/A) Conversion
+
+For an n\-bit D/A converter\, the output voltage is expressed as:
+
+The smallest possible voltage change is known as the least significant bit or LSB\.
+
+![](../images/lec-02-signals_11.jpg)
+
+
+## Uniform Sampling and Quantization
+
+* Most common way of performing A/D conversion
+  * Sample signal uniformly in time
+  * Quantize signal uniformly in amplitude
+* Key questions
+  * How much "noise" is added due to amplitude quantization?
+  * How can we reconstruct the signal back into analog form?
+  * How fast do we need to sample?
+    * Must avoid “aliasing”
+    * [https://en\.wikipedia\.org/wiki/Aliasing](https://en.wikipedia.org/wiki/Aliasing)
+
+
+## Aliasing (1)
+
+## Aliasing (2)
+
+Source: EE315a\, B\. Murmann\, Stanford Univ\.
+
+## Aliasing (3)
+
+Source: EE315a\, B\. Murmann\, Stanford Univ\.
+
+## Consequence
+
+The frequencies fsig and N·fs ± fsig \(N integer\)\, are indistinguishable in the discrete time domain\.
+
+## Sampling Theorem
+
+* In order to prevent aliasing\, we need
+* The sampling rate fs=2·fsig\,max is called the  _Nyquist rate_
+* Two possibilities
+  * Sample fast enough to cover all spectral components\, including "parasitic" ones outside band of interest
+  * Limit fsig\,max through filtering
+
+
+## Ideal (Brick Wall) Anti-Alias Filter (AAF)
+
+## Practical Anti-Alias Filter (AAF)
+
+Need to sample faster than Nyquist rate to get good attenuation=>  _Oversampling_
+
+## How much Oversampling?
+
+Can tradeoff sampling speed against filter order\.
+
+In high speed converters\, making fs/fsig\,max>10 is usually impossible or too costly\.
+
+Means that we need fairly high order filters\.
+
+Ref\. “CMOS Integrated ADC and DAC”\, v\.d\. Plassche\, 2003
+
+## Classes of Sampling
+
+## The Reconstruction Problem
+
+## Zero-Order Hold Reconstruction
+
+
+
+* The most practical way of reconstructing the continuous time signal is to simply  _hold_  the discrete time values
+  * Either for full period Ts or a fraction thereof
+  * Other schemes exist\, e\.g\.  _partial\-order hold_
+* What does this do to the signal spectrum?
+* We'll analyze this in two steps
+  * First look at infinitely narrow reconstruction pulses
+
+
+## Dirac Pulses
+
+## Spectrum
+
+Spectrum of Dirac signal contains replicas of Vin\(f\) at integer multiples of the sampling frequency\.
+
+## Finite Hold Pulse
+
+Amplitude Envelope
+
+## Example
+
+__Spectrum of Continuous Time Pulse Train __  __\(Arbitrary Example\)__
+
+__ZOH Transfer Function__  __\("__  __Sinc__  __ Distortion"\)__
+
+__ZOH Output\, __  __Spectrum of Staircase Approximation__
+
+original spectrum
+
+## Reconstruction Filter
+
+
+
+* Also called smoothing filter
+* Same situation as withanti\-alias filter
+  * A brick wall filter would be nice
+  * Oversampling helps reduce filter order
+
+
+## Summary
+
+## Recap
+
+
+
+* Next\, look at
+  * Transfer functions of quantizer and DAC
+  * Impact of quantization error
+
+
+![](../images/lec-02-signals_18.png)
+
+![](../images/lec-02-signals_19.png)
+
+![](../images/lec-02-signals_20.png)
+
+![](../images/lec-02-signals_21.png)
+
+<span style="color:#000000">Transfer Function</span>
+
+<span style="color:#000000">V</span>  <span style="color:#000000">q</span>  <span style="color:#000000"> \(quantized output\)</span>
+
+## Quantization of an Analog Signal
+
+
+
+* Quantization step D
+* Quantization error has sawtooth shape
+  * Bounded by
+* Ideally
+  * Infinite input range and infinite number of quantization levels
+* In practice
+  * Finite input range and finite number of quantization levels
+  * Output is a digital word \(not an analog voltage\)
+
+
+## Conceptual Model of a Quantizer
+
+
+
+* Encoding block determines how quantized levels are mapped into digital codes
+* Note that this model is not meant to represent an actual hardware implementation
+  * Its purpose is to show that quantization and encoding are conceptually separate operations
+  * Changing the encoding of a quantizer has no interesting implications on its function or performance
+
+
+## Encoding Example for a B-Bit Quantizer
+
+
+
+* Example: B=3
+  * 23=8 distinct output codes
+  * Diagram on the left shows "straight\-binary encoding"
+  * See e\.g\. Analog Devices "MT\-009: Data Converter Codes" for other encoding schemes
+* Quantization error grows out of bounds beyond code boundaries
+* We define the full scale range \(FSR\) as the maximum input range that satisfiesImplies that
+
+
+## Nomenclature
+
+![](../images/lec-02-signals_25.png)
+
+
+
+* __Overloading__  \- Occurs when an input outside the FSR is applied
+* __Transition level __ – Input value at the transition between two codes\. By standard convention\, the transition level T\(k\) lies between codes k\-1 and k
+* __Code width__  – The difference between adjacent transition levels\. By standard convention\, the code width W\(k\)=T\(k\+1\)\-T\(k\)
+  * Note that the code width of the first and last code \(000 and 111 on previous slide\) is undefined
+* __LSB size \(or width\) __ – synonymous with code width D
+
+
+\[IEEE Standard 1241\-2000\]
+
+## Bipolar Mid-Rise Quantizer
+
+## Bipolar Mid-Tread Quantizer
+
+## Unipolar Quantizer
+
+
+
+* Usually define origin where first code and straight line fit intersect
+  * Otherwise\, there would be a systematic offset
+* Usable range is reduced by D/2 below zero
+
+
+## Effect of Quantization Error on Signal
+
+
+
+* Two aspects
+  * How much noise power does quantization add to samples?
+  * How is this noise power distributed in frequency?
+* Quantization error is a deterministic function of the signal
+  * Should be able to answer above questions using a deterministic analysis\.
+  * But\, unfortunately\, such an analysis strongly depends on the chosen signal and can be very complex\.
+* Strategy
+  * Build basic intuition using simple deterministic signals\.
+  * Next\, abandon idea of deterministic representation and revert to a "general" statistical model \(to be used with caution\)\.
+
+
+## Ramp Input
+
+Applying a ramp signal \(periodic sawtooth\) at the input of the quantizer gives the following time domain waveform for eq
+
+What is the average power of this waveform?
+
+Integrate over one period
+
+## Sine Wave Input
+
+Integration is not straightforward…
+
+## Quantization Error Histogram
+
+Sinusoidal input signal with fsig=101 Hz\, sampled at fs=1000 Hz
+
+8\-bit quantizer
+
+Distribution is “almost” uniform
+
+Can approximate average power by integrating uniform distribution
+
+## Statistical Model of Quantization Error
+
+
+
+* Assumption: eq\(x\) has a uniform probability density
+* This approximation holds reasonably well in practice when
+  * Signal spans large number of quantization steps
+  * Signal is "sufficiently active"
+  * Quantizer does not overload
+
+
+## Dynamic Range Definition ideal ADC
+
+## Dynamic Rang ideal ADC
+
+| __B \(Number of Bits\)__ | __SQNR__ |
+| :-: | :-: |
+| 8 | 50 dB |
+| 12 | 74 dB |
+| 16 | 98 dB |
+| 20 | 122 dB |
+
+## Ideal DAC
+
+
+
+* Essentially a digitally controlled voltage\, current or charge source
+  * Example below is for unipolar DAC
+* Ideal DAC does not introduce quantization error\!
+
+
+## Static Nonidealities
+
+
+
+* Static deviations of transfer characteristics from ideality
+  * Offset
+  * Gain error
+  * Differential Nonlinearity \(DNL\)
+  * Integral Nonlinearity \(INL\)
+* Useful references
+  * “The Importance of Data Converter Static Specifications”\, Analog Devices MT\-010
+  * “Understanding Data Converters”\, Texas Instruments Application Report SLAA013\, 1995
+
+
+## Offset and Gain Error
+
+
+
+* Conceptually simple\, but lots of \(uninteresting\) subtleties in how exactly these errors should be defined
+  * Unipolar vs\. bipolar\, endpoint vs\. midpoint specification
+  * Definition in presence of nonlinearities
+* General idea \(neglecting staircase nature of transfer functions\):
+
+
+## ADC Offset and Gain Error
+
+
+
+* Definitions based on bottom and top endpoints of transfer characteristic
+  * ½ LSB before first transition and ½ LSB after last transition
+  * Offset is the deviation of bottom endpoint from its ideal location
+  * Gain error is the deviation of top endpoint from its ideal location with offset removed
+* Both quantities are measured in LSB or as percentage of full\-scale range
+
+
+Same idea\, except that endpoints are directly defined by analog output values at minimum and maximum digital input
+
+Also note that errors are specified along the vertical axis
+
+## Comments on Offset and Gain Errors
+
+
+
+* Definitions on the previous slides are the ones typically used in industry
+  * IEEE Standard suggest somewhat more sophisticated definitions based on least square curve fitting
+    * Technically more suitable metric when the transfer characteristics are significantly non\-uniform or nonlinear
+* Generally\, it is non\-trivial to build a converter with very good gain/offset specifications
+  * Nevertheless\, since gain and offset affect all codes uniformly\, these errors tend to be easy to correct
+    * E\.g\. using a digital pre\- or post\-processing operation
+  * Also\, many applications are insensitive to a certain level of gain and offset errors
+    * E\.g\. audio signals\, communication\-type signals\, \.\.\.
+* More interesting aspect: linearity
+  * DNL and INL
+
+
+## Rauschen / Noise
+
+Rauschen ist ein spezieller Signaltyp \(statistischer Prozess\) und beinhaltet keine Information\, stört aber die Information\.
+
+![](../images/lec-02-signals_32.png)
+
+![](../images/lec-02-signals_33.png)
+
+![](../images/lec-02-signals_34.png)
+
+![](../images/lec-02-signals_35.png)
+
+## LTI Systeme mit stochastischer Erregung (1)
+
+Wahrscheinlichkeitsdichtefunktion
+
+Erwartungswert \(Mittelwert\, Varianz\)
+
+Autokorrelationsfunktion
+
+Ref\. Systemtheorie\, Fliege\, 1991
+
+Parseval’s Theorem
+
+Wiener\-Chintchin Theorem \(Autokorrelation\)
+
+Mittlerer Erwartungswert
+
+Wiener\-Lee Relation \(Autokorrelation\)
+
+## Totales integriertes Rauschen
+
+Vom Leistungsdichtespektrum \(PSD\) zum integrierten Rauschen
+
+Signal\-zu\-Rausch\-Verhältnis \(SNR\)
+
+## Beispiel: RC Tiefpassfilter (1)

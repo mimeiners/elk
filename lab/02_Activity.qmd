@@ -33,8 +33,9 @@ I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
 \end{equation}
 
 
-wobei $I_{S}$ der Sättigungssperrstrom ist und $N$ ein Skalierungsfaktoren (Emissionskoeffizient), $V_T = kT / q$ ist
-die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur ($T$ = 300 K). 
+wobei $I_{S}$ der Sättigungssperrstrom ist, $N$ ein Skalierungsfaktor, genannt Emissionskoeffizient, ist und $V_T = kT / q$ 
+die sogenannte thermische Spannung ist, die bei Raumtemperatur ($T$=300 K) 25,4 mV beträgt.
+
 
 ## Schematische Symbole der Diode
 
