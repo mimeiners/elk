@@ -1,0 +1,226 @@
+# Kapitel 6
+
+Variationen von elektronischen Bauteilen
+
+# Circuit Element Variations
+
+
+
+* All electronic components have manufacturing tolerances\.
+  * Resistors can be purchased with  10%\,  5%\, and   1% tolerance\.  \(IC resistors are often  10%\.\)
+  * Capacitors can have asymmetrical tolerances such as \+20%/\-50%\.
+  * Power supply voltages typically vary from 1% to 10%\.
+* Device parameters will also vary with temperature and age\.
+* Circuits must be designed to accommodate these variations\.
+* We will use worst\-case and Monte Carlo \(statistical\) analysis to examine the effects of component parameter variations\.
+
+
+# Tolerance Modeling
+
+For symmetrical parameter variations
+
+Pnom\(1 \- \)  P  Pnom\(1 \+ \)
+
+For example\, a 10 k resistor with 5% percent tolerance could take on the following range of values:
+
+10k\(1 \- 0\.05\)  R  10k\(1 \+ 0\.05\)
+
+9500   R  10500 
+
+# Circuit Analysis with Tolerances
+
+
+
+* Worst\-case analysis
+  * Parameters are manipulated to produce the worst\-case min and max values of desired quantities\.
+  * This can lead to over design since the worst\-case combination of parameters is rare\.
+  * It may be less expensive to discard a rare failure than to design for 100% yield\.
+* Monte\-Carlo analysis
+  * Parameters are randomly varied to generate a set of statistics for desired outputs\.
+  * The design can be optimized so that failures due to parameter variation are less frequent than failures due to other mechanisms\.
+  * In this way\, the design difficulty is better managed than a worst\-case approach\.
+
+
+# Worst Case Analysis Example
+
+Problem: Find the nominal and worst\-case values for output voltage and source current\.
+
+Solution:
+
+Known Information and Given Data: Circuit topology and values in figure\.
+
+Unknowns:
+
+Approach:  Find nominal values and then select R1\, R2\, and VI values to generate extreme cases of the unknowns\.
+
+Assumptions: None\.
+
+Analysis: Next slides…
+
+![](img/lec-06-cir-elem-variation_0.jpg)
+
+Nominal voltage solution:
+
+# Worst-Case Analysis Example (cont.)
+
+![](img/lec-06-cir-elem-variation_1.jpg)
+
+Nominal Source current:
+
+Rewrite VO to help us determine how to find the worst\-case values\.
+
+VO is maximized for max VI\, R1 and min R2\.
+
+VO is minimized for min VI\, R1\, and max R2\.
+
+Worst\-case source currents:
+
+Check of Results:  The worst\-case values range from 14\-17 percent above and below the nominal values\.  The sum of the three element tolerances is 20 percent\, so our calculated values appear to be reasonable\.
+
+# Monte Carlo Analysis
+
+Parameters are varied randomly and output statistics are gathered\.
+
+We use programs like MATLAB\, Python\, SPICE\, or a spreadsheet to complete a statistically significant set of calculations\.
+
+For example\, with Excel\, a resistor with a nominal value Rnom and tolerance  can be expressed as:
+
+![](img/lec-06-cir-elem-variation_2.jpg)
+
+The RAND\(\) function returns random numbers uniformly distributed between 0 and 1\.
+
+# Monte Carlo Analysis Results
+
+![](img/lec-06-cir-elem-variation_3.jpg)
+
+Histogram of output voltage from 1000 case Monte Carlo simulation\.
+
+# Monte Carlo Analysis Example
+
+Problem: Perform a Monte Carlo analysis and find the mean\, standard deviation\, min\, and max for VO\, II\, and power delivered from the source\.
+
+Solution:
+
+Known Information and Given Data: Circuit topology and values in figure\.
+
+Unknowns: The mean\, standard deviation\, min\, and max for VO\, II\, and PI\.
+
+Approach:  Use a spreadsheet to evaluate the circuit equations with random parameters\.
+
+Assumptions: None\.
+
+Analysis: Next slides …
+
+![](img/lec-06-cir-elem-variation_4.jpg)
+
+Monte Carlo parameter definitions:
+
+# Monte Carlo Analysis Example (cont.)
+
+Monte Carlo parameter definitions:
+
+Circuit equations based on Monte Carlo parameters:
+
+Avg	Nom\.	Stdev	Max	WC\-max	Min	WC\-Min
+
+Vo \(V\)	4\.96	5\.00	0\.30	5\.70	5\.87	4\.37	4\.20
+
+II \(mA\)	0\.276	0\.278	0\.0173	0\.310	 0\.322	0\.242	0\.238
+
+P \(mW\)	4\.12	4\.17	0\.490	5\.04	\-\-	3\.29	\-\-
+
+# Temperature Coefficients
+
+Most circuit parameters are temperature sensitive\.
+
+P = Pnom\(1\+1∆T\+ 2∆T2\) where ∆T = T\-Tnom
+
+Pnom is defined at Tnom
+
+Most versions of SPICE allow for the specification of TNOM\, T\, TC1\(1\)\, TC2\(2\)\.
+
+SPICE temperature model for resistor:
+
+R\(T\) = R\(TNOM\)\*\[1\+TC1\*\(T\-TNOM\)\+TC2\*\(T\-TNOM\)2\]
+
+Many other components have similar models\.
+
+# Numeric Precision
+
+Most circuit parameters vary from less than  1 % to greater than  50%\.
+
+As a consequence\, more than three significant digits is meaningless\.
+
+Results in the text will be represented with three significant digits:  2\.03 mA\, 5\.72 V\, 0\.0436 µA\, and so on\.
+
+However\, extra guard digits are normally retained during calculations\.
+
+# Tolerances & Worst-Case Analysis Example
+
+__Problem:__  Find worst\-case values of  _I_  _C_  and  _V_  _CE_  in the circuit below\.
+
+__Given data: __ b _FO_  __ __ = 75 with 50% tolerance\,  _V_  _A _ = 50 V\, 5 % tolerance on  _V_  _CC _ \, 10% tolerance for each resistor\.  R1 = 18 kW\, R2 = 36 kW\.
+
+__Simplified Analysis:__
+
+To maximize IC \, VEQ should be maximized\, RE should be minimized and the opposite for minimizing IC\.  Extremes of RE are: 14\.4 kW and  17\.6 kW\.
+
+![](img/lec-06-cir-elem-variation_5.jpg)
+
+To maximize VEQ\, VCC and R1 should be maximized\, R2 should be minimized and opposite for minimizing VEQ\.
+
+# Tolerances & Worst-Case Analysis Example (cont.)
+
+![](img/lec-06-cir-elem-variation_6.jpg)
+
+Extremes of VEQ are: 4\.78 V and 3\.31 V\.
+
+Extremes for  IC are: 283 mA and 148 mA\.
+
+To maximize VCE \, IC and RC should be minimized\, and opposite for minimizing VEQ\.
+
+Extremes of VCE are: 7\.06 V \(forward\-active region\) and
+
+0\.471 V \(saturated\, hence calculated values for
+
+VCE and IC actually not correct\)\.
+
+# Tolerances - Monte Carlo Analysis
+
+In real circuits\, it is unlikely that various components will reach their extremes at the same time\, instead they will have some statistical distribution\. Hence worst\-case analysis over\-estimates extremes of circuit behavior\.
+
+In Monte Carlo analysis\, values of each circuit parameter are randomly selected from possible distributions of parameters and used to analyze the circuit\.
+
+Random parameter sets are generated\, and the statistical behavior of circuit is built up from the analysis of many test cases\.
+
+# Tolerances - Monte Carlo Analysis Example
+
+For each Case: Assign random values to all circuit elements
+
+Then calculate resulting currents and voltages
+
+Note: Assume constant VBE = 0\.7 for simplicity\.
+
+# Tolerances - Monte Carlo Analysis Example (cont.)
+
+
+
+* Full results of Monte Carlo analysis of 500 cases of the 4\-resistor bias circuit yields mean values of 207 mA and 4\.06 V for  _I_  _C_  and  _V_  _CE_  respectively which are close to values originally estimated from nominal circuit elements\. Standard deviations are 19\.6 mA and 0\.64 V respectively\.
+* The worst\-case calculations lie well beyond the extremes of the distributions
+  * Note that circuit never saturates in the Monte Carlo Analyses
+
+
+![](img/lec-06-cir-elem-variation_7.jpg)
+
+# Ltspice Monte-Carlo Analysis (mc)
+
+[https://spiceman\.net/ltspice\-monte\-carlo\-analysis/](https://spiceman.net/ltspice-monte-carlo-analysis/)
+
+![](img/lec-06-cir-elem-variation_8.png)
+
+# Ltspice Worst-Case (wc) and Monte-Carlo (mc)
+
+[https://www\.analog\.com/en/technical\-articles/ltspice\-worst\-case\-circuit\-analysis\-with\-minimal\-simulations\-runs\.html](https://www.analog.com/en/technical-articles/ltspice-worst-case-circuit-analysis-with-minimal-simulations-runs.html)
+
+![](img/lec-06-cir-elem-variation_9.png)
+
