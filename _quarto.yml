@@ -35,9 +35,9 @@ book:
 
     - part: Seminar
       chapters:
-        - class/01_lec.qmd
-#        - class/02_lec.qmd
-#        - class/03_lec.qmd
+        - class/lec-01-intro.qmd
+        - class/lec-02-signals.qmd
+        - class/lec-03-pn_diode.qmd
         - class/references.qmd
     
     - part: Labor
