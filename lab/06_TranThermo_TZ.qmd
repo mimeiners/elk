@@ -1,0 +1,204 @@
+---
+title: "Transisor-Thermometer"
+author: 
+  - name: Tim Ziemann
+    orcid: 
+    email: tim.ziemann@hs-bremen.de
+    corresponding: true
+    roles: "Lead author"
+    affiliation:
+      - name: Hochschule Bremen - City University of Applied Sciences (HSB)
+        city: Bremen
+        state: Germany
+        url: https://www.hs-bremen.de  
+---
+ 
+## Mathematical derivation of the transfer functions of the biquad
+
+First, the individual equations of the operational amplifiers were set up:
+
+$$
+V_1 = -(V_3 + V_4)
+$$ {#eq-v1}
+
+$$
+V_2 = -\left(\frac{1}{s} \omega_0 \cdot V_1 \right)
+$$ {#eq-v2}
+
+$$
+V_3 = -\left(\frac{1}{s} \omega_0 \cdot V_2 \right)
+$$ {#eq-v3}
+
+$$
+V_4 = -\left( \frac{V_2}{Q} + H_0 \cdot V_i \right) 
+$$ {#eq-v4}
+
+
+## Calculation of $\frac{V_2}{V_i}$
+
+Insert @eq-v1 into @eq-v2 : 
+
+
+\begin{align}
+V_2 &= -\frac{\omega_0}{s} \cdot V_1 = -\frac{\omega_0}{s} \cdot (-V_3 - V_4) \nonumber \\
+&= -\frac{\omega_0}{s} \cdot \left( \frac{\omega_0}{s} \cdot V_2 + \frac{1}{Q} \cdot V_2 + H_0 \cdot V_i \right) \label{eq:v2_expanded}
+\end{align}
+
+
+Summarizing results in:
+
+\begin{align}
+V_2 &= -\frac{\omega_0^2}{s^2} \cdot V_2 - \frac{\omega_0}{s Q} \cdot V_2 - \frac{\omega_0}{s} H_0 \cdot V_i \\
+\Rightarrow \frac{\omega_0}{s} H_0 \cdot V_i &= -\left( \frac{\omega_0^2}{s^2} + \frac{\omega_0}{s Q} + 1 \right) V_2
+\end{align}
+
+
+Resolve to $\frac{V_2}{V_i}$:
+
+$$
+\frac{V_2}{V_i} = \frac{\frac{\omega_0}{s} H_0}{ -\left( \frac{\omega_0^2}{s^2} + \frac{\omega_0}{s Q} + 1 \right)} 
+= -\frac{ \frac{s}{\omega_0} H_0 }{ 1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } 
+$$ {#eq-tf_v2}
+
+
+## Transfer-function $\frac{V_3}{V_i}$:
+
+Insert @eq-tf_v2 into @eq-v3 :
+
+
+$$
+V_3 = -\frac{\omega_0}{s} \cdot V_2 = -\frac{\omega_0}{s} \cdot \left( -\frac{\frac{s}{\omega_0} H_0 }{ 1 +
+\frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } \cdot V_i \right)
+$$
+
+$$
+V_3 = \left( \frac{H_0}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}} \right) V_i
+$$
+
+$$
+\Rightarrow \frac{V_3}{V_i} = \frac{H_0}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}}
+$$ {#eq-tf_v3}
+
+
+
+## Transfer-function $\frac{V_4}{V_i}$:
+
+Insert @eq-tf_v2 into @eq-v4 : 
+
+
+\begin{align}
+V_4 &= -\left( \frac{1}{Q} \cdot V_2 + H_0 \cdot V_i \right) = -\left( \frac{1}{Q} \cdot \left( -\frac{
+\frac{s}{\omega_0} H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}} \cdot V_i \right) + H_0 \cdot V_i \right)
+\nonumber \\ 
+&= \left( \frac{\frac{s}{\omega_0 Q} H_0}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}} - H_0 \right) V_i \\
+&= \left( \frac{ \frac{s}{\omega_0 Q} - \left(1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} \right) }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } \cdot H_0 \right) V_i \\
+&= - \frac{ \left( 1 + \frac{s^2}{\omega_0^2} \right) H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} } \cdot V_i \\
+\Rightarrow \frac{V_4}{V_i} &= - \frac{ \left( 1 + \frac{s^2}{\omega_0^2} \right) H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2} }
+\end{align}
+
+
+**Note:** In the task booklet, the following equation is given here:
+
+$$
+\frac{V_4}{V_i} = \frac{ \left( 1 + \frac{s^2}{\omega_0^2} \right) H_0 }{1 + \frac{s}{\omega_0 Q} +
+\frac{s^2}{\omega_0^2} }
+$$
+
+This corresponds to a negation of my own result.
+
+
+## Calculation of the transfer function $\frac{V_1}{V_i}$:
+
+Based on equation @eq-v1 : $$V_1 = -(V_3 + V_4)$$
+
+Using the transfer-function @eq-tf_v3 for $V_3$:
+
+$$
+\frac{V_3}{V_i} = \frac{H_0}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}}
+$$
+
+**Case 1: Use of the negated form of the transfer function of $V_4$ from my own derivation:** 
+
+$$
+\frac{V_4}{V_i} = - \frac{\left(1 + \frac{s^2}{\omega_0^2} \right) \cdot H_0}{1 + \frac{s}{\omega_0 Q} +
+\frac{s^2}{\omega_0^2}}
+$$ {#eq-tf_v4_neg}
+
+
+Inserting @eq-tf_v3 and @eq-tf_v4_neg into @eq-v1 results in: 
+
+
+$$
+V_1 = -\left( V_3 + V_4 \right) 
+$$
+
+$$
+V_1 = -\left( \frac{H_0}{D} + \left( -\frac{ \left( 1 + \frac{s^2}{\omega_0^2} \right) H_0 }{D} \right) \right) V_i
+$$
+
+$$
+V_1 = \left( \frac{ \left( \frac{s^2}{\omega_0^2} \right) H_0 }{D} \right) V_i \quad \text{where } D = 1 +
+\frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}
+$$
+
+$$
+\Rightarrow \frac{V_1}{V_i} = \frac{ \left( \frac{s^2}{\omega_0^2} \right) H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}} 
+$$ {#eq-tf_v1_korrekt}
+
+
+
+**Case 2: Use the positive form of the transfer function of $V_4$ as specified in the task booklet:** 
+
+$$
+\frac{V_4}{V_i} = \frac{\left(1 + \frac{s^2}{\omega_0^2} \right) \cdot H_0}{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}}
+$$ {#eq-tf_v4_aufg}
+
+
+Insert into @eq-v1 : 
+
+\begin{align}
+V_1 &= -\left( V_3 + V_4 \right) = -\left( \frac{H_0}{D} + \frac{ \left( 1 + \frac{s^2}{\omega_0^2} \right) H_0 }{D}
+\right) V_i \nonumber \\ 
+&= -\left( \frac{ \left( 2 + \frac{s^2}{\omega_0^2} \right) H_0 }{D} \right) V_i \\ 
+\Rightarrow \frac{V_1}{V_i} &= - \frac{ \left( 2 + \frac{s^2}{\omega_0^2} \right) H_0 }{1 + \frac{s}{\omega_0 Q} +
+\frac{s^2}{\omega_0^2}} \label{eq:tf_v1_falsch}
+\end{align}
+
+
+
+## Repeated calculation of the Transfer-function $\frac{V_2}{V_i}$ via $V_1$:
+
+Based on the correct function for $V_1$ @eq-tf_v1_korrekt : 
+
+$$
+\frac{V_1}{V_i} = \frac{ \frac{s^2}{\omega_0^2} \cdot H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}}
+$$
+
+Using the known relationship $V_2 = -\frac{\omega_0}{s} \cdot V_1$:
+
+$$
+V_2 = -\frac{\omega_0}{s} \cdot V_1
+$$
+
+$$
+V_2 = -\frac{\omega_0}{s} \cdot \frac{ \frac{s^2}{\omega_0^2} \cdot H_0 }{1 + \frac{s}{\omega_0 Q} +
+\frac{s^2}{\omega_0^2}} \cdot V_i
+$$
+
+$$
+V_2 = -\frac{ \frac{s}{\omega_0} \cdot H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}} \cdot V_i
+$$
+
+$$
+\Rightarrow \frac{V_2}{V_i} = - \frac{\frac{s}{\omega_0} H_0 }{1 + \frac{s}{\omega_0 Q} + \frac{s^2}{\omega_0^2}} 
+$$ {#eq-V2_aus_V1}
+
+
+A comparison of the two transfer functions $\frac{V_2}{V_i}$ @eq-tf_v2 and @eq-V2_aus_V1 shows that the error is due to
+equation  $\frac{V_4}{V_1}$ since the derivation of $\frac{V_1}{V_i}$ remains correct.
+
+
+## Conclusion 
+Only the use of the negated form of $\frac{V_4}{V_i}$ from  @eq-tf_v4_neg leads to a consistent result for
+$\frac{V_1}{V_i}$ according to @eq-tf_v1_korrekt . The version from the exercise booklet (@eq-tf_v4_aufg) therefore 
+appears to be incorrect.
