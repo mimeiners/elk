@@ -2,23 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mimeiners.github.io/elk/index.html</loc>
-    <lastmod>2024-11-04T21:26:38.315Z</lastmod>
+    <lastmod>2025-09-15T07:22:39.930Z</lastmod>
   </url>
   <url>
-    <loc>https://mimeiners.github.io/elk/class/01_lec.html</loc>
-    <lastmod>2024-11-07T11:58:28.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mimeiners.github.io/elk/class/references.html</loc>
-    <lastmod>2024-11-04T20:47:34.345Z</lastmod>
+    <loc>https://mimeiners.github.io/elk/class/lec-01-intro.html</loc>
+    <lastmod>2025-09-15T07:43:22.603Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/lab/01_Activity.html</loc>
-    <lastmod>2024-11-04T21:20:09.387Z</lastmod>
+    <lastmod>2025-09-15T07:23:38.632Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/lab/02_Activity.html</loc>
-    <lastmod>2024-11-08T10:51:19.442Z</lastmod>
+    <lastmod>2024-11-19T16:21:56.854Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/lab/03_Activity.html</loc>
@@ -29,11 +25,15 @@
     <lastmod>2024-11-04T21:20:09.390Z</lastmod>
   </url>
   <url>
+    <loc>https://mimeiners.github.io/elk/references.html</loc>
+    <lastmod>2024-11-20T22:03:48.395Z</lastmod>
+  </url>
+  <url>
     <loc>https://mimeiners.github.io/elk/M-5.3-Elektronik--ELK-.pdf</loc>
-    <lastmod>2024-11-18T21:04:13.248Z</lastmod>
+    <lastmod>2025-09-15T08:49:46.497Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/M-5.3-Elektronik--ELK-.epub</loc>
-    <lastmod>2024-11-18T21:04:14.191Z</lastmod>
+    <lastmod>2025-09-15T08:49:47.201Z</lastmod>
   </url>
 </urlset>

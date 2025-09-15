@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "M 5.3 Elektronik (ELK)",
     "section": "",
-    "text": "Unsyllabus\n\n\n\nName\nDescription\n\n\n\n\nCourse\nM 5.3 Elektronik (ELK)\n\n\nTerm\nWiSe24/25\n\n\nInstructor\nProf. Dr.-Ing. M. Meiners\n\n\nLectures\nDie., 9 Uhr bis 13 Uhr, E 507",
+    "text": "Unsyllabus\n\n\n\nName\nDescription\n\n\n\n\nCourse\nM 5.3 Elektronik (ELK)\n\n\nTerm\nWiSe25/26\n\n\nInstructor\nProf. Dr.-Ing. M. Meiners\n\n\nLectures\nDie., 9 Uhr bis 13 Uhr, E 507",
     "crumbs": [
       "Unsyllabus"
     ]
   },
   {
-    "objectID": "class/01_lec.html",
-    "href": "class/01_lec.html",
+    "objectID": "class/lec-01-intro.html",
+    "href": "class/lec-01-intro.html",
     "title": "1  Einleitung",
     "section": "",
     "text": "1.1 Lernziele des Moduls",
@@ -21,8 +21,8 @@
     ]
   },
   {
-    "objectID": "class/01_lec.html#lernziele-des-moduls",
-    "href": "class/01_lec.html#lernziele-des-moduls",
+    "objectID": "class/lec-01-intro.html#lernziele-des-moduls",
+    "href": "class/lec-01-intro.html#lernziele-des-moduls",
     "title": "1  Einleitung",
     "section": "",
     "text": "Einblicke in mikroelektronische Systeme\nAnalyse und Funktion von Halbleiterbauelementen\n\nHalbleiterphysik\nModellbildung\nNetzwerkanalyse/-synthese\n\nAnwendung von SPICE in der Schaltunganalyse\n\nSpezifikation\nPartitionierung\nDesign\n\nEinsatz von Entwicklungsboards, Embedded Systems / System-on-Chip (SoC)\n\nSTEMlab von Red Pitaya",
@@ -32,19 +32,19 @@
     ]
   },
   {
-    "objectID": "class/01_lec.html#wissenschaftliches-rechnen",
-    "href": "class/01_lec.html#wissenschaftliches-rechnen",
+    "objectID": "class/lec-01-intro.html#wissenschaftliches-rechnen-datenwissenschaft",
+    "href": "class/lec-01-intro.html#wissenschaftliches-rechnen-datenwissenschaft",
     "title": "1  Einleitung",
-    "section": "1.2 Wissenschaftliches Rechnen",
-    "text": "1.2 Wissenschaftliches Rechnen\n\nPython (Anaconda)\nMatlab (Campus Lizenz)\nCommand-line tools",
+    "section": "1.2 Wissenschaftliches Rechnen / Datenwissenschaft",
+    "text": "1.2 Wissenschaftliches Rechnen / Datenwissenschaft\n\nPython\nR: The R Project for Statistical Computing\nrpy2 - Python and R\nMatlab\nGnu Octave\nCommand-line tools",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#schaltungsentwurf-eda-tools",
-    "href": "class/01_lec.html#schaltungsentwurf-eda-tools",
+    "objectID": "class/lec-01-intro.html#schaltungsentwurf-eda-tools",
+    "href": "class/lec-01-intro.html#schaltungsentwurf-eda-tools",
     "title": "1  Einleitung",
     "section": "1.3 Schaltungsentwurf (EDA Tools)",
     "text": "1.3 Schaltungsentwurf (EDA Tools)\n\nPCB / System Design\n\nLTspice\nKiCad EDA\nAltium Designer\nSiemensEDA PCB tools\ncadence System Design & Analysis\n\nIC / Silicon Design\n\nIIC-OSIC-TOOLS (open-source)\nSiemensEDA IC tools\ncadence IC Design & Verification\nsynopsys silicon design (IC)",
@@ -54,366 +54,190 @@
     ]
   },
   {
-    "objectID": "class/01_lec.html#os-tools",
-    "href": "class/01_lec.html#os-tools",
+    "objectID": "class/lec-01-intro.html#betriebssystem-os---werkzeuge-tools",
+    "href": "class/lec-01-intro.html#betriebssystem-os---werkzeuge-tools",
     "title": "1  Einleitung",
-    "section": "1.4 OS-Tools",
-    "text": "1.4 OS-Tools\n\nMicrosoft-Terminal\nMicrosoft-PowerShell\nMacOS-Terminal\nLinux/MacOS Shell zsh-tools,\ngit (Versionskontrolle)",
+    "section": "1.4 Betriebssystem (OS) - Werkzeuge (Tools)",
+    "text": "1.4 Betriebssystem (OS) - Werkzeuge (Tools)\n\nSSH (Secure Shell)\nMicrosoft-Terminal\nMicrosoft-PowerShell\nMacOS-Terminal\nLinux/MacOS zsh-tools\nLinux/MacOS bash-it\nGit (Versionskontrolle)\nTortoiseGit – Windows Shell Interface to Git",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#code-editoren",
-    "href": "class/01_lec.html#code-editoren",
+    "objectID": "class/lec-01-intro.html#code-editoren",
+    "href": "class/lec-01-intro.html#code-editoren",
     "title": "1  Einleitung",
     "section": "1.5 Code Editoren",
-    "text": "1.5 Code Editoren\n\nVisual Studio Code\nSpyder IDE\nThonny (Micro-)Python IDE\nEmacs\nVim",
+    "text": "1.5 Code Editoren\n\nVisual Studio Code\nNotepad++ (Windows)\nEmacs\n\nVim",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#data-science",
-    "href": "class/01_lec.html#data-science",
+    "objectID": "class/lec-01-intro.html#datenverarbeitung-data-sciences",
+    "href": "class/lec-01-intro.html#datenverarbeitung-data-sciences",
     "title": "1  Einleitung",
-    "section": "1.6 Data Science",
-    "text": "1.6 Data Science\n\nDateisystem: Dateien- und Ordnerstruktur\nTabellenformate: Comma/Tab-Separated-Values (CSV/TSV), Spreadsheet (.xlsx, .ods)\nSpezielle Formate, z.B. MATLAB mat, HDF5\nEmbedded Datenbanken\n\nSQL, z.B. SQlite\nOLAP, z.B. DuckDB",
+    "section": "1.6 Datenverarbeitung / Data Sciences",
+    "text": "1.6 Datenverarbeitung / Data Sciences\n\n1.6.1 Dateisystem / Journaled File System\n\nOrdner / Directories\nDateien / Files\n\n\n\n1.6.2 Tabellenformate / Rectangular Data\n\nComma-Separated-Values (CSV), Tab-Separated-Values (TSV)\nwireservice/csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.\njohnkerl/miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON\nSpreadsheet (.xlsx, .ods)\napache/iceberg: Apache Iceberg\napache/iceberg-python: Apache PyIceberg\n\n\n\n1.6.3 Serialisation\n\nData Serialization — The Hitchhiker’s Guide to Python\nJSON\nMessagePack: It’s like JSON. but fast and small.\n\n\n\n1.6.4 Spezielle Formate / Data Frames\n\nMastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning\nMAT-File Versions - MATLAB & Simulink - MathWorks Deutschland\nHDF5 Or How I Learned To Love Data Compression And Partial I/O\nWas ist Apache Parquet?\nFeather File Format\npola-rs/polars: Dataframes powered by a multithreaded, vectorized query engine\nibis-project/ibis: Portable Python dataframe library\n\n\n\n1.6.5 Embedded DB-Engines\n\nSQL, z.B. SQLite\nOLAP, z.B. DuckDB",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#publish-computational-content",
-    "href": "class/01_lec.html#publish-computational-content",
+    "objectID": "class/lec-01-intro.html#schreibst-du-noch-oder-texst-du-schon",
+    "href": "class/lec-01-intro.html#schreibst-du-noch-oder-texst-du-schon",
     "title": "1  Einleitung",
-    "section": "1.7 Publish Computational Content",
-    "text": "1.7 Publish Computational Content\n\nJupyter-Book\nquarto",
+    "section": "1.7 Schreibst Du noch oder TeXst Du schon?",
+    "text": "1.7 Schreibst Du noch oder TeXst Du schon?\n\nMikTeX (Windows, MacOS, Linux)\nMacTeX (MacOS)\nTeXLive (Linux)",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#schreibst-du-noch-oder-texst-du-schon",
-    "href": "class/01_lec.html#schreibst-du-noch-oder-texst-du-schon",
+    "objectID": "class/lec-01-intro.html#latex-editoren",
+    "href": "class/lec-01-intro.html#latex-editoren",
     "title": "1  Einleitung",
-    "section": "1.8 Schreibst Du noch oder TeXst Du schon?",
-    "text": "1.8 Schreibst Du noch oder TeXst Du schon?\n\nMikTeX (Windows, MacOS, Linux)\nMacTeX (MacOS)\nTeXLive (Linux)",
+    "section": "1.8 LaTeX Editoren",
+    "text": "1.8 LaTeX Editoren\n\nIDE’s\n\nTeXStudio\nTeXMaker\nTeXWorks\n\nKollaborative Frameworks\n\nShareLaTeX, Online LaTeX\nCoCalc - Online LaTeX",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#latex-editoren",
-    "href": "class/01_lec.html#latex-editoren",
+    "objectID": "class/lec-01-intro.html#literaturverwaltung-und-latex",
+    "href": "class/lec-01-intro.html#literaturverwaltung-und-latex",
     "title": "1  Einleitung",
-    "section": "1.9 LaTeX Editoren",
-    "text": "1.9 LaTeX Editoren\n\nIDE’s\n\nTeXStudio\nTeXMaker\n\nKollaborative Frameworks\n\nOverleaf, Online LaTeX\nCoCalc - Online LaTeX",
+    "section": "1.9 Literaturverwaltung und LaTeX",
+    "text": "1.9 Literaturverwaltung und LaTeX\n\nCitavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX\nRefWorks - Library Guide Univ. Melbourne\nBenutzerdefinierte BibTex-Keys mit Zotero | nerdpause\nJabRef - Library Guide Univ. Melbourne\nEndNote - Library Guide Univ. Melbourne",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#literaturverwaltung-und-latex",
-    "href": "class/01_lec.html#literaturverwaltung-und-latex",
+    "objectID": "class/lec-01-intro.html#experimentelle-arbeit---entwurf-elektronischer-systeme",
+    "href": "class/lec-01-intro.html#experimentelle-arbeit---entwurf-elektronischer-systeme",
     "title": "1  Einleitung",
-    "section": "1.10 Literaturverwaltung und LaTeX",
-    "text": "1.10 Literaturverwaltung und LaTeX\n\nCitavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX\nRefWorks - Library Guide Univ. Melbourne\nBenutzerdefinierte BibTex-Keys mit Zotero | nerdpause\nJabRef - Library Guide Univ. Melbourne\nEndNote - Library Guide Univ. Melbourne",
+    "section": "1.10 Experimentelle Arbeit - Entwurf elektronischer Systeme",
+    "text": "1.10 Experimentelle Arbeit - Entwurf elektronischer Systeme\nAnalyse und Synthese von elektronischen Bauelementen und Systemen mit\n\nModellbildung auf Systemebene / Verhaltensmodellierung\nSimulation auf Schaltungsebene / SPICE\nCharakterisierung auf Hardwareebene mit\n\nAnalog System Lab Kit ASLK Pro\nRed Pitaya’s STEMlab 125-14/10\n\nTechnische Dokumentation mit quarto",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#experimentelle-arbeit---entwurf-elektronischer-systeme",
-    "href": "class/01_lec.html#experimentelle-arbeit---entwurf-elektronischer-systeme",
+    "objectID": "class/lec-01-intro.html#arte-reportage---smartphone",
+    "href": "class/lec-01-intro.html#arte-reportage---smartphone",
     "title": "1  Einleitung",
-    "section": "1.11 Experimentelle Arbeit - Entwurf elektronischer Systeme",
-    "text": "1.11 Experimentelle Arbeit - Entwurf elektronischer Systeme\nAnalyse und Synthese von elektronischen Bauelementen und Systemen mit\n\nModellbildung auf Systemebene / Verhaltensmodellierung\nSimulation auf Schaltungsebene / SPICE\nCharakterisierung auf Hardwareebene mit\n\nAnalog System Lab Kit ASLK Pro\nRed Pitaya’s STEMlab 125-14/10\n\nTechnische Dokumentation mit quarto",
+    "section": "1.11 ARTE Reportage - Smartphone",
+    "text": "1.11 ARTE Reportage - Smartphone",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#analyse-vs.-design",
-    "href": "class/01_lec.html#analyse-vs.-design",
+    "objectID": "class/lec-01-intro.html#reiseaussichten",
+    "href": "class/lec-01-intro.html#reiseaussichten",
     "title": "1  Einleitung",
-    "section": "1.12 Analyse vs. Design",
-    "text": "1.12 Analyse vs. Design\n\nEntgegen populärwissenschaftlicher Meinungen ist Schaltungsanalyse und Schaltungsentwurf keine “Schwarze Magie”\nSchaltungsanalyse\n\nist die Fähigkeit, Schaltungen in handhabbare Teile zu zerlegen\nbasierend auf einem einfachen, aber hinreichend genauen Modell\n“Just-in-time” Modellierung – verwende kein komplexes Modell, so lange es nicht benötigt wird …\neine Schaltung \\(\\Rightarrow\\) eine Lösung\n\nSchaltungsentwurf\n\nist die Fähigkeit der Schaltungssynthese auf Basis von Erfahrung und intensiver Analyse\neine Spezifikation \\(\\Rightarrow\\) viele Lösungen\nEntwurfspraktiken werden am besten durch’s “Selbermachen” ausgebildet – daher ein Entwurfsprojekt …",
+    "section": "1.12 Reiseaussichten",
+    "text": "1.12 Reiseaussichten\nDies ist der Beginn eines Prozesses,\nbesser noch, eines Abenteuers.",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#es-war-einmal",
-    "href": "class/01_lec.html#es-war-einmal",
+    "objectID": "class/lec-01-intro.html#reiseziele",
+    "href": "class/lec-01-intro.html#reiseziele",
     "title": "1  Einleitung",
-    "section": "1.13 Es war einmal …",
-    "text": "1.13 Es war einmal …\n\n\n\n1906 die Elektronenröhre\n\n\n\n\n\n1947 der erste Transistor, Bell Labs Foto",
+    "section": "1.13 Reiseziele",
+    "text": "1.13 Reiseziele\n\nMehr über Signale wissen, die in elektronischen Systemen verarbeitet werden.\nSchaltungsdiagramme lesen können.\nWissen über grundlegende Blöcke eines Systems aneignen.\nWissen, wie Transistoren arbeiten und in modernen integrierten Technologien hergestellt werden.\nEigenarten der Modellierung mikroelektronischer Bauelemente und der physikalischen und chemischen Prinzipien im Herstellungsprozess kennenlernen.",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#damals-und-heute",
-    "href": "class/01_lec.html#damals-und-heute",
+    "objectID": "class/lec-01-intro.html#reisebedingungen",
+    "href": "class/lec-01-intro.html#reisebedingungen",
     "title": "1  Einleitung",
-    "section": "1.14 Damals und heute",
-    "text": "1.14 Damals und heute\n\n\n\n1958 Jack Kilby’s erster IC\n\n\n\n\n\nModerner IC",
+    "section": "1.14 Reisebedingungen",
+    "text": "1.14 Reisebedingungen\nAnwendung Ihres Werkzeugkastens. * Grundlagen der Elektrotechnik/Physik\n\nElektromagnetische Wellen\nAngewandte Mathematik und Systemtheorie\nTrainingswille\nPioniergeist\nSpa{}\n\nSchnallen Sie sich an, die Reise beginnt …",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#packungsdichten",
-    "href": "class/01_lec.html#packungsdichten",
+    "objectID": "class/lec-01-intro.html#frontend-phasen",
+    "href": "class/lec-01-intro.html#frontend-phasen",
     "title": "1  Einleitung",
-    "section": "1.15 Packungsdichten",
-    "text": "1.15 Packungsdichten\n\n\n\nWafergenerationen",
+    "section": "1.15 Frontend Phasen",
+    "text": "1.15 Frontend Phasen",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#mooresches-gesetz",
-    "href": "class/01_lec.html#mooresches-gesetz",
+    "objectID": "class/lec-01-intro.html#backend-phasen",
+    "href": "class/lec-01-intro.html#backend-phasen",
     "title": "1  Einleitung",
-    "section": "1.16 Moore’sches Gesetz",
-    "text": "1.16 Moore’sches Gesetz",
+    "section": "1.16 Backend Phasen",
+    "text": "1.16 Backend Phasen\n\nPackaging\nZuverlässigkeit = Qualität auf Zeit\nTesting auf Wafer Level, known good die (KGD)\n\nBurn-in und Accelerated Aging (thermischer Stress, Arrhenius Gesetz)\nAutomatic Test Equipment (ATE)\n\nSystem Probe\nInterconnect Test\nBuild-in Self-Test (BIST)\n\n\nStatistische Datenanalyse und Yield Prognosen\n\nAusfallrate FIT (failure in time)\nBadewannenkurve",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#chip-manufacturing---how-are-microchips-made-infineon-dresden",
-    "href": "class/01_lec.html#chip-manufacturing---how-are-microchips-made-infineon-dresden",
+    "objectID": "class/lec-01-intro.html#sie-werden-experte",
+    "href": "class/lec-01-intro.html#sie-werden-experte",
     "title": "1  Einleitung",
-    "section": "1.17 Chip Manufacturing - How are Microchips made? (Infineon, Dresden)",
-    "text": "1.17 Chip Manufacturing - How are Microchips made? (Infineon, Dresden)",
+    "section": "1.17 Sie werden Experte",
+    "text": "1.17 Sie werden Experte\nLeistungsmerkmale.\n\nHintergrundwissen\n\nSystemverständnis, Architektur, Herstellungsverfahren, Implementation\n\nUnterbewusste Kompetenz\n\nAbgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen\n\nSpezialwissen\n\nBerufsspezifisches Wissen\n\nTeamwork Haltung\n\nKommunikationsfähigkeit, Berichtswesen und technische Präsentation\n\nKreativität\nTool-Kenntnisse",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#finfet-intel",
-    "href": "class/01_lec.html#finfet-intel",
+    "objectID": "class/lec-01-intro.html#evolution-von-produkten",
+    "href": "class/lec-01-intro.html#evolution-von-produkten",
     "title": "1  Einleitung",
-    "section": "1.18 FinFET (Intel)",
-    "text": "1.18 FinFET (Intel)",
+    "section": "1.18 Evolution von Produkten",
+    "text": "1.18 Evolution von Produkten\n\nAngetrieben durch Technologieverbesserung\n\nKosten (größere Chips, geringere Größe der Merkmale, bessere Ausbeute)\nLeistung (neue Bauteile, höhere Geschwindigkeit, weniger Stromverbrauch)\n\nAngetrieben durch Verbesserung der Entwurfsmethodik\n\nArchitektur (Leistung, Funktionen)\nCAD (Entwicklungskosten, Time-to-Market)\n\nKomplexität der Designs verdoppelt sich jedes Jahr (Moore’s Gesetz)\nRolle von CAD\n\nVerbesserung der Produktivität von Konstruktionsprozessen\nReduzierung der Komplexität für den Konstrukteur\nSicherstellung des ordnungsgemäßen Betriebs der Geräte",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#tsmc-fab-next-gen-75-nm",
-    "href": "class/01_lec.html#tsmc-fab-next-gen-75-nm",
+    "objectID": "class/lec-01-intro.html#eda-kompetenz",
+    "href": "class/lec-01-intro.html#eda-kompetenz",
     "title": "1  Einleitung",
-    "section": "1.19 TSMC Fab (Next Gen 7/5 nm)",
-    "text": "1.19 TSMC Fab (Next Gen 7/5 nm)",
+    "section": "1.19 EDA Kompetenz",
+    "text": "1.19 EDA Kompetenz\n\nEDA-Anbieter (Tool-Entwickler)\n\nIdentifikation von Entwurfsaufgaben, Bedarf an Werkzeugen\nEntwicklung von Strategien und Algorithmen\nImplementierung von Software-Werkzeugen\nVerifikation der Stabilität und Funktionalität der Software-Tools\n\nIC-Hersteller\n\nEntscheidungsplanung, welches Tool die Produktivität steigern könnte\nEDA-Tool-Manager, Installation und Wartung\nExperten für Softwareeinsatz, Anwendung in Produktdesign und -entwicklung\n\nDozenten und Studenten\n\nJobchancen\nNotwendigkeit, auf dem Laufenden zu bleiben",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#reiseaussichten",
-    "href": "class/01_lec.html#reiseaussichten",
+    "objectID": "class/lec-01-intro.html#design-entwurfsmethodik",
+    "href": "class/lec-01-intro.html#design-entwurfsmethodik",
     "title": "1  Einleitung",
-    "section": "1.20 Reiseaussichten",
-    "text": "1.20 Reiseaussichten\nDies ist der Beginn eines Prozesses,\nbesser noch, eines Abenteuers.",
+    "section": "1.20 Design-/Entwurfsmethodik",
+    "text": "1.20 Design-/Entwurfsmethodik\n\nFull Custom - vollständig manuell: ASIC\n\nÜberwiegend analoge Schaltungen\nEinfache digitale Gatter\nVolle Kontrolle, aber lange Entwicklungszeit (bis zu Jahren)\n\nSemi-custom: ASIC-Fertigung mit Verwendung von vorgefertigten Teilen\n\nStandardzellen, Makrozellen, IP’s\nWiederverwendung von vordefinierten Blöcken oder Maskensätzen\nEingeschränkte Kontrolle/Flexibilität, aber kürzere Entwicklungszeit (bis zu Wochen)\n\nVollständig automatisiert: Keine Fertigung, reprogrammierbare ASICs\n\nFPGA, PLA\nAusschließlich digitale Schaltungen\nSchnelles Prototyping",
     "crumbs": [
       "Seminar",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#reiseziele",
-    "href": "class/01_lec.html#reiseziele",
-    "title": "1  Einleitung",
-    "section": "1.21 Reiseziele",
-    "text": "1.21 Reiseziele\n\nMehr über Signale wissen, die in elektronischen Systemen verarbeitet werden.\nSchaltungsdiagramme lesen können.\nWissen über grundlegende Blöcke eines Systems aneignen.\nWissen, wie Transistoren arbeiten und in modernen integrierten Technologien hergestellt werden.\nEigenarten der Modellierung mikroelektronischer Bauelemente und der physikalischen und chemischen Prinzipien im Herstellungsprozess kennenlernen.",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#reisebedingungen",
-    "href": "class/01_lec.html#reisebedingungen",
-    "title": "1  Einleitung",
-    "section": "1.22 Reisebedingungen",
-    "text": "1.22 Reisebedingungen\nAnwendung Ihres Werkzeugkastens. * Grundlagen der Elektrotechnik/Physik\n\nElektromagnetische Wellen\nAngewandte Mathematik und Systemtheorie\nTrainingswille\nPioniergeist\nSpa{}\n\nSchnallen Sie sich an, die Reise beginnt …",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#systemhierarchie",
-    "href": "class/01_lec.html#systemhierarchie",
-    "title": "1  Einleitung",
-    "section": "1.23 Systemhierarchie",
-    "text": "1.23 Systemhierarchie\n\n\n\nFunktionsblöcke eines elektronischen Systems",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#system-assembly",
-    "href": "class/01_lec.html#system-assembly",
-    "title": "1  Einleitung",
-    "section": "1.24 System Assembly",
-    "text": "1.24 System Assembly\n\n\n\nBottom-up Prozess, Integration\n\n\nEntnommen den Vorlesungsfolien von Maloberti (2011).",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#schnittstellen-zur-aussenwelt",
-    "href": "class/01_lec.html#schnittstellen-zur-aussenwelt",
-    "title": "1  Einleitung",
-    "section": "1.25 Schnittstellen zur Aussenwelt",
-    "text": "1.25 Schnittstellen zur Aussenwelt\n\n\n\nInterfacing\n\n\nEntnommen den Vorlesungsfolien von Maloberti (2011).",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#meeting-mit-einem-system",
-    "href": "class/01_lec.html#meeting-mit-einem-system",
-    "title": "1  Einleitung",
-    "section": "1.26 Meeting mit einem System",
-    "text": "1.26 Meeting mit einem System\n\n\n\nDrahtloses Kommunikationssystem\n\n\nEntnommen den Vorlesungsfolien von Maloberti (2011).",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#system-in-a-package-sip",
-    "href": "class/01_lec.html#system-in-a-package-sip",
-    "title": "1  Einleitung",
-    "section": "1.27 System in a Package (SiP)",
-    "text": "1.27 System in a Package (SiP)\n\n\n\nBeschleunigungssensor\n\n\nEntnommen den Vorlesungsfolien von Maloberti (2011).",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#backend-phasen",
-    "href": "class/01_lec.html#backend-phasen",
-    "title": "1  Einleitung",
-    "section": "1.28 Backend Phasen",
-    "text": "1.28 Backend Phasen\n\nPackaging\nZuverlässigkeit = Qualität auf Zeit\nTesting auf Wafer Level, known good die (KGD)\n\nBurn-in und Accelerated Aging (thermischer Stress, Arrhenius Gesetz)\nAutomatic Test Equipment (ATE)\n\nSystem Probe\nInterconnect Test\nBuild-in Self-Test (BIST)\n\n\nStatistische Datenanalyse und Yield Prognosen\n\nAusfallrate FIT (failure in time)\nBadewannenkurve",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#sie-werden-experte",
-    "href": "class/01_lec.html#sie-werden-experte",
-    "title": "1  Einleitung",
-    "section": "1.29 Sie werden Experte",
-    "text": "1.29 Sie werden Experte\nLeistungsmerkmale.\n\nHintergrundwissen\n\nSystemverständnis, Architektur, Herstellungsverfahren, Implementation\n\nUnterbewusste Kompetenz\n\nAbgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen\n\nSpezialwissen\n\nBerufsspezifisches Wissen\n\nTeamwork Haltung\n\nKommunikationsfähigkeit, Berichtswesen und technische Präsentation\n\nKreativität\nTool-Kenntnisse",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#evolution-von-produkten",
-    "href": "class/01_lec.html#evolution-von-produkten",
-    "title": "1  Einleitung",
-    "section": "1.30 Evolution von Produkten",
-    "text": "1.30 Evolution von Produkten\n\nAngetrieben durch Technologieverbesserung\n\nKosten (größere Chips, geringere Größe der Merkmale, bessere Ausbeute)\nLeistung (neue Bauteile, höhere Geschwindigkeit, weniger Stromverbrauch)\n\nAngetrieben durch Verbesserung der Entwurfsmethodik\n\nArchitektur (Leistung, Funktionen)\nCAD (Entwicklungskosten, Time-to-Market)\n\nKomplexität der Designs verdoppelt sich jedes Jahr (Moore’s Gesetz)\nRolle von CAD\n\nVerbesserung der Produktivität von Konstruktionsprozessen\nReduzierung der Komplexität für den Konstrukteur\nSicherstellung des ordnungsgemäßen Betriebs der Geräte",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#eda-kompetenz",
-    "href": "class/01_lec.html#eda-kompetenz",
-    "title": "1  Einleitung",
-    "section": "1.31 EDA Kompetenz",
-    "text": "1.31 EDA Kompetenz\n\nEDA-Anbieter (Tool-Entwickler)\n\nIdentifikation von Entwurfsaufgaben, Bedarf an Werkzeugen\nEntwicklung von Strategien und Algorithmen\nImplementierung von Software-Werkzeugen\nVerifikation der Stabilität und Funktionalität der Software-Tools\n\nIC-Hersteller\n\nEntscheidungsplanung, welches Tool die Produktivität steigern könnte\nEDA-Tool-Manager, Installation und Wartung\nExperten für Softwareeinsatz, Anwendung in Produktdesign und -entwicklung\n\nDozenten und Studenten\n\nJobchancen\nNotwendigkeit, auf dem Laufenden zu bleiben",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#design-entwurfsmethodik",
-    "href": "class/01_lec.html#design-entwurfsmethodik",
-    "title": "1  Einleitung",
-    "section": "1.32 Design-/Entwurfsmethodik",
-    "text": "1.32 Design-/Entwurfsmethodik\n\nFull Custom - vollständig manuell: ASIC\n\nÜberwiegend analoge Schaltungen\nEinfache digitale Gatter\nVolle Kontrolle, aber lange Entwicklungszeit (bis zu Jahren)\n\nSemi-custom: ASIC-Fertigung mit Verwendung von vorgefertigten Teilen\n\nStandardzellen, Makrozellen, IP’s\nWiederverwendung von vordefinierten Blöcken oder Maskensätzen\nEingeschränkte Kontrolle/Flexibilität, aber kürzere Entwicklungszeit (bis zu Wochen)\n\nVollständig automatisiert: Keine Fertigung, reprogrammierbare ASICs\n\nFPGA, PLA\nAusschließlich digitale Schaltungen\nSchnelles Prototyping",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#nachhaltige-elektronik",
-    "href": "class/01_lec.html#nachhaltige-elektronik",
-    "title": "1  Einleitung",
-    "section": "1.33 Nachhaltige Elektronik …",
-    "text": "1.33 Nachhaltige Elektronik …",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#warum-es-sicht-lohnt",
-    "href": "class/01_lec.html#warum-es-sicht-lohnt",
-    "title": "1  Einleitung",
-    "section": "1.34 Warum es sicht lohnt …",
-    "text": "1.34 Warum es sicht lohnt …",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#und-ab-an-den-strand",
-    "href": "class/01_lec.html#und-ab-an-den-strand",
-    "title": "1  Einleitung",
-    "section": "1.35 Und ab an den Strand …",
-    "text": "1.35 Und ab an den Strand …\n\n\n\n\n\nMaloberti, Franco. 2011. Understanding Microelectronics: A Top-Down Approach. Wiley-Blackwell.",
-    "crumbs": [
-      "Seminar",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
-    ]
-  },
-  {
-    "objectID": "class/references.html",
-    "href": "class/references.html",
-    "title": "Literaturverzeichnis",
-    "section": "",
-    "text": "Maloberti, Franco. 2011. Understanding Microelectronics: A Top-down\nApproach. Wiley-Blackwell.",
-    "crumbs": [
-      "Seminar",
-      "Literaturverzeichnis"
     ]
   },
   {
@@ -443,7 +267,7 @@
     "href": "lab/02_Activity.html#hintergrund",
     "title": "3  IV-Charakterisierung von Siliziumdioden",
     "section": "3.2 Hintergrund",
-    "text": "3.2 Hintergrund\nEine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.\nWenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei \\(\\approx\\) 0.7 V und die IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:\n\\[\\begin{equation}\nI_D = I_S \\left( e^{\\frac{V_D }{N V_T}} - 1 \\right)\n\\end{equation}\\]\nwobei \\(I_{S}\\) der Sättigungssperrstrom ist und \\(N\\) ein Skalierungsfaktoren (Emissionskoeffizient), \\(V_T = kT / q\\) ist die sogenannte thermische Spannung und beträgt 25,4 mV bei Raumtemperatur (\\(T\\) = 300 K).",
+    "text": "3.2 Hintergrund\nEine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.\nWenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei \\(\\approx\\) 0.7 V und die IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:\n\\[\\begin{equation}\nI_D = I_S \\left( e^{\\frac{V_D }{N V_T}} - 1 \\right)\n\\end{equation}\\]\nwobei \\(I_{S}\\) der Sättigungssperrstrom ist, \\(N\\) ein Skalierungsfaktor, genannt Emissionskoeffizient, ist und \\(V_T = kT / q\\) die sogenannte thermische Spannung ist, die bei Raumtemperatur (\\(T\\)=300 K) 25,4 mV beträgt.",
     "crumbs": [
       "Labor",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>IV-Charakterisierung von Siliziumdioden</span>"

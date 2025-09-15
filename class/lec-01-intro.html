@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; IV-Charakterisierung von Siliziumdioden – M 5.3 Elektronik (ELK)</title>
+<title>1&nbsp; Einleitung – M 5.3 Elektronik (ELK)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lab/03_Activity.html" rel="next">
-<link href="../lab/01_Activity.html" rel="prev">
+<link href="../lab/01_Activity.html" rel="next">
+<link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,35 +71,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -112,7 +83,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/02_Activity.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/lec-01-intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/lec-01-intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -181,7 +152,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../class/lec-01-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../class/lec-01-intro.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
   </div>
 </li>
@@ -204,7 +175,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link active">
+  <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
   </div>
 </li>
@@ -238,25 +209,42 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">3.1</span> Zielsetzung</a></li>
-  <li><a href="#hintergrund" id="toc-hintergrund" class="nav-link" data-scroll-target="#hintergrund"><span class="header-section-number">3.2</span> Hintergrund</a></li>
-  <li><a href="#schematische-symbole-der-diode" id="toc-schematische-symbole-der-diode" class="nav-link" data-scroll-target="#schematische-symbole-der-diode"><span class="header-section-number">3.3</span> Schematische Symbole der Diode</a></li>
-  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">3.4</span> Materialien</a></li>
-  <li><a href="#iv-charakteristik" id="toc-iv-charakteristik" class="nav-link" data-scroll-target="#iv-charakteristik"><span class="header-section-number">3.5</span> IV-Charakteristik</a></li>
-  <li><a href="#zeitbereichsmessungen" id="toc-zeitbereichsmessungen" class="nav-link" data-scroll-target="#zeitbereichsmessungen"><span class="header-section-number">3.6</span> Zeitbereichsmessungen</a>
+  <li><a href="#lernziele-des-moduls" id="toc-lernziele-des-moduls" class="nav-link active" data-scroll-target="#lernziele-des-moduls"><span class="header-section-number">1.1</span> Lernziele des Moduls</a></li>
+  <li><a href="#wissenschaftliches-rechnen-datenwissenschaft" id="toc-wissenschaftliches-rechnen-datenwissenschaft" class="nav-link" data-scroll-target="#wissenschaftliches-rechnen-datenwissenschaft"><span class="header-section-number">1.2</span> Wissenschaftliches Rechnen / Datenwissenschaft</a></li>
+  <li><a href="#schaltungsentwurf-eda-tools" id="toc-schaltungsentwurf-eda-tools" class="nav-link" data-scroll-target="#schaltungsentwurf-eda-tools"><span class="header-section-number">1.3</span> Schaltungsentwurf (EDA Tools)</a></li>
+  <li><a href="#betriebssystem-os---werkzeuge-tools" id="toc-betriebssystem-os---werkzeuge-tools" class="nav-link" data-scroll-target="#betriebssystem-os---werkzeuge-tools"><span class="header-section-number">1.4</span> Betriebssystem (OS) - Werkzeuge (Tools)</a></li>
+  <li><a href="#code-editoren" id="toc-code-editoren" class="nav-link" data-scroll-target="#code-editoren"><span class="header-section-number">1.5</span> Code Editoren</a></li>
+  <li><a href="#datenverarbeitung-data-sciences" id="toc-datenverarbeitung-data-sciences" class="nav-link" data-scroll-target="#datenverarbeitung-data-sciences"><span class="header-section-number">1.6</span> Datenverarbeitung / Data Sciences</a>
   <ul class="collapse">
-  <li><a href="#messungen-mit-der-stemlab-oszilloskop-app" id="toc-messungen-mit-der-stemlab-oszilloskop-app" class="nav-link" data-scroll-target="#messungen-mit-der-stemlab-oszilloskop-app"><span class="header-section-number">3.6.1</span> Messungen mit der STEMlab Oszilloskop-App</a></li>
-  <li><a href="#messungen-mit-scpi-server-und-python" id="toc-messungen-mit-scpi-server-und-python" class="nav-link" data-scroll-target="#messungen-mit-scpi-server-und-python"><span class="header-section-number">3.6.2</span> Messungen mit SCPI-Server und Python</a></li>
+  <li><a href="#dateisystem-journaled-file-system" id="toc-dateisystem-journaled-file-system" class="nav-link" data-scroll-target="#dateisystem-journaled-file-system"><span class="header-section-number">1.6.1</span> Dateisystem / Journaled File System</a></li>
+  <li><a href="#tabellenformate-rectangular-data" id="toc-tabellenformate-rectangular-data" class="nav-link" data-scroll-target="#tabellenformate-rectangular-data"><span class="header-section-number">1.6.2</span> Tabellenformate / Rectangular Data</a></li>
+  <li><a href="#serialisation" id="toc-serialisation" class="nav-link" data-scroll-target="#serialisation"><span class="header-section-number">1.6.3</span> Serialisation</a></li>
+  <li><a href="#spezielle-formate-data-frames" id="toc-spezielle-formate-data-frames" class="nav-link" data-scroll-target="#spezielle-formate-data-frames"><span class="header-section-number">1.6.4</span> Spezielle Formate / Data Frames</a></li>
+  <li><a href="#embedded-db-engines" id="toc-embedded-db-engines" class="nav-link" data-scroll-target="#embedded-db-engines"><span class="header-section-number">1.6.5</span> Embedded DB-Engines</a></li>
   </ul></li>
+  <li><a href="#schreibst-du-noch-oder-texst-du-schon" id="toc-schreibst-du-noch-oder-texst-du-schon" class="nav-link" data-scroll-target="#schreibst-du-noch-oder-texst-du-schon"><span class="header-section-number">1.7</span> Schreibst Du noch oder TeXst Du schon?</a></li>
+  <li><a href="#latex-editoren" id="toc-latex-editoren" class="nav-link" data-scroll-target="#latex-editoren"><span class="header-section-number">1.8</span> LaTeX Editoren</a></li>
+  <li><a href="#literaturverwaltung-und-latex" id="toc-literaturverwaltung-und-latex" class="nav-link" data-scroll-target="#literaturverwaltung-und-latex"><span class="header-section-number">1.9</span> Literaturverwaltung und LaTeX</a></li>
+  <li><a href="#experimentelle-arbeit---entwurf-elektronischer-systeme" id="toc-experimentelle-arbeit---entwurf-elektronischer-systeme" class="nav-link" data-scroll-target="#experimentelle-arbeit---entwurf-elektronischer-systeme"><span class="header-section-number">1.10</span> Experimentelle Arbeit - Entwurf elektronischer Systeme</a></li>
+  <li><a href="#arte-reportage---smartphone" id="toc-arte-reportage---smartphone" class="nav-link" data-scroll-target="#arte-reportage---smartphone"><span class="header-section-number">1.11</span> ARTE Reportage - Smartphone</a></li>
+  <li><a href="#reiseaussichten" id="toc-reiseaussichten" class="nav-link" data-scroll-target="#reiseaussichten"><span class="header-section-number">1.12</span> Reiseaussichten</a></li>
+  <li><a href="#reiseziele" id="toc-reiseziele" class="nav-link" data-scroll-target="#reiseziele"><span class="header-section-number">1.13</span> Reiseziele</a></li>
+  <li><a href="#reisebedingungen" id="toc-reisebedingungen" class="nav-link" data-scroll-target="#reisebedingungen"><span class="header-section-number">1.14</span> Reisebedingungen</a></li>
+  <li><a href="#frontend-phasen" id="toc-frontend-phasen" class="nav-link" data-scroll-target="#frontend-phasen"><span class="header-section-number">1.15</span> Frontend Phasen</a></li>
+  <li><a href="#backend-phasen" id="toc-backend-phasen" class="nav-link" data-scroll-target="#backend-phasen"><span class="header-section-number">1.16</span> Backend Phasen</a></li>
+  <li><a href="#sie-werden-experte" id="toc-sie-werden-experte" class="nav-link" data-scroll-target="#sie-werden-experte"><span class="header-section-number">1.17</span> Sie werden Experte</a></li>
+  <li><a href="#evolution-von-produkten" id="toc-evolution-von-produkten" class="nav-link" data-scroll-target="#evolution-von-produkten"><span class="header-section-number">1.18</span> Evolution von Produkten</a></li>
+  <li><a href="#eda-kompetenz" id="toc-eda-kompetenz" class="nav-link" data-scroll-target="#eda-kompetenz"><span class="header-section-number">1.19</span> EDA Kompetenz</a></li>
+  <li><a href="#design-entwurfsmethodik" id="toc-design-entwurfsmethodik" class="nav-link" data-scroll-target="#design-entwurfsmethodik"><span class="header-section-number">1.20</span> Design-/Entwurfsmethodik</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/02_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/lec-01-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/02_Activity.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/lec-01-intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/lec-01-intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></h1>
 </div>
 
 
@@ -273,162 +261,326 @@ window.Quarto = {
 </header>
 
 
-<section id="zielsetzung" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">3.1</span> Zielsetzung</h2>
-<p>Ziel dieses Laborversuchs ist es, Strom- (I) und Spannungs- (V, eigentlich U) eigenschaften zwei verschiedener Siliziumdiode vom Typ 1N4001 und 1N4148 zu untersuchen. Parallel zu Messungen mit dem Red Pitaya STEMlab soll die Schaltung vollständig mit SPICE (LTspice, ngspice) simuliert werden, so dass Messdaten vom STEMLab auf dem eigenen Rechner verglichen (validiert) werden können.</p>
-<p><em>Hinweis.</em> In diesem Laborversuch wird die Terminologie aus der <a href="https://redpitaya.readthedocs.io/en/latest/index.html">Dokumentation</a> verwendet, wenn es um Verbindungen zum <a href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/top.html">Red Pitaya STEMlab</a> geht.</p>
-<p>Die Erweiterungsstecker-Pins für die Spannungsversorgung -3.3 V und +3.3 V sind in der <a href="https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/extent.html">Dokumentation</a> dargestellt.</p>
-<p>Die <a href="https://redpitaya.readthedocs.io/en/latest/appsFeatures/applications/oscSigGen/osc.html">Oszilloskop und Signalgenerator App</a> wird zum Erzeugen und Beobachten von Signalen in der Schaltung verwendet, wenn der Web-Server des STEMlab’s aktiviert ist.</p>
-</section>
-<section id="hintergrund" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="hintergrund"><span class="header-section-number">3.2</span> Hintergrund</h2>
-<p>Eine Halbleiterdiode ist ein elektronisches Bauelement, welches häufig in Schaltungsanwendungen, bei denen der Strom nur in eine Richtung fliessen darf, als Gleichrichtung eingesetzt wird.</p>
-<p>Wenn die Diode aus Silizium hergestellt wird, liegt die Durchlaßspannung typischerweise bei <span class="math inline">\(\approx\)</span> 0.7 V und die IV-Charakteristik im Bezug auf Diodenstrom und -spannung kann durch eine exponentielle Beziehung beschrieben werden:</p>
-<p><span class="math display">\[\begin{equation}
-I_D = I_S \left( e^{\frac{V_D }{N V_T}} - 1 \right)
-\end{equation}\]</span></p>
-<p>wobei <span class="math inline">\(I_{S}\)</span> der Sättigungssperrstrom ist, <span class="math inline">\(N\)</span> ein Skalierungsfaktor, genannt Emissionskoeffizient, ist und <span class="math inline">\(V_T = kT / q\)</span> die sogenannte thermische Spannung ist, die bei Raumtemperatur (<span class="math inline">\(T\)</span>=300 K) 25,4 mV beträgt.</p>
-</section>
-<section id="schematische-symbole-der-diode" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="schematische-symbole-der-diode"><span class="header-section-number">3.3</span> Schematische Symbole der Diode</h2>
-<p>Jeder Diodentyp hat ein spezifisches Schaltsymbol, welches vom herkömmlichen Diodensymbol der Siliziumdiode abgeleitet ist, vgl. <a href="#fig-19-01" class="quarto-xref">Abbildung&nbsp;<span>3.1</span></a> . Eine <em>Z</em>-förmige Kathode bezeichnet eine Zener-Diode, wie im zweiten Symbol von links in <a href="#fig-19-01" class="quarto-xref">Abbildung&nbsp;<span>3.1</span></a> zu sehen ist. Eine <em>S</em>-förmige Kathode bezeichnet eine Schottky-Diode und Pfeile, die von der Diode wegzeigen, kennzeichnen eine LED (Light Emitting Diode, engl.), wie im rechten Symbol dargestellt. Pfeile, die auf die Diode zeigen, kennzeichnen eine Photodiode.</p>
-<div id="fig-19-01" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-19-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_19_Fig_01a.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3.1: Diodensymbole
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="materialien" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="materialien"><span class="header-section-number">3.4</span> Materialien</h2>
+<section id="lernziele-des-moduls" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="lernziele-des-moduls"><span class="header-section-number">1.1</span> Lernziele des Moduls</h2>
 <ul>
-<li>Red Pitaya’s STEMlab</li>
-<li>10 <span class="math inline">\(\Omega\)</span> Widerstand</li>
-<li>Diode 1N4148</li>
-<li>Diode 1N4001</li>
-<li>Platine</li>
+<li><p>Einblicke in mikroelektronische Systeme</p></li>
+<li><p>Analyse und Funktion von Halbleiterbauelementen</p>
+<ul>
+<li>Halbleiterphysik</li>
+<li>Modellbildung</li>
+<li>Netzwerkanalyse/-synthese</li>
+</ul></li>
+<li><p>Anwendung von SPICE in der Schaltunganalyse</p>
+<ul>
+<li>Spezifikation</li>
+<li>Partitionierung</li>
+<li>Design</li>
+</ul></li>
+<li><p>Einsatz von Entwicklungsboards, Embedded Systems / System-on-Chip (SoC)</p>
+<ul>
+<li>STEMlab von <a href="https://www.redpitaya.com">Red Pitaya</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="iv-charakteristik" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="iv-charakteristik"><span class="header-section-number">3.5</span> IV-Charakteristik</h2>
-<p>Die Strom- und Spannungseigenschaften der pn-Übergangsdiode können mit dem STEMlab und den in <a href="#fig-19-04" class="quarto-xref">Abbildung&nbsp;<span>3.2</span></a> dargestellten Anschlüssen gemessen werden. Richten Sie die Steckplatine mit dem Generator OUT1-Kanalausgang an einem Ende des Widerstandes ein. Das andere Ende des Widerstandes ist mit einem Ende der zu messenden Diode verbunden, wie im Diagramm dargestellt. Die Eingangskanäle IN1 und IN2 sind ebenfalls unterschiedlich angeschlossen, daher werden Diodenstrom und -spannung:</p>
-<p><span class="math display">\[\begin{align}
-I_D &amp;= (IN_1 - IN_2) / R_1 \\
-V_D &amp;= IN_2
-\end{align}\]</span></p>
-<div id="fig-19-04" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-19-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_19_Fig_04a.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3.2: Anschlussplan für Dioden IV-Kurven
-</figcaption>
-</figure>
-</div>
-<p>Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der Strom-Spannungskurve (IV-Kurve) ist ein zweidimensionaler Graph (xy-Graph/Plot) erforderlich, wobei die x-Achse die Diodenspannung an IN2 und die y-Achse den Diodenstrom <span class="math inline">\(I_D = (IN1-IN2)/R1\)</span> darstellen.</p>
+<section id="wissenschaftliches-rechnen-datenwissenschaft" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="wissenschaftliches-rechnen-datenwissenschaft"><span class="header-section-number">1.2</span> Wissenschaftliches Rechnen / Datenwissenschaft</h2>
+<ul>
+<li><a href="https://www.anaconda.com/download/">Python</a></li>
+<li><a href="https://www.r-project.org/">R: The R Project for Statistical Computing</a></li>
+<li><a href="https://rpy2.readthedocs.io/en/latest/index.html">rpy2 - Python and R</a></li>
+<li><a href="https://de.mathworks.com">Matlab</a></li>
+<li><a href="https://www.gnu.org/software/octave/">Gnu Octave</a></li>
+<li><a href="http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html">Command-line tools</a></li>
+</ul>
 </section>
-<section id="zeitbereichsmessungen" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="zeitbereichsmessungen"><span class="header-section-number">3.6</span> Zeitbereichsmessungen</h2>
-<div id="wrn-conn" class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warnung&nbsp;3.1: Unterschiedliche Zugriffsarten / Messverfahren mit dem STEMlab
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>NIEMALS UNTERSCHIEDLICHE ZUGRIFFSARTEN / MESSVERFAHREN PARALLEL VERWENDEN.</p>
-<p>NICHT MIT ZWEI ODER MEHREREN RECHNERN ZUM MESSEN AUF DAS STEMLAB ZUGREIFEN.</p>
-<p>Greifen Sie nur von einem Rechner aus auf das STEMlab zu und deaktivieren Sie die aktuell nicht genutzte Methode, bspw. Oszilloskop-App (OFF-Button), bevor Sie den Zugriff via JupyterLab oder SCPI erproben.</p>
-</div>
-</div>
-<section id="messungen-mit-der-stemlab-oszilloskop-app" class="level3" data-number="3.6.1">
-<h3 data-number="3.6.1" class="anchored" data-anchor-id="messungen-mit-der-stemlab-oszilloskop-app"><span class="header-section-number">3.6.1</span> Messungen mit der STEMlab Oszilloskop-App</h3>
-<div id="tip-urls" class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tipp&nbsp;3.1
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>URLs der STEMLabs für den Zugriff via Web-Server aus dem VPN der HSB</em></p>
+<section id="schaltungsentwurf-eda-tools" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="schaltungsentwurf-eda-tools"><span class="header-section-number">1.3</span> Schaltungsentwurf (EDA Tools)</h2>
 <ul>
-<li><a href="http://elie1redpi.fk4.hs-bremen.de">Laborplatz ELIE1</a></li>
-<li><a href="http://elie2redpi.fk4.hs-bremen.de">Laborplatz ELIE2</a></li>
-<li><a href="http://elie3redpi.fk4.hs-bremen.de">Labroplatz ELIE3</a></li>
-<li><a href="http://elie4redpi.fk4.hs-bremen.de">Laborplatz ELIE4</a></li>
-<li><a href="http://elie5redpi.fk4.hs-bremen.de">Laborplatz ELIE5</a></li>
-<li><a href="http://elie6redpi.fk4.hs-bremen.de">Laborplatz ELIE6</a></li>
-</ul>
-</div>
-</div>
-<div id="fig-19-05" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-19-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_19_Fig_05a.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3.3: Verbindungen auf dem Steckbrett
-</figcaption>
-</figure>
-</div>
+<li>PCB / System Design
 <ul>
-<li><p>Die Schaltung aus <a href="#fig-19-04" class="quarto-xref">Abbildung&nbsp;<span>3.2</span></a> ist für Sie auf einer Platine aufgebaut und wird via SMA-Verbindern an das STEMlab angeschlossen.</p></li>
-<li><p>Loggen Sie sich mit vorzugsweise mit Google Chrome oder Mozilla Firefox auf dem STEMlab an ihrem Laborplatz ein und starten Sie die Oszilloskop- und Signalgenerator-App.</p></li>
-<li><p>Stellen Sie auf der rechten Seite im Menü bei OUT1 (Generator) den Amplitudenwert auf 0,5 V und den DC-Offset auf 0,5 V ein. Um ein Dreieckssignal als Eingangsspannung anzulegen wählen Sie im Waveform-Menü die Signalform “TRIANGLE” und aktivieren den Ausgang mit “ON”. Der “SHOW”-Button dient zum Anzeigen des Signals in der Oszilloskop-App.</p></li>
-<li><p>Stellen Sie sicher, dass sowohl IN1 V/div als auch IN2 V/div am linken unteren Bildschirmrand auf 200 mV/div eingesetellt sind. V/div können Sie im jeweiligen Kanal über die +/- Schaltflächen rechts unten kontrollieren.</p></li>
-<li><p>Setzen Sie den t/div-Wert auf 200 us/div. Auch hier können Sie t/div mit den +/- Schaltflächen einstellen.</p></li>
-<li><p>Im Menü “MATH settings” stellen Sie die Differenz IN1-IN2 ein und aktieren diese wurch setzen des “ENABLE” Buttons. Die mathematische Kurve skaliert mit dem Faktor R1 und stellt den Diodenstrom dar.</p></li>
+<li><a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">LTspice</a></li>
+<li><a href="https://www.kicad.org/">KiCad EDA</a></li>
+<li><a href="https://www.altium.com/de/altium-designer">Altium Designer</a></li>
+<li><a href="https://eda.sw.siemens.com/en-US/pcb/products/">SiemensEDA PCB tools</a></li>
+<li><a href="https://www.cadence.com/en_US/home/tools/system-design-and-analysis.html">cadence System Design &amp; Analysis</a></li>
+</ul></li>
+<li>IC / Silicon Design
+<ul>
+<li><a href="https://github.com/iic-jku/IIC-OSIC-TOOLS">IIC-OSIC-TOOLS (open-source)</a></li>
+<li><a href="https://eda.sw.siemens.com/en-US/ic/products/">SiemensEDA IC tools</a></li>
+<li><a href="https://www.cadence.com/en_US/home/tools/design-excellence.html">cadence IC Design &amp; Verification</a></li>
+<li><a href="https://www.synopsys.com/silicon-design.html">synopsys silicon design (IC)</a></li>
+</ul></li>
 </ul>
-<div id="fig-19-06" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-19-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/Activity_19_Fig_06.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-19-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3.4: Spannung und Strom einer Siliziumdiode (zeitabhängig)
-</figcaption>
-</figure>
-</div>
-<p>In <a href="#fig-19-06" class="quarto-xref">Abbildung&nbsp;<span>3.4</span></a> kann man sehen, dass die Diode zu leiten beginnt, wenn die Diodenspannung die Schwellenspannung von ca. 0.7 V erreicht.</p>
-<p>Außerdem sollte der mit “MATH-Trace” dargestellte Diodenstrom beobachtet werden. Man sollte deutlich erkennen, dass der Diodenstrom 0 A beträgt, sobald die Diodenspannung unter 0.7 V liegt. Ab einem Zeitpunkt, ab dem die Diodenspannung größer 0.7 V ist, beginnt die Diode zu leiten und der Strom wird nur durch den Widerstand <span class="math inline">\(R_1\)</span> begrenzt.</p>
 </section>
-<section id="messungen-mit-scpi-server-und-python" class="level3" data-number="3.6.2">
-<h3 data-number="3.6.2" class="anchored" data-anchor-id="messungen-mit-scpi-server-und-python"><span class="header-section-number">3.6.2</span> Messungen mit SCPI-Server und Python</h3>
-<div id="tip-ip-scpi" class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tipp&nbsp;3.2
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>IP-Adressen der STEMLabs für den Zugriff via SCPI</em></p>
+<section id="betriebssystem-os---werkzeuge-tools" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="betriebssystem-os---werkzeuge-tools"><span class="header-section-number">1.4</span> Betriebssystem (OS) - Werkzeuge (Tools)</h2>
 <ul>
-<li>Laborplatz ELIE1: 192.168.111.181</li>
-<li>Laborplatz ELIE2: 192.168.111.182</li>
-<li>Labroplatz ELIE3: 192.168.111.183</li>
-<li>Laborplatz ELIE4: 192.168.111.184</li>
-<li>Laborplatz ELIE5: 192.168.111.185</li>
-<li>Laborplatz ELIE6: 192.168.111.186</li>
+<li><a href="https://de.wikipedia.org/wiki/Secure_Shell">SSH (Secure Shell)</a></li>
+<li><a href="https://github.com/microsoft/terminal">Microsoft-Terminal</a></li>
+<li><a href="https://learn.microsoft.com/de-de/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.4">Microsoft-PowerShell</a></li>
+<li><a href="https://iterm2.com">MacOS-Terminal</a></li>
+<li><a href="https://ohmyz.sh">Linux/MacOS zsh-tools</a></li>
+<li><a href="https://bash-it.readthedocs.io/en/latest/">Linux/MacOS bash-it</a></li>
+<li><a href="https://git-scm.com">Git (Versionskontrolle)</a></li>
+<li><a href="https://tortoisegit.org/">TortoiseGit – Windows Shell Interface to Git</a></li>
 </ul>
-</div>
-</div>
+</section>
+<section id="code-editoren" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="code-editoren"><span class="header-section-number">1.5</span> Code Editoren</h2>
+<ul>
+<li><a href="https://code.visualstudio.com">Visual Studio Code</a></li>
+<li><a href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</li>
+<li><a href="https://www.gnu.org/software/emacs/">Emacs</a><br>
+</li>
+<li><a href="https://www.vim.org">Vim</a></li>
+</ul>
+</section>
+<section id="datenverarbeitung-data-sciences" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="datenverarbeitung-data-sciences"><span class="header-section-number">1.6</span> Datenverarbeitung / Data Sciences</h2>
+<section id="dateisystem-journaled-file-system" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="dateisystem-journaled-file-system"><span class="header-section-number">1.6.1</span> Dateisystem / Journaled File System</h3>
+<ul>
+<li>Ordner / Directories</li>
+<li>Dateien / Files</li>
+</ul>
+</section>
+<section id="tabellenformate-rectangular-data" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="tabellenformate-rectangular-data"><span class="header-section-number">1.6.2</span> Tabellenformate / Rectangular Data</h3>
+<ul>
+<li>Comma-Separated-Values (CSV), Tab-Separated-Values (TSV)</li>
+<li><a href="https://github.com/wireservice/csvkit">wireservice/csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.</a></li>
+<li><a href="https://github.com/johnkerl/miller">johnkerl/miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON</a></li>
+<li>Spreadsheet (.xlsx, .ods)</li>
+<li><a href="https://github.com/apache/iceberg?tab=readme-ov-file">apache/iceberg: Apache Iceberg</a></li>
+<li><a href="https://github.com/apache/iceberg-python">apache/iceberg-python: Apache PyIceberg</a></li>
+</ul>
+</section>
+<section id="serialisation" class="level3" data-number="1.6.3">
+<h3 data-number="1.6.3" class="anchored" data-anchor-id="serialisation"><span class="header-section-number">1.6.3</span> <a href="https://en.wikipedia.org/wiki/Serialization">Serialisation</a></h3>
+<ul>
+<li><a href="https://docs.python-guide.org/scenarios/serialization/">Data Serialization — The Hitchhiker’s Guide to Python</a></li>
+<li><a href="https://www.json.org/json-en.html">JSON</a></li>
+<li><a href="https://msgpack.org/">MessagePack: It’s like JSON. but fast and small.</a></li>
+</ul>
+</section>
+<section id="spezielle-formate-data-frames" class="level3" data-number="1.6.4">
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="spezielle-formate-data-frames"><span class="header-section-number">1.6.4</span> Spezielle Formate / Data Frames</h3>
+<ul>
+<li><a href="https://www.adventuresinmachinelearning.com/mastering-python-dictionaries-efficient-data-storage-and-retrieval/">Mastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning</a></li>
+<li><a href="https://de.mathworks.com/help/matlab/import_export/mat-file-versions.html">MAT-File Versions - MATLAB &amp; Simulink - MathWorks Deutschland</a></li>
+<li><a href="https://www.hdfgroup.org/2018/06/15/hdf5-or-how-i-learned-to-love-data-compression-and-partial-i-o/">HDF5 Or How I Learned To Love Data Compression And Partial I/O</a></li>
+<li><a href="https://www.databricks.com/de/glossary/what-is-parquet">Was ist Apache Parquet?</a></li>
+<li><a href="https://arrow.apache.org/docs/python/feather.html">Feather File Format</a></li>
+<li><a href="https://github.com/pola-rs/polars">pola-rs/polars: Dataframes powered by a multithreaded, vectorized query engine</a></li>
+<li><a href="https://github.com/ibis-project/ibis">ibis-project/ibis: Portable Python dataframe library</a></li>
+</ul>
+</section>
+<section id="embedded-db-engines" class="level3" data-number="1.6.5">
+<h3 data-number="1.6.5" class="anchored" data-anchor-id="embedded-db-engines"><span class="header-section-number">1.6.5</span> Embedded <a href="https://db-engines.com">DB-Engines</a></h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/SQL">SQL</a>, z.B. <a href="https://en.wikipedia.org/wiki/SQLite">SQLite</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Online_analytical_processing">OLAP</a>, z.B. <a href="https://duckdb.org/why_duckdb">DuckDB</a></li>
+</ul>
+</section>
+</section>
+<section id="schreibst-du-noch-oder-texst-du-schon" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="schreibst-du-noch-oder-texst-du-schon"><span class="header-section-number">1.7</span> Schreibst Du noch oder TeXst Du schon?</h2>
+<ul>
+<li><a href="https://miktex.org/">MikTeX (Windows, MacOS, Linux)</a></li>
+<li><a href="https://www.tug.org/mactex/">MacTeX (MacOS)</a></li>
+<li><a href="http://tug.org/texlive/">TeXLive (Linux)</a></li>
+</ul>
+</section>
+<section id="latex-editoren" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="latex-editoren"><span class="header-section-number">1.8</span> LaTeX Editoren</h2>
+<ul>
+<li>IDE’s
+<ul>
+<li><a href="http://www.texstudio.org">TeXStudio</a></li>
+<li><a href="http://www.xm1math.net/texmaker/">TeXMaker</a></li>
+<li><a href="http://www.tug.org/texworks/">TeXWorks</a></li>
+</ul></li>
+<li>Kollaborative Frameworks
+<ul>
+<li><a href="https://www.sharelatex.com/">ShareLaTeX, Online LaTeX</a></li>
+<li><a href="https://cocalc.com/doc/latex-editor.html">CoCalc - Online LaTeX</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="literaturverwaltung-und-latex" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="literaturverwaltung-und-latex"><span class="header-section-number">1.9</span> Literaturverwaltung und LaTeX</h2>
+<ul>
+<li><a href="https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html">Citavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX</a></li>
+<li><a href="https://unimelb.libguides.com/c.php?g=565734&amp;p=3912294">RefWorks - Library Guide Univ. Melbourne</a></li>
+<li><a href="https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/">Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause</a></li>
+<li><a href="https://unimelb.libguides.com/c.php?g=565734&amp;p=3897117">JabRef - Library Guide Univ. Melbourne</a></li>
+<li><a href="https://unimelb.libguides.com/latexbibtex/endnote">EndNote - Library Guide Univ. Melbourne</a></li>
+</ul>
+</section>
+<section id="experimentelle-arbeit---entwurf-elektronischer-systeme" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="experimentelle-arbeit---entwurf-elektronischer-systeme"><span class="header-section-number">1.10</span> Experimentelle Arbeit - Entwurf elektronischer Systeme</h2>
+<p>Analyse und Synthese von elektronischen Bauelementen und Systemen mit</p>
+<ul>
+<li><p>Modellbildung auf Systemebene / Verhaltensmodellierung</p></li>
+<li><p>Simulation auf Schaltungsebene / SPICE</p></li>
+<li><p>Charakterisierung auf Hardwareebene mit</p>
+<ul>
+<li><p><a href="https://aslk-pro.readthedocs.io/de/latest/">Analog System Lab Kit ASLK Pro</a></p></li>
+<li><p><a href="https://redpitaya.readthedocs.io/en/latest/developerGuide/125-14/top.html">Red Pitaya’s STEMlab 125-14/10</a></p></li>
+</ul></li>
+<li><p>Technische Dokumentation mit <a href="https://quarto.org">quarto</a></p></li>
+</ul>
+</section>
+<section id="arte-reportage---smartphone" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="arte-reportage---smartphone"><span class="header-section-number">1.11</span> ARTE Reportage - Smartphone</h2>
+</section>
+<section id="reiseaussichten" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="reiseaussichten"><span class="header-section-number">1.12</span> Reiseaussichten</h2>
+<p>Dies ist der <strong>Beginn eines Prozesses</strong>,</p>
+<p>besser noch, <strong>eines Abenteuers</strong>.</p>
+</section>
+<section id="reiseziele" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="reiseziele"><span class="header-section-number">1.13</span> Reiseziele</h2>
+<ul>
+<li><p>Mehr über Signale wissen, die in elektronischen Systemen verarbeitet werden.</p></li>
+<li><p>Schaltungsdiagramme lesen können.</p></li>
+<li><p>Wissen über grundlegende Blöcke eines Systems aneignen.</p></li>
+<li><p>Wissen, wie Transistoren arbeiten und in modernen integrierten Technologien hergestellt werden.</p></li>
+<li><p>Eigenarten der Modellierung mikroelektronischer Bauelemente und der physikalischen und chemischen Prinzipien im Herstellungsprozess kennenlernen.</p></li>
+</ul>
+</section>
+<section id="reisebedingungen" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="reisebedingungen"><span class="header-section-number">1.14</span> Reisebedingungen</h2>
+<p><em>Anwendung Ihres Werkzeugkastens.</em> * Grundlagen der Elektrotechnik/Physik</p>
+<ul>
+<li><p>Elektromagnetische Wellen</p></li>
+<li><p>Angewandte Mathematik und Systemtheorie</p></li>
+<li><p>Trainingswille</p></li>
+<li><p>Pioniergeist</p></li>
+<li><p>Spa{}</p></li>
+</ul>
+<p><em>Schnallen Sie sich an, die Reise beginnt …</em></p>
+</section>
+<section id="frontend-phasen" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="frontend-phasen"><span class="header-section-number">1.15</span> Frontend Phasen</h2>
+</section>
+<section id="backend-phasen" class="level2" data-number="1.16">
+<h2 data-number="1.16" class="anchored" data-anchor-id="backend-phasen"><span class="header-section-number">1.16</span> Backend Phasen</h2>
+<ul>
+<li><p>Packaging</p></li>
+<li><p>Zuverlässigkeit = Qualität auf Zeit</p></li>
+<li><p>Testing auf Wafer Level, known good die (KGD)</p>
+<ul>
+<li><p>Burn-in und Accelerated Aging (thermischer Stress, Arrhenius Gesetz)</p></li>
+<li><p>Automatic Test Equipment (ATE)</p>
+<ul>
+<li>System Probe</li>
+<li>Interconnect Test</li>
+<li>Build-in Self-Test (BIST)</li>
+</ul></li>
+</ul></li>
+<li><p>Statistische Datenanalyse und Yield Prognosen</p>
+<ul>
+<li><p>Ausfallrate FIT (failure in time)</p></li>
+<li><p>Badewannenkurve</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="sie-werden-experte" class="level2" data-number="1.17">
+<h2 data-number="1.17" class="anchored" data-anchor-id="sie-werden-experte"><span class="header-section-number">1.17</span> Sie werden Experte</h2>
+<p><em>Leistungsmerkmale.</em></p>
+<ul>
+<li><p>Hintergrundwissen</p>
+<ul>
+<li>Systemverständnis, Architektur, Herstellungsverfahren, Implementation</li>
+</ul></li>
+<li><p>Unterbewusste Kompetenz</p>
+<ul>
+<li>Abgespeicherte Erfahrungen aus Erfolgsgeschichten und Misserfolgen</li>
+</ul></li>
+<li><p>Spezialwissen</p>
+<ul>
+<li>Berufsspezifisches Wissen</li>
+</ul></li>
+<li><p>Teamwork Haltung</p>
+<ul>
+<li>Kommunikationsfähigkeit, Berichtswesen und technische Präsentation</li>
+</ul></li>
+<li><p>Kreativität</p></li>
+<li><p>Tool-Kenntnisse</p></li>
+</ul>
+</section>
+<section id="evolution-von-produkten" class="level2" data-number="1.18">
+<h2 data-number="1.18" class="anchored" data-anchor-id="evolution-von-produkten"><span class="header-section-number">1.18</span> Evolution von Produkten</h2>
+<ul>
+<li><p>Angetrieben durch Technologieverbesserung</p>
+<ul>
+<li>Kosten (größere Chips, geringere Größe der Merkmale, bessere Ausbeute)</li>
+<li>Leistung (neue Bauteile, höhere Geschwindigkeit, weniger Stromverbrauch)</li>
+</ul></li>
+<li><p>Angetrieben durch Verbesserung der Entwurfsmethodik</p>
+<ul>
+<li>Architektur (Leistung, Funktionen)</li>
+<li>CAD (Entwicklungskosten, Time-to-Market)</li>
+</ul></li>
+<li><p>Komplexität der Designs verdoppelt sich jedes Jahr (Moore’s Gesetz)</p></li>
+<li><p>Rolle von CAD</p>
+<ul>
+<li>Verbesserung der Produktivität von Konstruktionsprozessen</li>
+<li>Reduzierung der Komplexität für den Konstrukteur</li>
+<li>Sicherstellung des ordnungsgemäßen Betriebs der Geräte</li>
+</ul></li>
+</ul>
+</section>
+<section id="eda-kompetenz" class="level2" data-number="1.19">
+<h2 data-number="1.19" class="anchored" data-anchor-id="eda-kompetenz"><span class="header-section-number">1.19</span> EDA Kompetenz</h2>
+<ul>
+<li>EDA-Anbieter (Tool-Entwickler)
+<ul>
+<li>Identifikation von Entwurfsaufgaben, Bedarf an Werkzeugen</li>
+<li>Entwicklung von Strategien und Algorithmen</li>
+<li>Implementierung von Software-Werkzeugen</li>
+<li>Verifikation der Stabilität und Funktionalität der Software-Tools</li>
+</ul></li>
+<li>IC-Hersteller
+<ul>
+<li>Entscheidungsplanung, welches Tool die Produktivität steigern könnte</li>
+<li>EDA-Tool-Manager, Installation und Wartung</li>
+<li>Experten für Softwareeinsatz, Anwendung in Produktdesign und -entwicklung</li>
+</ul></li>
+<li>Dozenten und Studenten
+<ul>
+<li>Jobchancen</li>
+<li>Notwendigkeit, auf dem Laufenden zu bleiben</li>
+</ul></li>
+</ul>
+</section>
+<section id="design-entwurfsmethodik" class="level2" data-number="1.20">
+<h2 data-number="1.20" class="anchored" data-anchor-id="design-entwurfsmethodik"><span class="header-section-number">1.20</span> Design-/Entwurfsmethodik</h2>
+<ul>
+<li>Full Custom - vollständig manuell: ASIC
+<ul>
+<li>Überwiegend analoge Schaltungen</li>
+<li>Einfache digitale Gatter</li>
+<li>Volle Kontrolle, aber lange Entwicklungszeit (bis zu Jahren)</li>
+</ul></li>
+<li>Semi-custom: ASIC-Fertigung mit Verwendung von vorgefertigten Teilen
+<ul>
+<li>Standardzellen, Makrozellen, IP’s</li>
+<li>Wiederverwendung von vordefinierten Blöcken oder Maskensätzen</li>
+<li>Eingeschränkte Kontrolle/Flexibilität, aber kürzere Entwicklungszeit (bis zu Wochen)</li>
+</ul></li>
+<li>Vollständig automatisiert: Keine Fertigung, reprogrammierbare ASICs
+<ul>
+<li>FPGA, PLA</li>
+<li>Ausschließlich digitale Schaltungen</li>
+<li>Schnelles Prototyping</li>
+</ul></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -834,13 +986,13 @@ Tipp&nbsp;3.2
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lab/01_Activity.html" class="pagination-link" aria-label="Laborversuche">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Laborversuche</span></span>
+      <a href="../index.html" class="pagination-link" aria-label="Unsyllabus">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Unsyllabus</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lab/03_Activity.html" class="pagination-link" aria-label="Der BJT als Diode">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lab/01_Activity.html" class="pagination-link" aria-label="Laborversuche">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Laborversuche</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -852,7 +1004,7 @@ Tipp&nbsp;3.2
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/02_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/lec-01-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

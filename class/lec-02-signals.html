@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Signale – M 5.3 Elektronik (ELK)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../class/lec-03-pn_diode.html" rel="next">
+<link href="../class/lec-01-intro.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-22e83d4e5eff2a99ccc45532742ac980.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/lec-01-intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/lec-02-signals.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">M 5.3 Elektronik (ELK)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/elk/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../M-5.3-Elektronik--ELK-.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../M-5.3-Elektronik--ELK-.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Seminar</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/lec-01-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/lec-02-signals.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/lec-03-pn_diode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diode - Modelle und Schaltungen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labor</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/01_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/03_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/06_TranThermo_TZ.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Transistor-Thermometer</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#einfache-signale" id="toc-einfache-signale" class="nav-link active" data-scroll-target="#einfache-signale"><span class="header-section-number">2.1</span> Einfache Signale</a></li>
+  <li><a href="#signaltypen" id="toc-signaltypen" class="nav-link" data-scroll-target="#signaltypen"><span class="header-section-number">2.2</span> Signaltypen</a></li>
+  <li><a href="#konstantes-signal" id="toc-konstantes-signal" class="nav-link" data-scroll-target="#konstantes-signal"><span class="header-section-number">2.3</span> Konstantes Signal</a></li>
+  <li><a href="#nominal-und-worst-case" id="toc-nominal-und-worst-case" class="nav-link" data-scroll-target="#nominal-und-worst-case"><span class="header-section-number">2.4</span> Nominal und Worst Case</a></li>
+  <li><a href="#zeitkontinuierliches-signal" id="toc-zeitkontinuierliches-signal" class="nav-link" data-scroll-target="#zeitkontinuierliches-signal"><span class="header-section-number">2.5</span> Zeitkontinuierliches Signal</a></li>
+  <li><a href="#sprungsignale" id="toc-sprungsignale" class="nav-link" data-scroll-target="#sprungsignale"><span class="header-section-number">2.6</span> Sprungsignale</a></li>
+  <li><a href="#sprungfunktionen" id="toc-sprungfunktionen" class="nav-link" data-scroll-target="#sprungfunktionen"><span class="header-section-number">2.7</span> Sprungfunktionen</a></li>
+  <li><a href="#zeitdiskrete-signale" id="toc-zeitdiskrete-signale" class="nav-link" data-scroll-target="#zeitdiskrete-signale"><span class="header-section-number">2.8</span> Zeitdiskrete Signale</a></li>
+  <li><a href="#analog-and-digital-signals" id="toc-analog-and-digital-signals" class="nav-link" data-scroll-target="#analog-and-digital-signals"><span class="header-section-number">2.9</span> Analog and Digital Signals</a></li>
+  <li><a href="#the-data-conversion-problem" id="toc-the-data-conversion-problem" class="nav-link" data-scroll-target="#the-data-conversion-problem"><span class="header-section-number">2.10</span> The Data Conversion Problem</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">2.11</span> Overview</a></li>
+  <li><a href="#analog-to-digital-ad-conversion" id="toc-analog-to-digital-ad-conversion" class="nav-link" data-scroll-target="#analog-to-digital-ad-conversion"><span class="header-section-number">2.12</span> Analog-to-Digital (A/D) Conversion</a></li>
+  <li><a href="#digital-to-analog-da-conversion" id="toc-digital-to-analog-da-conversion" class="nav-link" data-scroll-target="#digital-to-analog-da-conversion"><span class="header-section-number">2.13</span> Digital-to-Analog (D/A) Conversion</a></li>
+  <li><a href="#uniform-sampling-and-quantization" id="toc-uniform-sampling-and-quantization" class="nav-link" data-scroll-target="#uniform-sampling-and-quantization"><span class="header-section-number">2.14</span> Uniform Sampling and Quantization</a></li>
+  <li><a href="#aliasing-1" id="toc-aliasing-1" class="nav-link" data-scroll-target="#aliasing-1"><span class="header-section-number">2.15</span> Aliasing (1)</a></li>
+  <li><a href="#aliasing-2" id="toc-aliasing-2" class="nav-link" data-scroll-target="#aliasing-2"><span class="header-section-number">2.16</span> Aliasing (2)</a></li>
+  <li><a href="#aliasing-3" id="toc-aliasing-3" class="nav-link" data-scroll-target="#aliasing-3"><span class="header-section-number">2.17</span> Aliasing (3)</a></li>
+  <li><a href="#consequence" id="toc-consequence" class="nav-link" data-scroll-target="#consequence"><span class="header-section-number">2.18</span> Consequence</a></li>
+  <li><a href="#sampling-theorem" id="toc-sampling-theorem" class="nav-link" data-scroll-target="#sampling-theorem"><span class="header-section-number">2.19</span> Sampling Theorem</a></li>
+  <li><a href="#ideal-brick-wall-anti-alias-filter-aaf" id="toc-ideal-brick-wall-anti-alias-filter-aaf" class="nav-link" data-scroll-target="#ideal-brick-wall-anti-alias-filter-aaf"><span class="header-section-number">2.20</span> Ideal (Brick Wall) Anti-Alias Filter (AAF)</a></li>
+  <li><a href="#practical-anti-alias-filter-aaf" id="toc-practical-anti-alias-filter-aaf" class="nav-link" data-scroll-target="#practical-anti-alias-filter-aaf"><span class="header-section-number">2.21</span> Practical Anti-Alias Filter (AAF)</a></li>
+  <li><a href="#how-much-oversampling" id="toc-how-much-oversampling" class="nav-link" data-scroll-target="#how-much-oversampling"><span class="header-section-number">2.22</span> How much Oversampling?</a></li>
+  <li><a href="#classes-of-sampling" id="toc-classes-of-sampling" class="nav-link" data-scroll-target="#classes-of-sampling"><span class="header-section-number">2.23</span> Classes of Sampling</a></li>
+  <li><a href="#the-reconstruction-problem" id="toc-the-reconstruction-problem" class="nav-link" data-scroll-target="#the-reconstruction-problem"><span class="header-section-number">2.24</span> The Reconstruction Problem</a></li>
+  <li><a href="#zero-order-hold-reconstruction" id="toc-zero-order-hold-reconstruction" class="nav-link" data-scroll-target="#zero-order-hold-reconstruction"><span class="header-section-number">2.25</span> Zero-Order Hold Reconstruction</a></li>
+  <li><a href="#dirac-pulses" id="toc-dirac-pulses" class="nav-link" data-scroll-target="#dirac-pulses"><span class="header-section-number">2.26</span> Dirac Pulses</a></li>
+  <li><a href="#spectrum" id="toc-spectrum" class="nav-link" data-scroll-target="#spectrum"><span class="header-section-number">2.27</span> Spectrum</a></li>
+  <li><a href="#finite-hold-pulse" id="toc-finite-hold-pulse" class="nav-link" data-scroll-target="#finite-hold-pulse"><span class="header-section-number">2.28</span> Finite Hold Pulse</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">2.29</span> Example</a></li>
+  <li><a href="#reconstruction-filter" id="toc-reconstruction-filter" class="nav-link" data-scroll-target="#reconstruction-filter"><span class="header-section-number">2.30</span> Reconstruction Filter</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">2.31</span> Summary</a></li>
+  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap"><span class="header-section-number">2.32</span> Recap</a></li>
+  <li><a href="#quantization-of-an-analog-signal" id="toc-quantization-of-an-analog-signal" class="nav-link" data-scroll-target="#quantization-of-an-analog-signal"><span class="header-section-number">2.33</span> Quantization of an Analog Signal</a></li>
+  <li><a href="#conceptual-model-of-a-quantizer" id="toc-conceptual-model-of-a-quantizer" class="nav-link" data-scroll-target="#conceptual-model-of-a-quantizer"><span class="header-section-number">2.34</span> Conceptual Model of a Quantizer</a></li>
+  <li><a href="#encoding-example-for-a-b-bit-quantizer" id="toc-encoding-example-for-a-b-bit-quantizer" class="nav-link" data-scroll-target="#encoding-example-for-a-b-bit-quantizer"><span class="header-section-number">2.35</span> Encoding Example for a B-Bit Quantizer</a></li>
+  <li><a href="#nomenclature" id="toc-nomenclature" class="nav-link" data-scroll-target="#nomenclature"><span class="header-section-number">2.36</span> Nomenclature</a></li>
+  <li><a href="#bipolar-mid-rise-quantizer" id="toc-bipolar-mid-rise-quantizer" class="nav-link" data-scroll-target="#bipolar-mid-rise-quantizer"><span class="header-section-number">2.37</span> Bipolar Mid-Rise Quantizer</a></li>
+  <li><a href="#bipolar-mid-tread-quantizer" id="toc-bipolar-mid-tread-quantizer" class="nav-link" data-scroll-target="#bipolar-mid-tread-quantizer"><span class="header-section-number">2.38</span> Bipolar Mid-Tread Quantizer</a></li>
+  <li><a href="#unipolar-quantizer" id="toc-unipolar-quantizer" class="nav-link" data-scroll-target="#unipolar-quantizer"><span class="header-section-number">2.39</span> Unipolar Quantizer</a></li>
+  <li><a href="#effect-of-quantization-error-on-signal" id="toc-effect-of-quantization-error-on-signal" class="nav-link" data-scroll-target="#effect-of-quantization-error-on-signal"><span class="header-section-number">2.40</span> Effect of Quantization Error on Signal</a></li>
+  <li><a href="#ramp-input" id="toc-ramp-input" class="nav-link" data-scroll-target="#ramp-input"><span class="header-section-number">2.41</span> Ramp Input</a></li>
+  <li><a href="#sine-wave-input" id="toc-sine-wave-input" class="nav-link" data-scroll-target="#sine-wave-input"><span class="header-section-number">2.42</span> Sine Wave Input</a></li>
+  <li><a href="#quantization-error-histogram" id="toc-quantization-error-histogram" class="nav-link" data-scroll-target="#quantization-error-histogram"><span class="header-section-number">2.43</span> Quantization Error Histogram</a></li>
+  <li><a href="#statistical-model-of-quantization-error" id="toc-statistical-model-of-quantization-error" class="nav-link" data-scroll-target="#statistical-model-of-quantization-error"><span class="header-section-number">2.44</span> Statistical Model of Quantization Error</a></li>
+  <li><a href="#dynamic-range-definition-ideal-adc" id="toc-dynamic-range-definition-ideal-adc" class="nav-link" data-scroll-target="#dynamic-range-definition-ideal-adc"><span class="header-section-number">2.45</span> Dynamic Range Definition ideal ADC</a></li>
+  <li><a href="#dynamic-rang-ideal-adc" id="toc-dynamic-rang-ideal-adc" class="nav-link" data-scroll-target="#dynamic-rang-ideal-adc"><span class="header-section-number">2.46</span> Dynamic Rang ideal ADC</a></li>
+  <li><a href="#ideal-dac" id="toc-ideal-dac" class="nav-link" data-scroll-target="#ideal-dac"><span class="header-section-number">2.47</span> Ideal DAC</a></li>
+  <li><a href="#static-nonidealities" id="toc-static-nonidealities" class="nav-link" data-scroll-target="#static-nonidealities"><span class="header-section-number">2.48</span> Static Nonidealities</a></li>
+  <li><a href="#offset-and-gain-error" id="toc-offset-and-gain-error" class="nav-link" data-scroll-target="#offset-and-gain-error"><span class="header-section-number">2.49</span> Offset and Gain Error</a></li>
+  <li><a href="#adc-offset-and-gain-error" id="toc-adc-offset-and-gain-error" class="nav-link" data-scroll-target="#adc-offset-and-gain-error"><span class="header-section-number">2.50</span> ADC Offset and Gain Error</a></li>
+  <li><a href="#comments-on-offset-and-gain-errors" id="toc-comments-on-offset-and-gain-errors" class="nav-link" data-scroll-target="#comments-on-offset-and-gain-errors"><span class="header-section-number">2.51</span> Comments on Offset and Gain Errors</a></li>
+  <li><a href="#rauschen-noise" id="toc-rauschen-noise" class="nav-link" data-scroll-target="#rauschen-noise"><span class="header-section-number">2.52</span> Rauschen / Noise</a></li>
+  <li><a href="#lti-systeme-mit-stochastischer-erregung-1" id="toc-lti-systeme-mit-stochastischer-erregung-1" class="nav-link" data-scroll-target="#lti-systeme-mit-stochastischer-erregung-1"><span class="header-section-number">2.53</span> LTI Systeme mit stochastischer Erregung (1)</a></li>
+  <li><a href="#totales-integriertes-rauschen" id="toc-totales-integriertes-rauschen" class="nav-link" data-scroll-target="#totales-integriertes-rauschen"><span class="header-section-number">2.54</span> Totales integriertes Rauschen</a></li>
+  <li><a href="#beispiel-rc-tiefpassfilter-1" id="toc-beispiel-rc-tiefpassfilter-1" class="nav-link" data-scroll-target="#beispiel-rc-tiefpassfilter-1"><span class="header-section-number">2.55</span> Beispiel: RC Tiefpassfilter (1)</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/lec-02-signals.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/lec-01-intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../class/lec-02-signals.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="einfache-signale" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="einfache-signale"><span class="header-section-number">2.1</span> Einfache Signale</h2>
+<ul>
+<li>Signale repräsentieren Informationen</li>
+<li>Ein Beispiel: Temperatur eines Backofens</li>
+<li>Mögliche Signale:
+<ul>
+<li>Temperatur des Backofens</li>
+<li>Temperatur und Feuchtigkeit des Kuchenteigs</li>
+<li>Geschmack/Qualität des Kuchens</li>
+</ul></li>
+</ul>
+<p><img src="../images/lec-02-signals_0.png" class="img-fluid"></p>
+</section>
+<section id="signaltypen" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="signaltypen"><span class="header-section-number">2.2</span> Signaltypen</h2>
+</section>
+<section id="konstantes-signal" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="konstantes-signal"><span class="header-section-number">2.3</span> Konstantes Signal</h2>
+<p>Ein konstantes Signal für ein elektronisches System korrespondiert nicht mit der mathematischen Definition einer Konstanten.</p>
+<p>Versorgungsspannungen und Referenzsignale elektronischer Schaltungen sind immer fehlerbehaftet (statisch und/oder statistisch).</p>
+<p>Toleranzen/Fehlergrenzen</p>
+</section>
+<section id="nominal-und-worst-case" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="nominal-und-worst-case"><span class="header-section-number">2.4</span> Nominal und Worst Case</h2>
+<p>Wir definieren <em>nominal</em> als das Ausgangssignal, welches wir bei einem spezifizierten Eingangssignal erwarten; E/A-Verhalten.</p>
+<p>Worst case high und worst case low definieren Signale, die über und unter dem nominalen Signal liegen.</p>
+</section>
+<section id="zeitkontinuierliches-signal" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="zeitkontinuierliches-signal"><span class="header-section-number">2.5</span> Zeitkontinuierliches Signal</h2>
+</section>
+<section id="sprungsignale" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sprungsignale"><span class="header-section-number">2.6</span> Sprungsignale</h2>
+<p>Sprung und Impuls sind plötzliche Amplitudenänderungen.</p>
+</section>
+<section id="sprungfunktionen" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="sprungfunktionen"><span class="header-section-number">2.7</span> Sprungfunktionen</h2>
+<p>Sprungfunktion</p>
+<p>Rechteckfunktion</p>
+<p>Signumfunktion</p>
+<p>Dreieckfunktion</p>
+</section>
+<section id="zeitdiskrete-signale" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="zeitdiskrete-signale"><span class="header-section-number">2.8</span> Zeitdiskrete Signale</h2>
+</section>
+<section id="analog-and-digital-signals" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="analog-and-digital-signals"><span class="header-section-number">2.9</span> Analog and Digital Signals</h2>
+<p>After digitization, the continuous analog signal becomes a set of discrete valueAnalog electrical signals are continuous in time - most often voltage or current. (Charge can also be utilized as a signal conveyor.)</p>
+<p>s, typically separated by fixed time intervals.</p>
+<p><img src="../images/lec-02-signals_9.jpg" class="img-fluid"></p>
+</section>
+<section id="the-data-conversion-problem" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="the-data-conversion-problem"><span class="header-section-number">2.10</span> The Data Conversion Problem</h2>
+<ul>
+<li>Real world signals
+<ul>
+<li>Continuous time, continuous amplitude</li>
+</ul></li>
+<li>Digital abstraction
+<ul>
+<li>Discrete time, discrete amplitude</li>
+</ul></li>
+<li>Two problems
+<ul>
+<li>How to discretize in time and amplitude
+<ul>
+<li>A/D conversion (ADC)</li>
+</ul></li>
+<li>How to “un-discretize” in time and amplitude
+<ul>
+<li>D/A conversion (DAC)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.11</span> Overview</h2>
+<ul>
+<li>We’ll first look at these building blocks from a functional, “black box” perspective.
+<ul>
+<li>Refine later and look at implementations</li>
+</ul></li>
+</ul>
+</section>
+<section id="analog-to-digital-ad-conversion" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="analog-to-digital-ad-conversion"><span class="header-section-number">2.12</span> Analog-to-Digital (A/D) Conversion</h2>
+<p>Analog input voltage vx is converted to an n-bit number.</p>
+<p>For a four-bit converter, vx ranging between 0 and VFS yields a digital output code between 0000 and 1111.</p>
+<p>The output is an approximation of the input due to the limited resolution of the n-bit output. Error is expressed as:</p>
+<p><img src="../images/lec-02-signals_10.jpg" class="img-fluid"></p>
+</section>
+<section id="digital-to-analog-da-conversion" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="digital-to-analog-da-conversion"><span class="header-section-number">2.13</span> Digital-to-Analog (D/A) Conversion</h2>
+<p>For an n-bit D/A converter, the output voltage is expressed as:</p>
+<p>The smallest possible voltage change is known as the least significant bit or LSB.</p>
+<p><img src="../images/lec-02-signals_11.jpg" class="img-fluid"></p>
+</section>
+<section id="uniform-sampling-and-quantization" class="level2" data-number="2.14">
+<h2 data-number="2.14" class="anchored" data-anchor-id="uniform-sampling-and-quantization"><span class="header-section-number">2.14</span> Uniform Sampling and Quantization</h2>
+<ul>
+<li>Most common way of performing A/D conversion
+<ul>
+<li>Sample signal uniformly in time</li>
+<li>Quantize signal uniformly in amplitude</li>
+</ul></li>
+<li>Key questions
+<ul>
+<li>How much “noise” is added due to amplitude quantization?</li>
+<li>How can we reconstruct the signal back into analog form?</li>
+<li>How fast do we need to sample?
+<ul>
+<li>Must avoid “aliasing”</li>
+<li><a href="https://en.wikipedia.org/wiki/Aliasing" class="uri">https://en.wikipedia.org/wiki/Aliasing</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="aliasing-1" class="level2" data-number="2.15">
+<h2 data-number="2.15" class="anchored" data-anchor-id="aliasing-1"><span class="header-section-number">2.15</span> Aliasing (1)</h2>
+</section>
+<section id="aliasing-2" class="level2" data-number="2.16">
+<h2 data-number="2.16" class="anchored" data-anchor-id="aliasing-2"><span class="header-section-number">2.16</span> Aliasing (2)</h2>
+<p>Source: EE315a, B. Murmann, Stanford Univ.</p>
+</section>
+<section id="aliasing-3" class="level2" data-number="2.17">
+<h2 data-number="2.17" class="anchored" data-anchor-id="aliasing-3"><span class="header-section-number">2.17</span> Aliasing (3)</h2>
+<p>Source: EE315a, B. Murmann, Stanford Univ.</p>
+</section>
+<section id="consequence" class="level2" data-number="2.18">
+<h2 data-number="2.18" class="anchored" data-anchor-id="consequence"><span class="header-section-number">2.18</span> Consequence</h2>
+<p>The frequencies fsig and N·fs ± fsig (N integer), are indistinguishable in the discrete time domain.</p>
+</section>
+<section id="sampling-theorem" class="level2" data-number="2.19">
+<h2 data-number="2.19" class="anchored" data-anchor-id="sampling-theorem"><span class="header-section-number">2.19</span> Sampling Theorem</h2>
+<ul>
+<li>In order to prevent aliasing, we need</li>
+<li>The sampling rate fs=2·fsig,max is called the <em>Nyquist rate</em></li>
+<li>Two possibilities
+<ul>
+<li>Sample fast enough to cover all spectral components, including “parasitic” ones outside band of interest</li>
+<li>Limit fsig,max through filtering</li>
+</ul></li>
+</ul>
+</section>
+<section id="ideal-brick-wall-anti-alias-filter-aaf" class="level2" data-number="2.20">
+<h2 data-number="2.20" class="anchored" data-anchor-id="ideal-brick-wall-anti-alias-filter-aaf"><span class="header-section-number">2.20</span> Ideal (Brick Wall) Anti-Alias Filter (AAF)</h2>
+</section>
+<section id="practical-anti-alias-filter-aaf" class="level2" data-number="2.21">
+<h2 data-number="2.21" class="anchored" data-anchor-id="practical-anti-alias-filter-aaf"><span class="header-section-number">2.21</span> Practical Anti-Alias Filter (AAF)</h2>
+<p>Need to sample faster than Nyquist rate to get good attenuation=&gt; <em>Oversampling</em></p>
+</section>
+<section id="how-much-oversampling" class="level2" data-number="2.22">
+<h2 data-number="2.22" class="anchored" data-anchor-id="how-much-oversampling"><span class="header-section-number">2.22</span> How much Oversampling?</h2>
+<p>Can tradeoff sampling speed against filter order.</p>
+<p>In high speed converters, making fs/fsig,max&gt;10 is usually impossible or too costly.</p>
+<p>Means that we need fairly high order filters.</p>
+<p>Ref. “CMOS Integrated ADC and DAC”, v.d. Plassche, 2003</p>
+</section>
+<section id="classes-of-sampling" class="level2" data-number="2.23">
+<h2 data-number="2.23" class="anchored" data-anchor-id="classes-of-sampling"><span class="header-section-number">2.23</span> Classes of Sampling</h2>
+</section>
+<section id="the-reconstruction-problem" class="level2" data-number="2.24">
+<h2 data-number="2.24" class="anchored" data-anchor-id="the-reconstruction-problem"><span class="header-section-number">2.24</span> The Reconstruction Problem</h2>
+</section>
+<section id="zero-order-hold-reconstruction" class="level2" data-number="2.25">
+<h2 data-number="2.25" class="anchored" data-anchor-id="zero-order-hold-reconstruction"><span class="header-section-number">2.25</span> Zero-Order Hold Reconstruction</h2>
+<ul>
+<li>The most practical way of reconstructing the continuous time signal is to simply <em>hold</em> the discrete time values
+<ul>
+<li>Either for full period Ts or a fraction thereof</li>
+<li>Other schemes exist, e.g.&nbsp;<em>partial-order hold</em></li>
+</ul></li>
+<li>What does this do to the signal spectrum?</li>
+<li>We’ll analyze this in two steps
+<ul>
+<li>First look at infinitely narrow reconstruction pulses</li>
+</ul></li>
+</ul>
+</section>
+<section id="dirac-pulses" class="level2" data-number="2.26">
+<h2 data-number="2.26" class="anchored" data-anchor-id="dirac-pulses"><span class="header-section-number">2.26</span> Dirac Pulses</h2>
+</section>
+<section id="spectrum" class="level2" data-number="2.27">
+<h2 data-number="2.27" class="anchored" data-anchor-id="spectrum"><span class="header-section-number">2.27</span> Spectrum</h2>
+<p>Spectrum of Dirac signal contains replicas of Vin(f) at integer multiples of the sampling frequency.</p>
+</section>
+<section id="finite-hold-pulse" class="level2" data-number="2.28">
+<h2 data-number="2.28" class="anchored" data-anchor-id="finite-hold-pulse"><span class="header-section-number">2.28</span> Finite Hold Pulse</h2>
+<p>Amplitude Envelope</p>
+</section>
+<section id="example" class="level2" data-number="2.29">
+<h2 data-number="2.29" class="anchored" data-anchor-id="example"><span class="header-section-number">2.29</span> Example</h2>
+<p><strong>Spectrum of Continuous Time Pulse Train</strong> <strong>(Arbitrary Example)</strong></p>
+<p><strong>ZOH Transfer Function</strong> **(“** <strong>Sinc</strong> __ Distortion”)__</p>
+<p><strong>ZOH Output,</strong> <strong>Spectrum of Staircase Approximation</strong></p>
+<p>original spectrum</p>
+</section>
+<section id="reconstruction-filter" class="level2" data-number="2.30">
+<h2 data-number="2.30" class="anchored" data-anchor-id="reconstruction-filter"><span class="header-section-number">2.30</span> Reconstruction Filter</h2>
+<ul>
+<li>Also called smoothing filter</li>
+<li>Same situation as withanti-alias filter
+<ul>
+<li>A brick wall filter would be nice</li>
+<li>Oversampling helps reduce filter order</li>
+</ul></li>
+</ul>
+</section>
+<section id="summary" class="level2" data-number="2.31">
+<h2 data-number="2.31" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.31</span> Summary</h2>
+</section>
+<section id="recap" class="level2" data-number="2.32">
+<h2 data-number="2.32" class="anchored" data-anchor-id="recap"><span class="header-section-number">2.32</span> Recap</h2>
+<ul>
+<li>Next, look at
+<ul>
+<li>Transfer functions of quantizer and DAC</li>
+<li>Impact of quantization error</li>
+</ul></li>
+</ul>
+<p><img src="../images/lec-02-signals_18.png" class="img-fluid"></p>
+<p><img src="../images/lec-02-signals_19.png" class="img-fluid"></p>
+<p><img src="../images/lec-02-signals_20.png" class="img-fluid"></p>
+<p><img src="../images/lec-02-signals_21.png" class="img-fluid"></p>
+<p><span style="color:#000000">Transfer Function</span></p>
+<p><span style="color:#000000">V</span> <span style="color:#000000">q</span> <span style="color:#000000">(quantized output)</span></p>
+</section>
+<section id="quantization-of-an-analog-signal" class="level2" data-number="2.33">
+<h2 data-number="2.33" class="anchored" data-anchor-id="quantization-of-an-analog-signal"><span class="header-section-number">2.33</span> Quantization of an Analog Signal</h2>
+<ul>
+<li>Quantization step D</li>
+<li>Quantization error has sawtooth shape
+<ul>
+<li>Bounded by</li>
+</ul></li>
+<li>Ideally
+<ul>
+<li>Infinite input range and infinite number of quantization levels</li>
+</ul></li>
+<li>In practice
+<ul>
+<li>Finite input range and finite number of quantization levels</li>
+<li>Output is a digital word (not an analog voltage)</li>
+</ul></li>
+</ul>
+</section>
+<section id="conceptual-model-of-a-quantizer" class="level2" data-number="2.34">
+<h2 data-number="2.34" class="anchored" data-anchor-id="conceptual-model-of-a-quantizer"><span class="header-section-number">2.34</span> Conceptual Model of a Quantizer</h2>
+<ul>
+<li>Encoding block determines how quantized levels are mapped into digital codes</li>
+<li>Note that this model is not meant to represent an actual hardware implementation
+<ul>
+<li>Its purpose is to show that quantization and encoding are conceptually separate operations</li>
+<li>Changing the encoding of a quantizer has no interesting implications on its function or performance</li>
+</ul></li>
+</ul>
+</section>
+<section id="encoding-example-for-a-b-bit-quantizer" class="level2" data-number="2.35">
+<h2 data-number="2.35" class="anchored" data-anchor-id="encoding-example-for-a-b-bit-quantizer"><span class="header-section-number">2.35</span> Encoding Example for a B-Bit Quantizer</h2>
+<ul>
+<li>Example: B=3
+<ul>
+<li>23=8 distinct output codes</li>
+<li>Diagram on the left shows “straight-binary encoding”</li>
+<li>See e.g.&nbsp;Analog Devices “MT-009: Data Converter Codes” for other encoding schemes</li>
+</ul></li>
+<li>Quantization error grows out of bounds beyond code boundaries</li>
+<li>We define the full scale range (FSR) as the maximum input range that satisfiesImplies that</li>
+</ul>
+</section>
+<section id="nomenclature" class="level2" data-number="2.36">
+<h2 data-number="2.36" class="anchored" data-anchor-id="nomenclature"><span class="header-section-number">2.36</span> Nomenclature</h2>
+<p><img src="../images/lec-02-signals_25.png" class="img-fluid"></p>
+<ul>
+<li><strong>Overloading</strong> - Occurs when an input outside the FSR is applied</li>
+<li><strong>Transition level</strong> – Input value at the transition between two codes. By standard convention, the transition level T(k) lies between codes k-1 and k</li>
+<li><strong>Code width</strong> – The difference between adjacent transition levels. By standard convention, the code width W(k)=T(k+1)-T(k)
+<ul>
+<li>Note that the code width of the first and last code (000 and 111 on previous slide) is undefined</li>
+</ul></li>
+<li><strong>LSB size (or width)</strong> – synonymous with code width D</li>
+</ul>
+<p>[IEEE Standard 1241-2000]</p>
+</section>
+<section id="bipolar-mid-rise-quantizer" class="level2" data-number="2.37">
+<h2 data-number="2.37" class="anchored" data-anchor-id="bipolar-mid-rise-quantizer"><span class="header-section-number">2.37</span> Bipolar Mid-Rise Quantizer</h2>
+</section>
+<section id="bipolar-mid-tread-quantizer" class="level2" data-number="2.38">
+<h2 data-number="2.38" class="anchored" data-anchor-id="bipolar-mid-tread-quantizer"><span class="header-section-number">2.38</span> Bipolar Mid-Tread Quantizer</h2>
+</section>
+<section id="unipolar-quantizer" class="level2" data-number="2.39">
+<h2 data-number="2.39" class="anchored" data-anchor-id="unipolar-quantizer"><span class="header-section-number">2.39</span> Unipolar Quantizer</h2>
+<ul>
+<li>Usually define origin where first code and straight line fit intersect
+<ul>
+<li>Otherwise, there would be a systematic offset</li>
+</ul></li>
+<li>Usable range is reduced by D/2 below zero</li>
+</ul>
+</section>
+<section id="effect-of-quantization-error-on-signal" class="level2" data-number="2.40">
+<h2 data-number="2.40" class="anchored" data-anchor-id="effect-of-quantization-error-on-signal"><span class="header-section-number">2.40</span> Effect of Quantization Error on Signal</h2>
+<ul>
+<li>Two aspects
+<ul>
+<li>How much noise power does quantization add to samples?</li>
+<li>How is this noise power distributed in frequency?</li>
+</ul></li>
+<li>Quantization error is a deterministic function of the signal
+<ul>
+<li>Should be able to answer above questions using a deterministic analysis.</li>
+<li>But, unfortunately, such an analysis strongly depends on the chosen signal and can be very complex.</li>
+</ul></li>
+<li>Strategy
+<ul>
+<li>Build basic intuition using simple deterministic signals.</li>
+<li>Next, abandon idea of deterministic representation and revert to a “general” statistical model (to be used with caution).</li>
+</ul></li>
+</ul>
+</section>
+<section id="ramp-input" class="level2" data-number="2.41">
+<h2 data-number="2.41" class="anchored" data-anchor-id="ramp-input"><span class="header-section-number">2.41</span> Ramp Input</h2>
+<p>Applying a ramp signal (periodic sawtooth) at the input of the quantizer gives the following time domain waveform for eq</p>
+<p>What is the average power of this waveform?</p>
+<p>Integrate over one period</p>
+</section>
+<section id="sine-wave-input" class="level2" data-number="2.42">
+<h2 data-number="2.42" class="anchored" data-anchor-id="sine-wave-input"><span class="header-section-number">2.42</span> Sine Wave Input</h2>
+<p>Integration is not straightforward…</p>
+</section>
+<section id="quantization-error-histogram" class="level2" data-number="2.43">
+<h2 data-number="2.43" class="anchored" data-anchor-id="quantization-error-histogram"><span class="header-section-number">2.43</span> Quantization Error Histogram</h2>
+<p>Sinusoidal input signal with fsig=101 Hz, sampled at fs=1000 Hz</p>
+<p>8-bit quantizer</p>
+<p>Distribution is “almost” uniform</p>
+<p>Can approximate average power by integrating uniform distribution</p>
+</section>
+<section id="statistical-model-of-quantization-error" class="level2" data-number="2.44">
+<h2 data-number="2.44" class="anchored" data-anchor-id="statistical-model-of-quantization-error"><span class="header-section-number">2.44</span> Statistical Model of Quantization Error</h2>
+<ul>
+<li>Assumption: eq(x) has a uniform probability density</li>
+<li>This approximation holds reasonably well in practice when
+<ul>
+<li>Signal spans large number of quantization steps</li>
+<li>Signal is “sufficiently active”</li>
+<li>Quantizer does not overload</li>
+</ul></li>
+</ul>
+</section>
+<section id="dynamic-range-definition-ideal-adc" class="level2" data-number="2.45">
+<h2 data-number="2.45" class="anchored" data-anchor-id="dynamic-range-definition-ideal-adc"><span class="header-section-number">2.45</span> Dynamic Range Definition ideal ADC</h2>
+</section>
+<section id="dynamic-rang-ideal-adc" class="level2" data-number="2.46">
+<h2 data-number="2.46" class="anchored" data-anchor-id="dynamic-rang-ideal-adc"><span class="header-section-number">2.46</span> Dynamic Rang ideal ADC</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>B (Number of Bits)</strong></th>
+<th style="text-align: center;"><strong>SQNR</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">50 dB</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">74 dB</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">98 dB</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">122 dB</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ideal-dac" class="level2" data-number="2.47">
+<h2 data-number="2.47" class="anchored" data-anchor-id="ideal-dac"><span class="header-section-number">2.47</span> Ideal DAC</h2>
+<ul>
+<li>Essentially a digitally controlled voltage, current or charge source
+<ul>
+<li>Example below is for unipolar DAC</li>
+</ul></li>
+<li>Ideal DAC does not introduce quantization error!</li>
+</ul>
+</section>
+<section id="static-nonidealities" class="level2" data-number="2.48">
+<h2 data-number="2.48" class="anchored" data-anchor-id="static-nonidealities"><span class="header-section-number">2.48</span> Static Nonidealities</h2>
+<ul>
+<li>Static deviations of transfer characteristics from ideality
+<ul>
+<li>Offset</li>
+<li>Gain error</li>
+<li>Differential Nonlinearity (DNL)</li>
+<li>Integral Nonlinearity (INL)</li>
+</ul></li>
+<li>Useful references
+<ul>
+<li>“The Importance of Data Converter Static Specifications”, Analog Devices MT-010</li>
+<li>“Understanding Data Converters”, Texas Instruments Application Report SLAA013, 1995</li>
+</ul></li>
+</ul>
+</section>
+<section id="offset-and-gain-error" class="level2" data-number="2.49">
+<h2 data-number="2.49" class="anchored" data-anchor-id="offset-and-gain-error"><span class="header-section-number">2.49</span> Offset and Gain Error</h2>
+<ul>
+<li>Conceptually simple, but lots of (uninteresting) subtleties in how exactly these errors should be defined
+<ul>
+<li>Unipolar vs.&nbsp;bipolar, endpoint vs.&nbsp;midpoint specification</li>
+<li>Definition in presence of nonlinearities</li>
+</ul></li>
+<li>General idea (neglecting staircase nature of transfer functions):</li>
+</ul>
+</section>
+<section id="adc-offset-and-gain-error" class="level2" data-number="2.50">
+<h2 data-number="2.50" class="anchored" data-anchor-id="adc-offset-and-gain-error"><span class="header-section-number">2.50</span> ADC Offset and Gain Error</h2>
+<ul>
+<li>Definitions based on bottom and top endpoints of transfer characteristic
+<ul>
+<li>½ LSB before first transition and ½ LSB after last transition</li>
+<li>Offset is the deviation of bottom endpoint from its ideal location</li>
+<li>Gain error is the deviation of top endpoint from its ideal location with offset removed</li>
+</ul></li>
+<li>Both quantities are measured in LSB or as percentage of full-scale range</li>
+</ul>
+<p>Same idea, except that endpoints are directly defined by analog output values at minimum and maximum digital input</p>
+<p>Also note that errors are specified along the vertical axis</p>
+</section>
+<section id="comments-on-offset-and-gain-errors" class="level2" data-number="2.51">
+<h2 data-number="2.51" class="anchored" data-anchor-id="comments-on-offset-and-gain-errors"><span class="header-section-number">2.51</span> Comments on Offset and Gain Errors</h2>
+<ul>
+<li>Definitions on the previous slides are the ones typically used in industry
+<ul>
+<li>IEEE Standard suggest somewhat more sophisticated definitions based on least square curve fitting
+<ul>
+<li>Technically more suitable metric when the transfer characteristics are significantly non-uniform or nonlinear</li>
+</ul></li>
+</ul></li>
+<li>Generally, it is non-trivial to build a converter with very good gain/offset specifications
+<ul>
+<li>Nevertheless, since gain and offset affect all codes uniformly, these errors tend to be easy to correct
+<ul>
+<li>E.g. using a digital pre- or post-processing operation</li>
+</ul></li>
+<li>Also, many applications are insensitive to a certain level of gain and offset errors
+<ul>
+<li>E.g. audio signals, communication-type signals, …</li>
+</ul></li>
+</ul></li>
+<li>More interesting aspect: linearity
+<ul>
+<li>DNL and INL</li>
+</ul></li>
+</ul>
+</section>
+<section id="rauschen-noise" class="level2" data-number="2.52">
+<h2 data-number="2.52" class="anchored" data-anchor-id="rauschen-noise"><span class="header-section-number">2.52</span> Rauschen / Noise</h2>
+<p>Rauschen ist ein spezieller Signaltyp (statistischer Prozess) und beinhaltet keine Information, stört aber die Information.</p>
+<p><img src="../images/lec-02-signals_32.png" class="img-fluid"></p>
+<p><img src="../images/lec-02-signals_33.png" class="img-fluid"></p>
+<p><img src="../images/lec-02-signals_34.png" class="img-fluid"></p>
+<p><img src="../images/lec-02-signals_35.png" class="img-fluid"></p>
+</section>
+<section id="lti-systeme-mit-stochastischer-erregung-1" class="level2" data-number="2.53">
+<h2 data-number="2.53" class="anchored" data-anchor-id="lti-systeme-mit-stochastischer-erregung-1"><span class="header-section-number">2.53</span> LTI Systeme mit stochastischer Erregung (1)</h2>
+<p>Wahrscheinlichkeitsdichtefunktion</p>
+<p>Erwartungswert (Mittelwert, Varianz)</p>
+<p>Autokorrelationsfunktion</p>
+<p>Ref. Systemtheorie, Fliege, 1991</p>
+<p>Parseval’s Theorem</p>
+<p>Wiener-Chintchin Theorem (Autokorrelation)</p>
+<p>Mittlerer Erwartungswert</p>
+<p>Wiener-Lee Relation (Autokorrelation)</p>
+</section>
+<section id="totales-integriertes-rauschen" class="level2" data-number="2.54">
+<h2 data-number="2.54" class="anchored" data-anchor-id="totales-integriertes-rauschen"><span class="header-section-number">2.54</span> Totales integriertes Rauschen</h2>
+<p>Vom Leistungsdichtespektrum (PSD) zum integrierten Rauschen</p>
+<p>Signal-zu-Rausch-Verhältnis (SNR)</p>
+</section>
+<section id="beispiel-rc-tiefpassfilter-1" class="level2" data-number="2.55">
+<h2 data-number="2.55" class="anchored" data-anchor-id="beispiel-rc-tiefpassfilter-1"><span class="header-section-number">2.55</span> Beispiel: RC Tiefpassfilter (1)</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/elk\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../class/lec-01-intro.html" class="pagination-link" aria-label="Einleitung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../class/lec-03-pn_diode.html" class="pagination-link" aria-label="Diode \- Modelle und Schaltungen">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diode - Modelle und Schaltungen</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Elektronik (ELK), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/class/lec-02-signals.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
