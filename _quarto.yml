@@ -5,7 +5,7 @@ project:
 lang: de
 
 book:
-  title: "Elektronik"
+  title: "M 5.3 Elektronik (ELK)"
   author:
     - name: Mirco Meiners
       orcid: 0000-0002-9709-4191
@@ -27,7 +27,7 @@ book:
 
   page-footer:
     left: |
-      Elektronik (ELK), M. Meiners, HSB.
+      M 5.3 Elektronik (ELK), M. Meiners, HSB.
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 #  cover-image: images/hsb-logo.png
@@ -44,28 +44,30 @@ book:
     - part: Seminar
       chapters:
         - class/lec-01-intro.qmd
-        - class/lec-02-signals.qmd
-        - class/lec-03-pn_diode.qmd
-        - class/references.qmd
-    
+      #  - class/lec-02-signals.qmd
+      #  - class/lec-03-pn_diode.qmd
+          
     - part: Labor
       chapters:
         - lab/01_Activity.qmd
         - lab/02_Activity.qmd
         - lab/03_Activity.qmd
         - lab/04_Activity.qmd
-#        - lab/05_dega_Activity.ipynb
-        - lab/06_TranThermo_TZ.qmd
-          
+        # - lab/05_dega_Activity.ipynb
+        # - lab/06_TranThermo_TZ.qmd
+
+    - references.qmd
+       
 bibliography: _bibliography/references.bib
 
 format:
   html:
     theme: flatly
+    default-image-extension: svg
   pdf:
-    documentclass: scrbook # scrreptrt
-#    lof: true
-#    lot: true
+    documentclass: scrbook 
+    # lof: true
+    # lot: true
     toc: true    
     geometry:
       - top=30mm
@@ -75,13 +77,17 @@ format:
       - linktoc=all
     colorlinks: true
     linkcolor: "blue"
-    biblio-style: ieee
-    #    keep-tex: true
+    biblio-style: "ieee"
+    highlight-style: "github"
+    mainfont: "Calibri"
+    # keep-tex: true
+    # default-image-extension: tex
     output-file: elk
   epub:
     theme: flatly
+    default-image-extension: svg
     output-file: elk
-  
+
 execute:
   freeze: auto
 

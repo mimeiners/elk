@@ -1,0 +1,7 @@
+# Einleitung
+Im Rahmen des Labors für Informationselektronik im Studiengang Elektrotechnik und Informatik bei Prof. Dr.-Ing. Mirco Meiners wurde eine Thermometerschaltung in KiCad simuliert, und im weiteren Verlauf aufgebaut und näher untersucht. Zu Grunde lag die ursrprüngliche Schaltung des Transistor-Thermometers von Prof. Dr.-Ing. Peter Baumann. 
+
+![Transistor-Thermometer-Schaltung](../../figures/intro/trth.png){#fig-toplvl_view}
+
+Die Funktionsweise kann im seinem Buch *Sensorschaltungen-Simulation mit PSpice*  detailliert nachgelesen werden. 
+

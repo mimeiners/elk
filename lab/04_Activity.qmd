@@ -45,7 +45,7 @@ entspricht.
 
 ![BS170 Spezifikation.](../images/Activity_23_Fig_01a.png)
 
-![Anschlussdiagramm nMOS-Messung](../images/Activity_23_Fig_02.png){#fig-23-02}
+![Anschlussdiagramm nMOS-Messung](../images/Activity_23_Fig_02b.png){#fig-23-02}
 
 
 ## Verfahren
@@ -97,7 +97,7 @@ Die selben Messungen können auch mit einem pMOS-Transistor durchgeführt werden
 Polarität der Spannung umgekehrt, so dass die Konfiguration der pMOS-Diode anders sein muss als bei einem nMOS. 
 Die Konfiguration der pMOS-Diode ist in @fig-23-07 dargestellt.
 
-![pMOS Anschlussdiagramm.](../images/Activity_23_Fig_07.png){#fig-23-07}
+![pMOS Anschlussdiagramm.](../images/Activity_23_Fig_07b.png){#fig-23-07}
 
 
 ## Verfahren
