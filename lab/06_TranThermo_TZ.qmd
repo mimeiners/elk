@@ -1,1 +1,2 @@
-{{< include ./TranThermo/index.qmd >}}
+# Transistor-Thermometer
+
