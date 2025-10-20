@@ -74,7 +74,7 @@ V_D &= IN_2
 
 ![Anschlussplan für Dioden IV-Kurven](../images/Activity_19_Fig_04a.png){#fig-19-04}
 
-![Anschlussdiagramm der Messplatine ](../images/Activity_19_Fig_04b.svg){#fig-23-07}
+![Anschlussdiagramm der Messplatine ](../images/Activity_19_Fig_04b.svg)
 
 Zur Messung der Strom- und Spannungseigenschaften einer Siliziumdiode sollte der OUT1-Generator als 1 kHz-Dreieckssignal
 mit einer maximalen Amplitude von 1 V und einer minimalen Amplitude von 0 V konfiguriert werden. Für die Messung der
