@@ -36,7 +36,7 @@ book:
   repo-url: https://github.com/mimeiners/elk/
   repo-branch: main
   repo-actions: [edit, issue]
-  downloads: [pdf,epub]
+  downloads: [pdf, epub]
     
   chapters:
     - index.qmd
@@ -55,7 +55,9 @@ book:
         - lab/04_Activity.qmd
         # - lab/05_dega_Activity.ipynb
         # - lab/06_TranThermo_TZ.qmd
-
+    - part: Transistor-Thermometer
+      chapters:
+        - lab/TranThermo/index.qmd
     - references.qmd
        
 bibliography: _bibliography/references.bib
@@ -65,28 +67,28 @@ format:
     theme: flatly
     default-image-extension: svg
   pdf:
-    documentclass: scrbook 
-    # lof: true
-    # lot: true
-    toc: true    
-    geometry:
-      - top=30mm
-      - left=20mm
-      - heightrounded
-    hyperrefoptions:
-      - linktoc=all
-    colorlinks: true
-    linkcolor: "blue"
-    biblio-style: "ieee"
-    highlight-style: "github"
-    mainfont: "Calibri"
-    # keep-tex: true
-    # default-image-extension: tex
-    output-file: elk
+   documentclass: scrbook 
+   # lof: true
+   # lot: true
+   toc: true    
+   geometry:
+     - top=30mm
+     - left=20mm
+     - heightrounded
+   hyperrefoptions:
+     - linktoc=all
+   colorlinks: true
+   linkcolor: "blue"
+   biblio-style: "ieee"
+   highlight-style: "github"
+   mainfont: "Calibri"
+   # keep-tex: true
+   # default-image-extension: tex
+   output-file: elk
   epub:
-    theme: flatly
-    default-image-extension: svg
-    output-file: elk
+   theme: flatly
+   default-image-extension: svg
+   output-file: elk
 
 execute:
   freeze: auto

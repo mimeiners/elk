@@ -22,7 +22,7 @@ bibliography: references.bib
 # Einleitung
 Im Rahmen des Labors für Informationselektronik im Studiengang Elektrotechnik und Informatik bei [Prof. Dr.-Ing. Mirco Meiners](https://www.hs-bremen.de/person/mimeiners/)  wurde eine Thermometerschaltung in [KiCad](https://kicad.org) simuliert, und im weiteren Verlauf aufgebaut und näher untersucht. Zu Grunde lag die ursrprüngliche Schaltung des Transistor-Thermometers von Prof. Dr.-Ing. Peter Baumann. 
 
-![Transistor-Thermometer-Schaltung](../../figures/intro/trth.png){width=80% fig-align="left"}
+![Transistor-Thermometer-Schaltung](./figures/intro/trth.png){width=80% fig-align="left"}
 
 Die Funktionsweise kann im seinem Buch *Sensorschaltungen-Simulation mit PSpice* [@baumann]  detailliert nachgelesen werden. Es soll hier nur kurz erwähnt werden, dass über die  verstellbaren Widerstände R~3~ der Nullpunkt und R~5~ die Steigung der Ausgangskennlinie einstellbar ist. 
 Da die Messwertaufnahme des Thermometers automatisiert werden soll, wurde eine Platine entwickelt, die ein ganzes Messsystem beinhaltet. 
@@ -33,10 +33,10 @@ Die Platine des Thermometers ist der Anschaulichkeit halber in vier Bereiche unt
 ## Bereich 1 - Voltageregulation
 Dieser Teil der Platine stellt das Netzteil der Platine dar. Im Folgenden sind das Layout und der Schaltplan zu sehen. 
 
-![Voltageregulation - Layout](../../figures/Platine/vreg-layout.png){width=40% fig-align="left"}
+![Voltageregulation - Layout](./figures/Platine/vreg-layout.png){width=40% fig-align="left"}
 
 
-![Voltageregulation - Schaltplan](../../figures/Platine/vreg-schem.png){width=80% fig-align="left"}
+![Voltageregulation - Schaltplan](./figures/Platine/vreg-schem.png){width=80% fig-align="left"}
 
 
 Gespeist wird die Platine mit einer Eingansgleichspannung im Bereich von 7V-30V. Durch die Brückengleichrichter wird die Versorgungsspannung verpolungssicher bereitgestellt. Die Siebkondensatoren C~5~, C~6~, C~7~ und C~8~ verringern etwaige Spitzen und Störungen, bevor die Spannungsregulatoren IC~1~ und IC~2~ eine Festspannung von +/-5V DC erzeugen und stabilisieren. Nochmals wird die Spannung über die Kondensatoren C~9~, C~10~, C~11~ und C~12~ gesiebt und steht ab dort den restlichen Schaltungen zur Verfügung. Die Dioden D~1~ bis D~4~ stellen einen Verpolungs- und Rückstromschutz für die Spannungsregler dar. Die LEDs mit ihren in Reihe geschalteten Widerständen zeigen an, ob die Spannung zur Verfügung steht. 
@@ -45,10 +45,10 @@ Gespeist wird die Platine mit einer Eingansgleichspannung im Bereich von 7V-30V.
 Auf diesem Teil der Platine befindet sich die eigentliche Thermometerschaltung. Wie bereits erwähnt wurde die Grundidee des Transistor-Thermometers von Prof. Dr.-Ing. Peter Baumann aus seinem Buch *Sensorschaltungen-Simulation mit PSpice* [@baumann] verwendet und für unsere Zwecke erweitert beziehungsweise verändert. Anbei das Layout und der Schaltplan.
 
 
-![TransThermo - Layout](../../figures/Platine/TransThermo-layout.png){width=40% fig-align="left"}
+![TransThermo - Layout](./figures/Platine/TransThermo-layout.png){width=40% fig-align="left"}
 
 
-![TransThermo - Schaltplan](../../figures/Platine/TransThermo-schem.png){width=80% fig-align="left"}
+![TransThermo - Schaltplan](./figures/Platine/TransThermo-schem.png){width=80% fig-align="left"}
 
 Eine wesentliche Änderung ist der Austausch der veränderbaren Widerstände durch digitale Potentiometer. Verwendet werden die Digitalpotis MCP4151 [@MCP] mit den Werten 10kΩ und der 100kΩ. 
 Die wichtigsten Eigenschaften dieser Bauelemente bestehen in der SPI-Programmierschnittstelle und den 257 verschiedenen Widerstandswerten (8Bit), die diese von Zeroscale bis Fullscale annehmen können. Weitere Informationen und Details sind im [Datenblatt](../../datasheets/MCP4151_MIC.pdf) des MCP4151 zu finden.
@@ -57,10 +57,10 @@ Die wichtigsten Eigenschaften dieser Bauelemente bestehen in der SPI-Programmier
 Der dritte Bereich ist einem ESP8266-NodeMCU V3 der firma @NodeMCU vorbehalten. Als Hauptelement wird hier das ESP8266-Modul der Firma @ESP8266 eingesetzt. Dieser dient als Programmierschnittstelle. Über Interpreter oder Programmiersprachen können somit die digitalen Potentiometer und der im Bereich 4 existierende ADC angesprochen werden und deren Daten ausgewertet, verändert und ausgegeben werden. Außerdem sind nicht alle Pins des ESP-Moduls in Benutzung, sodass etwaige andere externe Komponenten angeschlossen werden können. Das Layout und der Schaltplan werden im Folgenden gezeigt.
 
 
-![ESP8266 - Layout](../../figures/Platine/ESP8266-layout.png){width=30% fig-align="left"}
+![ESP8266 - Layout](./figures/Platine/ESP8266-layout.png){width=30% fig-align="left"}
 
 
-![ESP8266 - Schaltplan](../../figures/Platine/ESP8266-schem.png){width=60% fig-align="left"}
+![ESP8266 - Schaltplan](./figures/Platine/ESP8266-schem.png){width=60% fig-align="left"}
 
 Für eine kurze Beschreibung der Pins des NodeMCUs verweise ich auf diese [Kurzanleitung](../../datasheets/nodemcu-v3-anleitung.pdf) 
 
@@ -68,20 +68,20 @@ Für eine kurze Beschreibung der Pins des NodeMCUs verweise ich auf diese [Kurza
 Auf dem letzten Teil der Platine befindet sich das Modul des Analog-Digital-Wandlers, der ADS1115 der Firma @ADS1115. Das Herzstück ist ein 16-Bit ADC mit vier Single-ended oder zwei Differential Inputs, I2C-Interface und programmierbarer Verstärkung. Auch hier verweise ich für detailliertere Informationen auf das [Datenblatt](../../datasheets/ads1115.pdf) des ADS1115. 
 
 
-![ADS1115 - Layout](../../figures/Platine/ADS1115-layout.png){width=20% fig-align="left"}
+![ADS1115 - Layout](./figures/Platine/ADS1115-layout.png){width=20% fig-align="left"}
 
 
-![ADS1115 - Schaltplan](../../figures/Platine/ADS1115-schem.png){width=40% fig-align="left"}
+![ADS1115 - Schaltplan](./figures/Platine/ADS1115-schem.png){width=40% fig-align="left"}
 
 Auf dem Layoout gut zu erkennen sind die oben liegenden analogen Eingänge A~0~ bis A~3~, und im unteren Bereich die Jumper für die Adressvergabe des I2C-Bus.
 
 ## Gesamte Platine
 Hier ist nun die aus den vier Bereichen zusammengesetzte gesamte Platine zu erkennen.
 
-![Gesamtlayout](../../figures/Platine/Layout.png){width=100% fig-align="left"}
+![Gesamtlayout](./figures/Platine/Layout.png){width=100% fig-align="left"}
 
 
-![Gesamte Platine](../../figures/Platine/Platine.png){width=100% fig-align="left"}
+![Gesamte Platine](./figures/Platine/Platine.png){width=100% fig-align="left"}
 
 # Programmierung
 Die gesamte Schaltung des Aufbaus besitzt mehrere Elemente die zu Beginn oder auch während des Betriebs zu initialisieren und zu programmieren sind. Während der ESP8622 die Kommunikation zum Nutzer (Ausgabe der Messwerte, Änderungen der Widerstandswerte, etc) ermöglicht, so ist es auch seine Aufgabe, über verschiedene Protokolle die internen Bauelemente und Module (Digitale Potentiometer und Analog/Digital Wandler) anzusprechen. 

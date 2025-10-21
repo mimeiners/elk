@@ -31,7 +31,7 @@ $\approx$ 5 gesetzt, wobei $R_i$ = 2,2 k $\Omega$ und $R_f$ = 10 k $\Omega$.
 Ein npn-Transistor, der wie in @fig-22-01 gezeigt angeschlossen ist, verhält sich wie eine Diode.
 Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt werden.
 
-![npn-Transistor als Diode.](../images/Activity_22_Fig_01.png){#fig-20-01}
+![npn-Transistor als Diode.](../images/Activity_22_Fig_01.png){#fig-22-01}
 
 
 ::: {.callout-tip}
