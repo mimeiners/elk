@@ -1,0 +1,17 @@
+* Activity_19_1N4001.asc
+R1 IN2 IN1 {R1}
+D1 IN2 0 1N4001
+V1 IN1 N001 PULSE(0 2 0 0.5m 0.5m 1e-10 1m 10)
+Voffs N001 0 -1
+
+* PARAMETER
+.param R1=1k
+
+* BIBLIOTHEK
+.inc elk.lib
+
+* ANALYSE
+.tran 2m
+
+.backanno
+.end

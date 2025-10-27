@@ -1,0 +1,23 @@
+* Transistor-Thermometer
+R4 N002 vc {R4}
+R5 va N002 {R5}
+VE N001 0 5
+VDD vdd 0 10
+VSS 0 vss 10
+XU1 vp N002 vdd vss va tl082
+R1 N001 vc {R1}
+R2 N001 vp {R2}
+R3 vp 0 {R3}
+Q1 vc vc 0 0 Q2N3904
+
+* LIBRARY
+.inc elk.lib
+
+* PARAMETER
+.param R1=10k, R2=22k, R3=4.7k, R4=47k, R5=470k
+
+* ANALYSIS
+.op
+.step temp -20 50 1 
+
+.end
