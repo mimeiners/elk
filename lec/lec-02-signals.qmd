@@ -327,7 +327,7 @@ Can approximate average power by integrating uniform distribution
 ## ADC Offset and Gain Error
 
 -   Definitions based on bottom and top endpoints of transfer characteristic
-    -   ½ LSB before first transition and ½ LSB after last transition
+    -   1/2 LSB before first transition and 1/2 LSB after last transition
     -   Offset is the deviation of bottom endpoint from its ideal location
     -   Gain error is the deviation of top endpoint from its ideal location with offset removed
 -   Both quantities are measured in LSB or as percentage of full-scale range

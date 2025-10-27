@@ -43,9 +43,10 @@ book:
 
     - part: Seminar
       chapters:
-        - class/lec-01-intro.qmd
-      #  - class/lec-02-signals.qmd
-      #  - class/lec-03-pn_diode.qmd
+        - lec/lec-01-intro.qmd
+      #  - lec/lec-02-signals.qmd
+      #  - lec/lec-03-pn_diode.qmd
+      #  - lec/lec-04-n
           
     - part: Labor
       chapters:
