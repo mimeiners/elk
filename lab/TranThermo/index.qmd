@@ -11,13 +11,7 @@ author:
          city: Bremen
          state: Germany
          url: https://www.hs-bremen.de
-  
-
-bibliography: references.bib
 ---
-
-
-
 
 # Einleitung
 Im Rahmen des Labors für Informationselektronik im Studiengang Elektrotechnik und Informatik bei [Prof. Dr.-Ing. Mirco Meiners](https://www.hs-bremen.de/person/mimeiners/)  wurde eine Thermometerschaltung in [KiCad](https://kicad.org) simuliert, und im weiteren Verlauf aufgebaut und näher untersucht. Zu Grunde lag die ursrprüngliche Schaltung des Transistor-Thermometers von Prof. Dr.-Ing. Peter Baumann. 
@@ -89,8 +83,3 @@ Die gesamte Schaltung des Aufbaus besitzt mehrere Elemente die zu Beginn oder au
 ## Einrichtung der Kommunikation
 Die Kommunukation zum ESP8266 erfolgt in MicroPython über Thonny. 
 
-
-# References {.unnumbered}
-
-::: {#refs}
-:::
