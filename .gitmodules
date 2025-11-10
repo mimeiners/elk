@@ -1,0 +1,6 @@
+[submodule "files/meas/micropython-ads1115/ADS1115_mpy"]
+	path = files/meas/micropython-ads1115/ADS1115_mpy
+	url = git@github.com:wollewald/ADS1115_mpy.git
+[submodule "files/meas/arduino-ads1115/ADS1115_WE"]
+	path = files/meas/arduino-ads1115/ADS1115_WE
+	url = git@github.com:wollewald/ADS1115_WE.git
