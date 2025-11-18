@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Der BJT als Diode – M 5.3 Elektronik (ELK)</title>
+<title>6&nbsp; Der BJT als Diode – M 5.3 Elektronik (ELK)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-22e83d4e5eff2a99ccc45532742ac980.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cb7011eeb8faf9e577c51abd71603fb6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/03_Activity.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/03_Activity.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -125,9 +125,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">M 5.3 Elektronik (ELK)</a> 
         <div class="sidebar-tools-main tools-wide">
@@ -181,8 +179,20 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../class/lec-01-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../lec/lec-01-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec-02-signals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec-03-pn_diode.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Diode</span></span></a>
   </div>
 </li>
       </ul>
@@ -199,25 +209,42 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/01_Activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/02_Activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/03_Activity.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/04_Activity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Transistor-Thermometer</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/TranThermo/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Transistor-Thermometer</span></span></a>
   </div>
 </li>
       </ul>
@@ -238,19 +265,19 @@ window.Quarto = {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">4.1</span> Zielsetzung</a></li>
-  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">4.2</span> Materialien</a></li>
-  <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren"><span class="header-section-number">4.3</span> Verfahren</a></li>
-  <li><a href="#iv-kurvenmessungen" id="toc-iv-kurvenmessungen" class="nav-link" data-scroll-target="#iv-kurvenmessungen"><span class="header-section-number">4.4</span> IV-Kurvenmessungen</a></li>
+  <li><a href="#zielsetzung" id="toc-zielsetzung" class="nav-link active" data-scroll-target="#zielsetzung"><span class="header-section-number">6.1</span> Zielsetzung</a></li>
+  <li><a href="#materialien" id="toc-materialien" class="nav-link" data-scroll-target="#materialien"><span class="header-section-number">6.2</span> Materialien</a></li>
+  <li><a href="#verfahren" id="toc-verfahren" class="nav-link" data-scroll-target="#verfahren"><span class="header-section-number">6.3</span> Verfahren</a></li>
+  <li><a href="#iv-kurvenmessungen" id="toc-iv-kurvenmessungen" class="nav-link" data-scroll-target="#iv-kurvenmessungen"><span class="header-section-number">6.4</span> IV-Kurvenmessungen</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lab/03_Activity.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/03_Activity.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/01_Activity.html">Labor</a></li><li class="breadcrumb-item"><a href="../lab/03_Activity.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></h1>
 </div>
 
 
@@ -267,8 +294,8 @@ window.Quarto = {
 </header>
 
 
-<section id="zielsetzung" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">4.1</span> Zielsetzung</h2>
+<section id="zielsetzung" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="zielsetzung"><span class="header-section-number">6.1</span> Zielsetzung</h2>
 <p>Der Zweck dieses Versuchs ist es, die Strom- und Spannungseigenschaften eines als Diode geschalteten Bipolartransistors (Bipolar Junction Transistor, kurz BJT, engl.) zu untersuchen.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -285,8 +312,8 @@ Tipp
 </div>
 </div>
 </section>
-<section id="materialien" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="materialien"><span class="header-section-number">4.2</span> Materialien</h2>
+<section id="materialien" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="materialien"><span class="header-section-number">6.2</span> Materialien</h2>
 <ul>
 <li>Red Pitaya STEMlab</li>
 <li>OP484</li>
@@ -298,14 +325,14 @@ Tipp
 <li>Platine</li>
 <li>Labornetzteil</li>
 </ul>
-<p>Ein npn-Transistor, der wie in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>4.1</span></a> gezeigt angeschlossen ist, verhält sich wie eine Diode. Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt werden.</p>
+<p>Ein npn-Transistor, der wie in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a> gezeigt angeschlossen ist, verhält sich wie eine Diode. Dies kann durch die Verwendung der Oszilloskop- und Signalgenerator-App gezeigt werden.</p>
 <div id="fig-22-01" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-22-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/Activity_22_Fig_01.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-22-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.1: npn-Transistor als Diode.
+Abbildung&nbsp;6.1: npn-Transistor als Diode.
 </figcaption>
 </figure>
 </div>
@@ -319,21 +346,21 @@ Tipp
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Beachten Sie, dass die in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>4.1</span></a> (links) gezeigte Verstärkerschaltung nicht das Hauptthema dieses Versuchs ist. Diese Schaltung wird nur hinzugefügt, um das Signal OUT1 zu verstärken; von hier an können Sie den Punkt -5 <span class="math inline">\(\times
+<p>Beachten Sie, dass die in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a> (links) gezeigte Verstärkerschaltung nicht das Hauptthema dieses Versuchs ist. Diese Schaltung wird nur hinzugefügt, um das Signal OUT1 zu verstärken; von hier an können Sie den Punkt -5 <span class="math inline">\(\times
 V_{OUT1}\)</span> als Bezugspotenzial betrachten.</p>
 </div>
 </div>
 </section>
-<section id="verfahren" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="verfahren"><span class="header-section-number">4.3</span> Verfahren</h2>
-<p>Im Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in <a href="#fig-22-02" class="quarto-xref">Abbildung&nbsp;<span>4.2</span></a> gezeigt, an ein STEMlab angeschlossen, wobei <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>.</p>
+<section id="verfahren" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="verfahren"><span class="header-section-number">6.3</span> Verfahren</h2>
+<p>Im Labor in Raum E 507 ist an jedem Messplatz eine Platine, wie in <a href="#fig-22-02" class="quarto-xref">Abbildung&nbsp;<span>6.2</span></a> gezeigt, an ein STEMlab angeschlossen, wobei <span class="math inline">\(R_1\)</span> = 2,2 k <span class="math inline">\(\Omega\)</span>, <span class="math inline">\(R_2\)</span> = 10 k <span class="math inline">\(\Omega\)</span> und <span class="math inline">\(R_3\)</span> = 1 k <span class="math inline">\(\Omega\)</span>.</p>
 <div id="fig-22-02" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-22-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="../images/Activity_22_Fig_02a.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-22-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.2: Platine mit Transistorschaltung.
+Abbildung&nbsp;6.2: Platine mit Transistorschaltung.
 </figcaption>
 </figure>
 </div>
@@ -364,15 +391,15 @@ Warnung
 <img src="../images/Activity_22_Fig_03.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-22-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.3: npn-Transistor als Diode, Messungen.
+Abbildung&nbsp;6.3: npn-Transistor als Diode, Messungen.
 </figcaption>
 </figure>
 </div>
-<p>Aus <a href="#fig-22-03" class="quarto-xref">Abbildung&nbsp;<span>4.3</span></a> ist ersichtlich, dass der npn-Transistor in der in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>4.1</span></a> gezeigten Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem Diodenversuch.</p>
+<p>Aus <a href="#fig-22-03" class="quarto-xref">Abbildung&nbsp;<span>6.3</span></a> ist ersichtlich, dass der npn-Transistor in der in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a> gezeigten Konfiguration sich wie eine Diode verhält. Vergleichen Sie die Ergebnisse mit den Diodenmessungen aus dem Diodenversuch.</p>
 </section>
-<section id="iv-kurvenmessungen" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="iv-kurvenmessungen"><span class="header-section-number">4.4</span> IV-Kurvenmessungen</h2>
-<p>Da sich ein Bipolartransistor wie eine Diode verhalten kann (vgl. Konfiguration in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>4.1</span></a>, können sie die IV-Charakteristik mit den gleichen Messmethoden wie im Diodenexperiment ermitteln, also mit der Oszilloskop-App im Web-Browser, mit einem SCPI-Skript und mit dem JupyterLab auf dem STEMlab.</p>
+<section id="iv-kurvenmessungen" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="iv-kurvenmessungen"><span class="header-section-number">6.4</span> IV-Kurvenmessungen</h2>
+<p>Da sich ein Bipolartransistor wie eine Diode verhalten kann (vgl. Konfiguration in <a href="#fig-22-01" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a>, können sie die IV-Charakteristik mit den gleichen Messmethoden wie im Diodenexperiment ermitteln, also mit der Oszilloskop-App im Web-Browser, mit einem SCPI-Skript und mit dem JupyterLab auf dem STEMlab.</p>
 
 
 </section>
@@ -781,12 +808,12 @@ Abbildung&nbsp;4.3: npn-Transistor als Diode, Messungen.
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../lab/02_Activity.html" class="pagination-link" aria-label="IV-Charakterisierung von Siliziumdioden">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../lab/04_Activity.html" class="pagination-link" aria-label="Der MOSFET als Diode">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
