@@ -189,29 +189,20 @@ besser noch, **eines Abenteuers**.
 
 *Schnallen Sie sich an, die Reise beginnt ...*
 
-## Frontend Phasen
 
-## Backend Phasen
+## Halbleiterherstellung (Infineon, Dresden)
 
-* Packaging
-
-* Zuverlässigkeit = Qualität auf Zeit
-
-* Testing auf Wafer Level, known good die (KGD)
-
-  * Burn-in und Accelerated Aging (thermischer Stress, Arrhenius Gesetz)
-  
-  * Automatic Test Equipment (ATE)
-    * System Probe
-    * Interconnect Test
-    * Build-in Self-Test (BIST)
+{{< video "https://www.youtube.com/embed/_Kj58yQ67KI" width="854" height="480">}}
 
 
-* Statistische Datenanalyse und Yield Prognosen
+## FinFET (Intel)
 
-  * Ausfallrate FIT (failure in time)
-  
-  * Badewannenkurve
+{{< video "https://www.youtube.com/embed/_VMYPLXnd7E" width="854" height="480">}}
+
+
+## TSMC Fab (Next Gen 7/5 nm)
+
+{{< video "https://www.youtube.com/embed/Hb1WDxSoSec" width="854" height="480" >}}
 
 
 ## Sie werden Experte

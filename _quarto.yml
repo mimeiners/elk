@@ -44,10 +44,9 @@ book:
     - part: Seminar
       chapters:
         - lec/lec-01-intro.qmd
-      #  - lec/lec-02-signals.qmd
-      #  - lec/lec-03-pn_diode.qmd
-      #  - lec/lec-04-n
-          
+        - lec/lec-02-signals.qmd
+        - lec/lec-03-pn_diode.qmd
+                
     - part: Labor
       chapters:
         - lab/01_Activity.qmd
@@ -62,9 +61,10 @@ book:
     - references.qmd
        
 bibliography: _bibliography/references.bib
-biblio-style: "ieee"
+#  biblio-style: "ieee"
 
-output-file: "elk"
+#  output-file: "elk"
+highlight-style: "github"
 
 format:
   html:
@@ -83,7 +83,6 @@ format:
      - linktoc=all
    colorlinks: true
    linkcolor: "blue"
-   highlight-style: "github"
    mainfont: "Calibri"
    # keep-tex: true
    # default-image-extension: tex
@@ -93,4 +92,3 @@ format:
 
 execute:
   freeze: auto
-

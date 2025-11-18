@@ -10,16 +10,18 @@ Toleranzen/Fehlergrenzen
 
 ## Einfache Signale
 
+
+
 * Signale repräsentieren Informationen
   * Ein Beispiel: Temperatur eines Backofens
-  * Mögliche Signale:
-	- Temperatur des Backofens
-	- Temperatur und Feuchtigkeit des Kuchenteigs	
-	- Geschmack/Qualität des Kuchens
+  * Mögliche Signale: 	\- Temperatur des Backofens	\- Temperatur und Feuchtigkeit des Kuchenteigs	\- Geschmack/Qualität des Kuchens
 
-![](img/lec-02-signals_1.png)
 
-## Signaltypen - Nominal und Worst Case
+![](../images/lec-02-signals_1.png)
+
+## Signaltypen
+
+## Nominal und Worst Case
 
 Wir definieren  _nominal_  als das Ausgangssignal\, welches wir bei einem spezifizierten Eingangssignal erwarten; E/A\-Verhalten\.
 
@@ -40,6 +42,7 @@ Sprung und Impuls sind plötzliche Amplitudenänderungen\.
 ## The Data Conversion Problem
 
 
+
 * Real world signals: Continuous time\, continuous amplitude
 * Digital abstraction: Discrete time\, discrete amplitude
 * Two problems:
@@ -49,21 +52,21 @@ Sprung und Impuls sind plötzliche Amplitudenänderungen\.
 
 ## Analog-to-Digital (A/D) Conversion
 
-![](img/lec-02-signals_5.jpg)
+![](../images/lec-02-signals_5.jpg)
 
 ## Digital-to-Analog (D/A) Conversion
 
-![](img/lec-02-signals_6.jpg)
+![](../images/lec-02-signals_6.jpg)
 
 ## Rauschen / Noise
 
-![](img/lec-02-signals_7.png)
+![](../images/lec-02-signals_7.png)
 
-![](img/lec-02-signals_8.png)
+![](../images/lec-02-signals_8.png)
 
-![](img/lec-02-signals_9.png)
+![](../images/lec-02-signals_9.png)
 
-![](img/lec-02-signals_10.png)
+![](../images/lec-02-signals_10.png)
 
 ## LTI Systeme mit stochastischer Erregung (1)
 
@@ -77,5 +80,5 @@ Ref\. Systemtheorie\, Fliege\, 1991
 
 ## Totales integriertes Rauschen
 
-## Beispiel: RC Tiefpassfilter (1)
+## Beispiel: RC Tiefpassfilter
 

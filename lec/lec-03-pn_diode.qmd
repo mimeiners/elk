@@ -1,8 +1,6 @@
-# Kapitel 3
+# Diode
 
-Diode – Halbleiterphysik\, Modelle und Schaltungen
-
-# Diode als Schaltelemente (1)
+## Diode als Schaltelemente (1)
 
 Einweggleichrichter
 
@@ -20,11 +18,11 @@ Quelle: Elektronische Bauelemente\, Reisch\, Kap\. 15\.4
 
 Spannungsbegrenzung
 
-![](img/lec-03-pn_diode_4.png)
+![](../images/lec-03-pn_diode_4.png)
 
 Quelle: Microelectronics\, Razavi
 
-# Diode als Festkörper / Halbleiterphysik
+## Diode als Festkörper / Halbleiterphysik
 
 pn\-Übergang
 
@@ -47,7 +45,7 @@ pn\-Übergang
   * Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap\. 8\, Atom\- und Kernphysik und Kap\. 9\, Festkörperphysik\, des Buches  _Physik für Ingenieure_  von Hering 2012\, sowie Kap\. 12\, Halbleiter\, des Buches  _Elektronische Bauelemente_  von Reisch\, 2007 entnommen\.
 
 
-# Grundlagen der Elektrotechnik (1)
+## Grundlagen der Elektrotechnik (1)
 
 Als Vorbereitung für ein besseres Verständnis der Halbleiterphysik\, sollten die Grundbegriffe aus den Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden\. Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:
 
@@ -61,81 +59,81 @@ Elektrische Energie
 
 Elektrische Leistung\.
 
-# Einführung in die Halbleiterphysik
+## Einführung in die Halbleiterphysik
 
-# Elektronen im Festkörper
+## Elektronen im Festkörper
 
-![](img/lec-03-pn_diode_5.png)
+![](../images/lec-03-pn_diode_5.png)
 
-# Energiebänder-Modell (1)
+## Energiebänder-Modell (1)
 
-# Newton Mechanik vs. Quantentheorie
+## Newton Mechanik vs. Quantentheorie
 
-# Energiebandstruktur
+## Energiebandstruktur
 
-![](img/lec-03-pn_diode_6.png)
+![](../images/lec-03-pn_diode_6.png)
 
-# Aufenthaltswahrscheinlichkeit
+## Aufenthaltswahrscheinlichkeit
 
-![](img/lec-03-pn_diode_7.png)
+![](../images/lec-03-pn_diode_7.png)
 
-# Reduziertes Zonenschema
+## Reduziertes Zonenschema
 
-# Besetzungswahrscheinlichkeit
+## Besetzungswahrscheinlichkeit
 
-# Fermi-Dirac-Verteilungsfunktion
+## Fermi-Dirac-Verteilungsfunktion
 
-![](img/lec-03-pn_diode_8.png)
+![](../images/lec-03-pn_diode_8.png)
 
-# Fermi-Dirac-Statistik
+## Fermi-Dirac-Statistik
 
-# Halbleiter im thermischen Gleichgewicht
+## Halbleiter im thermischen Gleichgewicht
 
-# Bändermodelle des pn-Übergangs (1)
+## Bändermodelle des pn-Übergangs (1)
 
 Entn:  Physics of Semiconductor Devices\, Sze
 
 Entn: Grundlagen der Halbleiterphysik\, Smoliner
 
-# Stromgleichung
+## Stromgleichung
 
-# Kontinuitätsgleichung
+## Kontinuitätsgleichung
 
-# Poisson-Gleichung
+## Poisson-Gleichung
 
-# Abrupter pn-Übergang
+## Abrupter pn-Übergang
 
 Quelle: Elektronische Bauelemente\, Reisch\, 2007\, Kap\. 14
 
-# Sperrschichtnäherung (1)
+## Sperrschichtnäherung (1)
 
-![](img/lec-03-pn_diode_13.png)
+![](../images/lec-03-pn_diode_13.png)
 
 Quelle: Microelectronics\, Razavi
 
 Quelle: Elektonische Bauelemente\, Reisch
 
-# Speicherladung / Schaltverhalten
+## Speicherladung / Schaltverhalten
 
 Spannungsabhängiger Kondensator
 
-![](img/lec-03-pn_diode_16.png)
+![](../images/lec-03-pn_diode_16.png)
 
 Quelle: Microelectronics\, Razavi
 
-# Sperrschichtkapazität
+## Sperrschichtkapazität
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Diffusionskapazität
+## Diffusionskapazität
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Temperaturabhängigkeit
+## Temperaturabhängigkeit
 
 Diodenparameter eine Funktion der Temperatur
 
-# Modellierung
+## Modellierung
 
 Diode als Schalter \(oder Wasserventil\)
 
@@ -143,99 +141,43 @@ Diode als Konstantspannungsquelle
 
 Diode mit Großsignal\- und Kleinsignalverhalten
 
-# Ideale Diode
+## Ideale Diode
 
 Quelle: Aktive Elektronische Bauelemente\, Stiny
 
-# Näherungen der Diodenkennlinie - 0. Ordn.
+## Näherungen der Diodenkennlinie - 0. Ordn.
 
 Quelle: Aktive Elektronische Bauelemente\, Stiny
 
-# Näherung der Diodenkennlinie – 1. Ord.
+## Näherung der Diodenkennlinie – 1. Ord.
 
 Quelle: Aktive Elektronische Bauelemente\, Stiny
 
 Quelle: Aktive Elektronische Bauelemente\, Stiny
 
-# IV Charakteristik (real)
+## IV Charakteristik (real)
 
-# Sättigungsstrom
+## Sättigungsstrom
 
-# SPICE Modellanweisung
+## SPICE Modellanweisung
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Groß- und Kleinsignalmodell
+## Groß- und Kleinsignalmodell
 
 Großsignalmodell				Kleinsignalmodell
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Kleinsignalanalyse
+## Kleinsignalanalyse
 
 Quelle: Aktive elektronische Bauelemente\, Stiny\, Springer\, 2019
 
-# Kleinsignalgrößen
+## Kleinsignalgrößen
 
 Quelle: Aktive elektronische Bauelemente\, Stiny
 
-# Kleinsignalübertragung
+## Kleinsignalübertragung
 
 Quelle: Aktive elektronische Bauelemente\, Stiny
-
-# Übungen SPICE Analysen
-
-Gleichstromanalyse – die \.op\-Anweisung \, Ref\. Kap\. 4\.4\.1\, Reisch\, 2007Anzeige der Kleinsignalkenngrößen im Arbeitspunkt \(AP\)
-
-Arbeitspunkt bei Spannungssteuerung\, Ref\. Kap\. 14\.1\.4\, Reisch\, 2007Iterative Lösung der nicht\-linearen Beziehung zw\. Diodenstrom \(ID\) und Diodenspannung  \(VD\)\, vgl\. Bsp\. 14\.1\.5
-
-Admittanz einer Diode\, Bsp\. 14\.3\.1Handrechnung und SPICE \.ac\-Analyse
-
-# Anhang
-
-# Kleinsignalanalyse (1)
-
-![](img/lec-03-pn_diode_35.png)
-
-Quelle: Microelectronics\, Razavi
-
-![](img/lec-03-pn_diode_36.png)
-
-# Beispiel: Adapter/Ladegerät
-
-2\,4 V Ladegerät verloren; Ersatzschaltung bauen mit einem3V\-Adapter\.
-
-Bestimmen Sie den Sättigungsstrom der drei Dioden\, so dass die Ausgangsspannung 2\,4 V beträgt\. Vernachlässigen  Sie zur Vereinfachung dabei den Strom in das Mobiltelefon\.
-
-Bestimmen Sie die Ausgangsspannung\, wenn der Adapter 3\,1V liefert\.
-
-Quelle: Microelectronics\, Razavi
-
-# Lösung Adapteraufgabe (1)
-
-Bestimmung des Diodenstroms
-
-Man erwartet einen kleinen Anstieg der Ausgangsspannung\. Um den Grund dafür zu verstehen\, wird die Schaltung zu erst mit der Annahme konstanter Ausgangsspannung betrachtet\. Dann fällt die zusätzliche Spannung von 0\,1 V über dem Widerstand ab und der Diodenstrom steigt auf 7 mA\.
-
-Mit diesem Ergebnis beginnt die Interation:
-
-Diese Iteration zeigt\, dass das bisherige Modell der Diode als Konstantspannungsquelle für diese Fragestellung nicht nützlich ist\.
-
-# Adapter Recall
-
-Mit dem Verständnis der Kleinsignalanalyse kann die Schaltungsauslegung ohne Iteration durchgeführt werden\.
-
-![](img/lec-03-pn_diode_37.png)
-
-Quelle: Microelectronics\, Razavi
-
-# KISS Prinzip
-
-Unter Verwendung der Kleinsignalanalyse kann auch der zusätzliche Laststsrom einfach berücksichtigt werden\.
-
-Stellen Sie sich vor\, dieses mit den nicht\-linearen Gleichungen zu lösen\.
-
-![](img/lec-03-pn_diode_38.png)
-
-Quelle: Microelectronics\, Razavi
 
