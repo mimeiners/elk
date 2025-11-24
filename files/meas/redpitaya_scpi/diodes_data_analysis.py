@@ -7,6 +7,7 @@ Messdatenauswertung
 
 # import os
 import numpy as np
+# import scipy.io as io
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -31,9 +32,13 @@ DF_IN2 = pd.read_csv(Data_IN2 + '.csv')
 # DF_IN1 = pd.read_parquet(Data_IN1 + '.parquet')
 # DF_IN2 = pd.read_parquet(Data_IN2 + '.parquet')
 
+# %% MATLAB mat Daten einlesen
+# DF_IN1 = io.loadmat(Data_IN1 + '.mat')
+# DF_IN2 = io.loadmat(Data_IN2 + '.mat')
+
 # %% Darstellung
 t = np.linspace(0, 2.097e-3, 16384)  # Skalierung der Zeitachse
-DF_MATH = (DF_IN1.mean(axis=1) - DF_IN2.mean(axis=1)) / 1e3
+DF_MATH = (DF_IN1.mean(axis=1) - DF_IN2.mean(axis=1)) / 10e3
 
 fig, ax1 = plt.subplots()
 

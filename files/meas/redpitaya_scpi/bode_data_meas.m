@@ -8,12 +8,10 @@ clear;
 IP = '192.168.111.183';  % IP of your Red Pitaya ...
 port = 5000;
 RP = tcpclient(IP, port);
-RP.InputBufferSize = 16384*32;
 
 %% Open connection to Red Pitaya
 RP.ByteOrder = 'big-endian';
 configureTerminator(RP, 'CR/LF');
-
 flush(RP);
 
 %% Generate continous signal

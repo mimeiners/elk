@@ -1,0 +1,164 @@
+Schreiben Sie ein Programm in Matlab oder Python, welches mithilfe einer
+Fourierreihe eine Clock-Signal (CLK) darstellt. Das Programm soll als
+Ergebnis einen Plot des CLK-Signals erzeugen.
+
+::: solution
+``` {#lst:fourier_matlab .matlab language="Matlab" caption="Matlab-Code zur Lösung der Aufgabe" label="lst:fourier_matlab"}
+% Dieses Skript plottet die Fourierreihe eines Rechteckpulses
+% aus einer  Matheformelsammlung
+% y = (4*a)/pi [sin(wt) + sin(3wt)/3 + sin(5wt)/5 + ...]
+clear all;
+clf;
+
+% Definition des Laufindexes (Vektor)
+t = 0:.01:10;
+
+% Initialisierung
+A = 1.0
+T = 2.5;
+M = 50;
+y = 0;
+
+% Schleife, Fourierkoeffizienten
+for m = 1:2:M,
+    y = y + (4*A) * sin(m*2*pi*t/T)/(m*pi);
+end
+
+% Erzeugung des Plot-Fensters
+figure(1)
+plot(t, y, 'b-', t(1:10:end), y(1:10:end), 'r.')
+title('Fourierreihe eines Rechecksignals')
+xlabel('Zeit t/s')
+ylabel('rect(t)')
+grid on;
+axis([0, 10, -2, 2])
+% legend('5 Terme')
+
+% Drucken/Schreiben des Plots in eine Graphikdatei rect.png
+% print('rect.png', '-dpng')
+```
+
+``` {#lst:fourier_python .python language="Python" caption="Python-Code zur Lösung der Aufgabe" label="lst:fourier_python"}
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+
+"""
+Fourier Series - Square Wave
+f(t) = (4a)/pi [sin(wt) + sin(3wt)/3 + sin(5wt)/5 + ...]
+"""
+
+import numpy as np
+from scipy import signal
+from scipy.fftpack import fft
+
+import matplotlib.pyplot as plt
+
+N = 1000  # Anzahl der Samples
+dt = 1. / 1000  # Schrittweite
+
+frequency = 5.
+
+t = np.linspace(.0, N*dt, N)
+y = signal.square(2 * np.pi * frequency * t)
+
+figure2, (ax1, ax2) = plt.subplots(2, figsize=(20, 10))
+
+ax1.plot(t, y)
+y_sum = None
+
+
+# Schleife fuer die Fourier-Reihe
+for n in range(1, 20, 2):
+    yn = 4/(np.pi*n)*np.sin((2*np.pi*n*frequency*t))
+    if y_sum is None:
+        y_sum = yn
+    else:
+        y_sum += yn
+    if n in (1, 3, 5):
+        ax1.plot(t, y_sum)
+
+ax1.plot(t, y_sum)
+ax1.set_xlim(0, 2/frequency)
+ax1.set_ylim(-1.5, 1.5)
+ax1.set_xlabel('Zeit t')
+ax1.set_ylabel('Amplitude')
+
+yf = fft(y)
+tf = np.linspace(.0, 1./(2.*dt), N//2)
+spectrum = 2./N * np.abs(yf[0:N//2])
+
+ax2.plot(tf, spectrum)
+n = np.arange(1, 20, 2)
+ax2.plot(n*frequency, 4/(np.pi*n), 'o', color='red')
+ax2.grid()
+ax2.set_title('Spektrum')
+ax2.set_xlabel('Frequenz (Hz)')
+ax2.set_ylabel('Amplitude')
+
+plt.show()
+```
+:::
+
+Ermitteln Sie die Übertragungsfunktion eines passiven RC-Tiefpassfilters.
+
+::: solution
+<figure id="fig:rctp" data-latex-placement="!ht">
+
+<figcaption>Netzwerk des RC-Tiefpasses</figcaption>
+</figure>
+
+$$\begin{align}
+    H(j \omega) &= \frac{V_{out}(j\omega)}{V_{in}(j\omega)} \\
+                &= \frac{\underline{Z}_C}{\underline{Z}_R + \underline{Z}_C} = \frac{\frac{1}{j \omega C}}{R + \frac{1}{j \omega C}} \\
+                &= \frac{1}{1+j \omega RC} = \frac{1}{1+j\, 2 \pi f\, RC}
+  
+\end{align}$$
+:::
+
+Verifizieren Sie Ihre Handrechnung mit einer SPICE ".ac" Analyse.
+
+::: solution
+``` {#lst:spice_ac .objectivec language="C" caption="Netzliste der SPICE-Simulation" label="lst:spice_ac"}
+* Uebertragungsfunktion und Rauschanalyse eines RC-Tiefpasses
+
+* NETZWERK
+Rs vs vy 1k
+Cy vy 0 1u
+Vs vs 0 1 AC 1
+
+* ANALYSEN
+* Kleinsignalanalyse (ac) fuer die Uebertragungsfunktion
+.ac dec 100 1 1Meg
+
+* Rauschanalyse am Ausgangsknoten (vy)
+.noise V(vy) Vs dec 100 1 1Meg
+
+.end
+```
+:::
+
+Ermitteln Sie mit SPICE das ausgangsbezogene Rauschen (onoise) eines passiven RC-Tiefpassfilters.
+
+**Hilfe:** Aus einer Matheformelsammlung, bspw. [@zeidler2013] das unbestimmte Integral $$\begin{equation}
+  \int \frac{1}{a^2 + x^2} dx = \frac{1}{a} \arctan(\frac{x}{a})
+\end{equation}$$ nutzen.
+
+::: solution
+Leistungsdichtespektrum (PSD, Power Spectral Density) allg.
+$$\begin{align}
+    \overline{u_{n}^2(t)} &=  \int_{-\infty}^{\infty} S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2
+  
+\end{align}$$
+
+Benötigt werden die Übertragungsfunktion $H(j \omega)$ des Systems, die aus der vorherigen Aufgabe bekannt ist und die Rauschleistung
+$S_{uu}(j\omega)$ = $4 k T R$ eines ohmschen Widerstandes.
+
+Totales integriertes Rauschen (kausales System): $$\begin{align}
+  \overline{v_{out}^2} &= \int_{0}^{\infty} 4 kTR \left\lvert \frac{1}{1+j 2 \pi f RC} \right\lvert^2 df \\
+                       &= 4kTR  \int_{0}^{\infty} \frac{1}{1+ (2 \pi f RC)^2} df \\
+                       &= 4kTR \int_{0}^{\infty} \frac{\frac{1}{(2 \pi RC)^2}}{\frac{1}{(2 \pi RC)^2} + f^2} df \\
+                       &= 4kTR \left[ \frac{1}{2 \pi RC} \arctan\left( \frac{f}{2 \pi RC}\right)\right]_0^{\infty} \\
+                       &= 4kTR \frac{1}{2 \pi RC} \frac{\pi}{2} \\
+                       &= \frac{kT}{C}
+\end{align}$$
+:::

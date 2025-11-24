@@ -71,13 +71,17 @@ rp_s.tx_txt('ACQ:AVG ON')  # Averaging (OFF, ON)
 rp_s.tx_txt('ACQ:TRIG:LEV 0.5')  # Trigger level
 rp_s.tx_txt('ACQ:TRIG:DLY 8192')  # Delay
 rp_s.tx_txt('ACQ:START')  # Start der Messung
+
+time.sleep(1)
+
 rp_s.tx_txt('ACQ:TRIG NOW')  # Trigger setzen
 
 
+# Data acquisition
 for meas in range(0, 4):
 
     # Input IN1
-    time.sleep(0.1)  # in seconds
+    # time.sleep(0.1)  # in seconds
     rp_s.tx_txt('ACQ:SOUR1:DATA?')  # Readout buffer IN1
     IN1str = rp_s.rx_txt()
     IN1str = IN1str.strip('{}\n\r').replace("  ", "").split(',')
@@ -85,7 +89,7 @@ for meas in range(0, 4):
     DF_IN1[str(meas)] = IN1
 
     # Input IN2
-    time.sleep(0.1)  # in seconds
+    # time.sleep(0.1)  # in seconds
     rp_s.tx_txt('ACQ:SOUR2:DATA?')  # Readout buffer IN2
     IN2str = rp_s.rx_txt()
     IN2str = IN2str.strip('{}\n\r').replace("  ", "").split(',')
@@ -98,8 +102,8 @@ rp_s.tx_txt('OUTPUT1:STATE OFF')
 
 
 # %% Daten als Datei speichern
-Data_IN1 = 'data/IN1_' + DEVICE["d1"] + "_ELIE1"  # + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M'))
-Data_IN2 = 'data/IN2_' + DEVICE["d1"] + "_ELIE1"  # + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M'))
+Data_IN1 = 'data/IN1_' + DEVICE["d1"] + "_ELIE1" + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M'))
+Data_IN2 = 'data/IN2_' + DEVICE["d1"] + "_ELIE1" + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M'))
 
 
 # %% Speichern als CSV/TSV (comma/tab-seperated-values)
@@ -115,5 +119,5 @@ DF_IN2.to_csv(Data_IN2 + '.csv', index=False)
 # DF_IN2.to_excel(Data_IN2 + '.xlsx', index=False)
 
 # %% Speichern als Apache parquet
-DF_IN1.to_parquet(Data_IN1 + ".parquet", index=False)
-DF_IN2.to_parquet(Data_IN2 + ".parquet", index=False)
+# DF_IN1.to_parquet(Data_IN1 + ".parquet", index=False)
+# DF_IN2.to_parquet(Data_IN2 + ".parquet", index=False)

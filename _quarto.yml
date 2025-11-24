@@ -13,6 +13,7 @@ book:
       corresponding: true
       roles: "Lead author"
       affiliation:
+        - id: hsb
         - name: Hochschule Bremen - City University of Applied Sciences (HSB)
           city: Bremen
           state: Germany
@@ -20,6 +21,8 @@ book:
     - name: Tim Ziemann
       email: Tim.Ziemann@hs-bremen.de
       roles: "Supporting author"
+      affiliation:
+        - ref: hsb
   date: last-modified
 #  license: "Apache-2.0 license"
 
@@ -43,35 +46,50 @@ book:
 
     - part: Seminar
       chapters:
-        - lec/lec-01-intro.qmd
-        - lec/lec-02-signals.qmd
-        - lec/lec-03-pn_diode.qmd
-                
+        - lec/lec_01_intro.qmd
+        - lec/lec_02_signals.qmd
+        - lec/lec_03_pn_diode.qmd
+
+    - part: Übungen
+      chapters:
+      #  - hw/hw_01_signals.qmd
+      #  - hw/hw_02_diode.qmd
+        
     - part: Labor
       chapters:
-        - lab/01_Activity.qmd
-        - lab/02_Activity.qmd
-        - lab/03_Activity.qmd
-        - lab/04_Activity.qmd
-        # - lab/05_dega_Activity.ipynb
-        # - lab/06_TranThermo_TZ.qmd
+        - lab/lab_01_Activity_intro.qmd
+        - lab/lab_02_Activity_19.qmd
+        - lab/lab_03_Activity_22.qmd
+        - lab/lab_04_Activity_23.qmd
+        # - lab/lab_05_dega_Activity.ipynb
+
     - part: Transistor-Thermometer
       chapters:
         - lab/TranThermo/index.qmd
+
     - references.qmd
        
-bibliography: _bibliography/references.bib
-#  biblio-style: "ieee"
+  output-file: "elk"
 
-#  output-file: "elk"
-highlight-style: "github"
+# Bibliography
+bibliography: _bibliography/references.bib
+csl: _bibliography/ieee.csl
+
+number-sections: true
+highlight-style: github
+
 
 format:
   html:
     theme: flatly
     # default-image-extension: svg
+
+  epub:
+   theme: flatly
+   # default-image-extension: svg
+
   pdf:
-   documentclass: scrbook 
+   documentclass: scrreprt  # scrbook 
    # lof: true
    # lot: true
    toc: true    
@@ -83,12 +101,15 @@ format:
      - linktoc=all
    colorlinks: true
    linkcolor: "blue"
+
    mainfont: "Calibri"
    # keep-tex: true
    # default-image-extension: tex
-  epub:
-   theme: flatly
-   # default-image-extension: svg
-
-execute:
-  freeze: auto
+  
+   # Customization 
+   # template-partials:
+   # - frontmatter/title.tex
+   # - frontmatter/before-body.tex
+   # - frontmatter/toc.tex
+   # include-in-header:
+   # - frontmatter/header.tex

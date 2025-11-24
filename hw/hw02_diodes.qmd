@@ -1,0 +1,259 @@
+Was versteht man unter der Eigenleitung eines Halbleitermaterials im Unterschied zur Störstellenleitung?
+
+Wodurch ist das thermodynamische Gleichgewicht gekennzeichnet?
+
+Wovon hängen die Dichten von Elektronen und Löchern in einem reinen, undotierten Halbleiter ab?
+
+Skizzieren Sie die Bändermodelldarstellung von
+
+1.  Leiter
+
+2.  Isolator
+
+3.  n-dotiertem Halbleiter
+
+4.  p-dotiertem Halbleiter
+
+Skizzieren Sie die Ladungsträgerdichte $n$ als Funktion der Temperatur
+$T$ in einem n-dotierten Halbleiter.
+
+> Tragen Sie auf der y-Achse den natürlichen Logarithmus der Dichte
+> $\ln(n)$ auf. Vielleicht schreiben Sie auch ein Python-Skript dafür?
+
+Die intrinsische Ladungsträgerkonzentration von Silizium (Si) und
+Germanium (Ge) seien gegeben als $$\begin{align}
+  n_{i,Si} &= \num{5.2e15} T^{\frac{3}{2}} \exp\left( \frac{-W_g}{2kT}\right) \si{cm^{-3}} \\
+  n_{i,Ge} &= \num{1.66e15} T^{\frac{3}{2}} \exp\left( \frac{-W_g}{2kT}\right) \si{cm^{-3}}
+\end{align}$$
+
+wobei der Bandabstand $W_{g,Si}$=1.12 eV und $W_{g,Ge}$= 0.66 eV
+beträgt.
+
+Berechnen Sie $n_i$ bei 300 K und 600 K für Ge und vergleichen Sie Ihre
+Ergebnisse mit Si.
+
+::: solution
+$$\begin{align}
+    n_{i,Si}(T=\SI{300}{K}) &= \num{5.2e15} (300)^{\frac{3}{2}} \exp\left( \frac{-\SI{1.12}{eV}}{2\cdot
+                              \SI{8.627334e-5}{eV\per\kelvin} \cdot \SI{300}{K}}\right) \si{cm^{-3}} \\
+    n_{i,Si}(T=\SI{300}{K}) &= \SI{2.5e13}{\per\cubic\centi\metre} \\
+    n_{i,Si}(T=\SI{600}{K}) &= \num{5.2e15} (600)^{\frac{3}{2}}
+                              \exp\left(\frac{-\SI{1.12}{eV}}{2\cdot\SI{8.627334e-5}{eV\per\kelvin} \cdot
+                              \SI{600}{K}}\right) \si{cm^{-3}} \\
+    n_{i,Si}(T=\SI{600}{K}) &= \SI{4.15e16}{\per\cubic\centi\metre} \\
+    n_{i,Ge}(T=\SI{300}{K}) &= \num{1.66e15} (300)^{\frac{3}{2}} \exp\left( \frac{-\SI{0.66}{eV}}{2 \cdot
+                              \SI{8.627334e-5}{eV\per\kelvin} \cdot \SI{300}{K}}\right) \si{cm^{-3}} \\
+    n_{i,Ge}(T=\SI{300}{K}) &= \SI{2.5e13}{\per\cubic\centi\metre} \\
+    n_{i,Ge}(T=\SI{600}{K}) &= \num{1.66e15} (600)^{\frac{3}{2}}
+                              \exp\left(\frac{-\SI{0.66}{eV}}{2\cdot\SI{8.627334e-5}{eV\per\kelvin} \cdot
+                              \SI{600}{K}}\right) \si{cm^{-3}} \\
+    n_{i,Ge}(T=\SI{600}{K}) &= \SI{4.15e16}{\per\cubic\centi\metre}
+  
+\end{align}$$
+:::
+
+Bestimmen Sie die Elektronen- und Löcherdichte, wenn Germanium (Ge) mit
+Phosphor (P) in Höhe von 5 × 10^16^  cm^3^ dotiert ist.
+
+::: solution
+$$\begin{align}
+    p &= \SI{5e16}{\per\cubic\centi\metre} \\
+    n &= \frac{n_i^2(T=\SI{300}{K})}{p} = \SI{1.25e10}{\per\cubic\centi\metre}
+  
+\end{align}$$
+:::
+
+Warum tritt eine Diffusion von Ladungsträgern auf?
+
+Warum bildet sich eine Raumladungszone aus?
+
+Warum endet die Diffusion trotz eines weiterhin vorhandenen
+Konzentrationsgefälles der Ladungsträger?
+
+Warum ist die Diffusionsspannung von außen mit einem Voltmeter nicht
+meßbar?
+
+Welche Polung muss eine externe Spannung im Sperrfall haben, welche im
+Durchlassfall?
+
+Wie verhält sich die Sperrschichtweite im Sperrfalle, wie im
+Durchlassfall?
+
+Welche Ladungsträger bilden den Strom im Durchlassfall?
+
+Was versteht man unter
+
+1.  einer Speicherladung?
+
+2.  einer Ladungsträgerlebensdauer?
+
+3.  einer Diffusionslänge?
+
+Beschreiben Sie den Durchlassfall des pn-Überganges am Bändermodell.
+
+Für einen Oszillator wird eine variable, spannungsabhängige Kapazität
+mit einer Charakteristik wie in
+[1](#fig:hw5p2){reference-type="ref+Label" reference="fig:hw5p2"}
+gezeigt benötigt. Bestimmen Sie die dafür notwendigen Akzetor- und
+Donatordichten, $N_A^-$ und $N_D^+$, einer Silizium-Diode mit abrupten
+pn-Übergang bei $T$=300 K.
+
+<figure id="fig:hw5p2" data-latex-placement="h">
+
+<figcaption>Charakteristik der variablen Kapazität</figcaption>
+</figure>
+
+> $$\begin{align}
+>     c_j(0) = C_{J0} &= A_j \sqrt{\frac{q \varepsilon_0 \varepsilon_{r,Si}}
+>                       {2 V_j} \frac{N_A^- N_D^+}{N_A^- + N_D^+}} 
+>   
+> \end{align}$$
+
+::: solution
+Mit der Bestimmungsgleichung für die Sperrschichtkapazität
+$$\begin{align}
+    c_j(V) &= \frac{C_{J0}}{\sqrt{1-\frac{V}{V_J}}}
+  
+\end{align}$$ und dem Graphen können zwei Gleichungen zur Berechnung der
+Dotierungstoffkonzentrationen entwickelt werden.
+
+$$\begin{align}
+    N_A^- &= \SI{2e18}{\per\cubic\centi\metre} \\
+    N_D^+ &= \SI{3.71e17}{\per\cubic\centi\metre} 
+  
+\end{align}$$
+:::
+
+Zwei identische Si-Dioden sind in Reihe geschaltet. Berechnen Sie den
+Strom durch beide Dioden, wenn eine Vorwärtsspannung von 1 V über beide
+Diode anliegt. Der Sättigungsstrom beider Dioden ist jeweils
+$I_S$=1.44 × 10^−17^ A, $T$=300 K.
+
+::: solution
+$$\begin{align}
+    I_D &= I_S \left( \exp\left(\frac{V_F}{V_T}\right)-1\right) \\
+        &= \num{1.44e-17}
+          \left(\exp\left(\frac{\SI{0.5}{V}}{\SI{26}{mV}}\right)-1\right) \\
+        &= \SI{3.23e-9}{A}
+  
+\end{align}$$
+:::
+
+Skizzieren Sie den Strom $I_X$ als Funktion der Spannung $V_X$ für die
+Schaltung in [2](#fig:hw02p31){reference-type="ref+label"
+reference="fig:hw02p31"}. Nehmen Sie dabei die Widerstände $R_1$ und
+$R_2$ mit jeweils 1 k Ω an. Die Dioden haben jeweils eine
+Durchlassspannung von 0.5 V und die Batteriespannung $V_B$ beträgt 1 V.
+
+<figure id="fig:hw02p31" data-latex-placement="h">
+
+<figcaption>Diodenschaltung</figcaption>
+</figure>
+
+::: solution
+<figure data-latex-placement="h">
+
+<figcaption>Strom <span
+class="math inline"><em>I</em><sub><em>X</em></sub> = <em>f</em>(<em>V</em><sub><em>X</em></sub>)</span></figcaption>
+</figure>
+:::
+
+Gegeben ist die Schaltung in
+[3](#fig:hw02p32){reference-type="ref+Label" reference="fig:hw02p32"}.
+Skizzieren Sie den Strom $i_x$ als eine Funktion der Zeit, wenn die
+Eingangsspannung $u_x(t)=\hat{V}_0 \sin(\omega t)$ ($\hat{V}_0$=4 V,
+$f$=1 kHz) und die Batteriespannung $V_B=\SI{1}{V}$. Nehmen Sie dabei
+die Widerstände $R_1$ und $R_2$ mit jeweils 1 k Ω an. Die Dioden haben
+jeweils eine Durchlassspannung von 0.5 V.
+
+<figure id="fig:hw02p32" data-latex-placement="h">
+
+<figcaption>Diodenschaltung mit Sinusquelle</figcaption>
+</figure>
+
+::: solution
+<figure id="fig:hw02p42" data-latex-placement="h">
+
+<figcaption>Signalverläufe, Spannung <span
+class="math inline"><em>v</em><sub><em>x</em></sub>(<em>t</em>)</span>
+und Strom <span
+class="math inline"><em>i</em><sub><em>x</em></sub>(<em>t</em>)</span></figcaption>
+</figure>
+:::
+
+- Anzeige der Kleinsignalkenngrößen im Arbeitspunkt (AP), vgl. [Kap.
+  4.4.1 @reisch2007].
+
+- Arbeitspunkt bei Spannungssteuerung, vgl. [Kap. 14.1.4 @reisch2007].
+
+- Iterative Lösung der nicht-linearen Beziehung zw. Diodenstrom ($I_D$)
+  und Diodenspannung ($V_D$), vgl. [Bsp. 14.1.5 @reisch2007].
+
+Emitteln Sie die Admittanz einer Diode per Handrechnung und mit Hilfe
+von SPICE, vgl. [Bsp. 14.3.1 @reisch2007]
+
+Gegeben sind die folgenden Modellparameter:
+
+``` {#lst:spice_modell .objectivec language="C" caption="SPICE Modellanweisung" label="lst:spice_modell"}
+* Kleinsignalanalyse - Admittanz
+
+* MODELLANWEISUNG
+.MODEL 1N4002 D (IS=76.9p RS=42.0m BV=100 IBV=5.00u
++                CJO=39.8p M=0.333 N=1.45 TT=4.32u)
+```
+
+- Diodendstrom $I_D$=1 mA
+
+- Bahnwiderstand $r_s$=42 m Ω
+
+- Transitzeit $T_T$=4.32 μs
+
+- Sperrschichtkapazität $c_j$=39.8 pF
+
+- Diodenkapazität $c_d$=$c_j+T_T g_d$
+
+::: solution
+Die komplexe Kleinsignaladmittanz einer Diode lautet: $$\begin{align}
+    \underline{y} &= \frac{1}{r_s + (g_d + j \omega c_d)^{-1}} \\
+              &= \frac{g_d + j \omega c_d}{1 + r_sg_d + j \omega r_sc_d}
+  
+\end{align}$$
+
+Mit den Zahlenwerten aus der Aufgabenstellung können die
+Kleinsignalparameter berechnet werden. $$\begin{align}
+    r_d &= \frac{n V_T}{I_D} = \SI{37.7}{\ohm} \\
+    g_d &= \frac{1}{r_d} = \SI{26.5}{mS} \\
+    c_d &= c_j + T_T g_d = \SI{114.63}{nF}
+  
+\end{align}$$
+
+Für kleine Frequenzen erhält man für den Betrag der
+Kleinsignaladmittanz: $$\begin{align}
+    \lvert \underline{y} \rvert &= \frac{1}{r_s+r_d} = \SI{26.5}{mS}.
+  
+\end{align}$$
+
+Für größere Frequenzen wird ein frequenzproportionaler Anstieg
+beobachtet; die charakteristische Frequenz für den Übergang ist
+$$\begin{align}
+  f_1 &= \frac{1}{2 \pi r_d c_d} = \SI{36.8}{kHz}.
+\end{align}$$
+
+Für hohe Frequenzen gilt erwartungsgemäß
+$\lvert \underline{y} \rvert \rightarrow 1/r_s = \SI{23.81}{S}$; die
+charakteristische Freqeunz für den Übergang ist $$\begin{align}
+  f_2 &= \frac{1+r_sg_d}{2\pi r_s c_d} = \SI{33.1}{MHz}.
+\end{align}$$
+:::
+
+Simulieren Sie mit SPICE eine Diodenschaltung bei unterschiedlichen
+Temperaturen.
+
+Schauen Sie sich für weitere Hintergrundinformationen die *Application
+Notes* von Texas Instruments [@stitt1991] und Linear Technologie (jetzt
+Analog Devices) [@jones2012] an.
+
+Zur Simulation von Temperaturen mit SPICE finden Sie im Handbuch von
+LTspice und unter folgendem Link [LTspice: simulating
+temperature](https://electronics.stackexchange.com/questions/697348/ltspice-simulating-temperature)
+Hinweise.
