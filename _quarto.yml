@@ -7,22 +7,23 @@ lang: de
 book:
   title: "M 5.3 Elektronik (ELK)"
   author:
-    - name: Mirco Meiners
-      orcid: 0000-0002-9709-4191
-      email: Mirco.Meiners@hs-bremen.de
+    - name: "Mirco Meiners"
+      orcid: "0000-0002-9709-4191"
+      email: "Mirco.Meiners@hs-bremen.de"
       corresponding: true
       roles: "Lead author"
       affiliation:
         - id: hsb
-        - name: Hochschule Bremen - City University of Applied Sciences (HSB)
-          city: Bremen
-          state: Germany
-          url: https://www.hs-bremen.de/person/mimeiners/ 
-    - name: Tim Ziemann
-      email: Tim.Ziemann@hs-bremen.de
+        - name: "Hochschule Bremen - City University of Applied Sciences"
+          city: "Bremen"
+          state: "Germany"
+          url: "https://www.hs-bremen.de/person/mimeiners/"
+    - name: "Tim Ziemann"
+      email: "Tim.Ziemann@hs-bremen.de"
       roles: "Supporting author"
       affiliation:
         - ref: hsb
+          
   date: last-modified
 #  license: "Apache-2.0 license"
 
@@ -73,43 +74,71 @@ book:
 
 # Bibliography
 bibliography: _bibliography/references.bib
-csl: _bibliography/ieee.csl
-
-number-sections: true
-highlight-style: github
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
+# csl: _bibliography/ieee.csl
 
 
 format:
   html:
     theme: flatly
-    # default-image-extension: svg
+    fontsize: 1.2em
+    linestretch: 1.7
+    # mainfont: Helvetica Neue, Helvetica, Arial, sans
+    # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+    # backgroundcolor: "white"
+    # fontcolor: "black"
+    highlight-style: github
 
   epub:
-   theme: flatly
-   # default-image-extension: svg
+    theme: flatly
+    fontsize: 1.2em
+    linestretch: 1.7
+    # mainfont: Helvetica Neue, Helvetica, Arial, sans
+    # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+    # backgroundcolor: "white"
+    # fontcolor: "black"
+    highlight-style: github
 
   pdf:
-   documentclass: scrreprt  # scrbook 
-   # lof: true
-   # lot: true
-   toc: true    
-   geometry:
-     - top=30mm
-     - left=20mm
-     - heightrounded
-   hyperrefoptions:
-     - linktoc=all
-   colorlinks: true
-   linkcolor: "blue"
+    documentclass: scrbook
+    classoption: [twoside]
 
-   mainfont: "Calibri"
-   # keep-tex: true
-   # default-image-extension: tex
-  
-   # Customization 
-   # template-partials:
-   # - frontmatter/title.tex
-   # - frontmatter/before-body.tex
-   # - frontmatter/toc.tex
-   # include-in-header:
-   # - frontmatter/header.tex
+    keep-tex: true
+
+    toc: true
+    toc-depth: 3
+    # toc-title: "Table of contents"
+    # lof: true
+    # lot: true
+
+    number-sections: true
+    number-depth: 2
+        
+    papersize: a4
+        
+    geometry:
+      - inner=3cm
+      - outer=4cm
+      - top=3cm
+      - bottom=4cm
+      - headsep=22pt
+      - headheight=11pt
+      - footskip=33pt
+      - ignorehead
+      - ignorefoot
+      - heightrounded
+
+    fontsize: 11pt
+    pdfengine: xelatex
+
+    mainfont: "Calibri"
+    # mainfont: "Times New Roman"
+    # sansfont: "Arial"
+    monofont: "Courier New"
+    mathfont: "TeX Gyre Termes Math"
+    
+    # include-in-header:
+    #   - frontmatter/header.tex
+    # template-partials:
+    # - frontmatter/before-body.tex
+    # - frontmatter/toc.tex
