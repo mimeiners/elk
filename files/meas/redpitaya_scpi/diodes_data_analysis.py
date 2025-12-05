@@ -22,10 +22,10 @@ DEVICE = {
     "pmos": "BS250"
 }
 
-# + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M')) + '.csv'
-Data_IN1 = 'data/IN1_' + DEVICE["d1"] + "_ELIE1"
-# + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M')) + '.csv'
-Data_IN2 = 'data/IN2_' + DEVICE["d1"] + "_ELIE1"
+Data_IN1 = 'data/IN1_' + DEVICE["d1"] + \
+    "_ELIE4" + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M'))
+Data_IN2 = 'data/IN2_' + DEVICE["d1"] + \
+    "_ELIE4" + str(TSTAMP.strftime('_%Y-%m-%d_%H-%M'))
 
 # %% CSV/TSV Daten einlesen
 DF_IN1 = pd.read_csv(Data_IN1 + '.csv')

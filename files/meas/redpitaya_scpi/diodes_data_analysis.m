@@ -21,19 +21,19 @@ load('./data/IN2_D1.mat');
 
 
 %% Load data from excel sheet
-% DF_IN1 = readmatrix('./data/IN1_D1.xlsx');
-% DF_IN2 = readmatrix('./data/IN2_D1.xlsx');
-% DF_IN1 = readmatrix('./data/IN_D1.xlsx', 'Sheet', 1);
-% DF_IN2 = readmatrix('./data/IN_D1.xlsx', 'Sheet', 2);
+% DF_IN1 = readmatrix('./data/IN1_D1.mat.xlsx');
+% DF_IN2 = readmatrix('./data/IN2_D1.mat.xlsx');
+% DF_IN1 = readmatrix('./data/IN_D1.mat.xlsx', 'Sheet', 1);
+% DF_IN2 = readmatrix('./data/IN_D1.mat.xlsx', 'Sheet', 2);
 
 %% Darstellung
 t = linspace(0, 2.097e-3, 16384)  % Skalierung der Zeitachse
-DF_MATH = (mean(DF_IN1) - mean(DF_IN2)) / 1e3
+DF_MATH = (DF_IN1(:,1) - DF_IN2(:,1)) / 1e3;
 
 % 1. Achse
 yyaxis left
-plot(t * 1e3, mean(DF_IN1))
-plot(t * 1e3, mean(DF_IN2))
+plot(t * 1e3, DF_IN1(:,1))
+plot(t * 1e3, DF_IN2(:,1))
 xlabel('Zeit t in ms')
 ylabel('Spannung in V')
 

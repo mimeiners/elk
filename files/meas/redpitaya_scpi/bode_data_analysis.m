@@ -3,6 +3,28 @@
 % Input signal: DF_IN1
 % Output signal: DF_IN2
 
+%% Load data from mat file
+% load('./data/IN_D1.mat');
+load('./data/IN1_D1.mat');
+load('./data/IN2_D1.mat');
+
+
+%% Load data from parquet file
+% parquet data is table data, no matrix operations
+% T_IN1 = parquetread('./data/IN1_D1.parquet');
+% table to matrix conversion, table2matrix
+% DF_IN1 = T_IN1{:,:};
+% T_IN2 = parquetread('./data/IN2_D1.parquet');
+% table to matrix conversion, table2matrix
+% DF_IN2 = T_IN2{:,:};
+
+
+%% Load data from excel sheet
+% DF_IN1 = readmatrix('./data/IN1_D1.mat.xlsx');
+% DF_IN2 = readmatrix('./data/IN2_D1.mat.xlsx');
+% DF_IN1 = readmatrix('./data/IN_D1.mat.xlsx', 'Sheet', 1);
+% DF_IN2 = readmatrix('./data/IN_D1.mat.xlsx', 'Sheet', 2);
+
 
 %% Array of tones (GEN), input signal
 ampl = 0.5;
@@ -12,29 +34,8 @@ w = 2*pi*freqs;
 t = linspace(0, 8.389e-3, 16384);
 ts = 8.389e-3/16384;  % sampling time
 
-%% Load data from mat file
-% load('./data/IN_UB_VBS_VBP.mat');
-
-
-%% Load data from parquet file
-% parquet data is table data, no matrix operations
-T_IN1 = parquetread('./data/IN1_UB_VIN.parquet');
-% table to matrix conversion, table2matrix
-DF_IN1 = T_IN1{:,:};
-T_IN2 = parquetread('./data/IN2_UB_VBP.parquet');
-% table to matrix conversion, table2matrix
-DF_IN2 = T_IN2{:,:};
-
-
-%% Load data from excel sheet
-% DF_IN1 = readmatrix('./data/IN1_UB_VBS.xlsx');
-% DF_IN2 = readmatrix('./data/IN2_UB_VBP.xlsx');
-% DF_IN1 = readmatrix('./data/IN_UB_VBS_VBP.xlsx', 'Sheet', 1);
-% DF_IN2 = readmatrix('./data/IN_UB_VBS_VBP.xlsx', 'Sheet', 2);
-
 
 %% Fitting and extraction of sine params
-
 for n = 1:length(freqs)
     SigParam_IN1(:,n) = fit_sin(t, DF_IN1(:,n)');
     SigParam_IN2(:,n) = fit_sin(t, DF_IN2(:,n)');
@@ -42,7 +43,6 @@ end
     
 
 %% Amplitudes via std
-% MAG_dB = 20*log10(std(DF_IN1) ./ ampl);
 MAG_dB = 20*log10(std(DF_IN2) ./ std(DF_IN1));
 
 
@@ -55,10 +55,10 @@ y2 = ampl * sin(w(1)*t - w(1)*dt);  % output sinal
 
 
 %% Cross-correlation test
-    [C, lag] = xcorr(y1, y2);
-    [maxC, I] = max(C);
-    phase_rad_xcorr = (lag(I) * ts * w(1));
-    phase_deg_xcorr = rad2deg(phase_rad_xcorr);
+[C, lag] = xcorr(y1, y2);
+[maxC, I] = max(C);
+phase_rad_xcorr = (lag(I) * ts * w(1));
+phase_deg_xcorr = rad2deg(phase_rad_xcorr);
 
 
 %% Cross-correlation with dataframes
@@ -87,7 +87,6 @@ phase_deg_h = rad2deg(phase_rad_h);
 
 
 %% Hilbert transform with dataframe
-
 for n = 1:length(freqs)
     y1_h = hilbert(DF_IN1(:,n)');
     y2_h = hilbert(DF_IN2(:,n)');
@@ -95,6 +94,7 @@ for n = 1:length(freqs)
     phase_rad_h(n) = angle(y2_h/y1_h);
     phase_deg_h = rad2deg(phase_rad_h);
 end
+
 
 %% Bode plot magnitude
 figure(1);

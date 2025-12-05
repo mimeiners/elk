@@ -26,12 +26,13 @@ LABDESK = {
 IP = LABDESK["ELIE1"]  # IP des Laborplatzes
 rp = scpi.scpi(IP)
 
-# size in samples 16Bit
+# size in samples 16 Bit
 DATA_SIZE = 1024 * 16          # ((1024 * 1024 * 128) / 2) ## for 128 MB ##
 READ_DATA_SIZE = 1024 * 16     # (1024 * 256)              ## for 128 MB ##
 
 dec = 16
 trig_lvl = 0.4
+
 # %% Messung / Datenverarbeitung
 TSTAMP = datetime.datetime.now()
 DEVICE = {
@@ -63,10 +64,13 @@ rp.tx_txt('SOUR1:TRig:INT')
 rp.tx_txt('SOUR1:FUNC ' + str(func))  # Wellenform
 rp.tx_txt('SOUR1:VOLT ' + str(ampl))  # Amplitude
 rp.tx_txt('SOUR1:VOLT:OFFS ' + str(offset))  # Offset
-rp.tx_txt('SOUR1:PHAS 0' + str(offset))  # Offset
+rp.tx_txt('SOUR1:PHAS ' + str(offset))  # Offset
 rp.tx_txt('SOUR1:FREQ:FIX:Direct ' + str(freq))  # Frequenz
 # rp.tx_txt('SOUR1:FREQ:FIX ' + str(freq))  # Frequenz
-rp.tx_txt('OUTPUT1:STATE ON')  # Output
+
+# Enable output
+rp.tx_txt('OUTPUT1:STATE ON')
+rp.tx_txt('SOUR1:TRig:INT')
 
 time.sleep(1)  # in Sekunden
 
@@ -74,7 +78,6 @@ time.sleep(1)  # in Sekunden
 
 # ACQUISITION
 rp.tx_txt('ACQ:RST')  # Input reset
-# rp.tx_txt('ACQ:AVG ON')  # Averaging (OFF, ON)
 
 # Get memory region (DMM)
 start_address = int(rp.txrx_txt('ACQ:AXI:START?'))
@@ -102,9 +105,8 @@ rp.tx_txt('ACQ:AXI:SOUR2:ENable ON')  # Enable DMM ch2
 rp.tx_txt(f"ACQ:TRig:LEV {trig_lvl}")  # Trigger level
 
 
-rp.tx_txt('ACQ:START')  # Start der Messung
-# rp.tx_txt('ACQ:TRig NOW')  # Trigger setzen
-rp.tx_txt('ACQ:TRig CH1_PE')
+rp.tx_txt('ACQ:START')  # Start aquisition
+rp.tx_txt('ACQ:TRig NOW')  # Trigger manually
 
 # print("Waiting for trigger\n")
 while 1:
@@ -123,9 +125,6 @@ while 1:
     if rp.rx_txt() == '1':
         print('DMA buffer full\n')
         break
-
-# Stop Acquisition
-rp.tx_txt('ACQ:STOP')
 
 # Data Acquisition
 for meas in range(0, 1):
@@ -149,6 +148,10 @@ for meas in range(0, 1):
     IN2str = rp.rx_txt()
     IN2str = IN2str.strip('{}\n\r').replace("  ", "").split(',')
     DF_IN2[str(meas)] = np.array(list(map(float, IN2str)))
+
+
+# Stop Acquisition
+rp.tx_txt('ACQ:STOP')
 
 # Stopp des Generators
 rp.tx_txt('OUTPUT1:STATE OFF')

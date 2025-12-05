@@ -24,8 +24,10 @@ t = np.linspace(0, 8.389e-3, N)
 ts = 8.389e-3 / N  # sampling time
 
 # %% Data storage and read
-Data_IN1 = 'data/IN1_UB_VBS'  # + str(datetime.now().strftime('%Y-%m-%d_%H_%M'))
-Data_IN2 = 'data/IN2_UB_VBP'  # + str(datetime.now().strftime('%Y-%m-%d_%H_%M'))
+# + str(datetime.now().strftime('%Y-%m-%d_%H_%M'))
+Data_IN1 = 'data/IN1_UB_VBS'
+# + str(datetime.now().strftime('%Y-%m-%d_%H_%M'))
+Data_IN2 = 'data/IN2_UB_VBP'
 # Data_IN = 'data/IN_UB_VBS_VBP'  # + str(datetime.now().strftime('%Y-%m-%d_%H_%M'))
 
 DF_IN1 = pd.read_csv(Data_IN1 + '.csv')
