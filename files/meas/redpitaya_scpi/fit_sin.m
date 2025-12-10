@@ -1,8 +1,8 @@
 %% Sinosoidal fitting
 
 function s = fit_sin(t,y)
-%FIT_SIN Summary of this function goes here
-%   Detailed explanation goes here
+% FIT_SIN Summary of this function goes here
+% Detailed explanation goes here
 % Ref. https://de.mathworks.com/matlabcentral/answers/121579-curve-fitting-to-a-sinusoidal-function
 % The elements of output parameter vector, s ( b in the function ) are:
 % s(1): sine wave amplitude (in units of y)

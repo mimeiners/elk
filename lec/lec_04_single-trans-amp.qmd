@@ -2,15 +2,14 @@
 
 Verstärker mit einem Transistor
 
-# Introduction to Amplifiers
+# Einführung Verstärker
 
 
 
-* Amplifiers usually use electronic devices operating in the  <span style="color:#0000ff">Active Region</span>
-  * A BJT is used as an amplifier when biased in the forward\-active region
-  * The FET can be used as amplifier if operated in the pinch\-off or saturation region
-* In these regions\, transistors can provide high voltage\, current and power gains
-* Bias is provided to stabilize the operating point \(the Q\-Point\) in the desired region of operation
+* Amplifiers usually use electronic devices operating in the  <span style="color:#ff0000">Active Region\.</span>
+  * A BJT is used as an amplifier when biased in the  <span style="color:#ff0000">forward\-active region\.</span>
+  * The FET can be used as amplifier if operated in the  <span style="color:#ff0000">pinch\-off or saturation region\.</span>
+* In these regions\, transistors can provide high voltage\, current and power gains\. Bias is provided to stabilize the operating point \(the Q\-Point\) in the desired region of operation\.
 * Q\-point also determines
   * Small\-signal parameters of transistor
   * Voltage gain\, input resistance\, output resistance
@@ -26,9 +25,9 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 # RF Power Amplifiers (1)
 
-Als abhängige Stromquelle
+Als abhängige Stromquelle\,
 
-Als Schalter und
+als Schalter und
 
 im “overdrive” Modus; teils abhängige Quelle\, teils Schalter
 
@@ -40,47 +39,41 @@ Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
 Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
+\(a\) Eingangskreis
+
+\(b\) Ausgangskreis
+
 Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
 # BJT Amplifier Concept (1)
 
 ![](img/lec-04-single-trans-amp_16.jpg)
 
-The BJT is biased in the active region by dc voltage source  _V_  _BE_ \.  Q\-point is set at \( _I_  _C_ \,  _V_  _CE_ \) = \(1\.5 mA\, 5 V\) with  _I_  _B  _ = 15 mA  \(bF = 100\)
+The BJT is biased in the active region by dc voltage source  _V_  _BE_ \. Q\-point is set at \( _I_  _C_ \,  _V_  _CE_ \) = \(1\.5 mA\, 5 V\) with  _I_  _B  _ = 15 mA  \(bF = 100\)
 
 Total base\-emitter voltage is:   _v_  _BE_  _ = V_  _BE_  _ \+ _  _v_  _be_
 
 Collector\-emitter voltage is:    _v_  _CE_  _ =_  10  _– _  _i_  _C_  _R_  _C_    This is the load line equation\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
-
-![](img/lec-04-single-trans-amp_17.jpg)
-
-If changes in operating currents and voltages are small enough\, then iC and vCE waveforms are undistorted replicas of the input signal\.
-
-A small voltage change at the base causes a large voltage change at collector\.  Voltage gain is given by:
-
-Minus sign indicates 180o phase shift between the input and output signals\.
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 8 mV peak change in vBE gives 5 mA change in iB and 0\.5 mA change in iC\.
 
 0\.5 mA change in iC produces a 1\.65 V change in vCE \.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+![](img/lec-04-single-trans-amp_17.jpg)
+
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 # MOSFET Amplifier Concept
 
 ![](img/lec-04-single-trans-amp_18.jpg)
 
-MOSFET is biased in active region by dc voltage source VGS\.  Q\-point is set at \(ID\, VDS\) = \(1\.56 mA\, 4\.8 V\) with VGS = 3\.5 V
-
-Total gate\-source voltage is: vGS = VGS \+ vgs
-
-1 Vp\-p change in vGS  yields 1\.25 mAp\-p change in iD and a 4 Vp\-p change in vDS
-
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 # Coupling and Bypass Capacitors
+
+![](img/lec-04-single-trans-amp_19.jpg)
 
 Capacitors are designed to provide negligible impedance at frequencies of interest and provide open circuits at dc\.
 
@@ -88,11 +81,9 @@ _C_ 1 and  _C_ 2 are low impedance coupling capacitors or dc blocking capacitors
 
 _C_ 3 is a bypass capacitor that provides a low impedance path for ac current from emitter to ground\, thereby removing  _R_ E  \(required for good Q\-point stability\) from the circuit when ac signals are considered\.
 
-![](img/lec-04-single-trans-amp_19.jpg)
+ac coupling through capacitors is used to inject ac input signal and extract output signal without disturbing Q\-point\.
 
-ac coupling through capacitors is used to inject ac input signal and extract output signal without disturbing Q\-point
-
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 # dc and ac Analysis – Two Step Analysis
 
@@ -108,21 +99,19 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
   * Combine end results of dc and ac analysis to yield total voltages and currents in the network\.
 
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 # dc Equivalent Circuit for BJT Amplifier
 
-All capacitors in the original amplifier circuit are replaced by open circuits\, disconnecting  _v_  _I _ \,  _R_  _I _ \, and  _R_ 3 from circuit\.
+All capacitors in the original amplifier circuit are replaced by open circuits\, disconnecting  _v_  _I_  _ _ \,  _R_  _I _ \, and  _R_ 3 from circuit\.
 
 ![](img/lec-04-single-trans-amp_20.jpg)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 ![](img/lec-04-single-trans-amp_21.jpg)
 
-Capacitors are replaced by short circuits
-
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 # dc and ac Equivalents for a MOSFET Amplifier
 
@@ -130,23 +119,21 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
 
 Simplified ac equivalent
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# BJT Small-Signal OperationEquivalent Forms of Small-Signal Model
+# BJT Small-Signal Operation
 
-Voltage\-controlled current source  _g_  _m_  _v_  _be_  can be transformed into current\-controlled current source\,
-
-Basic relationship  _i_  _c_  _ _  _= _  _b_  _i_  _b_  is useful in both dc and ac analysis when the BJT is in the forward\-active region\.
+Equivalent Forms of Small\-Signal Model
 
 ![](img/lec-04-single-trans-amp_23.jpg)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 # BJT vs. MOSFET
 
 ![](img/lec-04-single-trans-amp_24.jpg)
 
-Quelle: Microelectronics\, Razavi
+Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
 | Bipolartransistor | MOSFET |
 | :-: | :-: |
@@ -184,10 +171,10 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 | VBE | VBC | Betriebsart \(npn\) |
 | :-: | :-: | :-: |
-|  |  | Vorwärtsbetrieb \(normaler Betrieb\) |
-|  |  | Rückwärtsbetrieb \(inverser Betrieb\) |
-|  |  | Sperrbetrieb |
-|  |  | Sättigung |
+| > 0 | < 0 | Vorwärtsbetrieb \(normaler Betrieb\) |
+| < 0 | > 0 | Rückwärtsbetrieb \(inverser Betrieb\) |
+| < 0 | < 0 | Sperrbetrieb |
+| > 0 | > 0 | Sättigung |
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, 2007; „Aktive elektronische Bauelemente“\, Stiny\, 2019
 
@@ -212,12 +199,6 @@ Nähere Informationen sind den Modellbeschreibungen des SPICE\-Simulators zu ent
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 # Kennlinien / Gummel-Plot
-
-Eingangskennlinie IB\(VBE\)
-
-Transferstromkennlinie IC\(VBE\)
-
-Vorwärtsstromverstärkung
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
@@ -253,33 +234,27 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Erinnerung: Kleinsignalanalyse Diode
-
-Tangente an die Diode im Arbeitspunkt \(AP\)\.
-
-Quelle: Aktive elektronische Bauelemente\, Stiny\, Springer\, 2019
-
 # Diode Small-Signal Model (1)
 
 The slope of the diode characteristic at the Q\-point is called the  __diode conductance__  and is given by:
 
 __Diode resistance__  is given by:
 
-![](img/lec-04-single-trans-amp_54.jpg)
+![](img/lec-04-single-trans-amp_52.jpg)
 
-![](img/lec-04-single-trans-amp_55.jpg)
+![](img/lec-04-single-trans-amp_53.jpg)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4
 
 _g_  _d_  is small but non\-zero for  _I_  _D_  = 0 because slope of diode equation is nonzero at the origin\.
 
 At the origin\, the diode conductance and resistance are given by:
 
-![](img/lec-04-single-trans-amp_56.jpg)
+![](img/lec-04-single-trans-amp_54.jpg)
 
-![](img/lec-04-single-trans-amp_57.jpg)
+![](img/lec-04-single-trans-amp_55.jpg)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4
 
 # NF-Hybridparameter (1)
 
@@ -287,7 +262,7 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Grundschaltungen mit BJTsKap. 17, “Elektronische Bauelemente”, Reisch, 2007
+# Grundschaltungen mit BJTs, Kap. 17, Reisch, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
@@ -309,30 +284,33 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 # Biasing for the BJT - Overview
 
+The goal of biasing is to establish known Q\-point which in turn establishes initial operating region of the transistor\.
 
+For a BJT\, the Q\-point is represented by \( _I_  _C_ \,  _V_  _CE_ \) for an  _npn_  transistor or \( _I_  _C_ \,  _V_  _EC_ \) for a  _pnp_  transistor\.
 
-* The goal of biasing is to establish known Q\-point which in turn establishes initial operating region of the transistor\.
-* For a BJT\, the Q\-point is represented by \( _I_  _C_ \,  _V_  _CE_ \) for an  _npn_  transistor or \( _I_  _C_ \,  _V_  _EC_ \) for a  _pnp_  transistor\.
-* The Q\-point controls values of diffusion capacitance\, transconductance\, input and output resistances\.
-* In general\, during circuit analysis\, we use simplified mathematical relationships derived for a specified operation region\, and the Early voltage is assumed to be infinite\.
-* Two practical biasing circuits used for a BJT are:
-  * Four\-Resistor Bias Network
-  * Two\-Resistor Bias Network
+The Q\-point controls values of diffusion capacitance\, transconductance\, input and output resistances\.
 
+In general\, during circuit analysis\, we use simplified mathematical relationships derived for a specified operation region\, and the Early voltage is assumed to be infinite\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Two practical biasing circuits used for a BJT are:
+
+Four\-Resistor Bias Network
+
+Two\-Resistor Bias Network
+
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 # Four-Resistor Bias Network
 
-![](img/lec-04-single-trans-amp_67.jpg)
+![](img/lec-04-single-trans-amp_65.jpg)
 
-![](img/lec-04-single-trans-amp_68.jpg)
+![](img/lec-04-single-trans-amp_66.jpg)
 
 Forward active region is correct
 
 Q\-point is \(202  __m__ A\, 4\.29 V\)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Quelle: Microelectronic Circuit Design\, Jaeger/Blalock\, 6\. Ed\.\, Kap\. 4
 
 # Four-Resistor Bias Network (cont.)
 
@@ -342,13 +320,13 @@ Hence\, base\-collector junction is reverse\-biased\, and assumption of forward\
 
 Load\-line for the circuit is:
 
-![](img/lec-04-single-trans-amp_69.jpg)
+![](img/lec-04-single-trans-amp_67.jpg)
 
 The two points needed to plot the load line are \(0\, 12 V\) and \(314 mA\, 0\)\. The resulting load line is plotted on the common\-emitter output characteristics\.
 
 IB = 2\.7 mA \- the intersection of the corresponding characteristic with load line gives the Q\-point: \(200 mA\, 4\.3 V\)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 # Four-Resistor Bias Design Objectives
 
@@ -356,13 +334,13 @@ We know that
 
 We desire _ I_  _B _  _<< I_  _R2_  _ _ that  _I_  _R1_  =  _I_  _R2_ \.  In this case\, base current doesn’t disturb the voltage divider action of  _R_  _1_  and  _R_  _2_ \. Thus\, the Q\-point is independent of base current as well as current gain\!
 
-Also\,  _V_  _EQ_  is designed  to be large enough that small variations in the assumed value of  _V_  _BE_  won’t affect  _I_  _E_  and  _I_  _C_ \.
+Also\,  _V_  _EQ_  is designed to be large enough that small variations in the assumed value of  _V_  _BE_  won’t affect  _I_  _E_  and  _I_  _C_ \.
 
 Current in the base voltage divider network is set by choosing I2 ≤ IC/5\.
 
 This ensures that power dissipation in bias resistors is < 17 % of the total quiescent power consumed by circuit\, and  _I_  _2_  >>  _I_  _B_  for b > 50\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 # Four-Resistor Bias Design Guidelines
 
@@ -376,7 +354,7 @@ _R_  _E_  is determined by  _V_  _EQ_  and the desired  _I_  _C_ \.
 
 _R_  _C_  is determined by desired  _V_  _CE_ \.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 # Four-Resistor Bias for BJT - Design Example
 
@@ -390,11 +368,11 @@ Analysis:  Divide \(VCC \- VCE\) equally between RE and RC\. Thus\, VE = 5 V
 
 and VC = 10 V;  Choose nearest 5% resistor values\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 # Two-Resistor Bias for BJT – Design Example
 
-Problem: Find the Q\-point a for pnp transistor in a 2\-resistor bias circuit     with given parameters\.
+Problem: Find the Q\-point for a pnp transistor in a 2\-resistor bias circuit     with given parameters\.
 
 Given data:  _b_ F = 50\, VCC  = 9 V
 
@@ -402,11 +380,11 @@ Assumptions: Forward\-active operation region\, VEB  = 0\.7 V
 
 Analysis:
 
-![](img/lec-04-single-trans-amp_70.jpg)
+![](img/lec-04-single-trans-amp_68.jpg)
 
 Forward\-active region operation is correct Q\-point is : \(6\.01 mA\, 2\.88 V\)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 5
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 # Feldeffekttransistor MOSFET
 
@@ -414,69 +392,31 @@ Begleitend sind die Kap\. 20\.1\, 20\.2 und 20\.6 aus “Elektronische Bauelemen
 
 # Metal-Oxide-Semiconductor (MOS)
 
-![](img/lec-04-single-trans-amp_71.jpg)
+![](img/lec-04-single-trans-amp_69.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
-# MOS Kondensator
-
-![](img/lec-04-single-trans-amp_72.png)
-
-Quelle: Microelectronics\, Razavi
-
-# fig_02_01
-
-CMOS Technologie
-
-![](img/lec-04-single-trans-amp_73.png)
-
-Quelle: Microelectronics\, Razavi
-
 # Struktur und Symbol
 
-![](img/lec-04-single-trans-amp_74.png)
+![](img/lec-04-single-trans-amp_70.png)
 
 Quelle: Microelectronics\, Razavi
-
-# Halbleiterherstellung (Infineon, Dresden)
-
-![](img/lec-04-single-trans-amp_75.jpg)
-
-https://youtu\.be/\_Kj58yQ67KI
-
-# FinFET (Intel)
-
-![](img/lec-04-single-trans-amp_76.jpg)
-
-https://youtu\.be/\_VMYPLXnd7E
-
-# TSMC Fab (Next Gen 7/5 nm)
-
-![](img/lec-04-single-trans-amp_77.jpg)
-
-https://youtu\.be/Hb1WDxSoSec
-
-# Samsung MBCFET
-
-![](img/lec-04-single-trans-amp_78.jpg)
-
-https://youtu\.be/3otqUu\-7WUQ?list=PLO\_wT97BGA6xC6hNy9VGtt1bKwVuQXI5B
 
 # Linearer Bereich
 
-![](img/lec-04-single-trans-amp_79.jpg)
+![](img/lec-04-single-trans-amp_71.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
 # Pinch-off
 
-![](img/lec-04-single-trans-amp_80.jpg)
+![](img/lec-04-single-trans-amp_72.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
 # Sättigungsbreich
 
-![](img/lec-04-single-trans-amp_81.jpg)
+![](img/lec-04-single-trans-amp_73.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
@@ -496,11 +436,11 @@ Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-Anwendungen finden Sie im Aufgabenblatt hw6n
-
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Grundschaltungen mit MOSFETsKap. 21, „Elektronische Bauelemente“, Reisch, 2007
+# Grundschaltungen mit MOSFETs
+
+Kap\. 21\, „Elektronische Bauelemente“\, Reisch\, 2007
 
 Emitter\-Schaltung\, Common\-Emitter \(CE\) wird zuSource\-Schaltung\, Common\-Source \(CS\)
 
@@ -570,27 +510,23 @@ I\(Vi\):	 0	 device\_current
 
 # MOSFET Small-Signal Model
 
-![](img/lec-04-single-trans-amp_91.jpg)
+![](img/lec-04-single-trans-amp_83.jpg)
 
 Using a two\-port y\-parameter network\,
 
 The port variables can represent either time\-varying part of total voltages and currents or small changes in them away from Q\-point values\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
 # MOSFET Small-Signal Model (cont.)
 
-![](img/lec-04-single-trans-amp_92.jpg)
+![](img/lec-04-single-trans-amp_84.jpg)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
 # MOSFET Small-Signal Model - Summary
 
-![](img/lec-04-single-trans-amp_93.jpg)
-
-Transconductance:
-
-Output resistance:
+![](img/lec-04-single-trans-amp_85.jpg)
 
 Since gate is insulated from channel by gate\-oxide input resistance of transistor is infinite\.
 
@@ -598,9 +534,13 @@ Small\-signal parameters are controlled by the Q\-point\.
 
 For the same operating point\, MOSFET has lower transconductance and an output resistance that is similar to the BJT\.
 
+Transconductance:
+
+Output resistance:
+
 Amplification factor for lVDS<<1:
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
 # Transkonduktanz
 
@@ -715,15 +655,15 @@ Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
 # MOSFET Biasing
 
-‘Bias’ sets the dc operating point around which the device operates\.
+<span style="color:#ff0000">Bias</span>  sets the dc operating point around which the device operates\.
 
-The ‘signal’ is actually comprised of relatively small changes in the voltages and/or currents\.
+The  <span style="color:#ff0000">signal</span>  is actually comprised of relatively small changes in the voltages and/or currents\.
 
 Remember \(Total = dc \+ signal\):    vGS = VGS \+ vgs    and   iD = ID \+ id
 
-![](img/lec-04-single-trans-amp_108.jpg)
+![](img/lec-04-single-trans-amp_100.jpg)
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 # Bias Analysis Approach
 
@@ -739,11 +679,11 @@ Change assumptions and analyze again if required\.
 
 NOTE: An enhancement\-mode device with VDS = VGS is always in saturation
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 # Four-Resistor and Two-Resistor Biasing
 
-Provide excellent bias for transistors in discrete circuits\.
+Provide excellent bias for transistors in  <span style="color:#0070c0">discrete circuits</span> \.
 
 Stabilize bias point with respect to device parameter and temperature variations using negative feedback\.
 
@@ -751,15 +691,15 @@ Use single voltage source to supply both gate\-bias voltage and drain current\.
 
 Generally used to bias transistors in saturation region\.
 
-Two\-resistor biasing uses fewer components that four\-resistor biasing
+Two\-resistor biasing uses fewer components that four\-resistor biasing\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 # Example 1: Const. Gate-Source Voltage Biasing (1)
 
-![](img/lec-04-single-trans-amp_109.jpg)
+![](img/lec-04-single-trans-amp_101.jpg)
 
-Problem: Find Q\-pt \(ID\, VDS \, VGS\)
+Problem: Find Q\-pt\. \(ID\, VDS \, VGS\)
 
 Approach: Assume operating region\, find Q\-point\, check to see if result is consistent with assumed region of operation
 
@@ -767,9 +707,9 @@ Assumption: Transistor is saturated\, IG = IB = 0
 
 Analysis: Simplify circuit with Thévenin transformation to find VEQ and REQ for gate\-bias voltage\. Find VGS and then use this to find ID\.  With ID\, we can then calculate VDS\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-![](img/lec-04-single-trans-amp_110.jpg)
+![](img/lec-04-single-trans-amp_102.jpg)
 
 Check:VDS > VGS\-VTN\. Hence saturation region assumption is correct\.
 
@@ -777,15 +717,15 @@ Q\-pt: \(50\.0  __m__ A\, 5\.00 V\) with VGS= 3\.00 V
 
 Discussion: The Q\-point of this circuit is quite sensitive to changes in transistor characteristics\, so it is not widely used\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 # Example 2: Load Line Analysis
 
-![](img/lec-04-single-trans-amp_111.jpg)
+![](img/lec-04-single-trans-amp_103.jpg)
 
-Problem: Find Q\-pt \(ID\, VDS \, VGS\)
+Problem: Find Q\-pt\. \(ID\, VDS \, VGS\)
 
-Approach: Find an equation for the load line\.  Use this to find Q\-pt at intersection of load line with device characteristic\.
+Approach: Find an equation for the load line\.  Use this to find Q\-pt\. at intersection of load line with device characteristic\.
 
 Assumption: Transistor is saturated\, IG = IB = 0
 
@@ -793,13 +733,9 @@ Analysis: For circuit values above\, load line  becomes
 
 Use this to find two points on the load line\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 # Example 2: Load Line Analysis (cont.)
-
-![](img/lec-04-single-trans-amp_112.jpg)
-
-![](img/lec-04-single-trans-amp_113.jpg)
 
 For VDS = 0\, ID = 100 uA
 
@@ -807,101 +743,107 @@ For ID = 0\, VDS = 10 V
 
 Plotting the line on the transistor output characteristic yields Q\-pt at intersection with VGS = 3V device curve\.
 
+![](img/lec-04-single-trans-amp_104.jpg)
+
+![](img/lec-04-single-trans-amp_105.jpg)
+
 Check: The load line approach agrees with previous calculation\. Q\-pt: \(50\.0  __m__ A\, 5\.00 V\) with VGS = 3\.00 V
 
 Discussion: Q\-pt is clearly in the saturation region\.  Graphical load line is good visual aid to see device operating region\.
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\. 4
+Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# HerstellungsverfahrenBJT und MOSFET
+# Herstellungsverfahren
 
-# Prozessschritte BJT
-
-# fig_02_03
+Prozessschritte BJT
 
 Dotierung mit Bor \(1\)
 
-![](img/lec-04-single-trans-amp_114.jpg)
+# fig_02_03
+
+![](img/lec-04-single-trans-amp_106.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-# fig_02_04
-
 Dotierung mit Bor \(2\)
 
-![](img/lec-04-single-trans-amp_115.jpg)
+# fig_02_04
+
+![](img/lec-04-single-trans-amp_107.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
 # fig_02_07
 
-![](img/lec-04-single-trans-amp_116.jpg)
+![](img/lec-04-single-trans-amp_108.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
-
-# fig_02_08
 
 Dotierungsprofil
 
-![](img/lec-04-single-trans-amp_117.jpg)
+# fig_02_08
+
+![](img/lec-04-single-trans-amp_109.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
-
-# fig_02_10
 
 Prozessschritte BJT \(1\)
 
-![](img/lec-04-single-trans-amp_118.jpg)
+# fig_02_10
+
+![](img/lec-04-single-trans-amp_110.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
-
-# fig_02_11
 
 Prozessschritte BJT \(2\)
 
-![](img/lec-04-single-trans-amp_119.jpg)
+# fig_02_11
+
+![](img/lec-04-single-trans-amp_111.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
-
-# fig_02_12
 
 Prozessschritte BJT \(3\)
 
-![](img/lec-04-single-trans-amp_120.jpg)
+# fig_02_12
+
+![](img/lec-04-single-trans-amp_112.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
-
-# fig_02_13
 
 Prozessschritte BJT \(4\)
 
-![](img/lec-04-single-trans-amp_121.jpg)
+# fig_02_13
+
+![](img/lec-04-single-trans-amp_113.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
-
-# fig_02_14
 
 Prozessschritte BJT \(5\)
 
-![](img/lec-04-single-trans-amp_122.jpg)
+# fig_02_14
+
+![](img/lec-04-single-trans-amp_114.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-# fig_02_15
-
 Prozessschritte BJT \(6\)
 
-![](img/lec-04-single-trans-amp_123.jpg)
+# fig_02_15
+
+![](img/lec-04-single-trans-amp_115.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
 # fig_02_16
 
-![](img/lec-04-single-trans-amp_124.jpg)
+![](img/lec-04-single-trans-amp_116.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-# Prozessschritte MOSFETs
+# Herstellungsverfahren
+
+Prozessschritte MOSFET
 
 Begleitend ist das Kap\. 20\.7 aus “Elektronische Bauelemente”\, Reisch\, 2007
 

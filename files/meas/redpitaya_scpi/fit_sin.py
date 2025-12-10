@@ -10,6 +10,7 @@ import scipy.optimize as opt
 
 # %% Sinosoidal fitting function
 def fit_sin(t, y):
+    '''Fit a sine funtion to given data.'''
     ff = np.fft.fftfreq(len(t), (t[1] - t[0]))  # assume uniform spacing
     Fyy = abs(np.fft.fft(y))
     guess_freq = abs(ff[np.argmax(Fyy[1:]) + 1])  # excluding the zero frequency "peak"
