@@ -1,8 +1,6 @@
-# Kapitel 4
+## Verstärker mit einem Transistor
 
-Verstärker mit einem Transistor
-
-# Einführung Verstärker
+## Einführung Verstärker
 
 
 
@@ -19,11 +17,11 @@ Verstärker mit einem Transistor
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
 
-# Transistor als Verstärker - Aktiver Vierpol
+## Transistor als Verstärker - Aktiver Vierpol
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# RF Power Amplifiers (1)
+## RF Power Amplifiers (1)
 
 Als abhängige Stromquelle\,
 
@@ -35,7 +33,7 @@ Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
 Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
-# Classes of Operation of RF Power Amplifiers (1)
+## Classes of Operation of RF Power Amplifiers (1)
 
 Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
@@ -45,7 +43,7 @@ Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
 Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
 
-# BJT Amplifier Concept (1)
+## BJT Amplifier Concept (1)
 
 ![](img/lec-04-single-trans-amp_16.jpg)
 
@@ -65,13 +63,13 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# MOSFET Amplifier Concept
+## MOSFET Amplifier Concept
 
 ![](img/lec-04-single-trans-amp_18.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# Coupling and Bypass Capacitors
+## Coupling and Bypass Capacitors
 
 ![](img/lec-04-single-trans-amp_19.jpg)
 
@@ -85,7 +83,7 @@ ac coupling through capacitors is used to inject ac input signal and extract out
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# dc and ac Analysis – Two Step Analysis
+## dc and ac Analysis – Two Step Analysis
 
 
 
@@ -101,7 +99,7 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# dc Equivalent Circuit for BJT Amplifier
+## dc Equivalent Circuit for BJT Amplifier
 
 All capacitors in the original amplifier circuit are replaced by open circuits\, disconnecting  _v_  _I_  _ _ \,  _R_  _I _ \, and  _R_ 3 from circuit\.
 
@@ -113,7 +111,7 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# dc and ac Equivalents for a MOSFET Amplifier
+## dc and ac Equivalents for a MOSFET Amplifier
 
 ![](img/lec-04-single-trans-amp_22.jpg)
 
@@ -121,7 +119,7 @@ Simplified ac equivalent
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# BJT Small-Signal Operation
+## BJT Small-Signal Operation
 
 Equivalent Forms of Small\-Signal Model
 
@@ -129,7 +127,7 @@ Equivalent Forms of Small\-Signal Model
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-# BJT vs. MOSFET
+## BJT vs. MOSFET
 
 ![](img/lec-04-single-trans-amp_24.jpg)
 
@@ -147,27 +145,27 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Quelle: Microelectronics\, Razavi
 
-# npn vs. nMOS
+## npn vs. nMOS
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Bipolartransistor (BJT)
+## Bipolartransistor (BJT)
 
 Begleitend Kap\. 16 und 17\, “Elektronische Bauelemente”\, Reisch\, 2007
 
-# fig_01_05
+## fig_01_05
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Bändermodell
+## Bändermodell
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Bandschema bei Vorwärtsbetrieb
+## Bandschema bei Vorwärtsbetrieb
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Betriebsarten
+## Betriebsarten
 
 | VBE | VBC | Betriebsart \(npn\) |
 | :-: | :-: | :-: |
@@ -178,39 +176,39 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, 2007; „Aktive elektronische Bauelemente“\, Stiny\, 2019
 
-# Großsignalbeschreibung
+## Großsignalbeschreibung
 
 Eindimensionales Transistormodell
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Ebers-Moll-Modell
+## Ebers-Moll-Modell
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Elementares Transistormodell
+## Elementares Transistormodell
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# SPICE Modellanweisung
+## SPICE Modellanweisung
 
 Nähere Informationen sind den Modellbeschreibungen des SPICE\-Simulators zu entnehmen\.
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Kennlinien / Gummel-Plot
+## Kennlinien / Gummel-Plot
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Early-Effekt
+## Early-Effekt
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Transistor als Verstärker - Aktiver Vierpol
+## Transistor als Verstärker - Aktiver Vierpol
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Kenngrößen beschalteter Vierpole
+## Kenngrößen beschalteter Vierpole
 
 Eingangsimpedanz
 
@@ -222,7 +220,7 @@ Spannungsübertragungsfaktor
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Beispielrechnungen
+## Beispielrechnungen
 
 Leitwertparameter eines Bandpasses\, Bsp\. 2\.2\.4\, Reisch\, 2007
 
@@ -230,11 +228,11 @@ Kenngrößen eines beschalteten Tiefpasses\, Bsp\. 2\.3\.1\, Reisch\, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Elementares Kleinsignalmodell
+## Elementares Kleinsignalmodell
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Diode Small-Signal Model (1)
+## Diode Small-Signal Model (1)
 
 The slope of the diode characteristic at the Q\-point is called the  __diode conductance__  and is given by:
 
@@ -256,23 +254,23 @@ At the origin\, the diode conductance and resistance are given by:
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4
 
-# NF-Hybridparameter (1)
+## NF-Hybridparameter (1)
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Grundschaltungen mit BJTs, Kap. 17, Reisch, 2007
+## Grundschaltungen mit BJTs, Kap. 17, Reisch, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Emitterschaltung
+## Emitterschaltung
 
 Arbeitspunkt \(\.op in SPICE\)
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Normwertreihen
+## Normwertreihen
 
 E\-Reihen nach DIN 41425: \[…\] „Die Normwertreihe En \(n=6\, 12\, 24\, …\) ordnet jeder Dekade der Widerstandsskala n Widerstandswerte zu\.“ \[…\]
 
@@ -282,7 +280,7 @@ Toleranz 5%:
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-# Biasing for the BJT - Overview
+## Biasing for the BJT - Overview
 
 The goal of biasing is to establish known Q\-point which in turn establishes initial operating region of the transistor\.
 
@@ -300,7 +298,7 @@ Two\-Resistor Bias Network
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
-# Four-Resistor Bias Network
+## Four-Resistor Bias Network
 
 ![](img/lec-04-single-trans-amp_65.jpg)
 
@@ -312,7 +310,7 @@ Q\-point is \(202  __m__ A\, 4\.29 V\)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blalock\, 6\. Ed\.\, Kap\. 4
 
-# Four-Resistor Bias Network (cont.)
+## Four-Resistor Bias Network (cont.)
 
 All calculated currents > 0\,  _V_  _BC_  =  _V_  _BE_  \-  _V_  _CE_  = 0\.7 \- 4\.32 = \- 3\.62 V
 
@@ -328,7 +326,7 @@ IB = 2\.7 mA \- the intersection of the corresponding characteristic with load l
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
-# Four-Resistor Bias Design Objectives
+## Four-Resistor Bias Design Objectives
 
 We know that
 
@@ -342,7 +340,7 @@ This ensures that power dissipation in bias resistors is < 17 % of the total qui
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
-# Four-Resistor Bias Design Guidelines
+## Four-Resistor Bias Design Guidelines
 
 Choose Thévenin equivalent base voltage
 
@@ -356,7 +354,7 @@ _R_  _C_  is determined by desired  _V_  _CE_ \.
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
-# Four-Resistor Bias for BJT - Design Example
+## Four-Resistor Bias for BJT - Design Example
 
 Problem:  Design 4\-resistor bias circuit with given parameters\.
 
@@ -370,7 +368,7 @@ and VC = 10 V;  Choose nearest 5% resistor values\.
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
-# Two-Resistor Bias for BJT – Design Example
+## Two-Resistor Bias for BJT – Design Example
 
 Problem: Find the Q\-point for a pnp transistor in a 2\-resistor bias circuit     with given parameters\.
 
@@ -386,45 +384,45 @@ Forward\-active region operation is correct Q\-point is : \(6\.01 mA\, 2\.88 V\)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
-# Feldeffekttransistor MOSFET
+## Feldeffekttransistor MOSFET
 
 Begleitend sind die Kap\. 20\.1\, 20\.2 und 20\.6 aus “Elektronische Bauelemente”\, Reisch\, 2007
 
-# Metal-Oxide-Semiconductor (MOS)
+## Metal-Oxide-Semiconductor (MOS)
 
 ![](img/lec-04-single-trans-amp_69.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
-# Struktur und Symbol
+## Struktur und Symbol
 
 ![](img/lec-04-single-trans-amp_70.png)
 
 Quelle: Microelectronics\, Razavi
 
-# Linearer Bereich
+## Linearer Bereich
 
 ![](img/lec-04-single-trans-amp_71.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
-# Pinch-off
+## Pinch-off
 
 ![](img/lec-04-single-trans-amp_72.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
-# Sättigungsbreich
+## Sättigungsbreich
 
 ![](img/lec-04-single-trans-amp_73.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
-# Arbeitsbereiche
+## Arbeitsbereiche
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# SPICE LEVEL-1-Modell (1)
+## SPICE LEVEL-1-Modell (1)
 
 __SATURATION – __  __Sättigung__  __ \- VCCS__
 
@@ -438,7 +436,7 @@ Quelle: Elektronische Bauelemente\, Reisch
 
 Quelle: Elektronische Bauelemente\, Reisch
 
-# Grundschaltungen mit MOSFETs
+## Grundschaltungen mit MOSFETs
 
 Kap\. 21\, „Elektronische Bauelemente“\, Reisch\, 2007
 
@@ -450,7 +448,7 @@ Kollektor\-Schaltung\, Common\-Collector \(CC\) wird zuDrain\-Schaltung\, Common
 
 vgl\. Sie auch mit Darstellungen der Autoren Stiny und Reisch\.
 
-# CS Schaltung LEVEL 1
+## CS Schaltung LEVEL 1
 
 Common\-source amplifier
 
@@ -480,7 +478,7 @@ RD vdd vo 5k
 
 \.end
 
-# Arbeitspunktanalyse (.op)
+## Arbeitspunktanalyse (.op)
 
 \-\-\- Operating Point \-\-\-
 
@@ -504,11 +502,11 @@ I\(Vdd\):	 \-0\.0005	 device\_current
 
 I\(Vi\):	 0	 device\_current
 
-# .dc Output
+## .dc Output
 
-# Kleinsignalmodell
+## Kleinsignalmodell
 
-# MOSFET Small-Signal Model
+## MOSFET Small-Signal Model
 
 ![](img/lec-04-single-trans-amp_83.jpg)
 
@@ -518,13 +516,13 @@ The port variables can represent either time\-varying part of total voltages and
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
-# MOSFET Small-Signal Model (cont.)
+## MOSFET Small-Signal Model (cont.)
 
 ![](img/lec-04-single-trans-amp_84.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
-# MOSFET Small-Signal Model - Summary
+## MOSFET Small-Signal Model - Summary
 
 ![](img/lec-04-single-trans-amp_85.jpg)
 
@@ -542,23 +540,23 @@ Amplification factor for lVDS<<1:
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
-# Transkonduktanz
+## Transkonduktanz
 
 Die Transkonduktanz \(gm\) ist das Kleinsignalverhältnis zwischenGate\-Spannung und Drain\-Strom\.
 
 Die Transkonduktanz erhält man durch partielle Differentiation der Großsignalkennlinie \(IV\, Strom\-Spannung\) im Arbeitspunkt\.
 
-# Kleinsignalersatzschaltbild
+## Kleinsignalersatzschaltbild
 
 Benutzen Sie das Großsignal Strom\-Spannungs\-Verhalten zur Bestimmung des Arbeitspunktes \(AP od\. OP\): ID\, VO\, gm \.
 
 Von nun an arbeiten Sie im “Kleinsignaluniversum”:Verstärkung\, Bandbreite etc\.
 
-# Finites dID/dVDS
+## Finites dID/dVDS
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# Modellierung des finiten dID/dVDS
+## Modellierung des finiten dID/dVDS
 
 
 
@@ -572,7 +570,7 @@ Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# Kanallängenmodulation (1)
+## Kanallängenmodulation (1)
 
 Eine steigende VDS Spannung verursacht eine Expansion der Raumladungszone am Drain \(vgl\. Physik des pn\-Übergangs\)\.
 
@@ -586,7 +584,7 @@ Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
 |VA2|  >   |VA1|
 
-# Vergleich zur Early-Spannung
+## Vergleich zur Early-Spannung
 
 Early Spannung \(VA\) ist als 1/λ in SPICE definiert\.
 
@@ -594,13 +592,13 @@ Es entspricht grob dem Schnittpunkt der extrapolierten I\-V Kennlinie mit der VD
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# Kleinsignalperspektive
+## Kleinsignalperspektive
 
 Im Arbeitspunkt kann finites dID/dVDS  als Ausgangsleitwert gds oder Widerstand ro=1/gds beschrieben werden\.
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# Ausgangsleitwert
+## Ausgangsleitwert
 
 Näherung für schnelle Handrechnung\, solange die Kanallänge L groß ist\.
 
@@ -608,19 +606,19 @@ Hinweis: Die Art der Näherung bestimmt zu große Werte für gds \.
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# MOSFET Modell mit gds
+## MOSFET Modell mit gds
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# CS Verstärker mit gds
+## CS Verstärker mit gds
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# .ac Simulation
+## .ac Simulation
 
-# .tran Output
+## .tran Output
 
-# Eine weitere Simulation
+## Eine weitere Simulation
 
 Folgende Stimulation
 
@@ -636,11 +634,11 @@ vi  vi  0   dc  1\.5  \*\*\* value for \.op analysis
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# .tran Output
+## .tran Output
 
-# .ac Output
+## .ac Output
 
-# Wichtig zu merken!
+## Wichtig zu merken!
 
 
 
@@ -653,7 +651,7 @@ Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
 Quelle: EE114\, B\. Murmann\, Stanford Univ\.
 
-# MOSFET Biasing
+## MOSFET Biasing
 
 <span style="color:#ff0000">Bias</span>  sets the dc operating point around which the device operates\.
 
@@ -665,7 +663,7 @@ Remember \(Total = dc \+ signal\):    vGS = VGS \+ vgs    and   iD = ID \+ id
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# Bias Analysis Approach
+## Bias Analysis Approach
 
 Assume an operation region \(generally the saturation region\)
 
@@ -681,7 +679,7 @@ NOTE: An enhancement\-mode device with VDS = VGS is always in saturation
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# Four-Resistor and Two-Resistor Biasing
+## Four-Resistor and Two-Resistor Biasing
 
 Provide excellent bias for transistors in  <span style="color:#0070c0">discrete circuits</span> \.
 
@@ -695,7 +693,7 @@ Two\-resistor biasing uses fewer components that four\-resistor biasing\.
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# Example 1: Const. Gate-Source Voltage Biasing (1)
+## Example 1: Const. Gate-Source Voltage Biasing (1)
 
 ![](img/lec-04-single-trans-amp_101.jpg)
 
@@ -719,7 +717,7 @@ Discussion: The Q\-point of this circuit is quite sensitive to changes in transi
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# Example 2: Load Line Analysis
+## Example 2: Load Line Analysis
 
 ![](img/lec-04-single-trans-amp_103.jpg)
 
@@ -735,7 +733,7 @@ Use this to find two points on the load line\.
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# Example 2: Load Line Analysis (cont.)
+## Example 2: Load Line Analysis (cont.)
 
 For VDS = 0\, ID = 100 uA
 
@@ -753,13 +751,13 @@ Discussion: Q\-pt is clearly in the saturation region\.  Graphical load line is 
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-# Herstellungsverfahren
+## Herstellungsverfahren
 
 Prozessschritte BJT
 
 Dotierung mit Bor \(1\)
 
-# fig_02_03
+## fig_02_03
 
 ![](img/lec-04-single-trans-amp_106.jpg)
 
@@ -767,13 +765,13 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Dotierung mit Bor \(2\)
 
-# fig_02_04
+## fig_02_04
 
 ![](img/lec-04-single-trans-amp_107.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-# fig_02_07
+## fig_02_07
 
 ![](img/lec-04-single-trans-amp_108.jpg)
 
@@ -781,7 +779,7 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Dotierungsprofil
 
-# fig_02_08
+## fig_02_08
 
 ![](img/lec-04-single-trans-amp_109.jpg)
 
@@ -789,7 +787,7 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Prozessschritte BJT \(1\)
 
-# fig_02_10
+## fig_02_10
 
 ![](img/lec-04-single-trans-amp_110.jpg)
 
@@ -797,7 +795,7 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Prozessschritte BJT \(2\)
 
-# fig_02_11
+## fig_02_11
 
 ![](img/lec-04-single-trans-amp_111.jpg)
 
@@ -805,7 +803,7 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Prozessschritte BJT \(3\)
 
-# fig_02_12
+## fig_02_12
 
 ![](img/lec-04-single-trans-amp_112.jpg)
 
@@ -813,7 +811,7 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Prozessschritte BJT \(4\)
 
-# fig_02_13
+## fig_02_13
 
 ![](img/lec-04-single-trans-amp_113.jpg)
 
@@ -821,7 +819,7 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Prozessschritte BJT \(5\)
 
-# fig_02_14
+## fig_02_14
 
 ![](img/lec-04-single-trans-amp_114.jpg)
 
@@ -829,25 +827,25 @@ Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\,
 
 Prozessschritte BJT \(6\)
 
-# fig_02_15
+## fig_02_15
 
 ![](img/lec-04-single-trans-amp_115.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-# fig_02_16
+## fig_02_16
 
 ![](img/lec-04-single-trans-amp_116.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-# Herstellungsverfahren
+## Herstellungsverfahren
 
 Prozessschritte MOSFET
 
 Begleitend ist das Kap\. 20\.7 aus “Elektronische Bauelemente”\, Reisch\, 2007
 
-# Wafer-Start
+## Wafer-Start
 
 Start with wafer at current step
 
@@ -863,7 +861,7 @@ Step specific processingetch\, implant\, etc\.\.\.
 
 Quelle: EE271\, S\. Mitra\, Stanford Univ\.
 
-# Transistor strukturieren (1)
+## Transistor strukturieren (1)
 
 __N\-well__
 
@@ -877,7 +875,7 @@ Quelle: EE271\, S\. Mitra\, Stanford Univ\.
 
 Quelle: EE271\, S\. Mitra\, Stanford Univ\.
 
-# Leiterbahnen strukturieren (1)
+## Leiterbahnen strukturieren (1)
 
 <span style="color:#000000">Deposit</span>
 

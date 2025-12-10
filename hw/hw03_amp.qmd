@@ -1,0 +1,146 @@
+Erzeugen Sie das Ausgangskennlinienfeld eines npn-Transistors in
+Emitterschaltung mit Hilfe von LTspice.
+
+Der zu verwendende Bipolartransistor habe dabei folgende Kenndaten:
+
+::: {#tab:hw03p1}
+  ----------- -------------- ---------------- ----------------------------------
+   Parameter      SPICE              npn Wert Erläuterung
+               Modellparam.                   
+     $B_F$          BF                    250 Ideale Vorwärtsstromverstärkung
+     $B_I$          BR                      6 Ideale Rückwärtsstromverstärkung
+   $V_{AF}$        VAF                   25 V Vorwärts-Early-Spannung
+     $I_S$          IS         10 × 10^−15^ A Transfersättigungsstrom
+     $r_b$          RB                   10 Ω Basisbahnwiderstand
+     $r_c$          RC                    2 Ω Kollektorbahnwiderstand
+     $r_e$          RE                  0.5 Ω Emitterbahnwiderstand
+  ----------- -------------- ---------------- ----------------------------------
+
+  : Typische Parameter des Bipolartransistors
+:::
+
+[]{#tab:hw03p1 label="tab:hw03p1"}
+
+> Schreiben Sie eine Modellanweisung mit den Kenndaten, um den
+> Transistor zu simulieren. Nutzen Sie zur Lösung der Aufgabe Literatur
+> aus der Referenzliste in AULIS z.B. von @tietze2012 oder @reisch2007.
+> Gerne auch eigene bevorzugte Werke.
+
+::: solution
+Die zur Simulation notwendige SPICE-Netzliste (LTspice):
+
+``` {#lst:spice_modell .objectivec language="C" caption="SPICE Modellanweisung" label="lst:spice_modell"}
+* Ausgangskennlinienfeld npn-BJT
+vben vbn 0 {be}
+vcen vcn 0 {ce}
+Qn1 vcn vbn 0 0 BIPO
+
+.include elk.lib
+.dc param ce 0.0 5.0 0.05
+.step param be list 0.74 0.76 0.78 0.8 0.85 0.9
+
+.end
+```
+:::
+
+Gegeben ist ein npn Bipolartransistor in Emitterschaltung,
+$V_{CC}$=15 V, $R_C$=470 Ω, $T$=300 K.
+
+Die Kenndaten des Bipolartransistors lauten:
+
+::: {#tab:hw03p2}
+  ------------- -------------- ---------------- ----------------------------------
+    Parameter       SPICE              npn Wert Erläuterung
+                 Modellparam.                   
+      $B_F$           BF                    250 Ideale Vorwärtsstromverstärkung
+      $B_I$           BR                      6 Ideale Rückwärtsstromverstärkung
+    $V_{AF}$         VAF                   30 V Vorwärts-Early-Spannung
+      $I_S$           IS         10 × 10^−15^ A Transfersättigungsstrom
+    $\tau_F$          TF                 400 ps Ideale Vorwärtstransitzeit
+      $r_b$           RB                   10 Ω Basisbahnwiderstand
+    $C_{je0}$        CJE                  20 pF EB Sperrschichtkapazität
+   $\psi_{0e}$       VJE                  0.9 V EB Diffusionsspannung
+      $n_e$          MJE                    0.4 EB Gradationsexponent
+   $C_{\mu 0}$       CJC                  10 pF BC Sperrschichtkapazität
+   $\psi_{0c}$       VJC                  0.8 V BC Diffusionsspannung
+      $n_c$          MJC                    0.4 BC Gradationsexponent
+  ------------- -------------- ---------------- ----------------------------------
+
+  : Typische Parameter des Bipolartransistors
+:::
+
+[]{#tab:hw03p2 label="tab:hw03p2"}
+
+Bestimmen Sie per Handrechnung den Basisvorwiderstand $R_B$ derart, so
+dass der Arbeitspunkt der Ausgangsspannung bei $V_2$=8 V liegt.
+Simulieren Sie den Frequenzgang der Emitterschaltung mit SPICE, wobei
+die Lastimpedanz eine RC-Parallelschaltung ist, $R_L$=1 k Ω und
+$C_L$=10 pF.
+
+<figure id="fig:hw03p2" data-latex-placement="h">
+
+<figcaption>Bipolarverstärker in Emitterschaltung</figcaption>
+</figure>
+
+::: solution
+Zur Bestimmung des Arbeitspunktes der Schaltung kann $v_1(t)=0$
+angenommen werden, so dass die Kapazitäten keinen Strom führen und bei
+der Netzwerkanalyse nicht berücksichtigt werden müssen.
+
+Damit die Ausgangsspannung $V_2=V_{CE}=\SI{8}{V}$ folgt der
+Kollektorstrom zu $$\begin{equation}
+  \label{eq:1}
+  I_C = \frac{V_{cc}-V_2}{R_C} = \frac{\SI{7}{V}}{\SI{470}{\ohm}} = \SI{14.9}{mA}.
+\end{equation}$$
+
+Mit Hilfe der Modellparameter $B_F$ und $V_{AF}$ kann der Basisstrom
+$I_B$ ermittelt werden. $$\begin{equation}
+  \label{eq:2}
+  I_B = \frac{I_C}{B_N} \approx \SI{47}{\micro\ampere},
+\end{equation}$$
+
+wobei die Stromverstärkung $B_N$ die Early-Spannung berücksichtigt.
+
+$$\begin{equation}
+  \label{eq:3}
+  B_N = B_F\left( 1 + \frac{V_{CE}}{V_{AF}}\right).
+\end{equation}$$
+
+In der Emitter-Schaltung arbeitet der Transistor im Vorwärtsbetrieb, die
+BC-Diode ist gesperrt. Die Spannung $V_{BE}$ kann aus der Gleichung für
+die BE-Diode und dem Modellparameter $I_S$ berechnet werden.
+
+$$\begin{equation}
+  \label{eq:4}
+  V_{BE} = V_T \ln\left( \frac{I_B}{I_S} \right) \approx \SI{580}{mV}.
+\end{equation}$$
+
+Ein weiterer Maschenumlauf liefert dann den gesuchten Widerstand $R_B$:
+$$\begin{equation}
+  \label{eq:5}
+  R_B = \frac{V_{CC}-V_{BE}}{I_B} = \SI{307}{k\ohm}.
+\end{equation}$$
+
+SPICE-Netzliste (LTspice):
+
+``` {#lst:spice_modell .objectivec language="C" caption="SPICE Modellanweisung" label="lst:spice_modell"}
+* Simulation des Frequenzgangs, Emitter-Schaltung
+Vin N002 0 AC 1
+VCC N001 0 15
+Q1 vc vb 0 0 BJTE1
+RC N001 vc 470
+RB N001 vb 304k
+RS N002 N003 50
+RL vout 0 1k
+CL vout 0 1p
+CK2 vc vout 100u
+CK1 N003 vb 1u
+    
+.MODEL BJTE1 NPN ( IS=10f VAF=30 BF=250 BR=6 RB=10 CJC=10p 
++                  MJC=0.4 VJC=0.8 CJE=20p MJE=0.4 VJE=0.9 TF=400p )
+
+.op
+.ac dec 100 10 1G
+.end
+```
+:::
