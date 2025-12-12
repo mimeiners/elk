@@ -1,0 +1,22 @@
+.title Diodes 
+
+* LIBRARIES
+.include "./lib/1n4001.cir"
+.include "./lib/1n4148.cir"
+.include "./lib/jumper.cir"
+
+* SIMULATION COMMANDS
+.save all
+.probe alli
+.tran 100u 2m
+
+* CIRCUIT
+Voffs1 /voff 0 DC -1
+Vtri1 /In-1 /voff PULSE( 0 2 0 0.5m 0.5m 100p 1m 10 )
+
+R1 /In-1 /Out-2 1k
+XJumper1 /vj1 /Out-2 /vj3 myjumper
+
+D1 /vj3 0 D1N4148
+D2 /vj1 0 D1N4001
+.end

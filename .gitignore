@@ -16,3 +16,4 @@ _book
 __pycache__
 .virtual_documents
 **/*.quarto_ipynb
+*-backup*

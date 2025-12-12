@@ -1,0 +1,70 @@
+.title KiCad schematic
+.include "/Users/mimeiners/Documents/courses/elk/elk-prj/spice/elk.lib"
+.save all
+.probe alli
+
+*** Emulate .step command
+* .step temp -25 50 1
+* .step param R3 4k 5k 100 
+* .step param R5 400k 500k 10k
+
+* PARAMETER
+.param ptemp = -20 R1 = 10k R2 = 22k R3 = 4k R4 = 47k R5 = 400k 
+*.temp {ptemp}                      ; set the overall circuit temperature
+.control
+let index = 1                       ; new loop index vector (in plot 'const')
+*let tcur = -20                       ; new temperature vector (in plot 'const')
+set plotstr = ' '
+set writestr = ' '
+
+** loop start **
+;while tcur <= 50                    ; the temperature loop
+  let rr3 = 4k                      ; new resistance parameter vector (in plot 'const')
+  while rr3 <= 5k                   ; the resistor R3 loop
+    let rr5 = 400k                  ; new resistance parameter vector (in plot 'const')
+    while rr5 <= 500k               ; the resistor R5 loop
+      echo
+      echo
+      echo *** op no. $&index',' R3=$&rr3',' R5=$&rr5',' temp=$&tcur *** ; print to console where we are
+;      alterparam ptemp = $&tcur     ; change the temperature parameter
+      alterparam R3 = $&rr3         ; change the R3 resistance parameter
+	    alterparam R5 = $&rr5         ; change the R5 resistance parameter
+      reset                         ; activate the parameter changes by reloading the ciruit
+      run                           ; run the op simulation
+      set plotstr = ( $plotstr {$curplot}.v(va) )
+      set writestr = ( $writestr {$curplot}.v(va) )
+      let rr5 = rr5 + 10k           ; new R5 value
+      let index = index + 1
+    end
+    let rr3 = rr3 + 100             ; new R3 value
+  end
+;  let tcur = tcur + 1              ; new temperature value
+;end
+
+** loop end, start plotting **
+set nolegend           ; legend for 50 graphs is unreadable
+set xbrushwidth=2      ; increase linewidth of graphs
+plot $plotstr          ; plot all output voltages
+set wr_singlescale     ; for wrdata: write the scale only once
+set wr_vecnames        ; for wrdata: write the vector names
+option numgt = 3       ; for wrdata: 3 digits after decimal point
+wrdata TransThermo.txt $writestr  ; write op output v(va) into file for all runs
+rusage                 ; list some resource usage
+.endc
+
+* ANALYSIS
+;.op
+.dc TEMP -20 50 1
+
+* NETLIST
+XU1 va vp VCC VEE va TL082
+VCC VCC 0 DC 10 
+VEE 0 VEE DC 10 
+R5 Net-_U1A-+_ va {R5}
+R4 vc Net-_U1A-+_ {R4}
+R3 vp 0 {R3}
+Q1 vc vc 0 Q2N3904
+R1 Net-_R1-Pad1_ vc {R1}
+R2 Net-_R1-Pad1_ vp {R2}
+VE Net-_R1-Pad1_ 0 DC 5 
+.end

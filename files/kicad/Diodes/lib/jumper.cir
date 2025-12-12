@@ -1,0 +1,5 @@
+* This models a jumper with series resistance of 1uOhm
+.SUBCKT myjumper 1 2 3
+R1 1 2 1e-6
+R2 2 3 1e9
+.ENDS

@@ -1,0 +1,35 @@
+.title Transistor Diodes
+
+* LIBRARIES
+.include "./lib/bs170.cir"
+.include "./lib/bs250.cir"
+.include "./lib/jumper.cir"
+.include "./lib/op27.cir"
+.include "./lib/q2n3904.cir"
+.include "./lib/q2n3906.cir"
+
+* SIMULATION OPTIONS
+.save all
+.probe alli
+.tran 100u 2m
+
+* CIRCUIT
+VSS33 0 -3V3 DC 3.3 
+VDD33 +3V3 0 DC 3.3 
+VDD5 +5V 0 DC 5.0 
+
+Vin2 /IN-1 0 PULSE( -0.92 0.68 0 0.5m 0.5m 100p 1m 4 ) 
+
+R1 /IN-1 /VN 2.2k
+R2 /VN /OUT-1 10k
+R3 /OUT-1 /OUT-2 1k
+XU1 0 /VN +5V -3V3 /OUT-1 OP27
+
+XJumperTransistorauswahl1 /OUT-2 /BS250 /OUT-2 /BS170 /OUT-2 /2N3906 /OUT-2 /2N3904 myjumper
+
+Q1 /2N3904 /2N3904 0 Q2N3904
+Q2 /2N3906 /2N3906 +3V3 Q2N3906
+XM1 /BS170 /BS170 0 BS170
+XM2 /BS250 /BS250 +3V3 BS250
+.end
+
