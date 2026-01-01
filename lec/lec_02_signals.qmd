@@ -10,8 +10,6 @@ Toleranzen/Fehlergrenzen
 
 ## Einfache Signale
 
-
-
 * Signale repräsentieren Informationen
   * Ein Beispiel: Temperatur eines Backofens
   * Mögliche Signale: 	\- Temperatur des Backofens	\- Temperatur und Feuchtigkeit des Kuchenteigs	\- Geschmack/Qualität des Kuchens
@@ -40,8 +38,6 @@ Sprung und Impuls sind plötzliche Amplitudenänderungen\.
 ## Zeitdiskrete Signale
 
 ## The Data Conversion Problem
-
-
 
 * Real world signals: Continuous time\, continuous amplitude
 * Digital abstraction: Discrete time\, discrete amplitude

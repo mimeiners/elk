@@ -1,18 +1,16 @@
-# Kapitel 5
+# Operationsverstärker
 
-Operationsverstärker
+## Schaltung und Übertragungskennlinie
 
-# Schaltung und Übertragungskennlinie
+![](../images/lec-05-opamp_0.png)
 
-![](img/lec-05-opamp_0.png)
+## Prinzipien und Kenndaten (1)
 
-# Prinzipien und Kenndaten (1)
+![](../images/lec-05-opamp_1.png)
 
-![](img/lec-05-opamp_1.png)
+![](../images/lec-05-opamp_2.png)
 
-![](img/lec-05-opamp_2.png)
-
-# Ausführungen
+## Ausführungen
 
 Bipolar\-OP‘s: Operationsverstärker in bipolarer Technologie
 
@@ -20,63 +18,25 @@ BiFET\-OP‘s: Operationsverstärker in BiCMOS\-Technologie
 
 CMOS\-OP‘s: Operationsverstärker in CMOS\-Technologie
 
-# Frequenzverhalten (1)
+## Frequenzverhalten (1)
 
-\(a\) Elementares Modell	\(b\) Makromodell
+![](../images/lec-05-opamp_3.png)
 
-![](img/lec-05-opamp_3.png)
+\(a\) Elementares Modell		\(b\) Makromodell
 
-![](img/lec-05-opamp_4.png)
+![](../images/lec-05-opamp_4.png)
 
-Bsp\. 6\.2\.2 Reisch\, 2007Ref\. lec3ex6\_2\_2\.zip in AULIS
+![](../images/lec-05-opamp_6.png)
 
-\* TESTSCHALTUNG
-
-V1 IN 0 AC 1
-
-R1 IN INN 1k
-
-R2 OUT INN 200k
-
-CL OUT 0 10n
-
-X1 0 INN OUT OPAMP
-
-\* MACROMODEL OPAMP
-
-\.SUBCKT OPAMP INP INN OUT
-
-RI INP INN 2MEG
-
-CI INP INN 1\.5P
-
-RGL1 INP 0 1G
-
-RGL2 INN 0 1G
-
-ED OUT0 0 INP INN LAPLACE=\{100000/\(1\+0\.047\*s\)\}
-
-RA OUT0 OUT 70
-
-\.ENDS OPAMP
-
-\* ANALYSE
-
-\.AC DEC 50 10 10MEG
-
-\.END
-
-![](img/lec-05-opamp_6.png)
-
-# Ersatzschaltungen/Makromodelle
+## Ersatzschaltungen/Makromodelle
 
 Für die Schaltungssimulation
 
 Ref\. Burr\-Brown\, „SPICE Based Macromodels“\, AB\-020F\, SBFA009 \(TI\)
 
-<span style="color:#000000">[spice\-it\-up\-understanding\-and\-using\-opamp\-macromodels](https://www.electronicdesign.com/technologies/analog/article/21806271/spice-it-up-understanding-and-using-opamp-macromodels)</span>
+<span style="color:#000000">[https://www\.electronicdesign\.com/technologies/analog/article/21806271/spice\-it\-up\-understanding\-and\-using\-opamp\-macromodels](https://www.electronicdesign.com/technologies/analog/article/21806271/spice-it-up-understanding-and-using-opamp-macromodels)</span>
 
-# Kleinsignalanalyse / Vierpolkenngrößen
+## Kleinsignalanalyse / Vierpolkenngrößen
 
 Leitwertparameter eines Vierpols / Zweitors
 
@@ -84,45 +44,19 @@ Leitwertparameter eines Vierpols / Zweitors
 
 Ref\. Kap\. 2\, Elektronische Bauelemente\,  Reisch\, 2007
 
-# Kenngrößen beschalteter Vierpole
+## Kenngrößen beschalteter Vierpole
 
 Eingangsimpedanz\, Ausgangsimpedanz\, Übertragungsfaktor
 
-# Verstärkertypen
+## Verstärkertypen
 
-# Lineare Grundschaltungen
+## Lineare Grundschaltungen (1)
 
-Invertierender Verstärker
-
-Nicht\-invertierender Verstärker
-
-Spannungsfolger
-
-Subtrahierer
-
-Instrumentenverstärker
-
-Addierer
-
-Integrierer
-
-Differenzierer
-
-Logarithmierer
-
-Ref\. Kap\. 6\, Elektronische Bauelemente\,  Reisch\, 2007
-
-Addierer
-
-<span style="color:#000000">Nicht\-invertierend</span>
-
-# Anwendung Integrator
-
-Passiver Tiefpassfilter
+## Anwendung Integrator
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# On-Chip Capacitors
+## On-Chip Capacitors
 
 
 
@@ -133,9 +67,9 @@ Source: EE315a\, B\. Murmann\, Stanford Univ\.
   * Series and parallel resistances are often not a concern
 
 
-![](img/lec-05-opamp_25.png)
+![](../images/lec-05-opamp_25.png)
 
-![](img/lec-05-opamp_26.png)
+![](../images/lec-05-opamp_26.png)
 
 __Metal\-Insulator\-Metal \(MIM\)__
 
@@ -147,7 +81,7 @@ Ng et al\.\, IEEE Trans\. Electron Dev\.\, 7/2005\, doi: 10\.1109/TED\.2005\.850
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# On-chip Inductors
+## On-chip Inductors
 
 Many nonidealities\, hard to model\, low “Q”
 
@@ -155,9 +89,9 @@ Area inefficient\, typically achieve L < 10nH
 
 Sometimes bondwires are used as an alternative\, L ~ 1nH/mm
 
-![](img/lec-05-opamp_27.png)
+![](../images/lec-05-opamp_27.png)
 
-![](img/lec-05-opamp_28.png)
+![](../images/lec-05-opamp_28.png)
 
 Mohan\, JSSC 10/1999
 
@@ -165,7 +99,7 @@ Bevilacqua\, ISSCC 2004
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Inductor Quality Factor
+## Inductor Quality Factor
 
 In general:
 
@@ -177,21 +111,21 @@ They are very useful for RF\, though\!
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# LC Lowpass Example
+## LC Lowpass Example
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Summary
+## Summary
 
 On\-chip capacitors are great\, even though they’re usually not as large as we would like them to be\.
 
 On\-chip inductors tend to be avoided whenever possible\, and are typically not useful in a filter with poles at frequencies below 200 MHz to 500 MHz\.
 
-The solution to this problem is to  <span style="color:#ff0000">simulate</span>  the inductors  <span style="color:#008000">using active components\.</span>
+The solution to this problem is to  <span style="color:##ff0000">simulate</span>  the inductors  <span style="color:#008000">using active components\.</span>
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Gyrators
+## Gyrators
 
 Gyrators are  <span style="color:#008000">active inductors</span> \.
 
@@ -199,27 +133,27 @@ The above circuit is not all that useful for our lowpass filter; we need a  <spa
 
 <span style="color:#008000">Don’t</span>  want the inductance to  <span style="color:#008000">be ground referenced</span> \.
 
-![](img/lec-05-opamp_30.png)
+![](../images/lec-05-opamp_30.png)
 
 Deliyannis et al\.\,  _Continuous\-Time Active Filter Design\, 1998_
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Floating Gyrator
+## Floating Gyrator
+
+![](../images/lec-05-opamp_31.png)
 
 Floating gyrators are pretty complex \(and sensitive to parasitics\)\.
 
 There must be a better way to solve this problem …
 
-![](img/lec-05-opamp_31.png)
+![](../images/lec-05-opamp_32.png)
 
-![](img/lec-05-opamp_32.png)
-
-![](img/lec-05-opamp_33.png)
+![](../images/lec-05-opamp_33.png)
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Integrators
+## Integrators
 
 A circuit that we can build without much sweat is an active integrator\, e\.g\. using an opamp
 
@@ -227,13 +161,13 @@ Assuming the availability of an ideal op\-amp\, we have
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# State-Space Realization
+## State-Space Realization
 
 State variables \(integrator outputs\)
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Signal Flow Graph (SFG)
+## Signal Flow Graph (SFG)
 
 Looks promising\, but the problem with this realization is that the first integrator takes a voltage at the input and produces a current at the output\.
 
@@ -241,11 +175,11 @@ We need the opposite if we want to realize the circuit with an RC integrator\.
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Modified (Equivalent) SFG
+## Modified (Equivalent) SFG
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Implementation
+## Implementation
 
 
 
@@ -257,31 +191,31 @@ Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# KHN Biquad
+## KHN Biquad
 
-![](img/lec-05-opamp_35.png)
+![](../images/lec-05-opamp_35.png)
 
 KHN biquad\, Deliyannis et al\.\,  _Continuous\-Time Active Filter Design\, 1998_
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Highpass and Bandpass Output
+## Highpass and Bandpass Output
 
 An interesting feature of some biquads \(including the KHN\) is that they provide additional highpass and bandpass outputs for “free”
 
-![](img/lec-05-opamp_36.png)
+![](../images/lec-05-opamp_36.png)
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# The General KHN Biquad
+## The General KHN Biquad
 
-![](img/lec-05-opamp_37.png)
+![](../images/lec-05-opamp_37.png)
 
 Implements arbitrary poles and zeros
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Tow-Thomas Biquad
+## Tow-Thomas Biquad
 
 General biquad using only three op\-amps
 
@@ -289,7 +223,7 @@ P\. E\. Fleischer and J\. Tow\, “Design Formulas for biquad active filters usi
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Tow-Thomas Transfer Functions
+## Tow-Thomas Transfer Functions
 
 Vo2/Vin implements a general biquad section with arbitrary poles and zeros
 
@@ -297,11 +231,11 @@ Vo1/Vin and Vo3/Vin realize the same poles but are limited to at most one finite
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Tow-Thomas Design Equations
+## Tow-Thomas Design Equations
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Sallen-Key LPF
+## Sallen-Key LPF
 
 Single gain element\, typically 1 ≤ K ≤ 10
 
@@ -319,5 +253,5 @@ Deliyannis et al\.\,  _Continuous\-Time Active Filter Design_ \, ch\. 4\.5\.2
 
 Source: EE315a\, B\. Murmann\, Stanford Univ\.
 
-# Lineare Grundschaltungen (5)
+## Lineare Grundschaltungen (5)
 

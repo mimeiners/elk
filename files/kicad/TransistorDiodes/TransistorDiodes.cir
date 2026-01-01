@@ -4,7 +4,7 @@
 .include "./lib/bs170.cir"
 .include "./lib/bs250.cir"
 .include "./lib/jumper.cir"
-.include "./lib/op27.cir"
+.include "./lib/TL082.cir"
 .include "./lib/q2n3904.cir"
 .include "./lib/q2n3906.cir"
 
@@ -23,7 +23,7 @@ Vin2 /IN-1 0 PULSE( -0.92 0.68 0 0.5m 0.5m 100p 1m 4 )
 R1 /IN-1 /VN 2.2k
 R2 /VN /OUT-1 10k
 R3 /OUT-1 /OUT-2 1k
-XU1 0 /VN +5V -3V3 /OUT-1 OP27
+XU1 0 /VN +5V -3V3 /OUT-1 TL082
 
 XJumperTransistorauswahl1 /OUT-2 /BS250 /OUT-2 /BS170 /OUT-2 /2N3906 /OUT-2 /2N3904 myjumper
 
