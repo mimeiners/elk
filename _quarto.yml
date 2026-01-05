@@ -49,12 +49,16 @@ book:
       chapters:
         - lec/lec_01_intro.qmd
         - lec/lec_02_signals.qmd
-        - lec/lec_03_pn_diode.qmd
+        - lec/lec_03_pn-diode.qmd
+        - lec/lec_04_single-trans-amp.qmd
+        - lec/lec_05_opamp.qmd
+        - lec/lec_06_cir-elem-variation.qmd
 
-    - part: Übungen
-      chapters:
-      #  - hw/hw_01_signals.qmd
-      #  - hw/hw_02_diode.qmd
+    # - part: Übungen
+    #   chapters:
+    #     - hw/hw_01_signals.qmd
+    #     - hw/hw_02_diodes.qmd
+    #     - hw/hw_03_amps.qmd
         
     - part: Labor
       chapters:
@@ -64,9 +68,9 @@ book:
         - lab/lab_04_Activity_23.qmd
         # - lab/lab_05_dega_Activity.ipynb
 
-    - part: Transistor-Thermometer
-      chapters:
-        - lab/TranThermo/index.qmd
+    # - part: Transistor-Thermometer
+    #  chapters:
+    #    - lab/TranThermo/index.qmd
 
     - references.qmd
        
@@ -89,15 +93,15 @@ format:
     # fontcolor: "black"
     highlight-style: github
 
-  epub:
-    theme: flatly
-    fontsize: 1.2em
-    linestretch: 1.7
-    # mainfont: Helvetica Neue, Helvetica, Arial, sans
-    # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
-    # backgroundcolor: "white"
-    # fontcolor: "black"
-    highlight-style: github
+  # epub:
+  #   theme: flatly
+  #   fontsize: 1.2em
+  #   linestretch: 1.7
+  #   # mainfont: Helvetica Neue, Helvetica, Arial, sans
+  #   # monofont: Cascadia Mono, Menlo, Consolas, Courier New, Courier
+  #   # backgroundcolor: "white"
+  #   # fontcolor: "black"
+  #   highlight-style: github
 
   pdf:
     documentclass: scrbook
@@ -136,6 +140,7 @@ format:
     # sansfont: "Arial"
     monofont: "Courier New"
     mathfont: "TeX Gyre Termes Math"
+    highlight-style: pygments
     
     # include-in-header:
     #   - frontmatter/header.tex

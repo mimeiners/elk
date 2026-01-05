@@ -1,5 +1,7 @@
-Erzeugen Sie das Ausgangskennlinienfeld eines npn-Transistors in
-Emitterschaltung mit Hilfe von LTspice.
+# Verstärker
+
+## BJT Kennlinien 
+Erzeugen Sie das Ausgangskennlinienfeld eines npn-Transistors in Emitterschaltung mit Hilfe von LTspice.
 
 Der zu verwendende Bipolartransistor habe dabei folgende Kenndaten:
 
@@ -21,15 +23,15 @@ Der zu verwendende Bipolartransistor habe dabei folgende Kenndaten:
 
 []{#tab:hw03p1 label="tab:hw03p1"}
 
-> Schreiben Sie eine Modellanweisung mit den Kenndaten, um den
-> Transistor zu simulieren. Nutzen Sie zur Lösung der Aufgabe Literatur
-> aus der Referenzliste in AULIS z.B. von @tietze2012 oder @reisch2007.
-> Gerne auch eigene bevorzugte Werke.
+## Modellanweisung
+Schreiben Sie eine Modellanweisung mit den Kenndaten, um den Transistor zu simulieren. Nutzen Sie zur Lösung der Aufgabe
+Literatur aus der Referenzliste in AULIS z.B. von @tietze2012 oder @reisch2007. Gerne auch eigene bevorzugte Werke.
 
-::: solution
+::: {.callout-caution collapse="true"}
+### Lösung
 Die zur Simulation notwendige SPICE-Netzliste (LTspice):
 
-``` {#lst:spice_modell .objectivec language="C" caption="SPICE Modellanweisung" label="lst:spice_modell"}
+``` c 
 * Ausgangskennlinienfeld npn-BJT
 vben vbn 0 {be}
 vcen vcn 0 {ce}
@@ -43,8 +45,8 @@ Qn1 vcn vbn 0 0 BIPO
 ```
 :::
 
-Gegeben ist ein npn Bipolartransistor in Emitterschaltung,
-$V_{CC}$=15 V, $R_C$=470 Ω, $T$=300 K.
+## Emitterschaltung
+Gegeben ist ein npn Bipolartransistor in Emitterschaltung, $V_{CC}$=15 V, $R_C$=470 Ω, $T$=300 K.
 
 Die Kenndaten des Bipolartransistors lauten:
 
@@ -71,59 +73,53 @@ Die Kenndaten des Bipolartransistors lauten:
 
 []{#tab:hw03p2 label="tab:hw03p2"}
 
-Bestimmen Sie per Handrechnung den Basisvorwiderstand $R_B$ derart, so
-dass der Arbeitspunkt der Ausgangsspannung bei $V_2$=8 V liegt.
-Simulieren Sie den Frequenzgang der Emitterschaltung mit SPICE, wobei
-die Lastimpedanz eine RC-Parallelschaltung ist, $R_L$=1 k Ω und
-$C_L$=10 pF.
+Bestimmen Sie per Handrechnung den Basisvorwiderstand $R_B$ derart, so dass der Arbeitspunkt der Ausgangsspannung bei
+$V_2$=8 V liegt. Simulieren Sie den Frequenzgang der Emitterschaltung mit SPICE, wobei die Lastimpedanz eine
+RC-Parallelschaltung ist, $R_L$=1 k Ω und $C_L$=10 pF.
 
 <figure id="fig:hw03p2" data-latex-placement="h">
 
 <figcaption>Bipolarverstärker in Emitterschaltung</figcaption>
 </figure>
 
-::: solution
-Zur Bestimmung des Arbeitspunktes der Schaltung kann $v_1(t)=0$
-angenommen werden, so dass die Kapazitäten keinen Strom führen und bei
-der Netzwerkanalyse nicht berücksichtigt werden müssen.
+::: {.callout-caution collapse="true"}
+### Lösung
+Zur Bestimmung des Arbeitspunktes der Schaltung kann $v_1(t)=0$ angenommen werden, so dass die Kapazitäten keinen Strom
+führen und bei der Netzwerkanalyse nicht berücksichtigt werden müssen.
 
-Damit die Ausgangsspannung $V_2=V_{CE}=\SI{8}{V}$ folgt der
-Kollektorstrom zu $$\begin{equation}
-  \label{eq:1}
-  I_C = \frac{V_{cc}-V_2}{R_C} = \frac{\SI{7}{V}}{\SI{470}{\ohm}} = \SI{14.9}{mA}.
-\end{equation}$$
+Damit die Ausgangsspannung $V_2=V_{CE}=\SI{8}{V}$ folgt der Kollektorstrom zu 
 
-Mit Hilfe der Modellparameter $B_F$ und $V_{AF}$ kann der Basisstrom
-$I_B$ ermittelt werden. $$\begin{equation}
-  \label{eq:2}
-  I_B = \frac{I_C}{B_N} \approx \SI{47}{\micro\ampere},
-\end{equation}$$
+$$
+I_C = \frac{V_{cc}-V_2}{R_C} = \frac{\SI{7}{V}}{\SI{470}{\ohm}} = \SI{14.9}{mA}.
+$$
+
+Mit Hilfe der Modellparameter $B_F$ und $V_{AF}$ kann der Basisstrom $I_B$ ermittelt werden. 
+$$
+I_B = \frac{I_C}{B_N} \approx \SI{47}{\micro\ampere},
+$$
 
 wobei die Stromverstärkung $B_N$ die Early-Spannung berücksichtigt.
 
-$$\begin{equation}
-  \label{eq:3}
-  B_N = B_F\left( 1 + \frac{V_{CE}}{V_{AF}}\right).
-\end{equation}$$
+$$
+B_N = B_F\left( 1 + \frac{V_{CE}}{V_{AF}}\right).
+$$
 
-In der Emitter-Schaltung arbeitet der Transistor im Vorwärtsbetrieb, die
-BC-Diode ist gesperrt. Die Spannung $V_{BE}$ kann aus der Gleichung für
-die BE-Diode und dem Modellparameter $I_S$ berechnet werden.
+In der Emitter-Schaltung arbeitet der Transistor im Vorwärtsbetrieb, die BC-Diode ist gesperrt. Die Spannung $V_{BE}$
+kann aus der Gleichung für die BE-Diode und dem Modellparameter $I_S$ berechnet werden.
 
-$$\begin{equation}
-  \label{eq:4}
-  V_{BE} = V_T \ln\left( \frac{I_B}{I_S} \right) \approx \SI{580}{mV}.
-\end{equation}$$
+$$
+V_{BE} = V_T \ln\left( \frac{I_B}{I_S} \right) \approx \SI{580}{mV}.
+$$
 
 Ein weiterer Maschenumlauf liefert dann den gesuchten Widerstand $R_B$:
-$$\begin{equation}
-  \label{eq:5}
-  R_B = \frac{V_{CC}-V_{BE}}{I_B} = \SI{307}{k\ohm}.
-\end{equation}$$
+
+$$
+R_B = \frac{V_{CC}-V_{BE}}{I_B} = \SI{307}{k\ohm}.
+$$
 
 SPICE-Netzliste (LTspice):
 
-``` {#lst:spice_modell .objectivec language="C" caption="SPICE Modellanweisung" label="lst:spice_modell"}
+``` c
 * Simulation des Frequenzgangs, Emitter-Schaltung
 Vin N002 0 AC 1
 VCC N001 0 15

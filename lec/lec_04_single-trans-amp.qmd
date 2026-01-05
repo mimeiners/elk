@@ -1,51 +1,47 @@
-## Verstärker mit einem Transistor
+# Verstärker mit einem Transistor
 
-## Einführung Verstärker
+<!-- ## Einführung Verstärker -->
 
-
-
-* Amplifiers usually use electronic devices operating in the  <span style="color:#ff0000">Active Region\.</span>
-  * A BJT is used as an amplifier when biased in the  <span style="color:#ff0000">forward\-active region\.</span>
-  * The FET can be used as amplifier if operated in the  <span style="color:#ff0000">pinch\-off or saturation region\.</span>
-* In these regions\, transistors can provide high voltage\, current and power gains\. Bias is provided to stabilize the operating point \(the Q\-Point\) in the desired region of operation\.
-* Q\-point also determines
-  * Small\-signal parameters of transistor
-  * Voltage gain\, input resistance\, output resistance
-  * Maximum input and output signal amplitudes
-  * Power consumption
+<!-- * Amplifiers usually use electronic devices operating in the  <span style="color:#ff0000">Active Region\.</span> -->
+<!--   * A BJT is used as an amplifier when biased in the  <span style="color:#ff0000">forward\-active region\.</span> -->
+<!--   * The FET can be used as amplifier if operated in the  <span style="color:#ff0000">pinch\-off or saturation region\.</span> -->
+<!-- * In these regions\, transistors can provide high voltage\, current and power gains\. Bias is provided to stabilize the operating point \(the Q\-Point\) in the desired region of operation\. -->
+<!-- * Q\-point also determines -->
+<!--   * Small\-signal parameters of transistor -->
+<!--   * Voltage gain\, input resistance\, output resistance -->
+<!--   * Maximum input and output signal amplitudes -->
+<!--   * Power consumption -->
 
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13
+<!-- Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 5\. Ed\.\, Kap\.13 -->
 
-## Transistor als Verstärker - Aktiver Vierpol
+<!-- ## Transistor als Verstärker - Aktiver Vierpol -->
 
-Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
+<!-- Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007 -->
 
-## RF Power Amplifiers (1)
+<!-- ## RF Power Amplifiers (1) -->
 
-Als abhängige Stromquelle\,
+<!-- Als abhängige Stromquelle\, -->
 
-als Schalter und
+<!-- als Schalter und -->
 
-im “overdrive” Modus; teils abhängige Quelle\, teils Schalter
+<!-- im “overdrive” Modus; teils abhängige Quelle\, teils Schalter -->
 
-Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
+<!-- Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1 -->
 
-Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
+<!-- ## Classes of Operation of RF Power Amplifiers (1) -->
 
-## Classes of Operation of RF Power Amplifiers (1)
+<!-- Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1 -->
 
-Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
+<!-- \(a\) Eingangskreis -->
 
-\(a\) Eingangskreis
+<!-- \(b\) Ausgangskreis -->
 
-\(b\) Ausgangskreis
-
-Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1
+<!-- Quelle: RF Power Amplifiers\, Kazimierczuk\, 2\. Ed\.\, Kap\.1 -->
 
 ## BJT Amplifier Concept (1)
 
-![](img/lec-04-single-trans-amp_16.jpg)
+![](../images/lec-04-single-trans-amp_16.jpg)
 
 The BJT is biased in the active region by dc voltage source  _V_  _BE_ \. Q\-point is set at \( _I_  _C_ \,  _V_  _CE_ \) = \(1\.5 mA\, 5 V\) with  _I_  _B  _ = 15 mA  \(bF = 100\)
 
@@ -59,19 +55,19 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 0\.5 mA change in iC produces a 1\.65 V change in vCE \.
 
-![](img/lec-04-single-trans-amp_17.jpg)
+![](../images/lec-04-single-trans-amp_17.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 ## MOSFET Amplifier Concept
 
-![](img/lec-04-single-trans-amp_18.jpg)
+![](../images/lec-04-single-trans-amp_18.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 ## Coupling and Bypass Capacitors
 
-![](img/lec-04-single-trans-amp_19.jpg)
+![](../images/lec-04-single-trans-amp_19.jpg)
 
 Capacitors are designed to provide negligible impedance at frequencies of interest and provide open circuits at dc\.
 
@@ -84,8 +80,6 @@ ac coupling through capacitors is used to inject ac input signal and extract out
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 ## dc and ac Analysis – Two Step Analysis
-
-
 
 * dc analysis:
   * Find dc equivalent circuit by replacing all capacitors by open circuits and inductors by short circuits\.
@@ -103,17 +97,17 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 All capacitors in the original amplifier circuit are replaced by open circuits\, disconnecting  _v_  _I_  _ _ \,  _R_  _I _ \, and  _R_ 3 from circuit\.
 
-![](img/lec-04-single-trans-amp_20.jpg)
+![](../images/lec-04-single-trans-amp_20.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
-![](img/lec-04-single-trans-amp_21.jpg)
+![](../images/lec-04-single-trans-amp_21.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 ## dc and ac Equivalents for a MOSFET Amplifier
 
-![](img/lec-04-single-trans-amp_22.jpg)
+![](../images/lec-04-single-trans-amp_22.jpg)
 
 Simplified ac equivalent
 
@@ -123,25 +117,25 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 Equivalent Forms of Small\-Signal Model
 
-![](img/lec-04-single-trans-amp_23.jpg)
+![](../images/lec-04-single-trans-amp_23.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.1
 
 ## BJT vs. MOSFET
 
-![](img/lec-04-single-trans-amp_24.jpg)
+![](../images/lec-04-single-trans-amp_24.jpg)
 
 Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
 
-| Bipolartransistor | MOSFET |
-| :-: | :-: |
-| Exponentielle Charakteristik | Quadratische Charakteristik |
-| Aktiv vorwärts: VCB > 0 | Sättigung: VDS > VGS – VTH |
-| Sättigung: VCB < 0 | Linearer Bereich \(Triode\): VDS < VGS – VTH |
-| Finiter Basisstrom | Null Gate\-Strom |
-| Early\-Effekt | Kanallängenmodulation |
-| Diffusionsströme | Driftströme |
-| \- | Spannungsabhängiger Widerstand |
+|      Bipolartransistor       |                    MOSFET                    |
+|:----------------------------:|:--------------------------------------------:|
+| Exponentielle Charakteristik |         Quadratische Charakteristik          |
+|   Aktiv vorwärts: VCB > 0    |          Sättigung: VDS > VGS – VTH          |
+|      Sättigung: VCB < 0      | Linearer Bereich \(Triode\): VDS < VGS – VTH |
+|      Finiter Basisstrom      |               Null Gate\-Strom               |
+|        Early\-Effekt         |            Kanallängenmodulation             |
+|       Diffusionsströme       |                 Driftströme                  |
+|              \-              |        Spannungsabhängiger Widerstand        |
 
 Quelle: Microelectronics\, Razavi
 
@@ -153,10 +147,6 @@ Quelle: Elektronische Bauelemente\, Reisch
 
 Begleitend Kap\. 16 und 17\, “Elektronische Bauelemente”\, Reisch\, 2007
 
-## fig_01_05
-
-Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
-
 ## Bändermodell
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
@@ -167,12 +157,12 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 ## Betriebsarten
 
-| VBE | VBC | Betriebsart \(npn\) |
-| :-: | :-: | :-: |
-| > 0 | < 0 | Vorwärtsbetrieb \(normaler Betrieb\) |
+| VBE | VBC |          Betriebsart \(npn\)          |
+|:---:|:---:|:-------------------------------------:|
+| > 0 | < 0 | Vorwärtsbetrieb \(normaler Betrieb\)  |
 | < 0 | > 0 | Rückwärtsbetrieb \(inverser Betrieb\) |
-| < 0 | < 0 | Sperrbetrieb |
-| > 0 | > 0 | Sättigung |
+| < 0 | < 0 |             Sperrbetrieb              |
+| > 0 | > 0 |               Sättigung               |
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, 2007; „Aktive elektronische Bauelemente“\, Stiny\, 2019
 
@@ -232,27 +222,27 @@ Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
 Quelle: „Elektronische Bauelemente“\, Reisch\, Springer\, 2007
 
-## Diode Small-Signal Model (1)
+<!-- ## Diode Small-Signal Model (1) -->
 
-The slope of the diode characteristic at the Q\-point is called the  __diode conductance__  and is given by:
+<!-- The slope of the diode characteristic at the Q\-point is called the  __diode conductance__  and is given by: -->
 
-__Diode resistance__  is given by:
+<!-- __Diode resistance__  is given by: -->
 
-![](img/lec-04-single-trans-amp_52.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_52.jpg) -->
 
-![](img/lec-04-single-trans-amp_53.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_53.jpg) -->
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4
+<!-- Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4 -->
 
-_g_  _d_  is small but non\-zero for  _I_  _D_  = 0 because slope of diode equation is nonzero at the origin\.
+<!-- _g_  _d_  is small but non\-zero for  _I_  _D_  = 0 because slope of diode equation is nonzero at the origin\. -->
 
-At the origin\, the diode conductance and resistance are given by:
+<!-- At the origin\, the diode conductance and resistance are given by: -->
 
-![](img/lec-04-single-trans-amp_54.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_54.jpg) -->
 
-![](img/lec-04-single-trans-amp_55.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_55.jpg) -->
 
-Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4
+<!-- Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 7\.4 -->
 
 ## NF-Hybridparameter (1)
 
@@ -300,9 +290,9 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 4
 
 ## Four-Resistor Bias Network
 
-![](img/lec-04-single-trans-amp_65.jpg)
+![](../images/lec-04-single-trans-amp_65.jpg)
 
-![](img/lec-04-single-trans-amp_66.jpg)
+![](../images/lec-04-single-trans-amp_66.jpg)
 
 Forward active region is correct
 
@@ -318,7 +308,7 @@ Hence\, base\-collector junction is reverse\-biased\, and assumption of forward\
 
 Load\-line for the circuit is:
 
-![](img/lec-04-single-trans-amp_67.jpg)
+![](../images/lec-04-single-trans-amp_67.jpg)
 
 The two points needed to plot the load line are \(0\, 12 V\) and \(314 mA\, 0\)\. The resulting load line is plotted on the common\-emitter output characteristics\.
 
@@ -378,7 +368,7 @@ Assumptions: Forward\-active operation region\, VEB  = 0\.7 V
 
 Analysis:
 
-![](img/lec-04-single-trans-amp_68.jpg)
+![](../images/lec-04-single-trans-amp_68.jpg)
 
 Forward\-active region operation is correct Q\-point is : \(6\.01 mA\, 2\.88 V\)
 
@@ -390,31 +380,31 @@ Begleitend sind die Kap\. 20\.1\, 20\.2 und 20\.6 aus “Elektronische Bauelemen
 
 ## Metal-Oxide-Semiconductor (MOS)
 
-![](img/lec-04-single-trans-amp_69.jpg)
+![](../images/lec-04-single-trans-amp_69.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
 ## Struktur und Symbol
 
-![](img/lec-04-single-trans-amp_70.png)
+![](../images/lec-04-single-trans-amp_70.png)
 
 Quelle: Microelectronics\, Razavi
 
 ## Linearer Bereich
 
-![](img/lec-04-single-trans-amp_71.jpg)
+![](../images/lec-04-single-trans-amp_71.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
 ## Pinch-off
 
-![](img/lec-04-single-trans-amp_72.jpg)
+![](../images/lec-04-single-trans-amp_72.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
 ## Sättigungsbreich
 
-![](img/lec-04-single-trans-amp_73.jpg)
+![](../images/lec-04-single-trans-amp_73.jpg)
 
 Quelle: Semiconductor Devices\, Sze and Lee
 
@@ -448,67 +438,67 @@ Kollektor\-Schaltung\, Common\-Collector \(CC\) wird zuDrain\-Schaltung\, Common
 
 vgl\. Sie auch mit Darstellungen der Autoren Stiny und Reisch\.
 
-## CS Schaltung LEVEL 1
+<!-- ## CS Schaltung LEVEL 1 -->
 
-Common\-source amplifier
+<!-- Common\-source amplifier -->
 
-\* MAIN CIRCUIT
+<!-- \* MAIN CIRCUIT -->
 
-M1 vo vg 0 0 nmos l=1u w=20u
+<!-- M1 vo vg 0 0 nmos l=1u w=20u -->
 
-vs vg 0 DC 1\.5 SINE\(1\.5 0\.1 1k\) AC 1
+<!-- vs vg 0 DC 1\.5 SINE\(1\.5 0\.1 1k\) AC 1 -->
 
-VDD vdd 0 5
+<!-- VDD vdd 0 5 -->
 
-RD vdd vo 5k
+<!-- RD vdd vo 5k -->
 
-\* MODELS
+<!-- \* MODELS -->
 
-\.model nmos nmos kp=50u vto=0\.5 level=1
+<!-- \.model nmos nmos kp=50u vto=0\.5 level=1 -->
 
-\* ANALYSIS
+<!-- \* ANALYSIS -->
 
-\.op
+<!-- \.op -->
 
-\.dc vs 0 5 0\.01
+<!-- \.dc vs 0 5 0\.01 -->
 
-\.ac dec 100 10 1k
+<!-- \.ac dec 100 10 1k -->
 
-\.tran 1u 5m 0
+<!-- \.tran 1u 5m 0 -->
 
-\.end
+<!-- \.end -->
 
-## Arbeitspunktanalyse (.op)
+<!-- ## Arbeitspunktanalyse (.op) -->
 
-\-\-\- Operating Point \-\-\-
+<!-- \-\-\- Operating Point \-\-\- -->
 
-V\(vo\):	 2\.5	 voltage
+<!-- V\(vo\):	 2\.5	 voltage -->
 
-V\(vi\):	 1\.5	 voltage
+<!-- V\(vi\):	 1\.5	 voltage -->
 
-V\(vdd\):	 5	 voltage
+<!-- V\(vdd\):	 5	 voltage -->
 
-Id\(M1\):	 0\.0005	 device\_current
+<!-- Id\(M1\):	 0\.0005	 device\_current -->
 
-Ig\(M1\):	 0	 device\_current
+<!-- Ig\(M1\):	 0	 device\_current -->
 
-Ib\(M1\):	 \-2\.51e\-012 device\_current
+<!-- Ib\(M1\):	 \-2\.51e\-012 device\_current -->
 
-Is\(M1\):	 \-0\.0005	 device\_current
+<!-- Is\(M1\):	 \-0\.0005	 device\_current -->
 
-I\(R1\):	 0\.0005	 device\_current
+<!-- I\(R1\):	 0\.0005	 device\_current -->
 
-I\(Vdd\):	 \-0\.0005	 device\_current
+<!-- I\(Vdd\):	 \-0\.0005	 device\_current -->
 
-I\(Vi\):	 0	 device\_current
+<!-- I\(Vi\):	 0	 device\_current -->
 
-## .dc Output
+<!-- ## .dc Output -->
 
-## Kleinsignalmodell
+<!-- ## Kleinsignalmodell -->
 
 ## MOSFET Small-Signal Model
 
-![](img/lec-04-single-trans-amp_83.jpg)
+![](../images/lec-04-single-trans-amp_83.jpg)
 
 Using a two\-port y\-parameter network\,
 
@@ -518,13 +508,13 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
 ## MOSFET Small-Signal Model (cont.)
 
-![](img/lec-04-single-trans-amp_84.jpg)
+![](../images/lec-04-single-trans-amp_84.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
 ## MOSFET Small-Signal Model - Summary
 
-![](img/lec-04-single-trans-amp_85.jpg)
+![](../images/lec-04-single-trans-amp_85.jpg)
 
 Since gate is insulated from channel by gate\-oxide input resistance of transistor is infinite\.
 
@@ -540,116 +530,112 @@ Amplification factor for lVDS<<1:
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\.7\.8
 
-## Transkonduktanz
+<!-- ## Transkonduktanz -->
 
-Die Transkonduktanz \(gm\) ist das Kleinsignalverhältnis zwischenGate\-Spannung und Drain\-Strom\.
+<!-- Die Transkonduktanz \(gm\) ist das Kleinsignalverhältnis zwischenGate\-Spannung und Drain\-Strom\. -->
 
-Die Transkonduktanz erhält man durch partielle Differentiation der Großsignalkennlinie \(IV\, Strom\-Spannung\) im Arbeitspunkt\.
+<!-- Die Transkonduktanz erhält man durch partielle Differentiation der Großsignalkennlinie \(IV\, Strom\-Spannung\) im Arbeitspunkt\. -->
 
-## Kleinsignalersatzschaltbild
+<!-- ## Kleinsignalersatzschaltbild -->
 
-Benutzen Sie das Großsignal Strom\-Spannungs\-Verhalten zur Bestimmung des Arbeitspunktes \(AP od\. OP\): ID\, VO\, gm \.
+<!-- Benutzen Sie das Großsignal Strom\-Spannungs\-Verhalten zur Bestimmung des Arbeitspunktes \(AP od\. OP\): ID\, VO\, gm \. -->
 
-Von nun an arbeiten Sie im “Kleinsignaluniversum”:Verstärkung\, Bandbreite etc\.
+<!-- Von nun an arbeiten Sie im “Kleinsignaluniversum”:Verstärkung\, Bandbreite etc\. -->
 
-## Finites dID/dVDS
+<!-- ## Finites dID/dVDS -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## Modellierung des finiten dID/dVDS
+<!-- ## Modellierung des finiten dID/dVDS -->
 
-
-
-* In modernen CMOS Kurzkanalprozessen sind diverse physiklische Effekte verantwortlich für finites dID/dVDS
-  * Channel length modulation \(CLM\)
-  * DIBL\, SCBE\, …
-  * Präzise Abhängigkeiten zu modellieren erfordert einige mit Formeln gefüllte Seiten\, vgl\. Modellbeschreibungen von BSIM4 und PSP\.
-* Hier berücksichtigen wir nur die Kanalängenmodulation in erster Ordnung\.
-* Das hilft uns\, ein handhabbares Modell ohne zu tiefgreifende Halbleiterphysik \(z\.B\. Poisson\-Gleichung\) zu entwickeln\.
+<!-- * In modernen CMOS Kurzkanalprozessen sind diverse physiklische Effekte verantwortlich für finites dID/dVDS -->
+<!--   * Channel length modulation \(CLM\) -->
+<!--   * DIBL\, SCBE\, … -->
+<!--   * Präzise Abhängigkeiten zu modellieren erfordert einige mit Formeln gefüllte Seiten\, vgl\. Modellbeschreibungen von BSIM4 und PSP\. -->
+<!-- * Hier berücksichtigen wir nur die Kanalängenmodulation in erster Ordnung\. -->
+<!-- * Das hilft uns\, ein handhabbares Modell ohne zu tiefgreifende Halbleiterphysik \(z\.B\. Poisson\-Gleichung\) zu entwickeln\. -->
 
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## Kanallängenmodulation (1)
+<!-- ## Kanallängenmodulation (1) -->
 
-Eine steigende VDS Spannung verursacht eine Expansion der Raumladungszone am Drain \(vgl\. Physik des pn\-Übergangs\)\.
+<!-- Eine steigende VDS Spannung verursacht eine Expansion der Raumladungszone am Drain \(vgl\. Physik des pn\-Übergangs\)\. -->
 
-Dies schiebt den Pinch\-Off Punkt des Kanals weg vom Drain\, modelliert als ΔL=f\(VDS\)\.
+<!-- Dies schiebt den Pinch\-Off Punkt des Kanals weg vom Drain\, modelliert als ΔL=f\(VDS\)\. -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-λ2   <     λ1
+<!-- λ2   <     λ1 -->
 
-|VA2|  >   |VA1|
+<!-- |VA2|  >   |VA1| -->
 
-## Vergleich zur Early-Spannung
+<!-- ## Vergleich zur Early-Spannung -->
 
-Early Spannung \(VA\) ist als 1/λ in SPICE definiert\.
+<!-- Early Spannung \(VA\) ist als 1/λ in SPICE definiert\. -->
 
-Es entspricht grob dem Schnittpunkt der extrapolierten I\-V Kennlinie mit der VDS\-Achse
+<!-- Es entspricht grob dem Schnittpunkt der extrapolierten I\-V Kennlinie mit der VDS\-Achse -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## Kleinsignalperspektive
+<!-- ## Kleinsignalperspektive -->
 
-Im Arbeitspunkt kann finites dID/dVDS  als Ausgangsleitwert gds oder Widerstand ro=1/gds beschrieben werden\.
+<!-- Im Arbeitspunkt kann finites dID/dVDS  als Ausgangsleitwert gds oder Widerstand ro=1/gds beschrieben werden\. -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## Ausgangsleitwert
+<!-- ## Ausgangsleitwert -->
 
-Näherung für schnelle Handrechnung\, solange die Kanallänge L groß ist\.
+<!-- Näherung für schnelle Handrechnung\, solange die Kanallänge L groß ist\. -->
 
-Hinweis: Die Art der Näherung bestimmt zu große Werte für gds \.
+<!-- Hinweis: Die Art der Näherung bestimmt zu große Werte für gds \. -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## MOSFET Modell mit gds
+<!-- ## MOSFET Modell mit gds -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## CS Verstärker mit gds
+<!-- ## CS Verstärker mit gds -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## .ac Simulation
+<!-- ## .ac Simulation -->
 
-## .tran Output
+<!-- ## .tran Output -->
 
-## Eine weitere Simulation
+<!-- ## Eine weitere Simulation -->
 
-Folgende Stimulation
+<!-- Folgende Stimulation -->
 
-\*\*\* input voltage
+<!-- \*\*\* input voltage -->
 
-vi  vi  0   dc  1\.5  \*\*\* value for \.op analysis
+<!-- vi  vi  0   dc  1\.5  \*\*\* value for \.op analysis -->
 
-\+           ac  1000  \*\*\* amplitude for \.ac analysis
+<!-- \+           ac  1000  \*\*\* amplitude for \.ac analysis -->
 
-\+           sin 1\.5 1000 1k  \*\*\* sinewave for \.tran: V\_I=1\.5V\, v\_i=0\.1V\, f=1kHz
+<!-- \+           sin 1\.5 1000 1k  \*\*\* sinewave for \.tran: V\_I=1\.5V\, v\_i=0\.1V\, f=1kHz -->
 
-1000V Eingangsamplitude\!
+<!-- 1000V Eingangsamplitude\! -->
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
-## .tran Output
+<!-- ## .tran Output -->
 
-## .ac Output
+<!-- ## .ac Output -->
 
-## Wichtig zu merken!
+<!-- ## Wichtig zu merken! -->
 
-
-
-* Wenn Sie einmal ein Kleinsignalmodell der Schaltung konstruiert haben\, dann sind alle Grosssignalinformationen verloren\.
-  * Die Kleinsignalübertragungsfunktion \(\.ac\) ist linear undwird expandiert von \-∞ bis \+∞
-  * Keine endliche Spannungsspanne oder Signalverstümmelung \(Clipping\) sind vorhanden\.
-* Die Eingangsamplitude in einer \.ac Anweisung ist irrelevant und kann auf jeden von 0 verschiedenen Wert gesetzt werden\.
-  * Am besten ist eine Amplitude von 1V\. Dann korrespondiert die Ausgangsamplitude zum Verstärkungsmaß der Schaltung\.
+<!-- * Wenn Sie einmal ein Kleinsignalmodell der Schaltung konstruiert haben\, dann sind alle Grosssignalinformationen verloren\. -->
+<!--   * Die Kleinsignalübertragungsfunktion \(\.ac\) ist linear undwird expandiert von \-∞ bis \+∞ -->
+<!--   * Keine endliche Spannungsspanne oder Signalverstümmelung \(Clipping\) sind vorhanden\. -->
+<!-- * Die Eingangsamplitude in einer \.ac Anweisung ist irrelevant und kann auf jeden von 0 verschiedenen Wert gesetzt werden\. -->
+<!--   * Am besten ist eine Amplitude von 1V\. Dann korrespondiert die Ausgangsamplitude zum Verstärkungsmaß der Schaltung\. -->
 
 
-Quelle: EE114\, B\. Murmann\, Stanford Univ\.
+<!-- Quelle: EE114\, B\. Murmann\, Stanford Univ\. -->
 
 ## MOSFET Biasing
 
@@ -659,7 +645,7 @@ The  <span style="color:#ff0000">signal</span>  is actually comprised of relativ
 
 Remember \(Total = dc \+ signal\):    vGS = VGS \+ vgs    and   iD = ID \+ id
 
-![](img/lec-04-single-trans-amp_100.jpg)
+![](../images/lec-04-single-trans-amp_100.jpg)
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
@@ -695,7 +681,7 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 ## Example 1: Const. Gate-Source Voltage Biasing (1)
 
-![](img/lec-04-single-trans-amp_101.jpg)
+![](../images/lec-04-single-trans-amp_101.jpg)
 
 Problem: Find Q\-pt\. \(ID\, VDS \, VGS\)
 
@@ -707,7 +693,7 @@ Analysis: Simplify circuit with Thévenin transformation to find VEQ and REQ for
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-![](img/lec-04-single-trans-amp_102.jpg)
+![](../images/lec-04-single-trans-amp_102.jpg)
 
 Check:VDS > VGS\-VTN\. Hence saturation region assumption is correct\.
 
@@ -719,7 +705,7 @@ Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
 ## Example 2: Load Line Analysis
 
-![](img/lec-04-single-trans-amp_103.jpg)
+![](../images/lec-04-single-trans-amp_103.jpg)
 
 Problem: Find Q\-pt\. \(ID\, VDS \, VGS\)
 
@@ -741,9 +727,9 @@ For ID = 0\, VDS = 10 V
 
 Plotting the line on the transistor output characteristic yields Q\-pt at intersection with VGS = 3V device curve\.
 
-![](img/lec-04-single-trans-amp_104.jpg)
+![](../images/lec-04-single-trans-amp_104.jpg)
 
-![](img/lec-04-single-trans-amp_105.jpg)
+![](../images/lec-04-single-trans-amp_105.jpg)
 
 Check: The load line approach agrees with previous calculation\. Q\-pt: \(50\.0  __m__ A\, 5\.00 V\) with VGS = 3\.00 V
 
@@ -751,149 +737,148 @@ Discussion: Q\-pt is clearly in the saturation region\.  Graphical load line is 
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blaclock\, 6\. Ed\.\, Kap\. 5
 
-## Herstellungsverfahren
+<!-- ## Herstellungsverfahren -->
 
-Prozessschritte BJT
+<!-- Prozessschritte BJT -->
 
-Dotierung mit Bor \(1\)
+<!-- Dotierung mit Bor \(1\) -->
 
-## fig_02_03
+<!-- ## fig_02_03 -->
 
-![](img/lec-04-single-trans-amp_106.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_106.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Dotierung mit Bor \(2\)
+<!-- Dotierung mit Bor \(2\) -->
 
-## fig_02_04
+<!-- ## fig_02_04 -->
 
-![](img/lec-04-single-trans-amp_107.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_107.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-## fig_02_07
+<!-- ## fig_02_07 -->
 
-![](img/lec-04-single-trans-amp_108.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_108.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Dotierungsprofil
+<!-- Dotierungsprofil -->
 
-## fig_02_08
+<!-- ## fig_02_08 -->
 
-![](img/lec-04-single-trans-amp_109.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_109.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Prozessschritte BJT \(1\)
+<!-- Prozessschritte BJT \(1\) -->
 
-## fig_02_10
+<!-- ## fig_02_10 -->
 
-![](img/lec-04-single-trans-amp_110.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_110.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Prozessschritte BJT \(2\)
+<!-- Prozessschritte BJT \(2\) -->
 
-## fig_02_11
+<!-- ## fig_02_11 -->
 
-![](img/lec-04-single-trans-amp_111.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_111.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Prozessschritte BJT \(3\)
+<!-- Prozessschritte BJT \(3\) -->
 
-## fig_02_12
+<!-- ## fig_02_12 -->
 
-![](img/lec-04-single-trans-amp_112.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_112.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Prozessschritte BJT \(4\)
+<!-- Prozessschritte BJT \(4\) -->
 
-## fig_02_13
+<!-- ## fig_02_13 -->
 
-![](img/lec-04-single-trans-amp_113.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_113.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Prozessschritte BJT \(5\)
+<!-- Prozessschritte BJT \(5\) -->
 
-## fig_02_14
+<!-- ## fig_02_14 -->
 
-![](img/lec-04-single-trans-amp_114.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_114.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-Prozessschritte BJT \(6\)
+<!-- Prozessschritte BJT \(6\) -->
 
-## fig_02_15
+<!-- ## fig_02_15 -->
 
-![](img/lec-04-single-trans-amp_115.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_115.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-## fig_02_16
+<!-- ## fig_02_16 -->
 
-![](img/lec-04-single-trans-amp_116.jpg)
+<!-- ![](../images/lec-04-single-trans-amp_116.jpg) -->
 
-Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010
+<!-- Quelle: „Analysis and Design of Analog Integrated Circuits“\, Gray et al\.\, Wiley\, 2010 -->
 
-## Herstellungsverfahren
+<!-- ## Herstellungsverfahren -->
 
-Prozessschritte MOSFET
+<!-- Prozessschritte MOSFET -->
 
-Begleitend ist das Kap\. 20\.7 aus “Elektronische Bauelemente”\, Reisch\, 2007
+<!-- Begleitend ist das Kap\. 20\.7 aus “Elektronische Bauelemente”\, Reisch\, 2007 -->
 
-## Wafer-Start
+<!-- ## Wafer-Start -->
 
-Start with wafer at current step
+<!-- Start with wafer at current step -->
 
-_Spin_  on a photo <span style="color:#df0202">resist \(PR\)</span>
+<!-- _Spin_  on a photo <span style="color:#df0202">resist \(PR\)</span> -->
 
-_Photons_  that entered \(through mask\) here allow selective  <span style="color:#df0202">PR</span>  removal
+<!-- _Photons_  that entered \(through mask\) here allow selective  <span style="color:#df0202">PR</span>  removal -->
 
-Pattern photoresist with mask
+<!-- Pattern photoresist with mask -->
 
-Pattern transfer to underling layer\.  In this case an  <span style="color:#0000ff"> __ETCH__ </span>  of the  <span style="color:#0000ff"> __blue layer__ </span>
+<!-- Pattern transfer to underling layer\.  In this case an  <span style="color:#0000ff"> __ETCH__ </span>  of the  <span style="color:#0000ff"> __blue layer__ </span> -->
 
-Step specific processingetch\, implant\, etc\.\.\.
+<!-- Step specific processingetch\, implant\, etc\.\.\. -->
 
-Quelle: EE271\, S\. Mitra\, Stanford Univ\.
+<!-- Quelle: EE271\, S\. Mitra\, Stanford Univ\. -->
 
-## Transistor strukturieren (1)
+<!-- ## Transistor strukturieren (1) -->
 
-__N\-well__
+<!-- __N\-well__ -->
 
-__counter\-doped__
+<!-- __counter\-doped__ -->
 
-__P\-type__
+<!-- __P\-type__ -->
 
-__wafer material__
+<!-- __wafer material__ -->
 
-Quelle: EE271\, S\. Mitra\, Stanford Univ\.
+<!-- Quelle: EE271\, S\. Mitra\, Stanford Univ\. -->
 
-Quelle: EE271\, S\. Mitra\, Stanford Univ\.
+<!-- Quelle: EE271\, S\. Mitra\, Stanford Univ\. -->
 
-## Leiterbahnen strukturieren (1)
+<!-- ## Leiterbahnen strukturieren (1) -->
 
-<span style="color:#000000">Deposit</span>
+<!-- <span style="color:#000000">Deposit</span> -->
 
-<span style="color:#000000">Dielectric</span>
+<!-- <span style="color:#000000">Dielectric</span> -->
 
-<span style="color:#000000">Etch metal</span>
+<!-- <span style="color:#000000">Etch metal</span> -->
 
-<span style="color:#000000">trenches</span>
+<!-- <span style="color:#000000">trenches</span> -->
 
-<span style="color:#000000">Etch </span>
+<!-- <span style="color:#000000">Etch </span> -->
 
-<span style="color:#000000">via </span>
+<!-- <span style="color:#000000">via </span> -->
 
-<span style="color:#000000">trench</span>
+<!-- <span style="color:#000000">trench</span> -->
 
-Quelle: EE271\, S\. Mitra\, Stanford Univ\.
+<!-- Quelle: EE271\, S\. Mitra\, Stanford Univ\. -->
 
-Same steps can be repeated to add additional metal layers
+<!-- Same steps can be repeated to add additional metal layers -->
 
-Quelle: EE271\, S\. Mitra\, Stanford Univ\.
-
+<!-- Quelle: EE271\, S\. Mitra\, Stanford Univ\. -->

@@ -3,7 +3,7 @@
 ## Circuit Element Variations
 
 * All electronic components have manufacturing tolerances\.
-* Resistors can be purchased with  10%\,  5%\, and  1% tolerance\.  \(IC resistors are often  10%\.\)
+* Resistors can be purchased with 10%\, 5%\, and 1% tolerance\.  \(IC resistors are often 10%\.\)
 * Capacitors can have asymmetrical tolerances such as \+20%/\-50%\.
 * Power supply voltages typically vary from 1% to 10%\.
 * Device parameters will also vary with temperature and age\. Circuits must be designed to accommodate these
@@ -16,13 +16,13 @@
 
 For symmetrical parameter variations:
 
-Pnom\(1 \- \)  P  Pnom\(1 \+ \)
+Pnom\(1 \- \) P  Pnom\(1 \+ \)
 
-For example\, a 10 k resistor with 5% percent tolerance could take on the following range of values:
+For example\, a 10 k resistor with 5% percent tolerance could take on the following range of values:
 
-10k\(1 \- 0\.05\)  R  10k\(1 \+ 0\.05\)
+10k\(1 \- 0\.05\)  R  10k\(1 \+ 0\.05\)
 
-9500   R  10500 
+9500  R  10500 
 
 
 ## Circuit Analysis with Tolerances
@@ -83,7 +83,7 @@ Parameters are varied randomly and output statistics are gathered\.
 
 We use programs like MATLAB\, Python\, SPICE\, or a spreadsheet to complete a statistically significant set of calculations\.
 
-For example\, with Excel\, a resistor with a nominal value Rnom and tolerance  can be expressed as:
+For example\, with Excel\, a resistor with a nominal value Rnom and tolerance  can be expressed as:
 
 The RAND\(\) function returns random numbers uniformly distributed between 0 and 1\.
 
@@ -135,11 +135,11 @@ P \(mW\)	4\.12	4\.17	0\.490	5\.04	\-\-	3\.29	\-\-
 
 Most circuit parameters are temperature sensitive\.
 
-P = Pnom\(1\+1∆T\+ 2∆T2\) where ∆T = T\-Tnom
+P = Pnom\(1\+1∆T\+ 2∆T2\) where ∆T = T\-Tnom
 
 Pnom is defined at Tnom
 
-Most versions of SPICE allow for the specification of TNOM\, T\, TC1\(1\)\, TC2\(2\)\.
+Most versions of SPICE allow for the specification of TNOM\, T\, TC1\(1\)\, TC2\(2\)\.
 
 SPICE temperature model for resistor:
 
@@ -157,7 +157,7 @@ Results in the text will be represented with three significant digits:  2\.03 mA
 
 However\, extra guard digits are normally retained during calculations\.
 
-## Tolerances & Worst-Case Analysis Example
+## Tolerances & Worst-Case Analysis Example
 
 __Problem:__  Find worst\-case values of  _I_  _C_  and  _V_  _CE_  in the circuit below\.
 
@@ -173,7 +173,7 @@ To maximize VEQ\, VCC and R1 should be maximized\, R2 should be minimized and op
 
 Quelle: Microelectronic Circuit Design\, Jaeger/Blalock\, 6\. Ed\.\, Kap\. 4\, Ex\. 4\.11
 
-## Tolerances & Worst-Case Analysis Example (cont.)
+## Tolerances & Worst-Case Analysis Example (cont.)
 
 ![](../images/lec-06-cir-elem-variation_6.jpg)
 
@@ -197,7 +197,7 @@ In Monte Carlo analysis\, values of each circuit parameter are randomly selected
 
 Random parameter sets are generated\, and the statistical behavior of circuit is built up from the analysis of many test cases\.
 
-## Tolerances - Monte Carlo Analysis Example
+## Tolerances - Monte Carlo Analysis Example
 
 For each Case: Assign random values to all circuit elements
 

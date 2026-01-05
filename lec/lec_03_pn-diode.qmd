@@ -1,32 +1,26 @@
-# Diode
+# Diode – Halbleiterphysik\, Modelle und Schaltungen
 
-## Diode als Schaltelemente (1)
+## Diode als Schaltelemente
 
-Einweggleichrichter
+* Einweggleichrichter
 
-Vollwellengleichrichter
+* Vollwellengleichrichter
 
-Quelle: Elektronische Bauelemente\, Reisch
+* Spannungsverdopplung
 
-Spannungsverdopplung
+* Spannungsstabilisierung\, Spannungsreferenz
 
-Quelle: Elektronische Bauelemente\, Reisch
+* Spannungsbegrenzung
 
-Spannungsstabilisierung\, Spannungsreferenz
+* Temperatursensor
 
-Quelle: Elektronische Bauelemente\, Reisch\, Kap\. 15\.4
 
-Spannungsbegrenzung
+![](img/lec-03-pn_diode_4.png)
 
-![](../images/lec-03-pn_diode_4.png)
-
-Quelle: Microelectronics\, Razavi
 
 ## Diode als Festkörper / Halbleiterphysik
 
 pn\-Übergang
-
-
 
   * Ladungsträger in Festkörpern
     * KristallstrukturEnergiezustände
@@ -45,7 +39,7 @@ pn\-Übergang
   * Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap\. 8\, Atom\- und Kernphysik und Kap\. 9\, Festkörperphysik\, des Buches  _Physik für Ingenieure_  von Hering 2012\, sowie Kap\. 12\, Halbleiter\, des Buches  _Elektronische Bauelemente_  von Reisch\, 2007 entnommen\.
 
 
-## Grundlagen der Elektrotechnik (1)
+## Grundlagen der Elektrotechnik
 
 Als Vorbereitung für ein besseres Verständnis der Halbleiterphysik\, sollten die Grundbegriffe aus den Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden\. Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:
 
@@ -63,19 +57,19 @@ Elektrische Leistung\.
 
 ## Elektronen im Festkörper
 
-![](../images/lec-03-pn_diode_5.png)
+![](img/lec-03-pn_diode_5.png)
 
-## Energiebänder-Modell (1)
+## Energiebänder-Modell
 
 ## Newton Mechanik vs. Quantentheorie
 
 ## Energiebandstruktur
 
-![](../images/lec-03-pn_diode_6.png)
+![](img/lec-03-pn_diode_6.png)
 
 ## Aufenthaltswahrscheinlichkeit
 
-![](../images/lec-03-pn_diode_7.png)
+![](img/lec-03-pn_diode_7.png)
 
 ## Reduziertes Zonenschema
 
@@ -83,17 +77,13 @@ Elektrische Leistung\.
 
 ## Fermi-Dirac-Verteilungsfunktion
 
-![](../images/lec-03-pn_diode_8.png)
+![](img/lec-03-pn_diode_8.png)
 
 ## Fermi-Dirac-Statistik
 
 ## Halbleiter im thermischen Gleichgewicht
 
-## Bändermodelle des pn-Übergangs (1)
-
-Entn:  Physics of Semiconductor Devices\, Sze
-
-Entn: Grundlagen der Halbleiterphysik\, Smoliner
+## Bändermodelle des pn-Übergangs
 
 ## Stromgleichung
 
@@ -103,31 +93,19 @@ Entn: Grundlagen der Halbleiterphysik\, Smoliner
 
 ## Abrupter pn-Übergang
 
-Quelle: Elektronische Bauelemente\, Reisch\, 2007\, Kap\. 14
-
 ## Sperrschichtnäherung (1)
 
-![](../images/lec-03-pn_diode_13.png)
-
-Quelle: Microelectronics\, Razavi
-
-Quelle: Elektonische Bauelemente\, Reisch
+![](img/lec-03-pn_diode_13.png)
 
 ## Speicherladung / Schaltverhalten
 
 Spannungsabhängiger Kondensator
 
-![](../images/lec-03-pn_diode_16.png)
-
-Quelle: Microelectronics\, Razavi
+![](img/lec-03-pn_diode_16.png)
 
 ## Sperrschichtkapazität
 
-Quelle: Elektronische Bauelemente\, Reisch
-
 ## Diffusionskapazität
-
-Quelle: Elektronische Bauelemente\, Reisch
 
 ## Temperaturabhängigkeit
 
@@ -143,17 +121,9 @@ Diode mit Großsignal\- und Kleinsignalverhalten
 
 ## Ideale Diode
 
-Quelle: Aktive Elektronische Bauelemente\, Stiny
-
 ## Näherungen der Diodenkennlinie - 0. Ordn.
 
-Quelle: Aktive Elektronische Bauelemente\, Stiny
-
 ## Näherung der Diodenkennlinie – 1. Ord.
-
-Quelle: Aktive Elektronische Bauelemente\, Stiny
-
-Quelle: Aktive Elektronische Bauelemente\, Stiny
 
 ## IV Charakteristik (real)
 
@@ -161,23 +131,15 @@ Quelle: Aktive Elektronische Bauelemente\, Stiny
 
 ## SPICE Modellanweisung
 
-Quelle: Elektronische Bauelemente\, Reisch
-
 ## Groß- und Kleinsignalmodell
 
-Großsignalmodell				Kleinsignalmodell
+* Großsignalmodell
 
-Quelle: Elektronische Bauelemente\, Reisch
+* Kleinsignalmodell
 
 ## Kleinsignalanalyse
 
-Quelle: Aktive elektronische Bauelemente\, Stiny\, Springer\, 2019
-
 ## Kleinsignalgrößen
 
-Quelle: Aktive elektronische Bauelemente\, Stiny
-
 ## Kleinsignalübertragung
-
-Quelle: Aktive elektronische Bauelemente\, Stiny
 
