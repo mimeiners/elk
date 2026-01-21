@@ -48,11 +48,11 @@ book:
     - part: Seminar
       chapters:
         - lec/lec_01_intro.qmd
-        - lec/lec_02_signals.qmd
-        - lec/lec_03_pn-diode.qmd
-        - lec/lec_04_single-trans-amp.qmd
-        - lec/lec_05_opamp.qmd
-        - lec/lec_06_cir-elem-variation.qmd
+        # - lec/lec_02_signals.qmd
+        # - lec/lec_03_pn-diode.qmd
+        # - lec/lec_04_single-trans-amp.qmd
+        # - lec/lec_05_opamp.qmd
+        # - lec/lec_06_cir-elem-variation.qmd
 
     # - part: Übungen
     #   chapters:
