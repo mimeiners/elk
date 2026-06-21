@@ -77,9 +77,9 @@ book:
   output-file: "elk"
 
 # Bibliography
-bibliography: _bibliography/references.bib
+bibliography: bibliography/references.bib
 csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl"
-# csl: _bibliography/ieee.csl
+# csl: bibliography/ieee.csl
 
 
 format:
@@ -103,47 +103,49 @@ format:
   #   # fontcolor: "black"
   #   highlight-style: github
 
-  pdf:
-    documentclass: scrbook
-    classoption: [twoside]
+  typst: defaults
 
-    keep-tex: true
+  # pdf:
+  #   documentclass: scrbook
+  #   classoption: [twoside]
 
-    toc: true
-    toc-depth: 3
-    # toc-title: "Table of contents"
-    # lof: true
-    # lot: true
+  #   keep-tex: true
 
-    number-sections: true
-    number-depth: 2
+  #   toc: true
+  #   toc-depth: 3
+  #   # toc-title: "Table of contents"
+  #   # lof: true
+  #   # lot: true
+
+  #   number-sections: true
+  #   number-depth: 2
         
-    papersize: a4
+  #   papersize: a4
         
-    geometry:
-      - inner=3cm
-      - outer=4cm
-      - top=3cm
-      - bottom=4cm
-      - headsep=22pt
-      - headheight=11pt
-      - footskip=33pt
-      - ignorehead
-      - ignorefoot
-      - heightrounded
+  #   geometry:
+  #     - inner=3cm
+  #     - outer=4cm
+  #     - top=3cm
+  #     - bottom=4cm
+  #     - headsep=22pt
+  #     - headheight=11pt
+  #     - footskip=33pt
+  #     - ignorehead
+  #     - ignorefoot
+  #     - heightrounded
 
-    fontsize: 11pt
-    pdfengine: xelatex
+  #   fontsize: 11pt
+  #   pdfengine: xelatex
 
-    mainfont: "Calibri"
-    # mainfont: "Times New Roman"
-    # sansfont: "Arial"
-    monofont: "Courier New"
-    mathfont: "TeX Gyre Termes Math"
-    highlight-style: pygments
+  #   mainfont: "Calibri"
+  #   # mainfont: "Times New Roman"
+  #   # sansfont: "Arial"
+  #   monofont: "Courier New"
+  #   mathfont: "TeX Gyre Termes Math"
+  #   highlight-style: pygments
     
-    # include-in-header:
-    #   - frontmatter/header.tex
-    # template-partials:
-    # - frontmatter/before-body.tex
-    # - frontmatter/toc.tex
+  #   # include-in-header:
+  #   #   - frontmatter/header.tex
+  #   # template-partials:
+  #   # - frontmatter/before-body.tex
+  #   # - frontmatter/toc.tex
