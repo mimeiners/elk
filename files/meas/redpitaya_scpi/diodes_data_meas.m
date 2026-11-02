@@ -5,7 +5,7 @@
 clear;
 
 %% Define Red Pitaya as TCP client object
-IP = '192.168.111.181';  % IP of your Red Pitaya ...
+IP = '192.168.111.182';  % IP of your Red Pitaya ...
 port = 5000;
 RP = tcpclient(IP, port);
 
@@ -105,8 +105,8 @@ clear RP;
 
 %% Save data as mat file
 % save('./data/IN_D1.mat', 'DF_IN1', 'DF_IN2');
-save('./data/IN1_D1_ELIE1.mat', 'DF_IN1');
-save('./data/IN2_D1_ELIE1.mat', 'DF_IN2');
+save('./data/IN1_D1_ELIE2.mat', 'DF_IN1');
+save('./data/IN2_D1_ELIE2.mat', 'DF_IN2');
 
 %% Save data as csv file
 % Not recommended, old version
