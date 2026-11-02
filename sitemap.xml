@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mimeiners.github.io/elk/index.html</loc>
-    <lastmod>2025-10-27T13:48:46.018Z</lastmod>
+    <lastmod>2026-11-02T16:13:59.832Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/lec/lec_01_intro.html</loc>
-    <lastmod>2026-01-05T13:19:06.793Z</lastmod>
+    <lastmod>2026-07-02T08:34:25.334Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/lab/lab_01_Activity_intro.html</loc>
@@ -26,10 +26,14 @@
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/references.html</loc>
-    <lastmod>2024-11-20T22:03:48.395Z</lastmod>
+    <lastmod>2026-11-02T16:12:32.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mimeiners.github.io/elk/elk.epub</loc>
+    <lastmod>2026-11-02T16:18:28.726Z</lastmod>
   </url>
   <url>
     <loc>https://mimeiners.github.io/elk/elk.pdf</loc>
-    <lastmod>2026-01-21T10:55:52.797Z</lastmod>
+    <lastmod>2026-11-02T16:18:53.218Z</lastmod>
   </url>
 </urlset>

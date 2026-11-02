@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>1&nbsp; Einleitung – M 5.3 Elektronik (ELK)</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -20,7 +26,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -34,15 +60,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-847404b1397bb642580d6a42be486c59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e8df4f7f6da0d93fa1b12922bb240437.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,17 +100,17 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Zum Hauptinhalt springen</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
+  <nav class="quarto-secondary-nav" aria-label="Symbolleiste">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="Pfad"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -95,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Website">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">M 5.3 Elektronik (ELK)</a> 
@@ -141,13 +167,10 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Seminar</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Seminar</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lec/lec_01_intro.html" class="sidebar-item-text sidebar-link active">
@@ -158,13 +181,10 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Labor</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Labor</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab_01_Activity_intro.html" class="sidebar-item-text sidebar-link">
@@ -203,45 +223,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
   <li><a href="#lernziele-des-moduls" id="toc-lernziele-des-moduls" class="nav-link active" data-scroll-target="#lernziele-des-moduls"><span class="header-section-number">1.1</span> Lernziele des Moduls</a></li>
-  <li><a href="#wissenschaftliches-rechnen" id="toc-wissenschaftliches-rechnen" class="nav-link" data-scroll-target="#wissenschaftliches-rechnen"><span class="header-section-number">1.2</span> Wissenschaftliches Rechnen</a></li>
-  <li><a href="#schaltungsentwurf-eda-tools" id="toc-schaltungsentwurf-eda-tools" class="nav-link" data-scroll-target="#schaltungsentwurf-eda-tools"><span class="header-section-number">1.3</span> Schaltungsentwurf (EDA Tools)</a></li>
+  <li><a href="#wissenschaftliches-rechnen-datenwissenschaft" id="toc-wissenschaftliches-rechnen-datenwissenschaft" class="nav-link" data-scroll-target="#wissenschaftliches-rechnen-datenwissenschaft"><span class="header-section-number">1.2</span> Wissenschaftliches Rechnen / Datenwissenschaft</a></li>
+  <li><a href="#eda-tools" id="toc-eda-tools" class="nav-link" data-scroll-target="#eda-tools"><span class="header-section-number">1.3</span> EDA Tools</a></li>
   <li><a href="#betriebssystem-os---werkzeuge-tools" id="toc-betriebssystem-os---werkzeuge-tools" class="nav-link" data-scroll-target="#betriebssystem-os---werkzeuge-tools"><span class="header-section-number">1.4</span> Betriebssystem (OS) - Werkzeuge (Tools)</a></li>
   <li><a href="#code-editoren" id="toc-code-editoren" class="nav-link" data-scroll-target="#code-editoren"><span class="header-section-number">1.5</span> Code Editoren</a></li>
-  <li><a href="#datenverarbeitung-data-sciences" id="toc-datenverarbeitung-data-sciences" class="nav-link" data-scroll-target="#datenverarbeitung-data-sciences"><span class="header-section-number">1.6</span> Datenverarbeitung / Data Sciences</a>
-  <ul class="collapse">
-  <li><a href="#dateisystem-journaled-file-system" id="toc-dateisystem-journaled-file-system" class="nav-link" data-scroll-target="#dateisystem-journaled-file-system"><span class="header-section-number">1.6.1</span> Dateisystem / Journaled File System</a></li>
-  <li><a href="#tabellenformate-rectangular-data" id="toc-tabellenformate-rectangular-data" class="nav-link" data-scroll-target="#tabellenformate-rectangular-data"><span class="header-section-number">1.6.2</span> Tabellenformate / Rectangular Data</a></li>
-  <li><a href="#serialisation" id="toc-serialisation" class="nav-link" data-scroll-target="#serialisation"><span class="header-section-number">1.6.3</span> Serialisation</a></li>
-  <li><a href="#spezielle-formate-data-frames" id="toc-spezielle-formate-data-frames" class="nav-link" data-scroll-target="#spezielle-formate-data-frames"><span class="header-section-number">1.6.4</span> Spezielle Formate / Data Frames</a></li>
-  <li><a href="#embedded-db-engines" id="toc-embedded-db-engines" class="nav-link" data-scroll-target="#embedded-db-engines"><span class="header-section-number">1.6.5</span> Embedded DB-Engines</a></li>
-  </ul></li>
-  <li><a href="#schreibst-du-noch-oder-texst-du-schon" id="toc-schreibst-du-noch-oder-texst-du-schon" class="nav-link" data-scroll-target="#schreibst-du-noch-oder-texst-du-schon"><span class="header-section-number">1.7</span> Schreibst Du noch oder TeXst Du schon?</a></li>
-  <li><a href="#latex-editoren" id="toc-latex-editoren" class="nav-link" data-scroll-target="#latex-editoren"><span class="header-section-number">1.8</span> LaTeX Editoren</a></li>
-  <li><a href="#literaturverwaltung-und-latex" id="toc-literaturverwaltung-und-latex" class="nav-link" data-scroll-target="#literaturverwaltung-und-latex"><span class="header-section-number">1.9</span> Literaturverwaltung und LaTeX</a></li>
-  <li><a href="#betriebssystem-os---werkzeuge-tools-1" id="toc-betriebssystem-os---werkzeuge-tools-1" class="nav-link" data-scroll-target="#betriebssystem-os---werkzeuge-tools-1"><span class="header-section-number">1.10</span> Betriebssystem (OS) - Werkzeuge (Tools)</a></li>
-  <li><a href="#experimentelle-arbeit---entwurf-elektronischer-systeme" id="toc-experimentelle-arbeit---entwurf-elektronischer-systeme" class="nav-link" data-scroll-target="#experimentelle-arbeit---entwurf-elektronischer-systeme"><span class="header-section-number">1.11</span> Experimentelle Arbeit - Entwurf elektronischer Systeme</a></li>
-  <li><a href="#reiseaussichten" id="toc-reiseaussichten" class="nav-link" data-scroll-target="#reiseaussichten"><span class="header-section-number">1.12</span> Reiseaussichten</a></li>
-  <li><a href="#reiseziele" id="toc-reiseziele" class="nav-link" data-scroll-target="#reiseziele"><span class="header-section-number">1.13</span> Reiseziele</a></li>
-  <li><a href="#reisebedingungen" id="toc-reisebedingungen" class="nav-link" data-scroll-target="#reisebedingungen"><span class="header-section-number">1.14</span> Reisebedingungen</a></li>
-  <li><a href="#halbleiterherstellung-infineon-dresden" id="toc-halbleiterherstellung-infineon-dresden" class="nav-link" data-scroll-target="#halbleiterherstellung-infineon-dresden"><span class="header-section-number">1.15</span> Halbleiterherstellung (Infineon, Dresden)</a></li>
-  <li><a href="#finfet-intel" id="toc-finfet-intel" class="nav-link" data-scroll-target="#finfet-intel"><span class="header-section-number">1.16</span> FinFET (Intel)</a></li>
-  <li><a href="#tsmc-fab-next-gen-75-nm" id="toc-tsmc-fab-next-gen-75-nm" class="nav-link" data-scroll-target="#tsmc-fab-next-gen-75-nm"><span class="header-section-number">1.17</span> TSMC Fab (Next Gen 7/5 nm)</a></li>
-  <li><a href="#sie-werden-experte" id="toc-sie-werden-experte" class="nav-link" data-scroll-target="#sie-werden-experte"><span class="header-section-number">1.18</span> Sie werden Experte</a></li>
-  <li><a href="#evolution-von-produkten" id="toc-evolution-von-produkten" class="nav-link" data-scroll-target="#evolution-von-produkten"><span class="header-section-number">1.19</span> Evolution von Produkten</a></li>
-  <li><a href="#eda-kompetenz" id="toc-eda-kompetenz" class="nav-link" data-scroll-target="#eda-kompetenz"><span class="header-section-number">1.20</span> EDA Kompetenz</a></li>
-  <li><a href="#design-entwurfsmethodik" id="toc-design-entwurfsmethodik" class="nav-link" data-scroll-target="#design-entwurfsmethodik"><span class="header-section-number">1.21</span> Design-/Entwurfsmethodik</a></li>
+  <li><a href="#berichtswesen-laborberichte" id="toc-berichtswesen-laborberichte" class="nav-link" data-scroll-target="#berichtswesen-laborberichte"><span class="header-section-number">1.6</span> Berichtswesen / Laborberichte</a></li>
+  <li><a href="#experimentelle-arbeit---entwurf-elektronischer-systeme" id="toc-experimentelle-arbeit---entwurf-elektronischer-systeme" class="nav-link" data-scroll-target="#experimentelle-arbeit---entwurf-elektronischer-systeme"><span class="header-section-number">1.7</span> Experimentelle Arbeit - Entwurf elektronischer Systeme</a></li>
+  <li><a href="#reiseaussichten" id="toc-reiseaussichten" class="nav-link" data-scroll-target="#reiseaussichten"><span class="header-section-number">1.8</span> Reiseaussichten</a></li>
+  <li><a href="#reiseziele" id="toc-reiseziele" class="nav-link" data-scroll-target="#reiseziele"><span class="header-section-number">1.9</span> Reiseziele</a></li>
+  <li><a href="#reisebedingungen" id="toc-reisebedingungen" class="nav-link" data-scroll-target="#reisebedingungen"><span class="header-section-number">1.10</span> Reisebedingungen</a></li>
+  <li><a href="#halbleiterherstellung-infineon-dresden" id="toc-halbleiterherstellung-infineon-dresden" class="nav-link" data-scroll-target="#halbleiterherstellung-infineon-dresden"><span class="header-section-number">1.11</span> Halbleiterherstellung (Infineon, Dresden)</a></li>
+  <li><a href="#finfet-intel" id="toc-finfet-intel" class="nav-link" data-scroll-target="#finfet-intel"><span class="header-section-number">1.12</span> FinFET (Intel)</a></li>
+  <li><a href="#tsmc-fab-next-gen-75-nm" id="toc-tsmc-fab-next-gen-75-nm" class="nav-link" data-scroll-target="#tsmc-fab-next-gen-75-nm"><span class="header-section-number">1.13</span> TSMC Fab (Next Gen 7/5 nm)</a></li>
+  <li><a href="#sie-werden-experte" id="toc-sie-werden-experte" class="nav-link" data-scroll-target="#sie-werden-experte"><span class="header-section-number">1.14</span> Sie werden Experte</a></li>
+  <li><a href="#evolution-von-produkten" id="toc-evolution-von-produkten" class="nav-link" data-scroll-target="#evolution-von-produkten"><span class="header-section-number">1.15</span> Evolution von Produkten</a></li>
+  <li><a href="#eda-kompetenz" id="toc-eda-kompetenz" class="nav-link" data-scroll-target="#eda-kompetenz"><span class="header-section-number">1.16</span> EDA Kompetenz</a></li>
+  <li><a href="#design-entwurfsmethodik" id="toc-design-entwurfsmethodik" class="nav-link" data-scroll-target="#design-entwurfsmethodik"><span class="header-section-number">1.17</span> Design-/Entwurfsmethodik</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/lec/lec_01_intro.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Pfad"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html">Seminar</a></li><li class="breadcrumb-item"><a href="../lec/lec_01_intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></h1>
 </div>
@@ -263,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="lernziele-des-moduls" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="lernziele-des-moduls"><span class="header-section-number">1.1</span> Lernziele des Moduls</h2>
 <ul>
-<li><p>Einblicke in mikroelektronische Systeme</p></li>
+<li><p>Einblicke in (mikro-)elektronische Systeme</p></li>
 <li><p>Analyse und Funktion von Halbleiterbauelementen</p>
 <ul>
 <li>Halbleiterphysik</li>
@@ -282,17 +291,16 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="wissenschaftliches-rechnen" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="wissenschaftliches-rechnen"><span class="header-section-number">1.2</span> Wissenschaftliches Rechnen</h2>
+<section id="wissenschaftliches-rechnen-datenwissenschaft" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="wissenschaftliches-rechnen-datenwissenschaft"><span class="header-section-number">1.2</span> Wissenschaftliches Rechnen / Datenwissenschaft</h2>
 <ul>
-<li><a href="https://www.anaconda.com/download/">Python</a></li>
-<li><a href="https://de.mathworks.com">Matlab</a></li>
-<li><a href="https://www.gnu.org/software/octave/">Gnu Octave</a></li>
-<li><a href="http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html">Command-line tools</a></li>
+<li><p><a href="https://www.anaconda.com/download/">Python</a></p></li>
+<li><p><a href="https://de.mathworks.com">Matlab</a></p></li>
+<li><p><a href="https://jeroenjanssens.com/dsatcl/">Command-line tools</a></p></li>
 </ul>
 </section>
-<section id="schaltungsentwurf-eda-tools" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="schaltungsentwurf-eda-tools"><span class="header-section-number">1.3</span> Schaltungsentwurf (EDA Tools)</h2>
+<section id="eda-tools" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="eda-tools"><span class="header-section-number">1.3</span> EDA Tools</h2>
 <ul>
 <li>PCB / System Design
 <ul>
@@ -328,70 +336,26 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="1.5" class="anchored" data-anchor-id="code-editoren"><span class="header-section-number">1.5</span> Code Editoren</h2>
 <ul>
 <li><a href="https://code.visualstudio.com">Visual Studio Code</a></li>
-<li><a href="https://notepad-plus-plus.org">Notepad++</a> (Windows)</li>
-<li><a href="https://www.gnu.org/software/emacs/">Emacs</a><br>
-</li>
+<li><a href="https://www.spyder-ide.org">Spyder IDE</a></li>
+<li><a href="https://thonny.org">Thonny (Micro-)Python IDE</a></li>
+<li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
 <li><a href="https://www.vim.org">Vim</a></li>
 </ul>
 </section>
-<section id="datenverarbeitung-data-sciences" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="datenverarbeitung-data-sciences"><span class="header-section-number">1.6</span> Datenverarbeitung / Data Sciences</h2>
-<section id="dateisystem-journaled-file-system" class="level3" data-number="1.6.1">
-<h3 data-number="1.6.1" class="anchored" data-anchor-id="dateisystem-journaled-file-system"><span class="header-section-number">1.6.1</span> Dateisystem / Journaled File System</h3>
+<section id="berichtswesen-laborberichte" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="berichtswesen-laborberichte"><span class="header-section-number">1.6</span> Berichtswesen / Laborberichte</h2>
 <ul>
-<li>Ordner / Directories</li>
-<li>Dateien / Files</li>
-</ul>
-</section>
-<section id="tabellenformate-rectangular-data" class="level3" data-number="1.6.2">
-<h3 data-number="1.6.2" class="anchored" data-anchor-id="tabellenformate-rectangular-data"><span class="header-section-number">1.6.2</span> Tabellenformate / Rectangular Data</h3>
+<li><a href="https://quarto.org">quarto</a>
 <ul>
-<li>Comma-Separated-Values (CSV), Tab-Separated-Values (TSV)</li>
-<li><a href="https://github.com/wireservice/csvkit">csvkit: A suite of utilities for converting to and working with CSV, the king of tabular file formats.</a></li>
-<li><a href="https://github.com/johnkerl/miller">miller: Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON</a></li>
-<li>Spreadsheet (.xlsx, .ods)</li>
-</ul>
-</section>
-<section id="serialisation" class="level3" data-number="1.6.3">
-<h3 data-number="1.6.3" class="anchored" data-anchor-id="serialisation"><span class="header-section-number">1.6.3</span> <a href="https://en.wikipedia.org/wiki/Serialization">Serialisation</a></h3>
-<ul>
-<li><a href="https://docs.python-guide.org/scenarios/serialization/">Data Serialization — The Hitchhiker’s Guide to Python</a></li>
-<li><a href="https://www.json.org/json-en.html">JSON</a></li>
-<li><a href="https://msgpack.org/">MessagePack: It’s like JSON. but fast and small.</a></li>
-</ul>
-</section>
-<section id="spezielle-formate-data-frames" class="level3" data-number="1.6.4">
-<h3 data-number="1.6.4" class="anchored" data-anchor-id="spezielle-formate-data-frames"><span class="header-section-number">1.6.4</span> Spezielle Formate / Data Frames</h3>
-<ul>
-<li><a href="https://www.adventuresinmachinelearning.com/mastering-python-dictionaries-efficient-data-storage-and-retrieval/">Mastering Python Dictionaries: Efficient Data Storage and Retrieval - Adventures in Machine Learning</a></li>
-<li><a href="https://de.mathworks.com/help/matlab/import_export/mat-file-versions.html">MAT-File Versions - MATLAB &amp; Simulink - MathWorks Deutschland</a></li>
-<li><a href="https://www.hdfgroup.org/2018/06/15/hdf5-or-how-i-learned-to-love-data-compression-and-partial-i-o/">HDF5 Or How I Learned To Love Data Compression And Partial I/O</a></li>
-<li><a href="https://www.databricks.com/de/glossary/what-is-parquet">Was ist Apache Parquet?</a></li>
-<li><a href="https://arrow.apache.org/docs/python/feather.html">Feather File Format</a></li>
-<li><a href="https://github.com/pola-rs/polars">pola-rs/polars: Dataframes powered by a multithreaded, vectorized query engine</a></li>
-<li><a href="https://github.com/ibis-project/ibis">ibis-project/ibis: Portable Python dataframe library</a></li>
-</ul>
-</section>
-<section id="embedded-db-engines" class="level3" data-number="1.6.5">
-<h3 data-number="1.6.5" class="anchored" data-anchor-id="embedded-db-engines"><span class="header-section-number">1.6.5</span> Embedded <a href="https://db-engines.com">DB-Engines</a></h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/SQL">SQL</a>, z.B. <a href="https://en.wikipedia.org/wiki/SQLite">SQLite</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Online_analytical_processing">OLAP</a>, z.B. <a href="https://duckdb.org/why_duckdb">DuckDB</a></li>
-</ul>
-</section>
-</section>
-<section id="schreibst-du-noch-oder-texst-du-schon" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="schreibst-du-noch-oder-texst-du-schon"><span class="header-section-number">1.7</span> Schreibst Du noch oder TeXst Du schon?</h2>
+<li><a href="https://quarto.org/docs/manuscripts/">Manuscripts</a></li>
+</ul></li>
+<li>LaTeX
 <ul>
 <li><a href="https://miktex.org/">MikTeX (Windows, MacOS, Linux)</a></li>
 <li><a href="https://www.tug.org/mactex/">MacTeX (MacOS)</a></li>
 <li><a href="http://tug.org/texlive/">TeXLive (Linux)</a></li>
-</ul>
-</section>
-<section id="latex-editoren" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="latex-editoren"><span class="header-section-number">1.8</span> LaTeX Editoren</h2>
-<ul>
-<li>IDE’s
+</ul></li>
+<li>LaTeX Editoren
 <ul>
 <li><a href="http://www.texstudio.org">TeXStudio</a></li>
 <li><a href="http://www.xm1math.net/texmaker/">TeXMaker</a></li>
@@ -400,35 +364,30 @@ ul.task-list li input[type="checkbox"] {
 <li>Kollaborative Frameworks
 <ul>
 <li><a href="https://www.sharelatex.com/">ShareLaTeX, Online LaTeX</a></li>
-<li><a href="https://cocalc.com/doc/latex-editor.html">CoCalc - Online LaTeX</a></li>
+<li><a href="https://cocalc.com/doc/latex-editor.html">CoCalc - Online LaTeX</a>
+<ul>
+<li>ein Service der <a href="https://academiccloud.de">AcademicCloud</a></li>
+</ul></li>
+</ul></li>
+<li>Literaturverwaltung
+<ul>
+<li><a href="https://www.suub.uni-bremen.de/service-beratung/literaturverwaltung/zotero/">Zotero</a></li>
+<li><a href="https://www.suub.uni-bremen.de/service-beratung/literaturverwaltung/citavi-2/">Citavi</a></li>
+</ul></li>
+<li>Datenverarbeitung
+<ul>
+<li>Dateisystem Ordner und Dateien</li>
+<li>Comma-Separated-Values (CSV), Tab-Separated-Values (TSV)
+<ul>
+<li><a href="https://github.com/wireservice/csvkit">csvkit</a></li>
+<li><a href="https://github.com/johnkerl/miller">miller</a></li>
+</ul></li>
+<li>Spreadsheet (.xlsx, .ods)</li>
 </ul></li>
 </ul>
 </section>
-<section id="literaturverwaltung-und-latex" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="literaturverwaltung-und-latex"><span class="header-section-number">1.9</span> Literaturverwaltung und LaTeX</h2>
-<ul>
-<li><a href="https://www1.citavi.com/sub/manual5/de/exporting_to_bibtex.html">Citavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX</a></li>
-<li><a href="https://unimelb.libguides.com/c.php?g=565734&amp;p=3912294">RefWorks - Library Guide Univ. Melbourne</a></li>
-<li><a href="https://nerdpause.de/benutzerdefinierte-bibtex-keys-mit-zotero/">Benutzerdefinierte BibTex-Keys mit Zotero | nerdpause</a></li>
-<li><a href="https://unimelb.libguides.com/c.php?g=565734&amp;p=3897117">JabRef - Library Guide Univ. Melbourne</a></li>
-<li><a href="https://unimelb.libguides.com/latexbibtex/endnote">EndNote - Library Guide Univ. Melbourne</a></li>
-</ul>
-</section>
-<section id="betriebssystem-os---werkzeuge-tools-1" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="betriebssystem-os---werkzeuge-tools-1"><span class="header-section-number">1.10</span> Betriebssystem (OS) - Werkzeuge (Tools)</h2>
-<ul>
-<li><a href="https://de.wikipedia.org/wiki/Secure_Shell">SSH (Secure Shell)</a></li>
-<li><a href="https://github.com/microsoft/terminal">Microsoft-Terminal</a></li>
-<li><a href="https://learn.microsoft.com/de-de/powershell/scripting/learn/ps101/01-getting-started?view=powershell-7.4">Microsoft-PowerShell</a></li>
-<li><a href="https://iterm2.com">MacOS-Terminal</a></li>
-<li><a href="https://ohmyz.sh">Linux/MacOS zsh-tools</a></li>
-<li><a href="https://bash-it.readthedocs.io/en/latest/">Linux/MacOS bash-it</a></li>
-<li><a href="https://git-scm.com">Git (Versionskontrolle)</a></li>
-<li><a href="https://tortoisegit.org/">TortoiseGit – Windows Shell Interface to Git</a></li>
-</ul>
-</section>
-<section id="experimentelle-arbeit---entwurf-elektronischer-systeme" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="experimentelle-arbeit---entwurf-elektronischer-systeme"><span class="header-section-number">1.11</span> Experimentelle Arbeit - Entwurf elektronischer Systeme</h2>
+<section id="experimentelle-arbeit---entwurf-elektronischer-systeme" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="experimentelle-arbeit---entwurf-elektronischer-systeme"><span class="header-section-number">1.7</span> Experimentelle Arbeit - Entwurf elektronischer Systeme</h2>
 <p>Analyse und Synthese von elektronischen Bauelementen und Systemen mit</p>
 <ul>
 <li><p>Modellbildung auf Systemebene / Verhaltensmodellierung</p></li>
@@ -441,13 +400,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Technische Dokumentation mit <a href="https://quarto.org">quarto</a></p></li>
 </ul>
 </section>
-<section id="reiseaussichten" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="reiseaussichten"><span class="header-section-number">1.12</span> Reiseaussichten</h2>
+<section id="reiseaussichten" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="reiseaussichten"><span class="header-section-number">1.8</span> Reiseaussichten</h2>
 <p>Dies ist der <strong>Beginn eines Prozesses</strong>,</p>
 <p>besser noch, <strong>eines Abenteuers</strong>.</p>
 </section>
-<section id="reiseziele" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="reiseziele"><span class="header-section-number">1.13</span> Reiseziele</h2>
+<section id="reiseziele" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="reiseziele"><span class="header-section-number">1.9</span> Reiseziele</h2>
 <ul>
 <li><p>Mehr über Signale wissen, die in elektronischen Systemen verarbeitet werden.</p></li>
 <li><p>Schaltungsdiagramme lesen können.</p></li>
@@ -456,8 +415,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Eigenarten der Modellierung mikroelektronischer Bauelemente und der physikalischen und chemischen Prinzipien im Herstellungsprozess kennenlernen.</p></li>
 </ul>
 </section>
-<section id="reisebedingungen" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="reisebedingungen"><span class="header-section-number">1.14</span> Reisebedingungen</h2>
+<section id="reisebedingungen" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="reisebedingungen"><span class="header-section-number">1.10</span> Reisebedingungen</h2>
 <p><em>Anwendung Ihres Werkzeugkastens.</em> * Grundlagen der Elektrotechnik/Physik</p>
 <ul>
 <li><p>Elektromagnetische Wellen</p></li>
@@ -468,20 +427,20 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><em>Schnallen Sie sich an, die Reise beginnt …</em></p>
 </section>
-<section id="halbleiterherstellung-infineon-dresden" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="halbleiterherstellung-infineon-dresden"><span class="header-section-number">1.15</span> Halbleiterherstellung (Infineon, Dresden)</h2>
+<section id="halbleiterherstellung-infineon-dresden" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="halbleiterherstellung-infineon-dresden"><span class="header-section-number">1.11</span> Halbleiterherstellung (Infineon, Dresden)</h2>
 <div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/_Kj58yQ67KI" width="854" height="480" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="finfet-intel" class="level2" data-number="1.16">
-<h2 data-number="1.16" class="anchored" data-anchor-id="finfet-intel"><span class="header-section-number">1.16</span> FinFET (Intel)</h2>
+<section id="finfet-intel" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="finfet-intel"><span class="header-section-number">1.12</span> FinFET (Intel)</h2>
 <div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/_VMYPLXnd7E" width="854" height="480" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="tsmc-fab-next-gen-75-nm" class="level2" data-number="1.17">
-<h2 data-number="1.17" class="anchored" data-anchor-id="tsmc-fab-next-gen-75-nm"><span class="header-section-number">1.17</span> TSMC Fab (Next Gen 7/5 nm)</h2>
+<section id="tsmc-fab-next-gen-75-nm" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="tsmc-fab-next-gen-75-nm"><span class="header-section-number">1.13</span> TSMC Fab (Next Gen 7/5 nm)</h2>
 <div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/Hb1WDxSoSec" width="854" height="480" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="sie-werden-experte" class="level2" data-number="1.18">
-<h2 data-number="1.18" class="anchored" data-anchor-id="sie-werden-experte"><span class="header-section-number">1.18</span> Sie werden Experte</h2>
+<section id="sie-werden-experte" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="sie-werden-experte"><span class="header-section-number">1.14</span> Sie werden Experte</h2>
 <p><em>Leistungsmerkmale.</em></p>
 <ul>
 <li><p>Hintergrundwissen</p>
@@ -504,8 +463,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Tool-Kenntnisse</p></li>
 </ul>
 </section>
-<section id="evolution-von-produkten" class="level2" data-number="1.19">
-<h2 data-number="1.19" class="anchored" data-anchor-id="evolution-von-produkten"><span class="header-section-number">1.19</span> Evolution von Produkten</h2>
+<section id="evolution-von-produkten" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="evolution-von-produkten"><span class="header-section-number">1.15</span> Evolution von Produkten</h2>
 <ul>
 <li><p>Angetrieben durch Technologieverbesserung</p>
 <ul>
@@ -526,8 +485,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="eda-kompetenz" class="level2" data-number="1.20">
-<h2 data-number="1.20" class="anchored" data-anchor-id="eda-kompetenz"><span class="header-section-number">1.20</span> EDA Kompetenz</h2>
+<section id="eda-kompetenz" class="level2" data-number="1.16">
+<h2 data-number="1.16" class="anchored" data-anchor-id="eda-kompetenz"><span class="header-section-number">1.16</span> EDA Kompetenz</h2>
 <ul>
 <li>EDA-Anbieter (Tool-Entwickler)
 <ul>
@@ -549,8 +508,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="design-entwurfsmethodik" class="level2" data-number="1.21">
-<h2 data-number="1.21" class="anchored" data-anchor-id="design-entwurfsmethodik"><span class="header-section-number">1.21</span> Design-/Entwurfsmethodik</h2>
+<section id="design-entwurfsmethodik" class="level2" data-number="1.17">
+<h2 data-number="1.17" class="anchored" data-anchor-id="design-entwurfsmethodik"><span class="header-section-number">1.17</span> Design-/Entwurfsmethodik</h2>
 <ul>
 <li>Full Custom - vollständig manuell: ASIC
 <ul>
@@ -573,6 +532,102 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-arte2025-revol" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span class="nocase">arte, Hrsg.</span>, <span>„<span>Revolutionär – Ideen, die die Welt veränderten</span>: Das Smartphone“</span>. Zugegriffen: 30. Dezember 2025. [Online]. Verfügbar unter: <a href="https://www.arte.tv/de/videos/122715-006-A/revolutionaer-ideen-die-die-welt-veraenderten/">https://www.arte.tv/de/videos/122715-006-A/revolutionaer-ideen-die-die-welt-veraenderten/</a></div>
+</div>
+<div id="ref-baker2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">R. J. Baker, <em>CMOS: Circuit Design, Layout, and Simulation</em>, 3rd Aufl. PDF; Wiley Press, 2010, S. 1208. Verfügbar unter: <a href="http://lib.myilibrary.com?id=337262">http://lib.myilibrary.com?id=337262</a></div>
+</div>
+<div id="ref-baker2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">R. J. Baker, <span>„CMOSedu“</span>. Website, 2015. Verfügbar unter: <a href="http://www.cmosedu.com">http://www.cmosedu.com</a></div>
+</div>
+<div id="ref-baumann2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">P. Baumann, <em>Sensorschaltungen</em>, 2. Aufl. Vieweg+Teubner, 2010. doi: <a href="https://doi.org/10.1007/978-3-8348-9753-4">10.1007/978-3-8348-9753-4</a>.</div>
+</div>
+<div id="ref-baumann2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">P. Baumann, <em>Parameterextraktion bei Halbleiterbauelementen - Simulation mit PSPICE</em>. Springer, 2012. doi: <a href="https://doi.org/10.1007/978-3-8348-2495-0">10.1007/978-3-8348-2495-0</a>.</div>
+</div>
+<div id="ref-baumann2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">P. Baumann, <em>Pr<span>ü</span>fungsfragen zur Elektronik</em>. Springer, 2013. doi: <a href="https://doi.org/10.1007/978-3-658-02913-5">10.1007/978-3-658-02913-5</a>.</div>
+</div>
+<div id="ref-carter2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">B. Carter, <em>Op Amps for Everyone</em>, 4th Aufl. Boston: Newnes, 2013. doi: <a href="https://doi.org/10.1016/B978-0-12-391495-8.00001-5">10.1016/B978-0-12-391495-8.00001-5</a>.</div>
+</div>
+<div id="ref-federau2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">J. Federau, <em>Operationsverstärker</em>. Springer Fachmedien Wiesbaden, 2017. doi: <a href="https://doi.org/10.1007/978-3-658-16373-0">10.1007/978-3-658-16373-0</a>.</div>
+</div>
+<div id="ref-goebel2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">H. Göbel und H. Siemund, <em>Übungsaufgaben zur Halbleiter-Schaltungstechnik</em>. Springer Berlin Heidelberg, 2018. doi: <a href="https://doi.org/10.1007/978-3-662-56569-8">10.1007/978-3-662-56569-8</a>.</div>
+</div>
+<div id="ref-goebel2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">H. Göbel, <em>Einführung in die Halbleiter-Schaltungstechnik</em>. Springer Berlin Heidelberg, 2019. doi: <a href="https://doi.org/10.1007/978-3-662-56563-6">10.1007/978-3-662-56563-6</a>.</div>
+</div>
+<div id="ref-hering-2025-physik-ingen" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">E. Hering, R. Martin, und M. Stohrer, <em>Physik für Ingenieure</em>. Springer Berlin Heidelberg, 2025. doi: <a href="https://doi.org/10.1007/978-3-662-69429-9">10.1007/978-3-662-69429-9</a>.</div>
+</div>
+<div id="ref-hilleringmann-2023-siliz-halbl" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">U. Hilleringmann, <em>Silizium-Halbleitertechnologie: Grundlagen mikroelektronischer Integrationstechnik</em>. Springer Fachmedien Wiesbaden, 2023. doi: <a href="https://doi.org/10.1007/978-3-658-42378-0">10.1007/978-3-658-42378-0</a>.</div>
+</div>
+<div id="ref-jaeger-2022-microel-circuit-desig-a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">R. Jaeger und B. Travis, <em>Microelectronic Circuit Design</em>. McGraw-Hill US Higher Ed ISE, 2022. Verfügbar unter: <a href="https://suche.suub.uni-bremen.de/peid=B191214129">https://suche.suub.uni-bremen.de/peid=B191214129</a></div>
+</div>
+<div id="ref-jaeger-2022-microel-circuit-desig-b" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">R. Jaeger und B. Travis, <em>Microelectronic Circuit Design</em>. McGraw-Hill US Higher Ed ISE, 2022. Verfügbar unter: <a href="https://suche.suub.uni-bremen.de/peid=B198375229">https://suche.suub.uni-bremen.de/peid=B198375229</a></div>
+</div>
+<div id="ref-jaeger2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">R. C. Jaeger und T. N. Blalock, <em>Microelectronic Circuit Design</em>, 6. Aufl. New York, New York: McGraw-Hill, 2023. Verfügbar unter: <a href="http://ebookcentral.proquest.com/lib/suub/detail.action?docID=6865812">http://ebookcentral.proquest.com/lib/suub/detail.action?docID=6865812</a></div>
+</div>
+<div id="ref-mancini2009" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">R. Mancini und B. Carter, <em>Op Amps for Everyone</em>, 3rd Aufl. Newnes, 2009. doi: <a href="https://doi.org/10.1016/b978-1-85617-505-0.x0001-4">10.1016/b978-1-85617-505-0.x0001-4</a>.</div>
+</div>
+<div id="ref-murmann2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">B. Murmann, <em>Analysis and Design of Elementary MOS Amplifier Stages</em>. in The Modular Series of Microelectronic Device and Circuit Design. NTS Press, 2013. Verfügbar unter: <a href="https://github.com/bmurmann/Book-on-MOS-stages/blob/main/book/Analysis and Design of Elementary MOS
+                  Amplifier Stages.pdf">https://github.com/bmurmann/Book-on-MOS-stages/blob/main/book/Analysis and Design of Elementary MOS Amplifier Stages.pdf</a></div>
+</div>
+<div id="ref-natt-2022-physik-python" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">O. Natt, <em>Physik mit Python: Simulationen, Visualisierungen und Animationen von Anfang an</em>. Springer Berlin Heidelberg, 2022. doi: <a href="https://doi.org/10.1007/978-3-662-66454-4">10.1007/978-3-662-66454-4</a>.</div>
+</div>
+<div id="ref-pretl2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">H. Pretl und M. Eberlein, <span>„Fifty Nifty Variations of Two-Transistor Circuits: A tribute to the versatility of <span>MOSFETs</span>“</span>, <em><span>IEEE</span> Solid-State Circuits Magazine</em>, Bd. 13, Nr. 3, S. 38–46, 2021, doi: <a href="https://doi.org/10.1109/mssc.2021.3088968">10.1109/mssc.2021.3088968</a>.</div>
+</div>
+<div id="ref-pretl2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">H. Pretl, M. Koefinger, und S. Dorrer, <span>„Analog <span>Circuit</span> <span>Design</span>“</span>. [Online]. Verfügbar unter: <a href="https://iic-jku.github.io/analog-circuit-design">https://iic-jku.github.io/analog-circuit-design</a></div>
+</div>
+<div id="ref-razavi2008" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">B. Razavi, <em>Microelectronics</em>. John Wiley &amp; Sons, Inc., 2008, S. 856.</div>
+</div>
+<div id="ref-reisch2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">M. Reisch, <em>Elektronische Bauelemente</em>, 2nd Aufl. Springer, 2007, S. 1517. doi: <a href="https://doi.org/10.1007/978-3-540-34015-7">10.1007/978-3-540-34015-7</a>.</div>
+</div>
+<div id="ref-siegl2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[23] </div><div class="csl-right-inline">J. Siegl, <em>Schaltungstechnik - Analog und gemischte analog/digital</em>, 4th Aufl. in Springer-Lehrbuch. Springer, 2010, S. 636. doi: <a href="https://doi.org/10.1007/978-3-642-13304-6">10.1007/978-3-642-13304-6</a>.</div>
+</div>
+<div id="ref-smoliner-2026-grund-halbl" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">J. Smoliner, <em>Grundlagen der Halbleiterphysik: Was Studierende der Physik und Elektrotechnik wissen sollten</em>. Springer Berlin Heidelberg, 2026. doi: <a href="https://doi.org/10.1007/978-3-662-72413-2">10.1007/978-3-662-72413-2</a>.</div>
+</div>
+<div id="ref-spencer2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">J. Spencer und G. Alonso, <span>„<span>LTspice: Worst-Case Circuit Analysis with Minimal Simulation Runs</span>“</span>, Analog Devices, techreport, Juni 2017. Verfügbar unter: <a href="https://www.analog.com/en/resources/technical-articles/ltspice-worst-case-circuit-analysis-with-minimal-simulations-runs.html">https://www.analog.com/en/resources/technical-articles/ltspice-worst-case-circuit-analysis-with-minimal-simulations-runs.html</a></div>
+</div>
+<div id="ref-spiceman2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[26] </div><div class="csl-right-inline">Spiceman, <span>„<span>LTspice-Monte Carlo Analysis (mc)</span>“</span>, Spiceman, techreport, 2019. Verfügbar unter: <a href="https://spiceman.net/ltspice-monte-carlo-analysis/">https://spiceman.net/ltspice-monte-carlo-analysis/</a></div>
+</div>
+<div id="ref-stiny-2019-aktiv-bauel" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">L. Stiny, <em>Aktive elektronische Bauelemente: Aufbau, Struktur, Wirkungsweise, Eigenschaften und praktischer Einsatz diskreter und integrierter Halbleiter-Bauteile</em>. Springer Fachmedien Wiesbaden, 2019. doi: <a href="https://doi.org/10.1007/978-3-658-24752-2">10.1007/978-3-658-24752-2</a>.</div>
+</div>
+<div id="ref-thuselt2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">F. Thuselt, <em>Physik der Halbleiterbauelemente</em>. Elektrotechnik/Informationstechnik, Hochschule Pforzheim, Pforzheim, Germany: Springer Berlin Heidelberg, 2018. doi: <a href="https://doi.org/10.1007/978-3-662-57638-0">10.1007/978-3-662-57638-0</a>.</div>
+</div>
+<div id="ref-tietze2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[29] </div><div class="csl-right-inline">U. Tietze, C. Schenk, und E. Gramm, <em>Halbleiter-Schaltungstechnik</em>, 14th Aufl. Springer, 2012, S. 1807.</div>
+</div>
+<div id="ref-wellmann-2019-mater-elekt-energ" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[30] </div><div class="csl-right-inline">P. Wellmann, <em>Materialien der Elektronik und Energietechnik: Halbleiter, Graphen, Funktionale Materialien</em>. Springer Fachmedien Wiesbaden, 2019. doi: <a href="https://doi.org/10.1007/978-3-658-26992-0">10.1007/978-3-658-26992-0</a>.</div>
+</div>
+<div id="ref-wetzel2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[31] </div><div class="csl-right-inline">T. Wetzel, <span>„<span>Worst-Case Analyse mit LTSpice</span>“</span>, MEDtech Ingenieur, Juni 2020. Verfügbar unter: <a href="https://medtech-ingenieur.de/worst-case-analyse-mit-ltspice/">https://medtech-ingenieur.de/worst-case-analyse-mit-ltspice/</a></div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -654,7 +709,8 @@ ul.task-list li input[type="checkbox"] {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -663,8 +719,69 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -678,6 +795,7 @@ ul.task-list li input[type="checkbox"] {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -840,44 +958,54 @@ ul.task-list li input[type="checkbox"] {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -976,7 +1104,10 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollbarer Code","output":"Scrollbare Ausgabe"};
+  </script>
+<nav class="page-navigation" aria-label="Seite">
   <div class="nav-page nav-page-previous">
       <a href="../index.html" class="pagination-link" aria-label="Unsyllabus">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Unsyllabus</span>
