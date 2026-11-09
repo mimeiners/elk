@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Signale – M 5.3 Elektronik (ELK)</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../lab/lab_01_Activity_intro.html" rel="next">
+<link href="../lec/lec_01_intro.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5de16f5e46225c21e2daa90d340bf64f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e8df4f7f6da0d93fa1b12922bb240437.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Zum Hauptinhalt springen</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Symbolleiste">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Pfad"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw_01_signals.html">Übungen</a></li><li class="breadcrumb-item"><a href="../hw/hw_01_signals.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Website">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">M 5.3 Elektronik (ELK)</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/mimeiners/elk/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../elk.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../elk.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Seminar</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lec/lec_01_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">Übungen</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw_01_signals.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">Labor</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab_01_Activity_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Laborversuche</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab_02_Activity_19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">IV-Charakterisierung von Siliziumdioden</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab_03_Activity_22.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Der BJT als Diode</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab_04_Activity_23.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Der MOSFET als Diode</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Literaturverzeichnis</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#signaldarstellungen" id="toc-signaldarstellungen" class="nav-link active" data-scroll-target="#signaldarstellungen"><span class="header-section-number">2.1</span> Signaldarstellungen</a></li>
+  <li><a href="#ermitteln-sie-die-übertragungsfunktion-eines-passiven-rc-tiefpassfilters." id="toc-ermitteln-sie-die-übertragungsfunktion-eines-passiven-rc-tiefpassfilters." class="nav-link" data-scroll-target="#ermitteln-sie-die-übertragungsfunktion-eines-passiven-rc-tiefpassfilters."><span class="header-section-number">2.2</span> Ermitteln Sie die Übertragungsfunktion eines passiven RC-Tiefpassfilters.</a></li>
+  <li><a href="#verifizieren-sie-ihre-handrechnung-mit-einer-spice-.ac-analyse." id="toc-verifizieren-sie-ihre-handrechnung-mit-einer-spice-.ac-analyse." class="nav-link" data-scroll-target="#verifizieren-sie-ihre-handrechnung-mit-einer-spice-.ac-analyse."><span class="header-section-number">2.3</span> Verifizieren Sie Ihre Handrechnung mit einer SPICE “.ac” Analyse.</a></li>
+  <li><a href="#ermitteln-sie-mit-spice-das-ausgangsbezogene-rauschen-onoise-eines-passiven-rc-tiefpassfilters." id="toc-ermitteln-sie-mit-spice-das-ausgangsbezogene-rauschen-onoise-eines-passiven-rc-tiefpassfilters." class="nav-link" data-scroll-target="#ermitteln-sie-mit-spice-das-ausgangsbezogene-rauschen-onoise-eines-passiven-rc-tiefpassfilters."><span class="header-section-number">2.4</span> Ermitteln Sie mit SPICE das ausgangsbezogene Rauschen (onoise) eines passiven RC-Tiefpassfilters.</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/hw/hw_01_signals.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Pfad"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../hw/hw_01_signals.html">Übungen</a></li><li class="breadcrumb-item"><a href="../hw/hw_01_signals.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Signale</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="signaldarstellungen" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="signaldarstellungen"><span class="header-section-number">2.1</span> Signaldarstellungen</h2>
+<p>Schreiben Sie ein Programm in Matlab oder Python, welches mithilfe einer Fourierreihe ein Clock-Signal (CLK) darstellt. Das Programm soll als Ergebnis einen Plot des CLK-Signals erzeugen.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Vorsicht</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Mit MATLAB:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">% Dieses Skript plottet die Fourierreihe eines Rechteckpulses</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">% aus einer  Matheformelsammlung</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">% y = (4*a)/pi [sin(wt) + sin(3wt)/3 + sin(5wt)/5 + ...]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">clear</span> <span class="va">all</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">clf</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">% Definition des Laufindexes (Vektor)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="va">t</span> <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">.01</span><span class="op">:</span><span class="fl">10</span><span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">% Initialisierung</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="va">A</span> <span class="op">=</span> <span class="fl">1.0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="va">T</span> <span class="op">=</span> <span class="fl">2.5</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="va">M</span> <span class="op">=</span> <span class="fl">50</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="va">y</span> <span class="op">=</span> <span class="fl">0</span><span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">% Schleife, Fourierkoeffizienten</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">for</span> <span class="va">m</span> <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">:</span><span class="va">M</span><span class="op">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="va">y</span> <span class="op">=</span> <span class="va">y</span> <span class="op">+</span> (<span class="fl">4</span><span class="op">*</span><span class="va">A</span>) <span class="op">*</span> <span class="va">sin</span>(<span class="va">m</span><span class="op">*</span><span class="fl">2</span><span class="op">*</span><span class="va">pi</span><span class="op">*</span><span class="va">t</span><span class="op">/</span><span class="va">T</span>)<span class="op">/</span>(<span class="va">m</span><span class="op">*</span><span class="va">pi</span>)<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">% Erzeugung des Plot-Fensters</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="va">figure</span>(<span class="fl">1</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="va">plot</span>(<span class="va">t</span><span class="op">,</span> <span class="va">y</span><span class="op">,</span> <span class="ss">'b-'</span><span class="op">,</span> <span class="va">t</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">:</span><span class="kw">end</span>)<span class="op">,</span> <span class="va">y</span>(<span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">:</span><span class="kw">end</span>)<span class="op">,</span> <span class="ss">'r.'</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="va">title</span>(<span class="ss">'Fourierreihe eines Rechecksignals'</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="va">xlabel</span>(<span class="ss">'Zeit t/s'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="va">ylabel</span>(<span class="ss">'rect(t)'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="va">grid</span> <span class="va">on</span><span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="va">axis</span>([<span class="fl">0</span><span class="op">,</span> <span class="fl">10</span><span class="op">,</span> <span class="op">-</span><span class="fl">2</span><span class="op">,</span> <span class="fl">2</span>])</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">% legend('5 Terme')</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">% Drucken/Schreiben des Plots in eine Graphikdatei rect.png</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">% print('rect.png', '-dpng')</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Mit Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">Fourier Series - Square Wave</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">f(t) = (4a)/pi [sin(wt) + sin(3wt)/3 + sin(5wt)/5 + ...]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> signal</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.fftpack <span class="im">import</span> fft</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1000</span>  <span class="co"># Anzahl der Samples</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">1.</span> <span class="op">/</span> <span class="dv">1000</span>  <span class="co"># Schrittweite</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>frequency <span class="op">=</span> <span class="fl">5.</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.linspace(<span class="fl">.0</span>, N<span class="op">*</span>dt, N)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> signal.square(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> frequency <span class="op">*</span> t)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>figure2, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ax1.plot(t, y)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>y_sum <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Schleife fuer die Fourier-Reihe</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">2</span>):</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    yn <span class="op">=</span> <span class="dv">4</span><span class="op">/</span>(np.pi<span class="op">*</span>n)<span class="op">*</span>np.sin((<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>n<span class="op">*</span>frequency<span class="op">*</span>t))</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> y_sum <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        y_sum <span class="op">=</span> yn</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        y_sum <span class="op">+=</span> yn</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="kw">in</span> (<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>):</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        ax1.plot(t, y_sum)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>ax1.plot(t, y_sum)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>ax1.set_xlim(<span class="dv">0</span>, <span class="dv">2</span><span class="op">/</span>frequency)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>ax1.set_ylim(<span class="op">-</span><span class="fl">1.5</span>, <span class="fl">1.5</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'Zeit t'</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Amplitude'</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>yf <span class="op">=</span> fft(y)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>tf <span class="op">=</span> np.linspace(<span class="fl">.0</span>, <span class="fl">1.</span><span class="op">/</span>(<span class="fl">2.</span><span class="op">*</span>dt), N<span class="op">//</span><span class="dv">2</span>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>spectrum <span class="op">=</span> <span class="fl">2.</span><span class="op">/</span>N <span class="op">*</span> np.<span class="bu">abs</span>(yf[<span class="dv">0</span>:N<span class="op">//</span><span class="dv">2</span>])</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>ax2.plot(tf, spectrum)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">20</span>, <span class="dv">2</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>ax2.plot(n<span class="op">*</span>frequency, <span class="dv">4</span><span class="op">/</span>(np.pi<span class="op">*</span>n), <span class="st">'o'</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>ax2.grid()</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Spektrum'</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'Frequenz (Hz)'</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Amplitude'</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ermitteln-sie-die-übertragungsfunktion-eines-passiven-rc-tiefpassfilters." class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="ermitteln-sie-die-übertragungsfunktion-eines-passiven-rc-tiefpassfilters."><span class="header-section-number">2.2</span> Ermitteln Sie die Übertragungsfunktion eines passiven RC-Tiefpassfilters.</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Vorsicht</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\begin{align}
+H(j \omega) &amp;= \frac{V_{out}(j\omega)}{V_{in}(j\omega)} \\
+&amp;= \frac{\underline{Z}_C}{\underline{Z}_R + \underline{Z}_C} = \frac{\frac{1}{j \omega C}}{R + \frac{1}{j \omega C}} \\
+&amp;= \frac{1}{1+j \omega RC} = \frac{1}{1+j\, 2 \pi f\, RC}
+\end{align}\]</span></p>
+</div>
+</div>
+</div>
+</section>
+<section id="verifizieren-sie-ihre-handrechnung-mit-einer-spice-.ac-analyse." class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="verifizieren-sie-ihre-handrechnung-mit-einer-spice-.ac-analyse."><span class="header-section-number">2.3</span> Verifizieren Sie Ihre Handrechnung mit einer SPICE “.ac” Analyse.</h2>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Vorsicht</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Uebertragungsfunktion und Rauschanalyse eines RC<span class="op">-</span>Tiefpasses</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> NETZWERK</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Rs vs vy <span class="dv">1</span><span class="er">k</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Cy vy <span class="dv">0</span> <span class="dv">1</span><span class="bu">u</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Vs vs <span class="dv">0</span> <span class="dv">1</span> AC <span class="dv">1</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> ANALYSEN</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Kleinsignalanalyse <span class="op">(</span>ac<span class="op">)</span> fuer die Uebertragungsfunktion</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">.</span>ac dec <span class="dv">100</span> <span class="dv">1</span> <span class="dv">1</span><span class="er">Meg</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="op">*</span> Rauschanalyse am Ausgangsknoten <span class="op">(</span>vy<span class="op">)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">.</span>noise V<span class="op">(</span>vy<span class="op">)</span> Vs dec <span class="dv">100</span> <span class="dv">1</span> <span class="dv">1</span><span class="er">Meg</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="op">.</span>end</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ermitteln-sie-mit-spice-das-ausgangsbezogene-rauschen-onoise-eines-passiven-rc-tiefpassfilters." class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="ermitteln-sie-mit-spice-das-ausgangsbezogene-rauschen-onoise-eines-passiven-rc-tiefpassfilters."><span class="header-section-number">2.4</span> Ermitteln Sie mit SPICE das ausgangsbezogene Rauschen (onoise) eines passiven RC-Tiefpassfilters.</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aus einer Matheformelsammlung das unbestimmte Integral</p>
+<p><span class="math display">\[\begin{equation}
+\int \frac{1}{a^2 + x^2} dx = \frac{1}{a} \arctan(\frac{x}{a})
+\end{equation}\]</span></p>
+<p>nutzen.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Vorsicht</span>Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Leistungsdichtespektrum (PSD, Power Spectral Density) allg.</p>
+<!-- \begin{align} -->
+<!-- \overline{u^2_n(t)} &=  \int_{-\infty}^{\infty} S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2 -->
+<!-- \end{align} -->
+<p>Benötigt werden die Übertragungsfunktion <span class="math inline">\(H(j \omega)\)</span> des Systems, die aus der vorherigen Aufgabe bekannt ist und die Rauschleistung <span class="math inline">\(S_{uu}(j\omega)\)</span> = <span class="math inline">\(4 k T R\)</span> eines ohmschen Widerstandes.</p>
+<p>Totales integriertes Rauschen (kausales System):</p>
+<p><span class="math display">\[\begin{align}
+\overline{v_{out}^2} &amp;= \int_{0}^{\infty} 4 kTR \left\lvert \frac{1}{1+j 2 \pi f RC} \right\lvert^2 df \\
+&amp;= 4kTR  \int_{0}^{\infty} \frac{1}{1+ (2 \pi f RC)^2} df \\
+&amp;= 4kTR \int_{0}^{\infty} \frac{\frac{1}{(2 \pi RC)^2}}{\frac{1}{(2 \pi RC)^2} + f^2} df \\
+&amp;= 4kTR \left[ \frac{1}{2 \pi RC} \arctan\left( \frac{f}{2 \pi RC}\right)\right]_0^{\infty} \\
+&amp;= 4kTR \frac{1}{2 \pi RC} \frac{\pi}{2} \\
+&amp;= \frac{kT}{C}
+\end{align}\]</span></p>
+</div>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-arte2025-revol" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span class="nocase">arte, Hrsg.</span>, <span>„<span>Revolutionär – Ideen, die die Welt veränderten</span>: Das Smartphone“</span>. Zugegriffen: 30. Dezember 2025. [Online]. Verfügbar unter: <a href="https://www.arte.tv/de/videos/122715-006-A/revolutionaer-ideen-die-die-welt-veraenderten/">https://www.arte.tv/de/videos/122715-006-A/revolutionaer-ideen-die-die-welt-veraenderten/</a></div>
+</div>
+<div id="ref-baker2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">R. J. Baker, <em>CMOS: Circuit Design, Layout, and Simulation</em>, 3rd Aufl. PDF; Wiley Press, 2010, S. 1208. Verfügbar unter: <a href="http://lib.myilibrary.com?id=337262">http://lib.myilibrary.com?id=337262</a></div>
+</div>
+<div id="ref-baker2015" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">R. J. Baker, <span>„CMOSedu“</span>. Website, 2015. Verfügbar unter: <a href="http://www.cmosedu.com">http://www.cmosedu.com</a></div>
+</div>
+<div id="ref-baumann2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">P. Baumann, <em>Sensorschaltungen</em>, 2. Aufl. Vieweg+Teubner, 2010. doi: <a href="https://doi.org/10.1007/978-3-8348-9753-4">10.1007/978-3-8348-9753-4</a>.</div>
+</div>
+<div id="ref-baumann2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">P. Baumann, <em>Parameterextraktion bei Halbleiterbauelementen - Simulation mit PSPICE</em>. Springer, 2012. doi: <a href="https://doi.org/10.1007/978-3-8348-2495-0">10.1007/978-3-8348-2495-0</a>.</div>
+</div>
+<div id="ref-baumann2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">P. Baumann, <em>Pr<span>ü</span>fungsfragen zur Elektronik</em>. Springer, 2013. doi: <a href="https://doi.org/10.1007/978-3-658-02913-5">10.1007/978-3-658-02913-5</a>.</div>
+</div>
+<div id="ref-carter2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">B. Carter, <em>Op Amps for Everyone</em>, 4th Aufl. Boston: Newnes, 2013. doi: <a href="https://doi.org/10.1016/B978-0-12-391495-8.00001-5">10.1016/B978-0-12-391495-8.00001-5</a>.</div>
+</div>
+<div id="ref-federau2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">J. Federau, <em>Operationsverstärker</em>. Springer Fachmedien Wiesbaden, 2017. doi: <a href="https://doi.org/10.1007/978-3-658-16373-0">10.1007/978-3-658-16373-0</a>.</div>
+</div>
+<div id="ref-goebel2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">H. Göbel und H. Siemund, <em>Übungsaufgaben zur Halbleiter-Schaltungstechnik</em>. Springer Berlin Heidelberg, 2018. doi: <a href="https://doi.org/10.1007/978-3-662-56569-8">10.1007/978-3-662-56569-8</a>.</div>
+</div>
+<div id="ref-goebel2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">H. Göbel, <em>Einführung in die Halbleiter-Schaltungstechnik</em>. Springer Berlin Heidelberg, 2019. doi: <a href="https://doi.org/10.1007/978-3-662-56563-6">10.1007/978-3-662-56563-6</a>.</div>
+</div>
+<div id="ref-hering-2025-physik-ingen" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">E. Hering, R. Martin, und M. Stohrer, <em>Physik für Ingenieure</em>. Springer Berlin Heidelberg, 2025. doi: <a href="https://doi.org/10.1007/978-3-662-69429-9">10.1007/978-3-662-69429-9</a>.</div>
+</div>
+<div id="ref-hilleringmann-2023-siliz-halbl" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">U. Hilleringmann, <em>Silizium-Halbleitertechnologie: Grundlagen mikroelektronischer Integrationstechnik</em>. Springer Fachmedien Wiesbaden, 2023. doi: <a href="https://doi.org/10.1007/978-3-658-42378-0">10.1007/978-3-658-42378-0</a>.</div>
+</div>
+<div id="ref-jaeger-2022-microel-circuit-desig-a" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">R. Jaeger und B. Travis, <em>Microelectronic Circuit Design</em>. McGraw-Hill US Higher Ed ISE, 2022. Verfügbar unter: <a href="https://suche.suub.uni-bremen.de/peid=B191214129">https://suche.suub.uni-bremen.de/peid=B191214129</a></div>
+</div>
+<div id="ref-jaeger-2022-microel-circuit-desig-b" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">R. Jaeger und B. Travis, <em>Microelectronic Circuit Design</em>. McGraw-Hill US Higher Ed ISE, 2022. Verfügbar unter: <a href="https://suche.suub.uni-bremen.de/peid=B198375229">https://suche.suub.uni-bremen.de/peid=B198375229</a></div>
+</div>
+<div id="ref-jaeger2023" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">R. C. Jaeger und T. N. Blalock, <em>Microelectronic Circuit Design</em>, 6. Aufl. New York, New York: McGraw-Hill, 2023. Verfügbar unter: <a href="http://ebookcentral.proquest.com/lib/suub/detail.action?docID=6865812">http://ebookcentral.proquest.com/lib/suub/detail.action?docID=6865812</a></div>
+</div>
+<div id="ref-jones2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">M. Jones, <span>„Accurate Temperature Sensing with an External P-N Junction“</span>, Linear Technology Corporation, Application Note AN137, 2012. Verfügbar unter: <a href="https://www.analog.com/media/en/technical-documentation/application-notes/an137f.pdf">https://www.analog.com/media/en/technical-documentation/application-notes/an137f.pdf</a></div>
+</div>
+<div id="ref-kazimierczuk2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">M. K. Kazimierczuk, <em>RF Power Amplifiers</em>, 2. John Wiley &amp; Sons, Ltd, 2014, S. 688. doi: <a href="https://doi.org/10.1002/9781118844373">10.1002/9781118844373</a>.</div>
+</div>
+<div id="ref-mancini2009" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">R. Mancini und B. Carter, <em>Op Amps for Everyone</em>, 3rd Aufl. Newnes, 2009. doi: <a href="https://doi.org/10.1016/b978-1-85617-505-0.x0001-4">10.1016/b978-1-85617-505-0.x0001-4</a>.</div>
+</div>
+<div id="ref-murmann2013" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">B. Murmann, <em>Analysis and Design of Elementary MOS Amplifier Stages</em>. in The Modular Series of Microelectronic Device and Circuit Design. NTS Press, 2013. Verfügbar unter: <a href="https://github.com/bmurmann/Book-on-MOS-stages/blob/main/book/Analysis and Design of Elementary MOS
+                  Amplifier Stages.pdf">https://github.com/bmurmann/Book-on-MOS-stages/blob/main/book/Analysis and Design of Elementary MOS Amplifier Stages.pdf</a></div>
+</div>
+<div id="ref-natt-2022-physik-python" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">O. Natt, <em>Physik mit Python: Simulationen, Visualisierungen und Animationen von Anfang an</em>. Springer Berlin Heidelberg, 2022. doi: <a href="https://doi.org/10.1007/978-3-662-66454-4">10.1007/978-3-662-66454-4</a>.</div>
+</div>
+<div id="ref-pretl2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">H. Pretl und M. Eberlein, <span>„Fifty Nifty Variations of Two-Transistor Circuits: A tribute to the versatility of <span>MOSFETs</span>“</span>, <em><span>IEEE</span> Solid-State Circuits Magazine</em>, Bd. 13, Nr. 3, S. 38–46, 2021, doi: <a href="https://doi.org/10.1109/mssc.2021.3088968">10.1109/mssc.2021.3088968</a>.</div>
+</div>
+<div id="ref-pretl2025" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">H. Pretl, M. Koefinger, und S. Dorrer, <span>„Analog <span>Circuit</span> <span>Design</span>“</span>. [Online]. Verfügbar unter: <a href="https://iic-jku.github.io/analog-circuit-design">https://iic-jku.github.io/analog-circuit-design</a></div>
+</div>
+<div id="ref-razavi2008" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[23] </div><div class="csl-right-inline">B. Razavi, <em>Microelectronics</em>. John Wiley &amp; Sons, Inc., 2008, S. 856.</div>
+</div>
+<div id="ref-reisch2007" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">M. Reisch, <em>Elektronische Bauelemente</em>, 2nd Aufl. Springer, 2007, S. 1517. doi: <a href="https://doi.org/10.1007/978-3-540-34015-7">10.1007/978-3-540-34015-7</a>.</div>
+</div>
+<div id="ref-siegl2010" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">J. Siegl, <em>Schaltungstechnik - Analog und gemischte analog/digital</em>, 4th Aufl. in Springer-Lehrbuch. Springer, 2010, S. 636. doi: <a href="https://doi.org/10.1007/978-3-642-13304-6">10.1007/978-3-642-13304-6</a>.</div>
+</div>
+<div id="ref-smoliner-2026-grund-halbl" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[26] </div><div class="csl-right-inline">J. Smoliner, <em>Grundlagen der Halbleiterphysik: Was Studierende der Physik und Elektrotechnik wissen sollten</em>. Springer Berlin Heidelberg, 2026. doi: <a href="https://doi.org/10.1007/978-3-662-72413-2">10.1007/978-3-662-72413-2</a>.</div>
+</div>
+<div id="ref-spencer2017" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">J. Spencer und G. Alonso, <span>„<span>LTspice: Worst-Case Circuit Analysis with Minimal Simulation Runs</span>“</span>, Analog Devices, techreport, Juni 2017. Verfügbar unter: <a href="https://www.analog.com/en/resources/technical-articles/ltspice-worst-case-circuit-analysis-with-minimal-simulations-runs.html">https://www.analog.com/en/resources/technical-articles/ltspice-worst-case-circuit-analysis-with-minimal-simulations-runs.html</a></div>
+</div>
+<div id="ref-spiceman2019" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">Spiceman, <span>„<span>LTspice-Monte Carlo Analysis (mc)</span>“</span>, Spiceman, techreport, 2019. Verfügbar unter: <a href="https://spiceman.net/ltspice-monte-carlo-analysis/">https://spiceman.net/ltspice-monte-carlo-analysis/</a></div>
+</div>
+<div id="ref-stiny-2019-aktiv-bauel" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[29] </div><div class="csl-right-inline">L. Stiny, <em>Aktive elektronische Bauelemente: Aufbau, Struktur, Wirkungsweise, Eigenschaften und praktischer Einsatz diskreter und integrierter Halbleiter-Bauteile</em>. Springer Fachmedien Wiesbaden, 2019. doi: <a href="https://doi.org/10.1007/978-3-658-24752-2">10.1007/978-3-658-24752-2</a>.</div>
+</div>
+<div id="ref-stitt1991" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[30] </div><div class="csl-right-inline">R. M. Stitt und D. Kunst, <span>„Diode-Based Temperature Measurement“</span>, Texas Instruments (Burr-Brown), Application Bulletin SBOA019, 1991. Verfügbar unter: <a href="https://hackaday.com/wp-content/uploads/2018/04/sboa019.pdf">https://hackaday.com/wp-content/uploads/2018/04/sboa019.pdf</a></div>
+</div>
+<div id="ref-thuselt2018" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[31] </div><div class="csl-right-inline">F. Thuselt, <em>Physik der Halbleiterbauelemente</em>. Elektrotechnik/Informationstechnik, Hochschule Pforzheim, Pforzheim, Germany: Springer Berlin Heidelberg, 2018. doi: <a href="https://doi.org/10.1007/978-3-662-57638-0">10.1007/978-3-662-57638-0</a>.</div>
+</div>
+<div id="ref-tietze2012" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[32] </div><div class="csl-right-inline">U. Tietze, C. Schenk, und E. Gramm, <em>Halbleiter-Schaltungstechnik</em>, 14th Aufl. Springer, 2012, S. 1807.</div>
+</div>
+<div id="ref-wellmann-2019-mater-elekt-energ" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[33] </div><div class="csl-right-inline">P. Wellmann, <em>Materialien der Elektronik und Energietechnik: Halbleiter, Graphen, Funktionale Materialien</em>. Springer Fachmedien Wiesbaden, 2019. doi: <a href="https://doi.org/10.1007/978-3-658-26992-0">10.1007/978-3-658-26992-0</a>.</div>
+</div>
+<div id="ref-wetzel2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[34] </div><div class="csl-right-inline">T. Wetzel, <span>„<span>Worst-Case Analyse mit LTSpice</span>“</span>, MEDtech Ingenieur, Juni 2020. Verfügbar unter: <a href="https://medtech-ingenieur.de/worst-case-analyse-mit-ltspice/">https://medtech-ingenieur.de/worst-case-analyse-mit-ltspice/</a></div>
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Kopiert");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Kopiert");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/elk\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollbarer Code","output":"Scrollbare Ausgabe"};
+  </script>
+<nav class="page-navigation" aria-label="Seite">
+  <div class="nav-page nav-page-previous">
+      <a href="../lec/lec_01_intro.html" class="pagination-link" aria-label="Einleitung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../lab/lab_01_Activity_intro.html" class="pagination-link" aria-label="Laborversuche">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Laborversuche</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>M 5.3 Elektronik (ELK), M. Meiners, HSB.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/elk/edit/main/hw/hw_01_signals.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/elk/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
