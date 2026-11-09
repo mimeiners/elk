@@ -54,11 +54,11 @@ book:
         # - lec/lec_05_opamp.qmd
         # - lec/lec_06_cir-elem-variation.qmd
 
-    # - part: Übungen
-    #   chapters:
-    #     - hw/hw_01_signals.qmd
-    #     - hw/hw_02_diodes.qmd
-    #     - hw/hw_03_amps.qmd
+    - part: Übungen
+      chapters:
+        - hw/hw_01_signals.qmd
+        # - hw/hw_02_diodes.qmd
+        # - hw/hw_03_amps.qmd
         
     - part: Labor
       chapters:
@@ -124,6 +124,7 @@ format:
 
     number-sections: true
     number-depth: 2
+    # cite-method: biblatex
         
     papersize: a4
         

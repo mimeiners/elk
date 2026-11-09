@@ -1,5 +1,4 @@
 # Einleitung
-
 ## Lernziele des Moduls
 
 * Einblicke in (mikro-)elektronische Systeme
@@ -19,11 +18,9 @@
 
 ## Wissenschaftliches Rechnen / Datenwissenschaft
 
-* [Python](https://www.anaconda.com/download/)
+* [Python (3.13, 3.14)](https://www.python.org/)
 
-* [Matlab](https://de.mathworks.com)
-
-* [Command-line tools](https://jeroenjanssens.com/dsatcl/) 
+* [Matlab Campus License](https://de.mathworks.com/academia/tah-portal/hochschule-bremen-31463273.html)
 
 
 ## EDA Tools
@@ -85,22 +82,24 @@
   * [Citavi](https://www.suub.uni-bremen.de/service-beratung/literaturverwaltung/citavi-2/)
 
 * Datenverarbeitung
-  * Dateisystem Ordner und Dateien
+  * [Command-line tools](https://jeroenjanssens.com/dsatcl/) 
   * Comma-Separated-Values (CSV), Tab-Separated-Values (TSV)
 	* [csvkit](https://github.com/wireservice/csvkit)
 	* [miller](https://github.com/johnkerl/miller)
+  * [Pandas](https://pandas.pydata.org)
+	* [Python for Data Analysis](https://wesmckinney.com/book/)
   * Spreadsheet (.xlsx, .ods)
 
 
 ## Experimentelle Arbeit - Entwurf elektronischer Systeme
 
-Analyse und Synthese von elektronischen Bauelementen und Systemen mit 
+**Entwurf eines Transistorkennlinienschreibers (Curve-Tracer)**
 
-* Modellbildung auf Systemebene / Verhaltensmodellierung
+* Verhaltensmodellierung auf Systemebene 
   
-* Simulation auf Schaltungsebene / SPICE
+* Schaltungssimulation mit SPICE
 
-* Charakterisierung auf Hardwareebene mit
+* Implementierung mit
 
   * [Analog System Lab Kit (ASLK) Pro](https://aslk-pro.readthedocs.io/de/latest/)
 

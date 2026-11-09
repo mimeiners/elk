@@ -240,8 +240,8 @@ f_2 &= \frac{1+r_sg_d}{2\pi r_s c_d} = \SI{33.1}{MHz}.
 ## Temperaturverhalten
 Simulieren Sie mit SPICE eine Diodenschaltung bei unterschiedlichen Temperaturen.
 
-Schauen Sie sich für weitere Hintergrundinformationen die *Application Notes* von Texas Instruments [@stitt1991] und
-Linear Technologie (jetzt Analog Devices) [@jones2012] an.
+Schauen Sie sich für weitere Hintergrundinformationen die *Application Notes* von Texas Instruments @stitt1991 und
+Linear Technologie (jetzt Analog Devices) @jones2012 an.
 
 Zur Simulation von Temperaturen mit SPICE finden Sie im Handbuch von LTspice und unter folgendem Link [LTspice: simulating
 temperature](https://electronics.stackexchange.com/questions/697348/ltspice-simulating-temperature) Hinweise.

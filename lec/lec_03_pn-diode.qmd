@@ -1,4 +1,4 @@
-# Diode – Halbleiterphysik\, Modelle und Schaltungen
+# Diode 
 
 ## Diode als Schaltelemente
 
@@ -36,22 +36,26 @@ pn\-Übergang
     * Driftstrom
     * Diffusionsstrom
     * Thermostrom
-  * Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap\. 8\, Atom\- und Kernphysik und Kap\. 9\, Festkörperphysik\, des Buches  _Physik für Ingenieure_  von Hering 2012\, sowie Kap\. 12\, Halbleiter\, des Buches  _Elektronische Bauelemente_  von Reisch\, 2007 entnommen\.
+  * Die hier präsentierten Inhalte zur Halbleiterphysik sind den Kap\. 8\, Atom\- und Kernphysik und Kap\. 9\,
+    Festkörperphysik\, des Buches  _Physik für Ingenieure_  von Hering 2012\, sowie Kap\. 12\, Halbleiter\, des Buches
+    _Elektronische Bauelemente_ von Reisch\, 2007 entnommen\.
 
 
 ## Grundlagen der Elektrotechnik
 
-Als Vorbereitung für ein besseres Verständnis der Halbleiterphysik\, sollten die Grundbegriffe aus den Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden\. Rufen Sie sich folgende physikalische Größen und Gesetze in Erinnerung:
+Als Vorbereitung für ein besseres Verständnis der Halbleiterphysik\, sollten die Grundbegriffe aus den
+Grundlagenvorlesungen der ersten beiden Semester aufgefrischt werden\. Rufen Sie sich folgende physikalische Größen und
+Gesetze in Erinnerung:
 
-Elektrische Stromstärke
+* Elektrische Stromstärke
 
-Elektrische Spannung
+* Elektrische Spannung
 
-Kirchhoff’schen Gesetze
+* Kirchhoff’schen Gesetze
 
-Elektrische Energie
+* Elektrische Energie
 
-Elektrische Leistung\.
+* Elektrische Leistung\.
 
 ## Einführung in die Halbleiterphysik
 

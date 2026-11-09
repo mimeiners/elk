@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Messautomatisierung - RedPitaya STEMlab SCPI
 
@@ -28,15 +26,20 @@ IP = LABDESK["ELIE2"]  # IP des Laborplatzes
 rp = scpi.scpi(IP)
 
 # size in samples 16 Bit
-DATA_SIZE = 1024 * 16  # ((1024 * 1024 * 128) / 2) ## for 128 MB ##
-READ_DATA_SIZE = 1024 * 16  # (1024 * 256)              ## for 128 MB ##
+DATA_SIZE = 1024 * 16
+READ_DATA_SIZE = 1024 * 16
 
-dec = 16
+dec = 16 
 trig_lvl = 0.4
 
 # %% Messung / Datenverarbeitung
 TSTAMP = datetime.datetime.now()
-DEVICE = {"d1": "1N4001", "d2": "1N4148", "npn": "2N3904", "pnp": "2N3906", "nmos": "BS170", "pmos": "BS250"}
+DEVICE = {"d1": "1N4001",
+          "d2": "1N4148",
+          "npn": "2N3904",
+          "pnp": "2N3906",
+          "nmos": "BS170",
+          "pmos": "BS250"}
 
 
 # Init Dataframes
@@ -121,7 +124,7 @@ while 1:
         break
 
 # Data Acquisition
-for meas in range(0, 1):
+for meas in range(1):
 
     # Input IN1
     # time.sleep(0.1)  # in seconds

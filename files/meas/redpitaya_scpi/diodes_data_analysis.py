@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Messdatenauswertung
 
@@ -7,14 +6,20 @@ Messdatenauswertung
 
 # %% Init
 # import os
+import time
+import datetime
 import numpy as np
-
 # import scipy.io as io
 import pandas as pd
 import matplotlib.pyplot as plt
 
 # %% Einlesen der Daten
-DEVICE = {"d1": "1N4001", "d2": "1N4148", "npn": "2N3904", "pnp": "2N3906", "nmos": "BS170", "pmos": "BS250"}
+DEVICE = {"d1": "1N4001",
+          "d2": "1N4148",
+          "npn": "2N3904",
+          "pnp": "2N3906",
+          "nmos": "BS170",
+          "pmos": "BS250"}
 
 TSTAMP = datetime.datetime.now()
 Data_IN1 = "data/IN1_" + DEVICE["d1"] + "_ELIE1" + str(TSTAMP.strftime("_%Y-%m-%d_%H-%M"))

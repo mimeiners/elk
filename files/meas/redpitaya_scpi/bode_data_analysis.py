@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Data analysis for Bode plots
 Input signal: DF_IN1
@@ -11,12 +9,12 @@ Output signal: DF_IN2
 import numpy as np
 import scipy.signal as sig
 import pandas as pd
-from fit_sin import fit_sin
 import matplotlib.pyplot as plt
+from fit_sin import fit_sin
 
 # %% Array of tones (GEN):
-ampl = 0.5
-offset = 0.0
+ampl = 0.5 
+offset = 0.0 
 freqs = np.arange(800, 1200, 5)
 w = 2 * np.pi * freqs
 N = 16384  # length of data array, STEMlab buffer size

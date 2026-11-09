@@ -1,4 +1,4 @@
-%% STEMlab measurements for Bode plots
+%% STEMlab diodes measurements 
 % @author: Mirco Meiners (HSB)
 % Input signal: DF_IN1
 % Output signal: DF_IN2

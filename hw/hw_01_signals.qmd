@@ -1,11 +1,13 @@
 # Signale
 
 ## Signaldarstellungen
-Schreiben Sie ein Programm in Matlab oder Python, welches mithilfe einer Fourierreihe eine Clock-Signal (CLK) darstellt. Das Programm soll als Ergebnis einen Plot des CLK-Signals erzeugen.
+Schreiben Sie ein Programm in Matlab oder Python, welches mithilfe einer Fourierreihe ein Clock-Signal (CLK) darstellt. Das Programm soll als Ergebnis einen Plot des CLK-Signals erzeugen.
 
 
 ::: {.callout-caution collapse="true"} 
 ### Lösung
+
+Mit MATLAB:
 ``` matlab
 % Dieses Skript plottet die Fourierreihe eines Rechteckpulses
 % aus einer  Matheformelsammlung
@@ -41,6 +43,7 @@ axis([0, 10, -2, 2])
 % print('rect.png', '-dpng')
 ```
 
+Mit Python:
 ``` python
 """
 Fourier Series - Square Wave
@@ -138,7 +141,7 @@ Vs vs 0 1 AC 1
 ## Ermitteln Sie mit SPICE das ausgangsbezogene Rauschen (onoise) eines passiven RC-Tiefpassfilters.
 
 ::: {.callout-note} 
-Aus einer Matheformelsammlung, bspw. [@zeidler2013] das unbestimmte Integral 
+Aus einer Matheformelsammlung das unbestimmte Integral 
 
 \begin{equation} 
 \int \frac{1}{a^2 + x^2} dx = \frac{1}{a} \arctan(\frac{x}{a})
@@ -151,10 +154,10 @@ nutzen.
 ### Lösung
 Leistungsdichtespektrum (PSD, Power Spectral Density) allg.
 
-\begin{align}
-\overline{u_{n}^2(t)} &=  \int_{-\infty}^{\infty} S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2
+<!-- \begin{align} -->
+<!-- \overline{u^2_n(t)} &=  \int_{-\infty}^{\infty} S_{uu}(j \omega) \cdot \lvert H(j \omega) \lvert^2 -->
   
-\end{align}
+<!-- \end{align} -->
 
 Benötigt werden die Übertragungsfunktion $H(j \omega)$ des Systems, die aus der vorherigen Aufgabe bekannt ist und die
 Rauschleistung $S_{uu}(j\omega)$ = $4 k T R$ eines ohmschen Widerstandes.

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Measurements for Bode plots
 Input signal: DF_IN1
@@ -10,10 +8,10 @@ Output signal: DF_IN2
 
 # %% Init
 import time
-from datetime import datetime
-import redpitaya_scpi as scpi
+import datetime
 import numpy as np
 import pandas as pd
+import redpitaya_scpi as scpi
 # import matplotlib.pyplot as plt
 
 # %% Connection params
