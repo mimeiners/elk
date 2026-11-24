@@ -66,9 +66,9 @@ book:
         - lab/lab_02_Activity_19.qmd
         - lab/lab_03_Activity_22.qmd
         - lab/lab_04_Activity_23.qmd
-        # - lab/lab_05_dega_Activity.ipynb
+    #   - lab/lab_05_dega_Activity.ipynb
         - lab/lab_06_AnalogCircuits.ipynb
-         
+    
     # - part: Transistor-Thermometer
     #  chapters:
     #    - lab/TranThermo/index.qmd
